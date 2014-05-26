@@ -1,11 +1,11 @@
-    ---
-    title:
-    category: Accomplishments
-    client: OSU Graduate School
-    tags:
-      - Public Website
-      - Changing Perceptions
-    ---
+---
+title:
+category: Accomplishments
+client: OSU Graduate School
+tags:
+  - Public Website
+  - Changing Perceptions
+---
 
 # Accomplishments
 
