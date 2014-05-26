@@ -1,6 +1,7 @@
 ---
-title:
-category: Accomplishments
+title: page.accomplishments
+layout: page
+permalink: /accomplishments/
 client: OSU Graduate School
 tags:
   - Public Website
