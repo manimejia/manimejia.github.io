@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+category: guide
 ---
 
 Noita is a [Jekyll][1] theme built with the responsive
