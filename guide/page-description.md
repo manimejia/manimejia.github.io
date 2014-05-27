@@ -1,6 +1,7 @@
 ---
 title: page.description
 layout: page
+category: guide
 permalink: /page-description/
 ---
 
