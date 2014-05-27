@@ -1,6 +1,7 @@
 ---
 title: page.robots
 layout: page
+category: guide
 permalink: /page-robots/
 ---
 
