@@ -1,6 +1,7 @@
 ---
-title: page.accomplishments
+title: Accomplishments
 layout: page
+category: guide
 permalink: /accomplishments/
 client: OSU Graduate School
 tags:
