@@ -1,6 +1,6 @@
-[submodule "noita/foundation"]
-	path = noita/foundation
+[submodule "resources/foundation"]
+	path = resources/foundation
 	url = https://github.com/components/foundation
-[submodule "noita/jquery"]
-	path = noita/jquery
+[submodule "resources/jquery"]
+	path = resources/jquery
 	url = https://github.com/components/jquery
