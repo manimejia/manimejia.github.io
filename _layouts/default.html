@@ -1,13 +1,13 @@
 <!doctype html>
-<html dir="ltr" lang="{{ site.noita.lang }}">
+<html dir="ltr" lang="{{ site.config.lang }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }}</title>
-  {% include noita/robots.html %}
-  {% include noita/meta-description.html %}
+  {% include robots.html %}
+  {% include meta-description.html %}
 
-  {% for favicon in site.noita.favicons %}
+  {% for favicon in site.config.favicons %}
     {% assign size = favicon | split: '-' | last | split: '.' | first %}
     <link rel="icon"
       sizes="{{ size }}x{{ size }}"
@@ -18,10 +18,10 @@
   {% endfor %}
 
   <link rel="alternate" href="/blog/feed.atom"
-    title="{{ site.noita.name }}" type="application/atom+xml">
+    title="{{ site.config.name }}" type="application/atom+xml">
 
-  <link rel="stylesheet" href="/noita/foundation/css/foundation.min.css">
-  {% for stylesheet in site.noita.stylesheets %}
+  <link rel="stylesheet" href="/resources/foundation/css/foundation.min.css">
+  {% for stylesheet in site.config.stylesheets %}
     <link rel="stylesheet" href="{{ stylesheet }}">
   {% endfor %}
 </head>
@@ -30,14 +30,14 @@
   <div class="top-bar" data-topbar id="topbar">
     <ul class="title-area">
       <li class="name">
-        <h1><a href="/">{{ site.noita.name }}</a></h1>
+        <h1><a href="/">{{ site.config.name }}</a></h1>
       </li>
-      <li class="toggle-topbar menu-icon"><a href="#topbar">{{ site.noita.topbar.toggle }}</a></li>
+      <li class="toggle-topbar menu-icon"><a href="#topbar">{{ site.config.topbar.toggle }}</a></li>
     </ul>
     <div class="top-bar-section">
-      {% if site.noita.topbar.left %}
+      {% if site.config.topbar.left %}
       <ul class="left">
-      {% for item in site.noita.topbar.left %}
+      {% for item in site.config.topbar.left %}
         <li{% if item.class %} class="has-form"{% endif %}>
           <a href="{{ item.url }}" class="{{ item.class }}">{{ item.name }}</a>
         </li>
@@ -45,9 +45,9 @@
       </ul>
       {% endif %}
 
-      {% if site.noita.topbar.right %}
+      {% if site.config.topbar.right %}
       <ul class="right">
-      {% for item in site.noita.topbar.right %}
+      {% for item in site.config.topbar.right %}
         <li{% if item.class %} class="has-form"{% endif %}>
           <a href="{{ item.url }}" class="{{ item.class }}">{{ item.name }}</a>
         </li>
@@ -81,7 +81,7 @@
   <script src="/noita/jquery/jquery.min.js"></script>
   <script src="/noita/foundation/js/foundation.min.js"></script>
   <script>$(document).foundation();</script>
-  {% for javascript in site.noita.javascripts %}
+  {% for javascript in site.config.javascripts %}
     <script src="{{ javascript }}"></script>
   {% endfor %}
 </body>

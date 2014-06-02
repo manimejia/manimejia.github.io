@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ site.noita.lang }}">
-  <title>{{ site.noita.name }}</title>
-  <subtitle>{{ site.noita.description }}</subtitle>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ site.config.lang }}">
+  <title>{{ site.config.name }}</title>
+  <subtitle>{{ site.config.description }}</subtitle>
 
-{% if site.noita.url %}
-  {% assign base = site.noita.url %}
+{% if site.config.url %}
+  {% assign base = site.config.url %}
 {% elsif site.github.url %}
   {% assign base = site.github.url %}
 {% else %}
@@ -13,8 +13,8 @@
 
   <id>{{ base }}{{ page.url }}</id>
   <author>
-    <name>{{ site.noita.author.name }}</name>
-    <uri>{{ site.noita.author.url }}</uri>
+    <name>{{ site.config.author.name }}</name>
+    <uri>{{ site.config.author.url }}</uri>
   </author>
   <link
     rel="alternate"

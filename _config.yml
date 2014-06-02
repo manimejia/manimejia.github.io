@@ -7,17 +7,17 @@ exclude:
   - Rakefile
   - README.md
 
-layouts: ./_noita
+layouts: ./_layouts
 
-noita:
-  name: Noita
-  description: Jekyll theme built with Foundation
+config:
+  name: ManiMejia.me
+  description: 'Artist, Athlete, and Engineer'
   author:
-    name: Anatol Broder
-    url: http://penibelst.de/
+    name: Manuel Mejia
+    url: http://manimejia.me
   lang: en
   favicons:
-    - /assets/2014/04/21/favicon-152.png
+    - /resources/favicon-152.png
   topbar:
     toggle: Menu
     right:
