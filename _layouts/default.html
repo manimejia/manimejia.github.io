@@ -20,7 +20,7 @@
   <link rel="alternate" href="/blog/feed.atom"
     title="{{ site.config.name }}" type="application/atom+xml">
 
-  <link rel="stylesheet" href="/resources/foundation/css/foundation.min.css">
+  <link rel="stylesheet" href="/resources/foundation/vendor/foundation/css/foundation.min.css">
   {% for stylesheet in site.config.stylesheets %}
     <link rel="stylesheet" href="{{ stylesheet }}">
   {% endfor %}
@@ -78,8 +78,8 @@
     </div>
   </div>
 
-  <script src="/noita/jquery/jquery.min.js"></script>
-  <script src="/noita/foundation/js/foundation.min.js"></script>
+  <script src="/resources/foundation/vandor/jquery/jquery.min.js"></script>
+  <script src="/resources/foundation/vendor/foundation/js/foundation.min.js"></script>
   <script>$(document).foundation();</script>
   {% for javascript in site.config.javascripts %}
     <script src="{{ javascript }}"></script>
