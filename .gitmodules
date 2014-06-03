@@ -1,6 +1,6 @@
-[submodule "foundation"]
+[submodule "resources/foundation"]
 	path = resources/foundation
 	url = https://github.com/zurb/foundation.git
-[submodule "jquery"]
+[submodule "resources/jquery"]
 	path = resources/jquery
 	url = https://github.com/jquery/jquery.git
