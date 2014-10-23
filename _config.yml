@@ -1,13 +1,70 @@
 markdown: kramdown
 permalink: none
+include: 
+  - blog 
 exclude:
   - CNAME
   - Gemfile
   - LICENSE
   - Rakefile
   - README.md
+  - resources
+  - foundation/scss
+
+sass:
+   sass_dir: theme/foundation/scss
 
 layouts: ./_layouts
+
+libraries:
+  jquery: 
+    js: /theme/foundation/js/vendor/jquery.js
+  modernizr: 
+    js: /theme/foundation/js/vendor/modernizr.js
+  foundation: 
+    js: /theme/foundation/js/foundation.js
+    icons: /theme/foundation/icons/foundation-icons.css
+    normalize: /theme/foundation/css/normalize.css
+  skrollr:
+    js: /theme/skrollr/skrollr.min.js
+  skrollr_stylesheets:
+    js: /theme/skrollr/skrollr.stylesheets.min.js
+  skrollr_menu:
+    js: /theme/skrollr/skrollr.menu.min.js
+  slick: 
+    js: /theme/slick/slick.min.js
+    css: /theme/slick/slick.css
+  manimejia: 
+    js: /theme/manimejia/manimejia.js
+    css: /theme/manimejia/foundation-manimejia.css
+    accordion: /theme/manimejia/foundation.accordion.mm.js
+
+
+defaults:
+  -
+    scope:
+      type: "page"
+      path: ""
+    values:
+      title: 
+      category: 
+      tags: 
+      layout: "page"
+      assetpath: "assets/"
+      assetpath_is_relative_to_siteroot: false
+      libraries: 
+      scripts: 
+        inline: |
+      styles:
+        inline: |
+
+  -
+    scope:
+      type: "page"
+      path: "projects"
+    values:
+      layout: "project" 
+      category: "project"
 
 config:
   name: ManiMejia.me
@@ -21,12 +78,10 @@ config:
   topbar:
     toggle: Menu
     right:
-      - name: About
-        url: /about/
-      - name: Guide
-        url: /guide/
-      - name: Blog
-        url: /blog/
-      - name: Repository
-        url: https://github.com/penibelst/jekyll-noita
+      - name: Services
+        url: /#services
+      - name: Portfolio
+        url: /#portfolio
+      - name: Contact
+        url: /#contact
         class: small button

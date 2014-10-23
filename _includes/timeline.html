@@ -1,0 +1,80 @@
+<style>
+{% include timeline.css %}
+</style>
+
+<div class="timeline-container" id="skrollr-body" >
+
+{% assign timeline_pages = site.pages %}
+{% assign timeline_category = 'project' %}
+{% assign timeline_tag = '' %}
+
+{% assign timeline_pages = timeline_pages | sort: 'date' %}
+
+{% assign t_orientation = 'left' %}
+
+
+{% for this_page in timeline_pages reversed %}
+{% if timeline_category == '' or this_page.category == timeline_category %}
+{% if timeline_tag == '' or this_page.tags contains timeline_tag %}
+
+  {% include _object-this_client_page-client.liquid client=this_page.client %}
+  {% include _string-this_assets_path-category.liquid category=this_page.category %}
+  {% include _string-this_page_id-url.liquid url=this_page.url %}
+
+  {% capture item_orientation_class %}{% cycle 'item_orientation_class': 'timeline-left', 'timeline-right' %}{% endcapture %}
+
+  {% capture item_description_class %}{% cycle 'item_description_class': 'medium-5 pull-7 text-right', 'medium-5' %}{% endcapture %}
+
+  {% capture item_thumbnail_class %}{% cycle 'item_thumbnail_class': 'medium-7 push-5', 'medium-7' %}{% endcapture %}
+
+  {% capture item_year %}{{ this_page.date | date: '%Y' }}{% endcapture %}
+  {% unless last_item_year %}{% assign last_item_year = 0000 %}{% endunless %}
+
+  {% if item_year != last_item_year %}
+    <div class="row bg-transparent"><h3 class="columns timeline-year text-center"><span class="label secondary">{{ item_year }}</span></h3></div>
+  {% endif %}
+  <div class="row bg-transparent">
+  <article class="timeline-item {{ item_orientation_class }}" >
+    <aside class="timeline-marker {{ item_thumbnail_class }} columns">
+      <a class="timeline-thumbnail" title="{{ this_page.title }}" 
+      href="#{{ this_page_id }}-content" data-reveal-id="{{ this_page_id }}-content" data-reveal-ajax="{{ this_page.url }}">
+        {% if this_page.thumbnail and this_page.client %}
+          <img src="{{ this_assets_path }}{{ this_page.thumbnail }}" width="128" height="128">
+        {% else %}
+          <i class="fi-folder icon-thumbnail"></i>
+        {% endif %}
+      </a>
+    </aside>
+    <section class="timeline-content {{ item_description_class }} columns">
+      <header>
+        <time class="date" datetime="{{ this_page.date | date: '%F' }}">{{ this_page.date | date: '%b, %Y' }}</time> 
+        &nbsp;&nbsp;
+        <address class="client inline"><a href="{{ this_client_page.url }}" title="All projects for {{ this_client_page.title }}">{{ this_client_page.title }}</a></address>
+        <h4><a href="#{{ this_page_id }}-content" data-reveal-id="{{ this_page_id }}-content" data-reveal-ajax="{{ this_page.url }}">{{ this_page.title }}</a></h4>
+        {% if this_client_page %}
+        {% endif %}
+      </header>
+      {% if this_page.excerpt %}{{ this_page.excerpt }}{% endif %}
+      <ul class="tags button-group">
+      {% for item_tag in this_page.tags %}
+        <li><a  class="button tiny radius" href="#{{ item_tag }}">{{ item_tag }}</a></li> 
+      {% endfor %}
+      </ul>
+    </section>
+    <section id="{{ this_page_id }}-content" class="reveal-modal" data-reveal>
+      <a href="/load?content={{ this_page.url | url_param_escape }}" data-reveal-id="{{ this_page_id }}-content" data-reveal-ajax="{{ this_page.url }}">Read More</a>
+    </section>
+  </article>
+  </div>
+
+  {% assign last_item_year = item_year %}
+
+{% endif %}
+{% endif %}
+{% endfor %}
+
+
+  <span class="line hide-for-small"></span>
+</div>
+
+

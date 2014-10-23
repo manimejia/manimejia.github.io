@@ -1,0 +1,34 @@
+{% unless this_page %}{% assign this_page = page %}{% endunless %}
+
+{% assign this_page_filename = this_page.name | replace: ".md", ".html" %}
+{% assign this_page_basepath = this_page.url | remove: this_page_filename %}
+
+{% if this_page.assetpath_is_relative_to_siteroot %}
+  {% assign this_page_assetpath = site.url | append: "/" | append: this_page.assetpath %}
+{% else %}
+  {% assign this_page_assetpath = this_page_basepath | append: this_page.assetpath %}
+{% endif %}
+
+
+{% assign this_page_id = "" %}
+{% if this_page.category == 'project' %}
+	{% assign this_page_id = this_page.client | append: "-" %}
+{% endif %}
+{% assign this_page_id = this_page_id | append: this_page.name | remove: ".md" %}
+
+
+{% if this_page.client %}
+	{% for site_page in site.pages %}
+		{% if site_page.category == 'client' and site_page.client == this_page.client %}
+			{% assign  this_client_page = site_page %}
+		{% endif %}
+	{% endfor %}
+{% endif %}
+
+{% if this_page.assets %}
+  {% capture this_page_md_footer %}
+   {% for asset in this_page.assets %}
+   [ASSET{{forloop.index}}]: {{this_page_assetpath}}{{asset.filename}} "{{asset.caption}}"
+   {% endfor %}
+  {% endcapture %}
+{% endif %}

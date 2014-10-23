@@ -1,0 +1,132 @@
+---
+category: season
+title: Mani Can Fly
+date: 2014-04-18
+season: Spring 2014
+---
+<!-- Spring 2014 Splash Page - ManiCanFly 
+
+color palette:
+http://paletton.com/#uid=33z0r0kVCZWgGWwsGY+YsufUshz
+
+-->
+<style>
+body{
+  background-color:#222;
+  color:#FFF;
+}
+#season-wrapper{
+  max-width:1140px; 
+  margin:0 auto;
+  position:relative;
+  background-position: 50% 100%;
+  background-color: #0386FC;
+  background-image: url(/theme/hype/ManiCanFly-web.hyperesources/ManiCanFly-bg.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#season-wrapper #services{
+  background-color: rgba(2,2,2,0.5);
+}
+#season-wrapper #portfolio h2{
+  color: #222;
+}
+#season-wrapper > section {
+	margin-bottom:5em;
+}
+#season-splash{
+  margin:0 auto; 
+  color:#222;
+  height:700px;
+  width:100%;
+  overflow:hidden;
+}
+#manicanflyweb_hype_container{
+  position:relative;
+  width:100%;
+  height:550px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+#manicanflyweb-memetext{
+  font-weight: bold;
+  font-size: 3em;
+  font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream   Vera Sans Bold", "Arial Black", sans serif;
+  color: #222;
+  text-shadow: #FFF 0 0 .1em, #FFF 0 0 2em;
+  width: 100%;
+  margin: 0px auto 20px;
+  position: absolute;
+  top: 500px;
+}
+
+
+
+#season-wrapper{
+    -skrollr-animation-name: background-zoomin-bottom;
+}
+#season-wrapper #season-splash #manicanflyweb_hype_container{
+    -skrollr-animation-name: content-zoomin-top;
+}
+#season-wrapper #season-splash #manicanflyweb-memetext{
+    -skrollr-animation-name: content-fadeout-bottom;
+}
+.skrollr-perspectivezoom-bottom{
+	-skrollr-animation-name: content-perspectivezoom-bottom
+}
+.skrollr-perspectivezoom-em-bottom{
+  -skrollr-animation-name: content-perspectivezoom-em-bottom
+}
+
+@-skrollr-keyframes background-zoomin-bottom{
+    top-top {
+        background-size: 100%; background-position: 50% 100%;
+    }	
+    top-bottom {
+        background-size: 200%; background-position: 50% 0%;
+    }
+}
+@-skrollr-keyframes content-zoomin-top {
+    top-bottom {
+        transform: scale(1.5); top:100px;
+    }
+    top-top {
+        transform: scale(1); top:0px;
+    }
+
+}
+@-skrollr-keyframes content-fadeout-bottom {
+    center-bottom {
+        opacity: 0;
+    }
+    center-top {
+        opacity: 1;
+    }
+}
+
+@-skrollr-keyframes content-perspectivezoom-bottom {
+    center-top {
+        transform: scale(1);
+    }
+    bottom-top {
+        transform: scale(.1);
+    }
+
+}
+@-skrollr-keyframes content-perspectivezoom-em-bottom {
+    center-top {
+        font-size:1rem;
+    }
+    bottom-top {
+        font-size:.1rem;
+    }
+
+}
+</style>
+<figure id="season-splash" aria-hidden>
+  <div id="manicanflyweb_hype_container" class="hype-container">
+    <script type="text/javascript" charset="utf-8" src="/theme/hype/ManiCanFly-web.hyperesources/manicanflyweb_hype_generated_script.js?80223"></script>
+  </div>
+  <figcaption id="manicanflyweb-memetext" class="text-center">HAS FAITH ... WILL FLY SOMEDAY</figcaption>  
+</figure>
+

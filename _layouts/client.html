@@ -1,0 +1,17 @@
+---
+layout: default
+---
+{% assign client = page %}
+<p><a href="{{ client.website }}">{{ client.website }}</a></p>
+<p>{{ client.description }}</p>
+
+<h3>Projects</h3>
+<ul>
+{% for p in site.pages %}
+  {% if p.category == 'project' %}
+  	{% if p.client == client.client %}
+	  <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>

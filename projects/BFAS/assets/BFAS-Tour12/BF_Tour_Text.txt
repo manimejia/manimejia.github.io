@@ -1,0 +1,204 @@
+
+This document holds the text content of the BFAS Flash Tour version 13.1 and must be located in the same folder as the SWF files associated with the tour.
+
+********** USE CAUTION WHEN UPDATING ***********
+This Is a Plain Text Document and has a sensitive syntax.
+
+****** FOLLOWING ARE INSTRUCTIONS FOR USE *******
+
+This document holds the text value of text variables used in the tour.
+These variables are used to update the TEXT BOXES and TITLE BOXES throughout the tour.
+Each variable starts with the symbol "&" and ends with the symbol "=".
+Each variable is followed by it's value (after the "=" symbol).
+Every "&" symbol is the beginning of a variable's name and continues till the next "=" symbol (carrage returns and all).
+Every "=" symbol is the beginning of a variable's value and continues till the next "&" symbol (carrage returns and all).
+When altering a variable's value don't start with a space character unless you want the displayed text to be indented.
+You can ADD variables to the list BUT DO NOT ALTER VARIABLE NAMES OR THE TWO SYMBOLS SURROUNDING THEM unless you want to remove them from the tour.
+
+Each variable is one of a pair. (title or text)
+The pairs display a Title for the active item and the Text that describes it.
+To find a Title or Text entry that you want to change search for the title of the item as it is shown in the Title box of the running tour. (For instance, if you want to change the Title or Text for the Welcome Center you would search for "Welcome Center")
+
+There is a patern for creating these variable names.
+Each variable name starts with the name of the swf file that it relates to, if it does.
+The suffix attatched is either "_title" or "_text" to discribe the role it's value will play.
+(For example the file that loads for the Welcome Center Panorama is called "BFM_pano_Welcome.swf" and the Title associated with it can be found on this document at "BFM_pano_Welcome_title" and it's description can be found on this document at "BFM_pano_Welcome_text")
+
+Each group bellow is preceded by a line or two in *asterisks* and ALL CAPS.
+These are not variables used in the tour, only navigation aids for this document.
+
+***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****
+***** FOLLOWING ARE THE TEXT VARIABLES USED IN THE TOUR *****
+
+&
+***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****
+****** ***** TITLES AND DESCRIPTIONS DISPALYED FOR EACH MAP ***** ******
+&BFM_map_title=BestFriends
+&BFM_map_text=Best Friends is the largest animal sanctuary in the nation. Working with shelters, humane groups and individuals all over the country, our mission is to bring about a time when all healthy, adoptable pets will find homes with caring people and there will be No More Homeless Pets.
+&BNY_map_title=Bunny House Area
+&BNY_map_text=Over 200 bunnies call the Bunny House home. After you visit the Bunny House, you can stroll over to Angel Village for lunch and enjoy spectacular views of Angel Canyon and the White Cliffs beyond.
+&DTA_map_title=Dogtown
+&DTA_map_text=On any given day, you’ll find around 650 dogs at Best Friends Dogtown and its suburb, Dogtown Heights (a “Gated” Community!). On your next visit to Dogtown, we hope you’ll take a dog (or two, or three, or four) for a walk in our new dog park.
+&FFN_map_title=Wild Friends
+&FFN_map_text=Wild and Feathered Friends is the bird and wildlife department at Best Friends. Each year we care for approximately 350 birds and assorted other wild creatures. From this map you can visit some of the aviaries and habitats at Feathered Friends and view panoramas of the area.
+&HHQ_map_title=Horse Haven
+&HHQ_map_text=Daily activities at Horse Haven HQ include feeding, training, bathing, and exercising the 25-30 horses and burros who live here. 
+&KTV_map_title=Kittyville
+&KTV_map_text=At Kittyville, we look after some 600 cats on any given day. Most cats that come to Best Friends can be adopted, but those who can’t will live out their days here at the sanctuary. From this map you can visit several cat areas and take in panoramic views from Kittyville.
+&VST_map_title=How To Get Here
+&VST_map_text=&Best Friends Animal Sanctuary is located in Angel Canyon, just a few miles outside Kanab, Utah, in the heart of the Golden Circle. The Grand Canyon, Zion, Bryce and Lake Powell are all a short drive away. For more information on traveling to Best Friends, look for "Visitor Information" on our web site.
+&
+***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****
+****** TITLES AND DESCRIPTIONS DISPALYED FOR BEST FRIENDS MAP BUILDINGS ******
+&BFM_bldg_wtc_title=Welcome Center
+&BFM_bldg_wtc_text=Our Welcome Center is open every day to receive visitors, and there are several tours of the sanctuary each day. Last year, more than 20,000 people visited the sanctuary.
+&
+****** TITLES AND DESCRIPTIONS DISPALYED FOR BEST FRIENDS MAP PANORAMAS ******
+&BFM_pano_Welcome_title=Welcome Center Garden&BFM_pano_Welcome_text=&BFM_pano_trail_title=&BFM_pano_Trail_text=&BFM_pano_Rest_title= Angel's Rest&BFM_pano_Rest_text=&BFM_pano_Landing_title=Angel's Landing&BFM_pano_Landing_text=&BFM_pano_Cliffs_title=The White Cliffs&BFM_pano_Cliffs_text=&BFM_pano_Canyon_title=Across Angel Canyon&BFM_pano_Canyon_text=
+&
+****** TITLES AND DESCRIPTIONS DISPALYED FOR BEST FRIENDS MAP MOVIES ******
+&BFM_movie_Windchimes_title=&BFM_movie_Windchimes_text=&BFM_movie_Volunt_title=&BFM_movie_Volunt_text=&BFM_movie_Tour_title=The Visitor's Tour&BFM_movie_Tour_text=&BFM_movie_MobAdopt_title=&BFM_movie_MobAdopt_text=&BFM_movie_Adopt_title=&BFM_movie_Adopt_text=
+&
+****** TITLES AND DESCRIPTIONS DISPALYED FOR BEST FRIENDS MAP PHOTOS ******
+&BFM_photo_WishingSign_text=&BFM_photo_WcEnter_title=&BFM_photo_WcEnter_text=&BFM_photo_StaffMichael_title=
+&BFM_photo_StaffMichael_text=&BFM_photo_StaffFrancis_title=&BFM_photo_StaffFrancis_text=&BFM_photo_StaffFaith_title=&BFM_photo_StaffFaith_text=&BFM_photo_PetRock_title=&BFM_photo_PetRock_text=&BFM_photo_Muffin_title=The Welcome Team&BFM_photo_Muffin_text=&BFM_photo_Gift_title=Gift Shop and Tour Signup&BFM_photo_Gift_text=&BFM_photo_Fish_title=Visiting The Goldfish&BFM_photo_Fish_text=&BFM_photo_Cliffs2_title=&BFM_photo_Cliffs2_text=&BFM_photo_Cliffs_title=&BFM_photo_Cliffs_text=&BFM_photo_arsWall_title=&BFM_photo_arsWall_text=&BFM_photo_arsVisit2_title=&BFM_photo_arsVisit2_text=&BFM_photo_arsVisit1_title=&BFM_photo_arsVisit1_text=&BFM_photo_arsTomato_title=&BFM_photo_arsTomato_text=&BFM_photo_arsSign_title=&BFM_photo_arsSign_text=&BFM_photo_arsHobbes_title=&BFM_photo_arsHobbes_text=&BFM_photo_arsGazebo_title=&BFM_photo_arsGazebo_text=&BFM_photo_arsGate_title=&BFM_photo_arsGate_text=&BFM_photo_arsFount_title=&BFM_photo_arsFount_text=&BFM_photo_arsBenton_title=&BFM_photo_arsBenton_text=&BFM_photo_aldMonks_title=&BFM_photo_aldMonks_text=&BFM_photo_aldKids2_title=&BFM_photo_aldKids2_text=&BFM_photo_aldKids1_title=
+&BFM_photo_aldKids1_text=
+&
+***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****
+****** TITLES AND DESCRIPTIONS DISPALYED FOR BUNNY HOUSE AREA BUILDINGS ******
+&BNY_bldg_Village_title=Angel Village
+&BNY_bldg_Village_text=From the deck off the cafeteria in Angel Village you’ll find breathtaking views of Angel Canyon. Lunch is prepared daily for staff and visitors here. Angel Village houses administrative offices, the magazine office, and the volunteer center. Move your mouse around on this map and visit the Bunny House, drop by the cafeteria for lunch, visit Molly the Potbellied Pig, or simply take in the view.
+&BNY_bldg_House_title=Bunny Houses
+&BNY_bldg_House_text=The bunnies here love to dig in the ground and make tunnels, so underground fences keep them from digging out. The Bunny House began with a call from a woman who had taken in three rabbits. One year later, she had 167 rabbits. The woman didn’t know about spaying and neutering! Rabbits make excellent pets and can be “house”-trained to use a litter box.
+&
+****** TITLES AND DESCRIPTIONS DISPALYED FOR BUNNY HOUSE AREA PANORAMAS ******
+&BNY_pano_PkLot_title=&BNY_pano_PkLot_text=&BNY_pano_Lunch_title=&BNY_pano_Lunch_text=&BNY_pano_Deck_title=&BNY_pano_Deck_text=&BNY_pano_Complex_title=&BNY_pano_Complex_text=
+&
+****** TITLES AND DESCRIPTIONS DISPALYED FOR BUNNY HOUSE AREA MOVIES ******
+&BNY_movie_Molly_title=&BNY_movie_Molly_text=&BNY_movie_Bunnies_title=&BNY_movie_Bunnies_text=
+&
+****** TITLES AND DESCRIPTIONS DISPALYED FOR BUNNY HOUSE AREA PHOTOS ******
+&BNY_photo_VillageEnter_title=&BNY_photo_VillageEnter_text=&BNY_photo_Director_title=&BNY_photo_Director_text=&BNY_photo_Cave_title=&BNY_photo_Cave_text=&BNY_photo_BunnyEnter_title=&BNY_photo_BunnyEnter_text=&BNY_photo_Bunny02_title=&BNY_photo_Bunny02_text=&BNY_photo_Bunny01_title=
+&BNY_photo_Bunny01_text=
+&
+***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****
+****** TITLES AND DESCRIPTIONS DISPALYED FOR DOG TOWN MAP BUILDINGS ******
+&DTA_bldg_Old_title=Old Friends
+&DTA_bldg_Old_text=Old Friends is our retirement home for older dogs. Each of the specially designed octagon buildings has indoor rooms and outdoor play areas, heating, cooling, and even noise dampening. (That’s an addition the dogs may not appreciate, but the staff sure do at feeding time!)
+&DTA_bldg_Club_title=The Clubhouse
+&DTA_bldg_Club_text=The Clubhouse buildings are named Amra and Rhonda, after two of the original dogs in Dogtown. Amra was a 150-pound malamute who became known as the “Sheriff of Dogtown.” Rhonda, a little terrier mix, fell in love with Amra and was his constant companion for many years. All the dogs at the Clubhouse are “family-friendly” dogs that are ready to go to good new homes.
+&DTA_bldg_Heights_title=Dog Town Heights
+&DTA_bldg_Heights_text=Before Dogtown Heights was built, we had an area near the Best Friends Clinic known as “The Garden”. It was where folks thinking of adopting could go to meet and play with “friendly family dogs”. The “garden” group of dogs has now moved to Dogtown Heights and is happily playing around in their new “garden”. The Garden buildings are named after two of Dogtown’s original residents. Jethro, the Mayor of Dogtown and Ginger, an old Chesapeake Bay retriever who collected all the tennis balls throughout Dogtown, and hid them under “the federal reserve tree”.
+&DTA_bldg_Clinic_title=The Clinic
+&DTA_bldg_Clinic_title=The Clinic is a fully equipped veterinary hospital. Our chief veterinarian and her able assistants take care of dogs, cats, bunnies, birds, horses and all the other creatures here at the sanctuary. As well as caring for the sanctuary animals, we provide a low-cost spay/neuter and shot clinic for the public.
+&DTA_bldg_Tara_title=Tara's Run
+&DTA_bldg_Tara_text=Tara’s Run (named for the beloved pet of the members who donated it) is the dog training arena at Dogtown. We often know very little about a dog’s behavior when he or she first comes to Best Friends. Working with them in Tara’s Run helps us to know the dogs better and helps them to get ready for a new home. (And, yes, you CAN teach old dogs new tricks!)
+&DTA_bldg_Octagon_title=Dogtown Octagons
+&DTA_bldg_Octagon_text=These eight-sided buildings are great for housing groups of dogs. Each building has five or six dog rooms, with each room dedicated to a group of four to seven dogs; a kitchen; and washing and grooming facilities. Each dog room connects to an outside play area, where the dogs can romp with their pals and race their neighbors along the fence.
+&DTA_bldg_New_title=New Friends
+&DTA_bldg_New_text=At New Friends, we care for puppies and expectant mothers who come to Best Friends. All puppies are checked by our vet, get all their shots, and receive loving care here until they are old enough to be spayed or neutered and then placed into good homes.
+&
+****** TITLES AND DESCRIPTIONS DISPALYED FOR DOG TOWN MAP PANORAMAS ******
+&DTA_pano_Tara_title=&DTA_pano_Tara_text=&DTA_pano_OldRun_title=&DTA_pano_OldRun_text=&DTA_pano_OldFriends_title=
+&DTA_pano_OldFriends_text=&DTA_pano_GardenRoof_title=&DTA_pano_GardenRoof_text=&DTA_pano_Dulce_title=&DTA_pano_Dulce_text=&DTA_pano_DogTowRoof_title=&DTA_pano_DogTowRoof_text=&DTA_pano_ClubHouse_title=
+&DTA_pano_ClubHouse_text=&DTA_pano_ClubFront_title=&DTA_pano_ClubFront_text=&DTA_pano_ClinicSurg_title=&DTA_pano_ClinicSurg_text=&DTA_pano_ClinicPkLot_title=&DTA_pano_ClinicPkLot_text=&DTA_pano_ClinicLobby_title=&DTA_pano_ClinicLobby_text=
+&
+****** TITLES AND DESCRIPTIONS DISPALYED FOR DOG TOWN MAP MOVIES ******
+&DTA_movie_Tyson_title=
+&DTA_movie_Tyson_text=
+&DTA_movie_Training_title=&DTA_movie_Training_text=&DTA_movie_Puppies_title=&DTA_movie_Puppies_text=&DTA_movie_Orson_title=&DTA_movie_Orson_text=&DTA_movie_Octaine_title=&DTA_movie_Octaine_text=
+&DTA_movie_Neighborhood_title=&DTA_movie_Neighborhood_text=&DTA_movie_Monty_title=
+&DTA_movie_Monty_text=
+&DTA_movie_Luthor_title=&DTA_movie_Luthor_text=&DTA_movie_Leroy_title=&DTA_movie_Leroy_text=&DTA_movie_Goliath_title=&DTA_movie_Goliath_text=&DTA_movie_Feeding_title=&DTA_movie_Feeding_text=&DTA_movie_Coyotes_title=&DTA_movie_Coyotes_text=&DTA_movie_Ace_title=&DTA_movie_Ace_text=
+&
+****** TITLES AND DESCRIPTIONS DISPALYED FOR DOG TOWN MAP PHOTOS ******
+&DTA_photo_WalkRoof02_title=&DTA_photo_WalkRoof02_text=&DTA_photo_Sweep_title=&DTA_photo_Sweep_text=&DTA_photo_StaffVet_title=&DTA_photo_StaffVet_text=&DTA_photo_StaffJudah_title=&DTA_photo_StaffJudah_text=&DTA_photo_StaffDirector_title=&DTA_photo_StaffDirector_text=&DTA_photo_StaffAdopt_title=&DTA_photo_StaffAdopt_text=&DTA_photo_OldRunDogs03_title=&DTA_photo_OldRunDogs03_text=&DTA_photo_OldRunDogs02_title=&DTA_photo_OldRunDogs02_text=&DTA_photo_OldRunDogs_title=&DTA_photo_OldRunDogs_text=&DTA_photo_OldKiss_title=&DTA_photo_OldKiss_text=&DTA_photo_DulcePet_title=&DTA_photo_DulcePet_text=&DTA_photo_DogWalkRoof01_title=&DTA_photo_DogWalkRoof01_text=&DTA_photo_DogWalk03_title=&DTA_photo_DogWalk03_text=&DTA_photo_DogWalk02_title=&DTA_photo_DogWalk02_text=&DTA_photo_DogWalk01_title=
+&DTA_photo_DogWalk01_text=
+&DTA_photo_DogTag_title=
+&DTA_photo_DogTag_text=
+&DTA_photo_DogHang05_title=&DTA_photo_DogHang05_text=&DTA_photo_DogHang04_title=&DTA_photo_DogHang04_text=&DTA_photo_DogHang03_title=&DTA_photo_DogHang03_text=&DTA_photo_DogHang02_title=&DTA_photo_DogHang02_text=&DTA_photo_DogHang01_title=
+&DTA_photo_DogHang01_text=&DTA_photo_DogFace_title=&DTA_photo_DogFace_text=&DTA_photo_Doctor_title=&DTA_photo_Doctor_text=&DTA_photo_ClubKiss_title=&DTA_photo_ClubKiss_text=&DTA_photo_ClubBench_title=&DTA_photo_ClubBench_text=&DTA_photo_ClinicTreats_title=&DTA_photo_ClinicTreats_text=&DTA_photo_ClinicFront_title=
+&DTA_photo_ClinicFront_text=
+&
+***** ***** ***** ***** ***** ***** ********** ***** ***** ***** ***** *****
+****** TITLES AND DESCRIPTIONS DISPALYED FOR WILD FRIENDS MAP BUILDINGS ******
+&FFN_bldg_Headq_title=Wild Friends HQ
+&FFN_bldg_Headq_text=Wild birds that can’t be released back to the wild often receive permits to be educational birds. They visit schools and take part in other activities to teach people the importance of protecting wildlife and their natural habitat. We also care for and find new homes for rescued domestic birds that were once neglected or mistreated.
+&FFN_bldg_Domestic_title=Domestic Aviaries
+&FFN_bldg_Domestic_text=Some birds, like parrots, live indoors and spend time with people. Others live outside in specially designed aviaries. At Feathered Friends, you’ll hear a lot of conversation, from the calls of peacocks and geese, to the gentle cooing of doves and pigeons, to the early morning proclamations of Charlie the Rooster.
+&FFN_bldg_Wild_title=Wildlife Rehab Area
+&FFN_bldg_Wild_text=Here we care for injured or orphaned wildlife until they are well enough to be released. Our program is state and federally licensed and primarily cares for songbirds, birds of prey, and small mammals. After receiving treatment for injuries, hawks and owls are moved to a large aviary to practice flying again. A separate aviary helps songbirds prepare for release.
+&
+****** WILD FRIENDS MAP PANORAMAS ******
+&FFN_pano_Front_title=&FFN_pano_Front_text=&FFN_pano_Center_title=
+&FFN_pano_Center_text=
+&
+****** TITLES AND DESCRIPTIONS DISPALYED FOR WILD FRIENDS MAP MOVIES ******
+&FFN_movie_Wild_title=&FFN_movie_Wild_text=&FFN_movie_Rooster_title=&FFN_movie_Rooster_text=&FFN_movie_Ravens_title=&FFN_movie_Ravens_text=&FFN_movie_Owl_title=&FFN_movie_Owl_text=&FFN_movie_Mink_title=&FFN_movie_Mink_text=&FFN_movie_Crow_title=
+&FFN_movie_Crow_text=
+&
+****** TITLES AND DESCRIPTIONS DISPALYED FOR WILD FRIENDS MAP PHOTOS ******
+&FFN_photo_Talk_text=&FFN_photo_Talk_text=&FFN_photo_StaffSharon_text=&FFN_photo_StaffSharon_text=&FFN_photo_Pigeon_text=&FFN_photo_Pigeon_text=&FFN_photo_Misty_text=&FFN_photo_Misty_text=&FFN_photo_Goose_text=&FFN_photo_Goose_text=&FFN_photo_Dexter_text=&FFN_photo_Dexter_text=&FFN_photo_Baby_text=
+&FFN_photo_Baby_text=
+&
+***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****
+****** TITLES AND DESCRIPTIONS DISPALYED FOR HORSE HAVEN MAP BUILDINGS ******
+&HHQ_hhq_title=Horse Haven HQ
+&HHQ_hhq_text=From the Welcome Center you can watch the daily activities at Horse Haven HQ, where staff and volunteers handle feeding, training, bathing, and exercising the 25-30 horses and burros that live here. Some horses need special care, such as hoof treatments, and there are always new horses arriving or being adopted. Horse Haven is a favorite with volunteers who, along with the horses, enjoy the view from pastures along Angel Canyon Creek.
+&HHQ_cab_title=Angel Canyon Cottages
+&HHQ_cab_text=On your next visit to Best Friends, plan to stay at one of the four Angel Canyon Cottages, located right on the sanctuary. You’ll have all the comforts of home and a great view as well. Make your reservations early, as the cottages fill up fast during the spring and summer!
+&
+****** TITLES AND DESCRIPTIONS DISPALYED FOR HORSE HAVEN MAP PANORAMAS ******
+&HHQ_pano_Pasture_title=&HHQ_pano_Pasture_text=&HHQ_pano_HorseHQ_title=&HHQ_pano_HorseHQ_text=&HHQ_pano_Dysney_title=
+&HHQ_pano_Dysney_text=
+&
+****** TITLES AND DESCRIPTIONS DISPALYED FOR HORSE HAVEN MAP MOVIES ******
+&HHQ_movie_Training_title=&HHQ_movie_Training_text=&HHQ_movie_TajRed_title=&HHQ_movie_TajRed_text=&HHQ_movie_Scoop_title=&HHQ_movie_Scoop_text=&HHQ_movie_Goats_title=&HHQ_movie_Goats_text=&HHQ_movie_Feeding_title=&HHQ_movie_Feeding_text=&HHQ_movie_Burros_title=&HHQ_movie_Burros_text=
+&
+****** TITLES AND DESCRIPTIONS DISPALYED FOR HORSE HAVEN MAP PHOTOS ******
+&HHQ_photo_StaffHorse_title=&HHQ_photo_StaffHorse_text=&HHQ_photo_HorseVet_title=&HHQ_photo_HorseVet_text=&HHQ_photo_Frankie_title=&HHQ_photo_Frankie_text=&HHQ_photo_Dee_title=&HHQ_photo_Dee_text=&HHQ_photo_Cabins_title=&HHQ_photo_Cabins_text=&HHQ_photo_Burro_title=&HHQ_photo_Burro_text=&HHQ_photo_Bridge_title=
+&HHQ_photo_Bridge_text=
+&
+***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****
+****** TITLES AND DESCRIPTIONS DISPALYED FOR KITTYVILLE MAP BUILDINGS ******
+&KTV_bldg_CatHQ_title=Cat Headquarters
+&KTV_bldg_CatHQ_text=Cat HQ is presided over by Baby Bonkers, who likes hanging out in the coffee cupboard or on the office computer, where we keep all the cat records.
+&KTV_bldg_Morgain_title=Morgain's Place
+&KTV_bldg_Morgain_text=Our cat Adoption Center is named after a favorite kitty who belonged to the members who donated this building. Cats and kittens who don’t have any special health or behavior needs, and who are ready for immediate adoption, live in Morgaine’s Place.
+&KTV_bldg_Benton_title=Benton's House
+&KTV_bldg_Benton_text=Benton’s House, a.k.a. TLC Cat Clubhouse, is home to our special needs cats. Benton’s House was named for a cat that came to Best Friends after being abandoned and hit by a car. Benton had a clubbed foot and some other difficulties, but he got around just fine and let all the other cats know that he was the boss! Thanks to our members, Benton and other cats with special needs now have their own special home.
+&KTV_bldg_WildCat_title=Wildcat's Village
+&KTV_bldg_WildCat_text=If you prefer barns and back alleys over beds and china bowls, you’ll find lots of friends here in the WildCats Village. Four state-of-the-art cat buildings were designed especially for feral cats, who aren’t used to being around people. Rafters and cubbyholes provide lots of good hiding places. (But the way toys and food are scattered around when we go in to clean each morning, you can see the cats have been out and about, partying all night!)
+&KTV_bldg_Landing_title=Happy Landing's
+&KTV_bldg_Landing_text=All new kitty arrivals need to be “OK’d” by our vets before they can mix with the other cats. For many, this is their first visit to a doctor. Once they get a clean bill of health, it’s on to Kittyville or, even better, to a good new home!
+&KTV_bldg_Motel_title=Kitty Motel
+&KTV_bldg_Motel_text=Like Benton’s House, the Kitty Motel was built with special features to accommodate cats with extra-special needs – cats that may not want to climb too high, can’t negotiate steps, or can’t always make it to the litter box. There are special suites at the Kitty Motel, including “Feline Leukemia Room” and the renowned “Incontinental Suite”.
+&
+****** TITLES AND DESCRIPTIONS DISPALYED FOR KITTYVILLE MAP PANORAMAS ******
+&KTV_pano_Tomato_title=&KTV_pano_Tomato_text=&KTV_pano_OutWildCat_title=&KTV_pano_OutWildCat_text=&KTV_pano_OutEntrance_title=&KTV_pano_OutEntrance_text=&KTV_pano_OutCenter_title=&KTV_pano_OutCenter_text=&KTV_pano_Oscar_title=&KTV_pano_Oscar_text=&KTV_pano_MotelLobby_title=&KTV_pano_MotelLobby_text=&KTV_pano_MotelFeLuke_title=
+&KTV_pano_MotelFeLuke_text=
+&KTV_pano_Morgain_title=&KTV_pano_Morgain_text=&KTV_pano_Colonel_title=&KTV_pano_Colonel_text=&KTV_pano_Benton_title=&KTV_pano_Benton_text=&KTV_pano_Adoptable_title=
+&KTV_pano_Adoptable_text=
+&
+****** TITLES AND DESCRIPTIONS DISPALYED FOR KITTYVILLE MAP MOVIES ******
+&KTV_movie_Weebles_text=&KTV_movie_Sinjin_title=&KTV_movie_Sinjin_text=&KTV_movie_Sammy_title=&KTV_movie_Sammy_text=&KTV_movie_Rafter_title=&KTV_movie_Rafter_text=&KTV_movie_Pokey_title=&KTV_movie_Pokey_text=&KTV_movie_Oscar_title=&KTV_movie_Oscar_text=&KTV_movie_liza_title=&KTV_movie_liza_text=&KTV_movie_Kittens_title=&KTV_movie_Kittens_text=&KTV_movie_Kermit_title=&KTV_movie_Kermit_text=&KTV_movie_Heidi_title=&KTV_movie_Heidi_text=&KTV_movie_Feeding_title=&KTV_movie_Feeding_text=&KTV_movie_Daiquiri_title=&KTV_movie_Daiquiri_text=&KTV_movie_Colonel_title=&KTV_movie_Colonel_text=&KTV_movie_Cassie_title=
+&KTV_movie_Cassie_text=
+&
+****** TITLES AND DESCRIPTIONS DISPALYED FOR KITTYVILLE MAP PHOTOS ******
+&KTV_photo_OscarRafter_title=&KTV_photo_OscarRafter_text=&KTV_photo_OscarHeidi_title=&KTV_photo_OscarHeidi_text=&KTV_photo_MorChair_title=&KTV_photo_MorChair_text=&KTV_photo_MorCatTree_title=&KTV_photo_MorCatTree_text=&KTV_photo_MorCatBoxes_title=&KTV_photo_MorCatBoxes_text=&KTV_photo_KmoPumkin_title=&KTV_photo_KmoPumkin_text=&KTV_photo_KmoFoodCans_title=&KTV_photo_KmoFoodCans_text=&KTV_photo_KmoClean01_title=&KTV_photo_KmoClean01_text=&KTV_photo_KmoCatTree_title=&KTV_photo_KmoCatTree_text=&KTV_photo_KmoCatFloor_title=&KTV_photo_KmoCatFloor_text=&KTV_photo_KmoBobby_title=&KTV_photo_KmoBobby_text=&KTV_photo_KittyBox_title=&KTV_photo_KittyBox_text=&KTV_photo_KittenPet_title=&KTV_photo_KittenPet_text=&KTV_photo_Daiquiri_title=&KTV_photo_Daiquiri_text=&KTV_photo_ColonelUpStairs_title=&KTV_photo_ColonelUpStairs_text=&KTV_photo_ColonelSideCat_title=&KTV_photo_ColonelSideCat_text=&KTV_photo_ColonelLounge_title=&KTV_photo_ColonelLounge_text=&KTV_photo_CatInPhoto_title=&KTV_photo_CatInPhoto_text=&KTV_photo_BentPet02_title=&KTV_photo_BentPet02_text=&KTV_photo_BentPet01_title=
+&KTV_photo_BentPet01_text=&KTV_photo_BentBijou_title=
+&KTV_photo_BentBijou_text=
+&KTV_photo_OutBoxTouch_title=
+&KTV_photo_OutBoxTouch_text=
+&KTV_photo_OutBentSign_title=
+&KTV_photo_OutBentSign_text=
+&KTV_photo_OscarWindow_title=
+&KTV_photo_OscarWindow_text=
+&KTV_photo_OscarSocial_title=
+&KTV_photo_OscarSocial_text=&KTV_photo_TomatoAward_title=&KTV_photo_TomatoAward_text=&KTV_photo_StaffVivian_title=&KTV_photo_StaffVivian_text=&KTV_photo_Weebles_title=&KTV_photo_Weebles_text=&KTV_photo_TomatoShade_title=&KTV_photo_TomatoShade_text=&KTV_photo_TomatoBasket_title=&KTV_photo_TomatoBasket_text=&KTV_photo_StaffCatAdopt_title=
+&KTV_photo_StaffCatAdopt_text=
+&
+***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****
+&EOF=true
+
+

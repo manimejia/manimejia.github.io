@@ -1,0 +1,95 @@
+---
+layout: default
+---
+{% assign this_page = page %}
+{% include _this_page.liquid %}
+<article class="row">
+  <header class="column">
+      <h3 class="title left" tabindex="0">
+          <small class="client-title">{{ this_client_page.title }}</small><br/>
+          <span class="page-title">{{ page.title }}</span> 
+      </h3>
+      <nav class="text-right">
+        <a data-accordion-close title="return to portfolio" href="{{site.url}}#{{this_page_id}}"><i class="fi-x font-larger"></i></a>
+      </nav>
+      <asside>
+          {% if page.date %}<time>{{ page.date | date: "%b %-d, %Y" }}</time><br/>{% endif %}
+          {% if page.role %}<strong>{{ page.role }}</strong><br/>{% endif %}
+          {% if page.status %}<strong>{{ page.status }}</strong>{% endif %}
+          {% if page.website %}
+            <a href="{{page.website}}" target="_blank" tabindex="0" aria-selected="false" title="go to website"><i class="fi-link"></i> website</a>
+          {% endif %}
+      </asside>
+  </header>
+  <div class="column">
+  <ul class="tabs vertical" data-tab role="tablist">
+    {% if page.tasks %}
+    <li class="tab-title active" role="presentational" >
+      <a href="#{{this_page_id}}-tasks" role="tab" tabindex="0" aria-selected="true" controls="{{this_page_id}}-excerpt">
+      <i class="fi-list-thumbnails font-xlarger"></i> Tasks</a>
+    </li>
+    {% endif %}
+    {% if page.content %}
+    <li class="tab-title" role="presentational" >
+      <a href="#{{this_page_id}}-story" role="tab" tabindex="0" aria-selected="false" controls="{{this_page_id}}-body">
+      <i class="fi-align-justify font-xlarger"></i>Full Story</a>
+    </li>
+    {% endif %}
+    {% if page.assets %}
+    <li class="tab-title" role="presentational" >
+      <a href="#{{this_page_id}}-assets" role="tab" tabindex="0" aria-selected="false" controls="  {{this_page_id}}-assets">
+      <i class="fi-monitor font-xlarger"></i> Screenshots</a>
+    </li>
+    {% endif %}
+    {% if page.tags %}
+    <li class="tab-title" role="presentational" >
+      <a href="#{{this_page_id}}-tags" role="tab" tabindex="0" aria-selected="false" controls="  {{this_page_id}}-tags">
+      <i class="fi-pricetag-multiple font-xlarger"></i> Tags</a>
+    </li>
+    {% endif %}
+  </ul>
+  <div class="tabs-content vertical" data-equalizer>
+      {% if page.tasks %}
+      <section id="{{this_page_id}}-tasks" class="content active" role="tabpanel" aria-hidden="false" data-equalizer-watch>
+      <ul class="circle">
+      {% for task in page.tasks %}
+        <li>{{ task | strip_html | markdownify }}</li>
+      {% endfor %}
+      </ul>
+      </section>
+      {% endif %}
+      {% if page.content %}
+      <section id="{{this_page_id}}-story" class="content" role="tabpanel" aria-hidden="true" data-equalizer-watch>
+        {{ page.content | append: this_page_md_footer | markdownify }}
+      </section>
+      {% endif %}
+      {% if page.assets %}
+      <section id="{{this_page_id}}-assets" class="content" role="tabpanel" aria-hidden="true" data-equalizer-watch>
+        <div class="slick-carousel">
+          {% for asset in page.assets %}
+          {% if asset.filename %}
+          <figure id="{{this_page_id}}-asset{{forloop.index}}">
+              <figcaption>{{asset.caption}}</figcaption>
+              <img src="{{this_page_assetpath}}{{asset.filename}}"/>
+          </figure>
+          {% endif %}
+          {% endfor %}
+        </div>
+      </section>
+      {% endif %}
+      {% if page.tags %}
+      <section id="{{this_page_id}}-tags" class="content" role="tabpanel" aria-hidden="true" data-equalizer-watch>
+        {% for tag in page.tags %}
+          <em class="label">{{ tag }}</em>
+        {% endfor %}}
+      </section>
+      {% endif %}
+  </div>
+  </div>
+  <nav class="text-center column">
+      <a data-accordion-close title="return to portfolio" href="{{site.url}}#{{this_page_id}}" class="grippy">&nbsp;</a>
+  </nav>
+</article>
+
+
+	 

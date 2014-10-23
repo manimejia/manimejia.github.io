@@ -1,0 +1,11 @@
+{% if include.season and include.content %}
+
+{% assign splash = site.pages | where: "categoy" , season" | where: "season" , {{ include.season }} %}
+
+<div id="season-wrapper" class="{{ splash.season | slugify }}">
+  {{ splash.content }}
+  
+{% include {{ include.content }} %}
+</div>
+
+{% endif %}

@@ -1,0 +1,17 @@
+{% if include.string != "" %}
+{% assign include_string = include.string %}
+{% assign string_size = include_string | split: '' | size %}
+	{% if string_size > 0 %}
+	{% assign string_max = include.max %}
+	{% unless string_max %}{% assign string_max = string_size %}{% endunless %}
+	{% assign string_rows = string_size | divided_by: string_max | ciel %}
+		{% for string_row in (1..string_rows) %}
+		{% assign string_slice = string_row | times: string_max | minus: string_max %}
+		{% assign string_split_row = include_string | slice: string_slice, string_max | split: '' %}
+			{% for string_char in string_split_row %}
+			{% assign string_mid_row = string_split_row.size | divided_by: 2 | round %}
+			<span class="char char-y-{{string_row}} char-x-{{ forloop.index | minus: string_mid_row }}" aria-hidden>{{ string_char }}</span>
+			{% endfor %}
+		{% endfor %}
+	{% endif %}
+{% endif %}

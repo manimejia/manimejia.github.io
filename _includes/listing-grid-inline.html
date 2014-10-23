@@ -1,0 +1,218 @@
+<style>
+span.title a {
+color: inherit;
+}
+
+
+.accordion.accordion-grid{
+  position: relative;
+  text-align:center;
+}
+.accordion.accordion-grid .year{
+position: absolute;
+margin: -2.2rem 0 0 -2rem;
+}
+.accordion.accordion-grid .year time.label{
+  font-size:1rem;
+}
+.year time.label::after {
+bottom: 0px;
+border: 0.8rem solid rgba(0, 0, 0, 0);
+content: ' ';
+height: 0px;
+width: 0px;
+position: absolute;
+pointer-events: none;
+border-left-color: #FFBE00;
+right: -1.5rem;
+}
+
+
+.accordion.accordion-grid > .accordion-navigation{
+font-size:1rem;
+display: inline-block !important;
+vertical-align: top;
+padding-top: 1rem;
+border-top: 1px dotted #555;
+margin-top: 1rem;
+margin-bottom:0rem;
+}
+
+.accordion.accordion-grid > .accordion-navigation > a.th{
+position: relative;
+text-align: center;
+display: table;
+width: 8.5rem;
+height: 8.5rem;
+margin: 2.2rem 2.2rem 1.5rem;
+color: #FFF;
+background: initial;
+padding: initial;
+font-family: inherit;
+font-size: 0;
+text-shadow: 0 0 0 #FFF;
+border-radius: 50%;
+border: solid .25rem #FFF;
+}
+.accordion.accordion-grid > .accordion-navigation.active > a.th{
+  border-color:#222;
+  /*font-size:1rem;*/
+}
+.accordion.accordion-grid > .accordion-navigation > a.th:hover,
+.accordion.accordion-grid > .accordion-navigation > a.th:focus{
+  outline:none;
+  box-shadow: 0 0 .5rem .25rem #fff;
+  font-size:1rem;
+}
+
+.accordion.accordion-grid > .accordion-navigation.active > .th:after{
+top: 100%;
+border: solid rgba(0, 0, 0, 0);
+content: " ";
+height: 0;
+width: 0;
+position: absolute;
+pointer-events: none;
+border-bottom-color: #222;
+border-width: 1.5rem;
+left: 50%;
+margin: -1.3rem 0 0 -1.5rem;
+z-index: 5;
+}
+
+.accordion.accordion-grid > .accordion-navigation > .th .th-caption {
+  display: none;
+  border-radius: 50%;
+  font-size:inherit;
+  color: #222;
+  text-shadow: 0 0 .5rem #FFF;
+}
+
+.accordion.accordion-grid > .accordion-navigation > a.th .client{
+  font-weight: bold;
+  position: absolute;
+  z-index: 0;
+}
+.accordion.accordion-grid > .accordion-navigation > a.th .title {
+line-height: 1.3rem; 
+height: 8rem;
+width: 8rem;
+position: relative;
+z-index: 2;
+background: rgba(255, 255, 255, 0.8);
+font-weight: normal;
+letter-spacing: .05rem;
+vertical-align: middle;
+}
+
+.accordion.accordion-grid > .accordion-navigation.active > a.th .th-caption,
+.accordion.accordion-grid > .accordion-navigation > a.th:hover .th-caption,
+.accordion.accordion-grid > .accordion-navigation > a.th:focus .th-caption,
+.accordion.accordion-grid > .accordion-navigation > a.th .th-caption:hover,
+.accordion.accordion-grid > .accordion-navigation > a.th .th-caption:focus{
+  display: table-cell;
+}
+
+
+/*.accordion.accordion-grid > .accordion-navigation > .th .title {
+height: 100%;
+width: 100%;
+background-color: rgba(0, 0, 0, 0.5);
+color: inherit;
+top: 0;
+position: relative;
+z-index: 2;
+vertical-align: middle;
+}*/
+
+.accordion.accordion-grid > .accordion-navigation > .th .th-image{
+font-size: 8rem;
+line-height: 8rem;
+width: 8rem;
+height: 8rem;
+border-radius: 50%;
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+display: block;
+}
+.accordion.accordion-grid > .accordion-navigation > .th:hover .th-image,
+.accordion.accordion-grid > .accordion-navigation > .th .client:hover ~ .th-image,
+.accordion.accordion-grid > .accordion-navigation.active  > .th .th-image{
+/*box-shadow: #fff 0 0 10px;*/
+}
+
+
+.accordion.accordion-grid > .accordion-navigation > .content{
+  position: absolute;
+  left: 0;
+  z-index: 10;
+  text-align:left;
+  font-size:.8rem;
+  background: #222;
+}
+
+
+
+.accordion.accordion-grid > .accordion-navigation > .content{
+  /*display:block;*/
+  /*height:auto;*/
+}
+.accordion.accordion-grid > .accordion-navigation > .content{
+  /*height:0px;*/
+}
+.accordion.accordion-grid > .accordion-navigation > .content.active{
+  /*height:auto;*/
+  display: initial;
+}
+
+/*
+article.accordion-navigation .th a.th-link .title{
+  display: none;
+}
+article.accordion-navigation .th a.th-link:hover .title{
+  display: block;
+}*/
+
+
+</style>
+
+<dl id="portfolio-listing-grid" class="accordion accordion-grid row" role="tablist">
+{% assign listing_pages = site.pages | where: "category" , "project" | sort: "date"%}
+{% for this_page in listing_pages reversed %}
+
+  {% include _this_page.liquid %}
+
+  {% assign item_year = this_page.date | date: '%Y' %}
+  {% unless last_item_year %}{% assign last_item_year = 0000 %}{% endunless %}
+
+    <dd id="{{ this_page_id }}-wrapper" class="accordion-navigation" role="presentational">
+    {% if item_year != last_item_year %}
+      <h3 class="year inline-block" role="heading"><time class="label secondary">{{ item_year }}</time></h3>
+    {% endif %}
+      <a id="{{ this_page_id }}-th" href="{{ this_page.url }}" class="th skrollr-perspectivezoom-bottom"
+        role="tab" tabindex="-1" aria-selected="false" controls="{{this_page_id}}"
+        data-accordion-content="{{ this_page_id }}" data-scroll-offset="-60" >
+        <!--<span class="title th-link">{{ this_page.title }}</span>-->
+        <span class="title th-caption" >{{ this_page.title }}</span> 
+        <span class="client th-caption circular-text" >{% include split_char.html string=this_client_page.title %}</span>
+        {% if this_page.thumbnail %}
+        <img class="th-image" src="{{ this_page_assetpath }}{{ this_page.thumbnail }}" aria-hidden>
+        {% else %}
+        <i class="fi-prohibited th-image font-xx-large" aria-hidden></i>
+        {% endif %}
+      </a>
+
+      <div id="{{ this_page_id }}" class="content column" 
+        data-load="{{ this_page.url }} #page-content > *" aria-expanded="false"/>
+    </dd>
+
+{% assign last_item_year = item_year %}
+
+{% endfor %}
+</dl>
+
+
+
+

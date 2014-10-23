@@ -1,0 +1,17 @@
+{% unless this_page %}{% assign this_page = page %}{% endunless %}
+{% if include.category %}
+  {% assign this_assets_path_category = include.category %}
+{% else %}
+  {% assign this_assets_path_category = page.category %}
+{% endif %}
+  {% capture this_assets_path_raw %}
+  {% case this_assets_path_category %}
+    {% when 'project' %}
+       /projects/{{ this_page.client }}/assets/
+    {% when 'client' %}
+       /projects/{{ this_page.client }}/assets/
+    {% else %}
+       /{{ this_page.id }}/assets/
+  {% endcase %}
+  {% endcapture %}
+  {% assign this_assets_path =  this_assets_path_raw | strip | strip_newlines | remove:' ' | remove:'	' | remove:'\n' %}

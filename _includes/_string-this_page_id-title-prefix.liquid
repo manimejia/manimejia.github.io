@@ -1,0 +1,8 @@
+{% if include.title and include.prefix %}
+  {% assign this_page_id = "" %}
+  {% if include.prefix %}
+  	{% capture this_page_id %}{{ include.prefix }}-{% endcapture %}
+  {% endif %}
+  {% capture this_page_id %}{{ this_page_id }}{{ include.title }}{% endcapture %}
+  {% capture this_page_id %}{{ this_page_id | handleize }}{% endcapture %}
+{% endif %}

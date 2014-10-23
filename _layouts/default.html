@@ -20,17 +20,23 @@
   <link rel="alternate" href="/blog/feed.atom"
     title="{{ site.config.name }}" type="application/atom+xml">
 
-  <link rel="stylesheet" href="/resources/foundation/vendor/foundation/css/foundation.min.css">
-  {% for stylesheet in site.config.stylesheets %}
-    <link rel="stylesheet" href="{{ stylesheet }}">
-  {% endfor %}
+<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:300,400|Open+Sans:400italic,600,400' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ site.libraries.foundation.normalize }}">
+  <link rel="stylesheet" href="{{ site.libraries.foundation.icons }}">
+  <link rel="stylesheet" href="{{ site.libraries.slick.css }}">
+  <link rel="stylesheet" href="{{ site.libraries.manimejia.css }}">
+  {% if page.style %}
+    <!-- page.style -->
+    {{ page.style }}
+  {% endif %}
 </head>
 <body>
 
-  <div class="top-bar" data-topbar id="topbar">
+<div class="fixed-bottom">
+  <nav class="top-bar" data-topbar id="topbar">
     <ul class="title-area">
       <li class="name">
-        <h1><a href="/">{{ site.config.name }}</a></h1>
+        <h1><a href="/">{{ site.config.name }}</a></h1>        
       </li>
       <li class="toggle-topbar menu-icon"><a href="#topbar">{{ site.config.topbar.toggle }}</a></li>
     </ul>
@@ -55,34 +61,55 @@
       </ul>
       {% endif %}
     </div>
-  </div>
+  </nav>
+</div>
 
-  <div class="row">
-    <div class="column">
-      <h1>{{ page.title }}</h1>
+{% unless page.hidetitle %}
+  <headers id="page-title-row" class="row">
+    <div id="page-title-column" class="column">
+      <h1 id="page-title">{{ page.title }} 
+      {% if page.category %}
+      <small class="label" title="category">{{ page.category }}</small>
+      {% endif %}
+      </h1>
     </div>
-  </div>
+  </haders>
+{% endunless %}
 
-  {{ content }}
+{% unless page.hidecontent %}
+  <main id="page-content" class="{{page.category}}">
+        {{ content }}
+  </main>
+{% endunless %}
 
-  <div class="row">
-    <div class="column">
+{% unless page.hidefooter %}
+  <footer id="page-footer-row" class="row">
+    <div id="page-footer-column" class="column">
       <hr>
     </div>
     <div class="small-8 columns">
-      <p>© 2014 <a href="http://penibelst.de/">Anatol Broder</a>. Licensed under
+      <p>© 2014 <a href="http://penibelst.de/">Manuel Mejia</a>. Licensed under Creative Commons and 
       the <a href="http://opensource.org/licenses/MIT">MIT License</a>.</p>
     </div>
     <div class="small-4 columns">
       <p class="text-right menu-icon"><a href="#topbar">&#x25B2;</a></p>
     </div>
-  </div>
+  </footer>
+{% endunless %}
 
-  <script src="/resources/foundation/vandor/jquery/jquery.min.js"></script>
-  <script src="/resources/foundation/vendor/foundation/js/foundation.min.js"></script>
-  <script>$(document).foundation();</script>
-  {% for javascript in site.config.javascripts %}
-    <script src="{{ javascript }}"></script>
-  {% endfor %}
+<script src="{{ site.libraries.jquery.js }}"></script>
+<script src="{{ site.libraries.modernizr.js }}"></script>
+<script src="{{ site.libraries.foundation.js }}"></script>
+<script src="{{ site.libraries.slick.js }}"></script>
+<script src="{{ site.libraries.skrollr_stylesheets.js }}"></script>
+<script src="{{ site.libraries.skrollr.js }}"></script>
+<script src="{{ site.libraries.skrollr_menu.js }}"></script>
+<script src="{{ site.libraries.manimejia.accordion }}"></script>
+<script src="{{ site.libraries.manimejia.js }}"></script>
+{% if page.script %}
+  <!-- page.javascript -->
+  {{ page.script }}
+{% endif %}
+
 </body>
 </html>

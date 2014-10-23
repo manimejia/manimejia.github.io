@@ -1,0 +1,111 @@
+<style>
+article.listing-item {
+  display:inline-block;
+  padding: 1rem 1rem;
+}
+span.title a {
+color: inherit;
+}
+article.listing-item .thumbnail{
+  position: relative;
+  text-align: center;
+  display: table;
+  width:8rem;
+  height:8rem;
+}
+
+
+article.listing-item .thumbnail a.thumbnail-link {
+  display: none;
+  border-radius: 50%;
+}
+
+article.listing-item .thumbnail:hover a.thumbnail-link,
+article.listing-item .thumbnail a.thumbnail-link:hover,
+article.listing-item .thumbnail a.thumbnail-link:hover ~ a.thumbnail-link{
+  display: table-cell;
+}
+
+article.listing-item .thumbnail a.thumbnail-link.client {
+  color: #222;
+  background-color: rgba(250, 250, 250, 0.5);
+  z-index: -1;
+  position:absolute;
+  font-weight:bold;
+}
+article.listing-item .thumbnail a.thumbnail-link.title {
+  margin-right: -4rem;
+  height: 100%;
+  width:100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color:inherit;
+  top:0;
+  position:relative;
+  z-index: 1;
+  vertical-align: middle;
+}
+
+article.listing-item .thumbnail .thumbnail-image{
+  font-size: 8rem;
+  line-height: 8rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 0;
+  display:block;
+  box-shadow: #555 0 0 10px;
+}
+/*
+article.listing-item .thumbnail a.thumbnail-link .title{
+  display: none;
+}
+article.listing-item .thumbnail a.thumbnail-link:hover .title{
+  display: block;
+}*/
+
+
+</style>
+
+<ul class="project-listing text-center small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+{% assign listing_pages = site.pages | where: "category" , "project" | sort: "date" , "last" %}
+{% for this_page in listing_pages reversed %}
+
+  {% include _this_page.liquid %}
+
+  {% assign item_year = this_page.date | date: '%Y' %}
+  {% unless last_item_year %}{% assign last_item_year = 0000 %}{% endunless %}
+
+{% if item_year != last_item_year %}
+  {% if forloop.first != true %}
+  </li><!-- .timeline-year -->
+  {% endif %}
+  <li class="timeline-year skrollr-perspectivezoom-bottom text-center">
+  <h3><time class="year label secondary">{{ item_year }}</time></h3>
+{% endif %}
+
+  <article id="{{ this_page_id }}" class="listing-item modal-target">
+    <aside class="thumbnail">
+      <a class="client thumbnail-link circular-text" href="{{ this_client_page.url }}" title="All projects for {{ this_client_page.title }}">{% include split_char.html string=this_client_page.title %}</a>
+      {% if this_page.thumbnail and this_page.client %}
+        <img class="thumbnail-image" src="{{ this_page_assetpath }}{{ this_page.thumbnail }}">
+      {% else %}
+        <i class="fi-prohibited thumbnail-image font-xx-large"></i>
+      {% endif %}
+      <a class="title thumbnail-link" title="{{ this_page.title }}"
+      href="#{{ this_page_id }}-details" data-reveal-id="{{ this_page_id }}-details" data-reveal-ajax="{{ this_page.url }}">{{ this_page.title }}</a>
+    </aside>
+    <div id="{{ this_page_id }}-details" class="reveal-modal full item-body" data-reveal>
+      <a href="{{ this_page.url }}">Read More</a>
+    </div>
+  </article>
+
+{% assign last_item_year = item_year %}
+
+{% endfor %}
+  </li><!-- .timeline-year -->
+</ul>
+
+
+
+

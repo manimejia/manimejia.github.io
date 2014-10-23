@@ -1,7 +1,9 @@
 <div class="post-short">
   <h4>
     <a href="{{ post.url }}">{{ post.title }}</a>
+	{% if post.date %}
     <small>{{ post.date | date: '%F' }}</small>
+	{% endif %}
   </h4>
   <p>{{ post.description }}</p>
 </div>

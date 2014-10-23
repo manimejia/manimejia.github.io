@@ -1,0 +1,100 @@
+<style>
+article.listing-item {
+  display:block;
+  margin:0 auto;
+}
+article.listing-item .thumbnail{
+  background-color: #ccc;
+  border-radius: 50%;
+  max-width: 128px;
+  max-height: 128px;
+  position: relative;
+  z-index: 2;
+  overflow:hidden;
+}
+
+article.listing-item .thumbnail a.thumbnail-link {
+  display:block;
+  width: 128px;
+  height: 128px;
+  text-align: center;
+}
+
+article.listing-item .thumbnail .thumbnail-image{
+  /*font-size: 128px;*/
+  position: absolute;
+  top:0;
+  left:0;
+}
+article.listing-item .thumbnail .title{
+  position: relative;
+  padding: 15px;
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 50%;
+  color: #222;
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: #FFF 0px 0px 5px;
+  background-color: rgba(250, 250, 250, 0.5);
+}
+article.listing-item .thumbnail a.thumbnail-link .title{
+  display: none;
+}
+article.listing-item .thumbnail a.thumbnail-link:hover .title{
+  display: block;
+}
+
+
+</style>
+
+<div class="project-listing text-center slick-carousel skrollr-perspectivezoom-bottom">
+{% assign listing_pages = site.pages | where: "category" , "project" | sort: "date" , "last" %}
+{% assign is_first_item = true %}
+{% for this_page in listing_pages reversed %}
+
+  {% include _object-this_client_page-client.liquid client=this_page.client %}
+  {% include _string-this_assets_path-category.liquid category=this_page.category %}
+  {% include _string-this_page_id-url.liquid url=this_page.url %}
+
+  {% capture item_year %}{{ this_page.date | date: '%Y' }}{% endcapture %}
+  {% unless last_item_year %}{% assign last_item_year = 0000 %}{% endunless %}
+
+{% if item_year != last_item_year %}
+  {% if is_first_item == false %}
+  </div><!-- .timeline-year -->
+  {% endif %}
+  <div class="timeline-year row text-center">
+  <h3><time class="year label secondary">{{ item_year }}</time></h3>
+{% endif %}
+
+  <article id="{{ this_page_id }}" class="listing-item modal-target">
+    <aside class="thumbnail">
+      <a title="{{ this_page.title }}" class="thumbnail-link"
+      href="#{{ this_page_id }}details" data-reveal-id="{{ this_page_id }}details" data-reveal-ajax="{{ this_page.url }}">
+        {% if this_page.thumbnail and this_page.client %}
+          <img class="thumbnail-image" src="{{ this_assets_path }}{{ this_page.thumbnail }}">
+        {% else %}
+          <i class="fi-folder thumbnail-image font-xx-large"></i>
+        {% endif %}
+        <span class="title">{{ this_page.title }}</span>
+        <address class="client inline"><a href="{{ this_client_page.url }}" title="All projects for {{ this_client_page.title }}">{{ this_client_page.title }}</a></address>
+      </a>
+    </aside>
+    <div id="{{ this_page_id }}details" class="reveal-modal full item-body" data-reveal>
+      <a href="{{ this_page.url }}">Read More</a>
+    </div>
+  </article>
+
+{% assign is_first_item = false %}
+{% assign last_item_year = item_year %}
+
+{% endfor %}
+  </div><!-- .timeline-year -->
+</div>
+
+
+
+

@@ -1,26 +1,40 @@
 ---
 layout: default
-title: Noita
+title: 
+hidetitle: true
 permalink: /index.html
 ---
 
-<div class="row">
-  <div class="column">
-    <h3 class="subheader"><a href="http://jekyllrb.com/">Jekyll</a> theme built
-    with <a href="http://foundation.zurb.com/">Foundation</a></h3>
-  </div>
-</div>
+{% assign all_seasons = site.pages | where: "category" , "season" | sort: "date" , "last" %}
+<div id="season-wrapper" class="row {{ all_seasons.first.season | slugify }}">
+  {{ all_seasons.first.content }}
 
-<div class="row">
-  <div class="columns">
-    <h2 id="blog">Blog</h2>
-  </div>
-  <div class="medium-8 columns">
-    {% include posts-short.html %}
-  </div>
-  <div class="medium-4 columns">
-    <div data-alert class="alert-box warning round">
-      <a href="#blog" class="close">&times;</a>Dummy content
+<section id="services" class="text-center column">
+<h2 class="text-center skrollr-perspectivezoom-bottom">Professional Services</h2>
+  {% include services.html %}
+</section><!-- #services -->
+
+<section id="portfolio" class="column">
+<h2 class="text-center skrollr-perspectivezoom-bottom">Portfolio</h2>
+{% include listing-grid-inline.html category="project" %}
+</section> <!-- #portfolio-grid -->
+
+</div>
+<!--
+  <div class="row">
+    <div class="columns">
+      <h2 id="blog">Blog</h2>
+    </div>
+    <div class="medium-8 columns">
+      {% include posts-short.html %}
+    </div>
+    <div class="medium-4 columns">
+      <div data-alert class="alert-box warning round">
+        <a href="#blog" class="close">&times;</a>Dummy content
+      </div>
     </div>
   </div>
-</div>
+  -->
+
+
+

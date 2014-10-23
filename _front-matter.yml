@@ -1,0 +1,14 @@
+# general front matter variables
+---
+title: # rendered in default template as <title> and <h1>
+category: # expecting one per page. Controls the template used and the variables expected.
+tags:
+
+
+---
+
+# project front matter variables
+
+# client front matter variables
+
+# blog post front matter variables

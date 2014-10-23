@@ -1,0 +1,7 @@
+{% if include.client %}
+	{% for site_page in site.pages %}
+		{% if site_page.category == 'client' and site_page.client == include.client %}
+			{% assign  this_client_page = site_page %}
+		{% endif %}
+	{% endfor %}
+{% endif %}

@@ -1,0 +1,26 @@
+---
+permalink: load/index.html
+
+layout: default
+
+hidetitle: true
+
+html:
+  style:
+  meta:
+  sidebar:
+  footer:
+  script: |
+    <script type="text/javascript">
+    jQuery( document ).ready(function($) {
+      var content = getUrlParameter('content');
+      if(content){
+        $('#page-load-content').load(decodeURIComponent(content));
+      }
+    });
+    </script>
+  
+---
+
+
+<div id="page-load-content"/>
