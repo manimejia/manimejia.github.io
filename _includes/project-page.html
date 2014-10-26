@@ -1,7 +1,4 @@
----
- layout: default
----
-{% assign this_page = page %}
+{% unless this_page %}{% assign this_page = page %}{% endunless %}
 {% include _this_page.liquid %}
 <article class="row" aria-labelledby="{{this_page_id}}-title">
   <nav class="right" id="{{this_page_id}}-navigation">
@@ -10,44 +7,44 @@
   <header class="column medium-10">
       <h3 class="title left" id="{{this_page_id}}-title">
           <small class="client-title">{{ this_client_page.title }}</small><br/>
-          <span class="page-title">{{ page.title }}</span> 
-          <a href="{{page.website}}" target="_blank" title="go to {{ page.status }} website"><i class="fi-play-circle"></i></a>
+          <span class="page-title">{{ this_page.title }}</span> 
+          <a href="{{this_page.website}}" target="_blank" title="go to {{ this_page.status }} website"><i class="fi-play-circle"></i></a>
       </h3>
   </header>
   <aside class="column medium-2">
     <h4 class="hidden-for-small-only hidden-for-medium-up">Project Meta</h4>
-      {% if page.date %}
+      {% if this_page.date %}
       <i class="fi-clock"></i> 
       <label class="hidden-for-small-only hidden-for-medium-up">Completed:</label> 
-      <time>{{ page.date | date: "%b %-d, %Y" }}</time>
+      <time>{{ this_page.date | date: "%b %-d, %Y" }}</time>
       {% endif %}
-      {% if page.role %}
+      {% if this_page.role %}
       <br class="hide-for-small-only"/><span class="hide-for-medium-up" aria-hidden="true"> | </span>
       <i class="fi-sheriff-badge"></i> 
       <label class="hidden-for-small-only hidden-for-medium-up">Role:</label> 
-      <b>{{ page.role }}</b>
+      <b>{{ this_page.role }}</b>
       {% endif %}
       <br class="hide-for-small-only"/><span class="hide-for-medium-up" aria-hidden="true"> | </span>
-      {% if page.website %}
-      <a href="{{page.website}}" target="_blank" title="go to website"><i class="fi-play-circle font-larger"></i> </a>
+      {% if this_page.website %}
+      <a href="{{this_page.website}}" target="_blank" title="go to website"><i class="fi-play-circle font-larger"></i> </a>
       {% endif %}
-      {% if page.status %}
+      {% if this_page.status %}
       <label class="hidden-for-small-only hidden-for-medium-up">Status:</label> 
-      <b>{{ page.status }}</b>
+      <b>{{ this_page.status }}</b>
       {% endif %}
-
+      
   </aside>
-  {% if page.assets %}{% assign contentColumnClass = 'medium-10 large-8' %}{% endif %}
+  {% if this_page.assets %}{% assign contentColumnClass = 'medium-9' %}{% endif %}
   <section id="{{this_page_id}}-content" class="column {{contentColumnClass}}" aria-labelledby="{{this_page_id}}-content-label">
     <h4 id="{{this_page_id}}-content-label" class="hidden-for-small-only hidden-for-medium-up">Project Details</h4>
     <ul class="tabs" data-tab role="tablist">
-      {% if page.tasks %}
+      {% if this_page.tasks %}
       <li class="tab-title active" role="presentational" >
         <a id="{{this_page_id}}-tasks-tab" href="#{{this_page_id}}-tasks" role="tab" tabindex="0" aria-selected="true" controls="{{this_page_id}}-excerpt">
         <i class="fi-list-thumbnails font-larger"></i> Tasks</a>
       </li>
       {% endif %}
-      {% if page.content %}
+      {% if this_page.content %}
       <li class="tab-title" role="presentational" >
         <a id="{{this_page_id}}-story-tab" href="#{{this_page_id}}-story" role="tab" tabindex="0" aria-selected="false" controls="{{this_page_id}}-body">
         <i class="fi-align-justify font-larger"></i> Full Story</a>
@@ -55,30 +52,30 @@
       {% endif %}
     </ul>
     <div class="tabs-content" data-equalizer>
-        {% if page.tasks %}
+        {% if this_page.tasks %}
         <section id="{{this_page_id}}-tasks" class="content active" role="tabpanel" aria-hidden="false" data-equalizer-watch aria-labelledby="{{this_page_id}}-tasks-tab">
         <ul class="circle">
-        {% for task in page.tasks %}
+        {% for task in this_page.tasks %}
           <li>{{ task | strip_html | markdownify }}</li>
         {% endfor %}
         </ul>
         </section>
         {% endif %}
-        {% if page.content %}
+        {% if this_page.content %}
         <section id="{{this_page_id}}-story" class="content" role="tabpanel" aria-hidden="true" data-equalizer-watch  aria-labelledby="{{this_page_id}}-story-tab">
-          {{ page.content | append: this_page_md_footer | markdownify }}
+          {{ this_page.content | append: this_page_md_footer | markdownify }}
         </section>
         {% endif %}
     </div>
   </section>
-  {% if page.assets %}
-  <aside id="{{this_page_id}}-assets" aria-labelledby="{{this_page_id}}-assets-title" class="column medium-2 large-4">
+  {% if this_page.assets %}
+  <aside id="{{this_page_id}}-assets" aria-labelledby="{{this_page_id}}-assets-title">
     <ul class="clearing-thumbs" data-clearing>
-      {% for asset in page.assets %}
+      {% for asset in this_page.assets %}
       {% if asset.filename %}
       <li>
         <a href="{{this_page_assetpath}}{{asset.filename}}" class="th">
-          <img id="{{this_page_id}}-asset{{forloop.index}}" src="{{this_page_assetpath}}{{asset.filename}}" data-caption="{{asset.caption}}" alt="{{asset.caption}}"/>
+          <img id="{{this_page_id}}-asset{{forloop.index}}" data-load="{{this_page_assetpath}}{{asset.filename}}" data-caption="{{asset.caption}}" alt="{{asset.caption}}"/>
         </a>
       </li>
       {% endif %}
@@ -86,11 +83,11 @@
     </ul>
   </aside>
   {% endif %}
-  {% if page.tags %}
+  {% if this_page.tags %}
   <aside id="{{this_page_id}}-tags" class="column">
     <h4 class="hidden-for-small-only hidden-for-medium-up">Project Tags</h4>
     <ul class="inline-list taglist">
-    {% for tag in page.tags %}
+    {% for tag in this_page.tags %}
       <li class="label radius alert">{{ tag }}</li>
     {% endfor %}
     </ul>

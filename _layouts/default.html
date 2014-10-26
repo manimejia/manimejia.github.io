@@ -32,40 +32,12 @@
 </head>
 <body>
 
-<div class="fixed-bottom">
-  <nav class="top-bar" data-topbar id="topbar">
-    <ul class="title-area">
-      <li class="name">
-        <h1><a href="/">{{ site.config.name }}</a></h1>        
-      </li>
-      <li class="toggle-topbar menu-icon"><a href="#topbar">{{ site.config.topbar.toggle }}</a></li>
-    </ul>
-    <div class="top-bar-section">
-      {% if site.config.topbar.left %}
-      <ul class="left">
-      {% for item in site.config.topbar.left %}
-        <li{% if item.class %} class="has-form"{% endif %}>
-          <a href="{{ item.url }}" class="{{ item.class }}">{{ item.name }}</a>
-        </li>
-      {% endfor %}
-      </ul>
-      {% endif %}
-
-      {% if site.config.topbar.right %}
-      <ul class="right">
-      {% for item in site.config.topbar.right %}
-        <li{% if item.class %} class="has-form"{% endif %}>
-          <a href="{{ item.url }}" class="{{ item.class }}">{{ item.name }}</a>
-        </li>
-      {% endfor %}
-      </ul>
-      {% endif %}
-    </div>
-  </nav>
-</div>
+{% unless page.hidetopbar %}
+{% include topbar.html %}
+{% endunless %}
 
 {% unless page.hidetitle %}
-  <headers id="page-title-row" class="row">
+  <header id="page-title-row" class="row">
     <div id="page-title-column" class="column">
       <h1 id="page-title">{{ page.title }} 
       {% if page.category %}
@@ -73,7 +45,7 @@
       {% endif %}
       </h1>
     </div>
-  </haders>
+  </header>
 {% endunless %}
 
 {% unless page.hidecontent %}
@@ -103,7 +75,7 @@
 <script src="{{ site.libraries.slick.js }}"></script>
 <script src="{{ site.libraries.skrollr_stylesheets.js }}"></script>
 <script src="{{ site.libraries.skrollr.js }}"></script>
-<script src="{{ site.libraries.skrollr_menu.js }}"></script>
+<!-- <script src="{{ site.libraries.skrollr_menu.js }}"></script> -->
 <script src="{{ site.libraries.manimejia.accordion }}"></script>
 <script src="{{ site.libraries.manimejia.js }}"></script>
 {% if page.script %}

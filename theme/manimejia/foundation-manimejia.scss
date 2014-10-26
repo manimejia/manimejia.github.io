@@ -1613,6 +1613,10 @@ cursor: row-resize;
 margin-bottom: -.5rem;
 }
 
+.clearing-thumbs img{
+	width:150px;
+}
+
 .fixed-bottom{
   width: 100%;
   left: 0;
@@ -1627,7 +1631,9 @@ margin-bottom: -.5rem;
 	top:0 !important;
 }
 
-
+body.f-topbar-fixed .clearing-blackout {
+padding-top: 45px;
+}
 
 /* 
  * Apply default header styles to <header> elements 
