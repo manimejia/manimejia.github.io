@@ -53,11 +53,17 @@ defaults:
       assetpath: "assets/"
       assetpath_is_relative_to_siteroot: false
       libraries: 
-      scripts: 
-        inline: |
-      styles:
-        inline: |
-
+      script: | 
+      style: | 
+      publish:
+        main: true
+        print: false
+        featured: false
+        draft: false
+      hide:
+        topbar: false
+        title: false
+        footer: false
   -
     scope:
       type: "page"
@@ -71,7 +77,10 @@ config:
   description: 'Artist, Athlete, and Engineer'
   author:
     name: Manuel Mejia
-    url: http://manimejia.me
+    website: http://manimejia.me
+    email: hello-at-manimejia.me
+    phone: (971) 533 7591
+
   lang: en
   favicons:
     - /resources/favicon-152.png
@@ -79,9 +88,9 @@ config:
     toggle: Menu
     right:
       - name: Services
-        url: /#services
+        url: "#services"
       - name: Portfolio
-        url: /#portfolio
+        url: "#portfolio"
       - name: Contact
-        url: /#contact
+        url: "#contact"
         class: small button

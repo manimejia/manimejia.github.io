@@ -2,9 +2,9 @@
 client: BFAS  
 title: Best Friends Virtual Tour  
 date: 2002-02-01  
-website: http://manimejia.me/projects/bfas/assets/BFAS-Tour12
+website: /projects/bfas/assets/BFAS-Tour12
 role: Designer / Developer  
-status: not released
+status: archived
 
 display: 
 - portfolio

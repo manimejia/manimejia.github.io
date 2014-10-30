@@ -57,14 +57,14 @@ assets:
 
 
 tasks: 
-  - Worked closely with company founders and CEO to develop the requirements for a next generation web-enabled and socially-integrated care management application.
-  - Performed a full code audit of the legacy care management system, including detailed documentation of how and why it did or did not fill the current requirements.
-  - Collaborated with the company founders, developing numerous iterations of wireframes and mockups to communicate the user experience of the new system as our understanding   evolved and matured. 
-  - Designed a whole collection of "care management" icons to support the application's user interface needs.
+  - Worked closely with company founders and CEO to develop the requirements and the user experience for a next generation web-enabled and socially-integrated elder care management system.
+  - Performed a full code audit of the legacy system, including detailed documentation of how and why it did or did not fill the current requirements.
+  - Collaborated with the company founders, developing numerous iterations of wireframes and mockups to communicate the desired user experience of a new care management system. 
+  - Designed a collection of "care management" icons to support the application's user interface needs.
   - Performed extensive research and provided documentation to help determine the most appropriate platform for future development. 
-  - Designed and documented an architecture to develop this system on the Drupal 7 platform.
-  -  Developed a working proof-of-concept (POC) on the Drupal 7 platform.
-  -  Developed a number of custom "fields" and "field widgets" to facilitate application configuration and content editing by non-technical staff.
+  - Designed and documented an architecture to develop this next gen system on the Drupal 7 platform.
+  - Developed a working proof-of-concept (POC) on the Drupal 7 platform.
+  - Developed a number of custom "fields" and "field widgets" to facilitate application configuration and content editing by non-technical staff.
   -  Developed a "natural language" system for rendering structured data in a readable journal format.
  
 ---

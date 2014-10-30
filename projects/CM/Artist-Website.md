@@ -2,7 +2,7 @@
 client: CM
 title: Artist's Portfolio Website
 date: 2008-10-01
-website: cyrusmejia.com
+website: http://cyrusmejia.com
 role: Website Developer
 status: live
 

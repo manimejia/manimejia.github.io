@@ -1,10 +1,9 @@
 ---
-# 2006-12-01-RC-Business-Website.md
-
 client: RCIT
 title: Small Business Website
 date: 2006-12-01
-website: redcoyote.com
+website: 
+status: retired
 role: Website Developer
 tags:
 - Open Edit

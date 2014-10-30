@@ -2,23 +2,21 @@
 layout: default
 title: Manuel Mejia's Portfolio Website
 hidetitle: true
-hidetopbar: true
+# hidetopbar: true
 permalink: /index.html
 ---
 
 {% assign all_seasons = site.pages | where: "category" , "season" | sort: "date" , "last" %}
-<div id="season-wrapper" class="row {{ all_seasons.first.season | slugify }}">
+<div id="season-wrapper" class="row {{ all_seasons.first.season | slugify }}" role="main">
   {{ all_seasons.first.content }}
 
-  {% include topbar.html %}
-
-<section id="services" class="text-center column">
-<h2 class="text-center skrollr-perspectivezoom-bottom">Professional Services</h2>
+<section id="services" class="text-center column" role="region" aria-labelledby="services-heading" tabindex="0">
+<h2 id="services-heading" class="text-center skrollr-perspectivezoom-bottom">Professional Services</h2>
   {% include services.html %}
 </section><!-- #services -->
 
-<section id="portfolio" class="column" role="application" aria-labelledby="portfolio-header">
-<h2 id="portfolio-header" class="text-center">Portfolio</h2>
+<section id="portfolio" class="column" role="region" aria-labelledby="portfolio-heading" tabindex="0">
+<h2 id="portfolio-heading" class="text-center">Portfolio</h2>
 {% include listing-grid-inline.html category="project" %}
 </section> <!-- #portfolio-grid -->
 

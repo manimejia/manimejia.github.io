@@ -1,0 +1,148 @@
+---
+title: Manuel Mejia
+permalink: resume.html
+hidetopbar: true
+hidefooter: true
+layout: default
+style: | 
+ <style>
+ body{background: #FFF;color: #222;}
+ a{color:#0386FC;}
+ a.active,
+ a:hover,
+ a:focus,
+ a:active{color:#0082F9;}
+ h1,h2,h3,h4,h5,h6,header,header small{color:#222;}
+ .highlight{text-shadow:none;}
+ </style>
+
+---
+{% assign listing_pages = site.pages | where: "category" , "project" | sort: "date" %}
+{% assign base_url = 'http://manimejia.me/' %}
+
+<div class="row">
+<ul role="contentinfo" class="no-bullet column">
+<li><b>Website: </b><a href="{{ site.config.author.website }}">manimejia.me</a></li>
+<li><b>Email: </b>{{ site.config.author.email }}</li>
+<li><b>Phone: </b>{{ site.config.author.phone }}</li>
+</ul>
+</div>
+{% include services.html %}
+
+<section id="technical-experience" class="row" aria-labelledby="technical-experience-label">
+<h2 id="technical-experience-label" class="column">Technical Experience</h2>
+<figure class="column text-center">
+<img src="https://docs.google.com/spreadsheets/d/1gBdIVCMZN1qdhwwWIwwZjQtkmucS-or_XAKocYftV48/pubchart?oid=1386956387&format=image" alt="Chart showing Manuel Mejia's work experience since 2001">
+<figcaption>
+<a href="https://docs.google.com/spreadsheets/d/1gBdIVCMZN1qdhwwWIwwZjQtkmucS-or_XAKocYftV48/pubhtml?gid=0&single=true" title="online spreadsheet from which the chart is made">chart data</a>
+</figcaption>
+</figure>
+</section>
+
+<section id="work-history" class="row" aria-labelledby="work-history-label">
+<h2 id="work-history-label" class="column">Work History</h2>
+{% for this_page in listing_pages reversed %}
+
+  {% assign display_resume = false %}
+  {% for display in this_page.display %}
+  {% if display == 'resume' %}{% assign display_resume = true %}{% endif %}
+  {% endfor %}
+
+  {% if display_resume == true %}
+	{% include _this_page.liquid %}
+	{% assign item_year = this_page.date | date: '%Y' %}
+	{% unless last_item_year %}{% assign last_item_year = 0000 %}{% endunless %}
+
+	<hr/>
+    {% if item_year != last_item_year %}
+    <h3 class="year text-center alert-box warning font-larger" role="heading"><time>{{ item_year }}</time></h3>
+    {% endif %}
+
+	 <article class="column" aria-labelledby="{{this_page_id}}-title">
+	 <div class="row">
+	  <aside class="left small-3 text-center" aria-hidden="true">
+	  	<img style="padding-right:1.5rem" src="{{ this_page_assetpath }}{{ this_page.thumbnail }}" alt="">
+	  </aside>
+	  <header class="" role="heading">
+	      <h3 class="title" id="{{this_page_id}}-title">
+	          <small class="client-title">{{ this_client_page.title }}</small><br/>
+	          <span class="page-title">{{ this_page.title }}</span> 
+	      </h3>
+	  </header>
+	  <aside class="" role="contentinfo">
+	      <ul class="no-bullet inline-list" role="presentational">
+	      {% if this_page.date %}
+	      <li role="presentational">
+	      	<div>
+	        <label class="hidden-for-small-only hidden-for-medium-up hide-for-print-only">Completed:</label> 
+	        <i class="fi-clock font-larger"></i>&nbsp;<time>{{ this_page.date | date: "%b %-d, %Y" }}</time>
+	        </div>
+	      </li>
+	      {% endif %}
+
+	      {% if this_page.role %}
+	      <li role="presentational">
+	      <div>
+	        <label class="hidden-for-small-only hidden-for-medium-up hide-for-print-only">Role:</label> 
+	        <i class="fi-at-sign font-larger"></i>&nbsp;<b>{{ this_page.role }}</b>
+	        </div>
+	      </li>
+	      {% endif %}
+	      {% if this_page.website %}
+	      <li role="presentational">
+	      	<div>
+	        <label class="hidden-for-small-only hidden-for-medium-up hide-for-print-only">Status:</label> 
+	        <a href="{{this_page.website}}" target="_blank" title="go to {{ this_page.status }} website">
+	        <i class="fi-play-circle font-larger"></i>&nbsp;
+	        {% if this_page.status %}{{ this_page.status }} {% endif %}website
+	        </a>
+	        </div>
+	      </li>
+	      {% elsif this_page.status %}
+	      <!-- <li role="presentational">
+	        <div>
+	        <label class="hidden-for-small-only hidden-for-medium-up hide-for-print-only">Status:</label> 
+	        <i class="fi-info font-larger"></i>&nbsp;<b>{{ this_page.status }}</b>
+	        </div>
+	      </li> -->
+	      {% endif %}
+	      </ul>
+	  </aside>
+	  </div>
+	  <br>
+	  <div class="row">
+		{% if this_page.tasks %}
+		<section id="{{this_page_id}}-tasks" class="column medium-9 medium-push-3" aria-hidden="false" ar-labelledby="{{this_page_id}}-tasks-label">
+	  	  <h4 id="{{this_page_id}}-tasks-label" class="hidden-for-small-only hidden-for-medium-up hide-for-print-only">
+	  	Responsibilities</h4>
+		  <ul class="no-bullet">
+		  {% for task in this_page.tasks %}
+		    <li class="clearfix">
+			    <i class="fi-check font-xlarger highlight left full-height" style="line-height:1em">&nbsp;</i>
+			    {{ task | strip_html | strip | markdownify }}
+		    </li>
+		  {% endfor %}
+		  </ul>
+		</section>
+		{% endif %}
+	    {% if this_page.tags %}
+	    <aside id="{{this_page_id}}-tags" role="complementary" class="column medium-3 medium-pull-9" aria-labelledby="{{this_page_id}}-tags-label">
+	      <h4 id="{{this_page_id}}-tags-label"  class="hidden-for-small-only hidden-for-medium-up hide-for-print-only">Skills</h4>
+	      <ul class="taglist">
+	      {% for tag in this_page.tags %}
+	        <li class="label radius success">{{ tag }}</li>
+	      {% endfor %}
+	      </ul>
+	      <a href="{{base_url}}#{{ this_page_id }}" title="project page" class="button info expand"><i class="fi-link"></i> Read More</a>
+	    {% endif %} 
+	  </div>
+
+	</article>
+
+
+ {% endif %}
+
+{% assign last_item_year = item_year %}
+
+{% endfor %}
+</section>

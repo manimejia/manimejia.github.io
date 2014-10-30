@@ -30,7 +30,7 @@
     {{ page.style }}
   {% endif %}
 </head>
-<body>
+<body class="{% unless page.hidetopbar %}f-topbar-fixed{% endunless %}">
 
 {% unless page.hidetopbar %}
 {% include topbar.html %}
@@ -72,7 +72,7 @@
 <script src="{{ site.libraries.jquery.js }}"></script>
 <script src="{{ site.libraries.modernizr.js }}"></script>
 <script src="{{ site.libraries.foundation.js }}"></script>
-<script src="{{ site.libraries.slick.js }}"></script>
+<!-- <script src="{{ site.libraries.slick.js }}"></script> -->
 <script src="{{ site.libraries.skrollr_stylesheets.js }}"></script>
 <script src="{{ site.libraries.skrollr.js }}"></script>
 <!-- <script src="{{ site.libraries.skrollr_menu.js }}"></script> -->

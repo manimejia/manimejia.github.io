@@ -1,10 +1,9 @@
 ---
-# 2007-04-01-RVR-Podcast-Blog--Website.md
-
 client: RVR
 title: Podcast Blog & Website
 date: 2007-04-01
-website: rawveganradio.com
+website: 
+status: retired
 role: Website Developer
 tags:
 - Website

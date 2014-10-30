@@ -27,8 +27,8 @@
 
 {% if this_page.assets %}
   {% capture this_page_md_footer %}
-   {% for asset in this_page.assets %}
+   {% for asset in this_page.assets %}{% if asset.filename %}
    [ASSET{{forloop.index}}]: {{this_page_assetpath}}{{asset.filename}} "{{asset.caption}}"
-   {% endfor %}
+   {% endif %}{% endfor %}
   {% endcapture %}
 {% endif %}

@@ -1,17 +1,17 @@
-<div class="sticky">
+<div class="{% if page.hidetopbar %}sticky{% else %}fixed{%endif%}">
   <nav class="top-bar" data-topbar id="topbar" role="navigation">
-    <ul class="title-area">
-      <li class="name">
-        <h1><a href="/">{{ site.config.name }}</a></h1>        
+    <ul class="title-area" role="presentational">
+      <li class="name" role="presentational">
+        <h1><a id="topbar-homepage" href="/" tabindex="0" title="website home">{{ site.config.name }}</a></h1>        
       </li>
-      <li class="toggle-topbar menu-icon"><a href="#topbar">{{ site.config.topbar.toggle }}</a></li>
+      <li class="toggle-topbar menu-icon"><a href="#topbar" role="link">{{ site.config.topbar.toggle }}</a></li>
     </ul>
     <div class="top-bar-section">
       {% if site.config.topbar.left %}
       <ul class="left">
       {% for item in site.config.topbar.left %}
         <li{% if item.class %} class="has-form"{% endif %}>
-          <a href="{{ item.url }}" class="{{ item.class }}">{{ item.name }}</a>
+          <a href="{{ item.url }}" class="{{ item.class }}" role="link" tabindex="0">{{ item.name }}</a>
         </li>
       {% endfor %}
       </ul>
@@ -21,7 +21,7 @@
       <ul class="right">
       {% for item in site.config.topbar.right %}
         <li{% if item.class %} class="has-form"{% endif %}>
-          <a href="{{ item.url }}" class="{{ item.class }}">{{ item.name }}</a>
+          <a href="{{ item.url }}" class="{{ item.class }}" role="link" tabindex="0">{{ item.name }}</a>
         </li>
       {% endfor %}
       </ul>
