@@ -681,7 +681,7 @@ $input-prefix-border-color: scale-color($jet, $lightness: 20%);
 // We use this to style the glowing effect of inputs when focused
 // $input-include-glowing-effect: true;
 // $glowing-effect-fade-time: 0.45s;
-// $glowing-effect-color: $input-focus-border-color;
+$glowing-effect-color: $white;
 
 // Select variables
 $select-bg-color: $oil;
@@ -1569,7 +1569,35 @@ $tabs-navigation-font-color: $white;
 	}
 }
 
+// override foundation @mixin block-glowing-effect
+// modify the width of focus.
+// $selector - Used for selector state. Default: focus, Options: hover, active, visited
+// $fade-time - Default: 300ms
+// $glowing-effect-color - Default: fade-out($primary-color, .25)
+@mixin block-glowing-effect($selector:focus, $fade-time:300ms, $glowing-effect-color:fade-out($primary-color, .25)) {
+  transition: box-shadow $fade-time, border-color $fade-time ease-in-out;
+  @if $selector == 'focus' {
+    $selector: ':focus';
+  } @else if $selector == 'hover' {
+    $selector: ':hover';
+  } @else if $selector == 'active' {
+    $selector: ':active';
+  } @else if $selector == 'visited' {
+    $selector: ':visited';
+  }
+  &#{$selector} {
+    box-shadow: 0 0 .5rem .25rem $glowing-effect-color;
+    border-color: $glowing-effect-color;
+    outline:none;
+    position:relative;
+    z-index:10;
+  }
+}
 
+.focusable{
+  @include block-glowing-effect(':focus, &:hover', $glowing-effect-fade-time, $glowing-effect-color);
+}
+//' single quote here because sublime bugs syntax coloring on the quoted selector in previous line
 
 .font-xsmaller{
 	font-size: .5em !important;
@@ -1584,11 +1612,18 @@ $tabs-navigation-font-color: $white;
 	font-size: 2em !important;
 }
 .font-xxlarger{
-	font-size: 5em !important;
+	font-size: 3em !important;
 }
 
 .icon{
   font-size: 5rem;
+}
+a.close{
+	display: inline-block;
+	line-height: 1em;
+	padding: .3rem;
+	margin-top: 1rem;
+	font-size: 3em;
 }
 .highlight{
   color: $alert-color;
@@ -1610,7 +1645,12 @@ width: 3rem;
 display: inline-block;
 border-bottom: .5rem #555 double;
 cursor: row-resize;
-margin-bottom: -.5rem;
+margin-bottom: .5rem;
+height: .5rem;
+}
+
+.full-height{
+	height:100%;
 }
 
 .clearing-thumbs img{
@@ -1681,6 +1721,36 @@ $thumb-transition-function: ease-out;
   transition-timing-function: $thumb-transition-function;
 }
 
+.th.img-micro,
+.th.img-thumb,
+.th.img-preview{
+	background-size: cover;
+	background-position: top center;
+	background-repeat: no-repeat;
+}
+.th.img-micro{
+	width:64px;
+	height:64px;
+}
+.th.img-thumb{
+	width:128px;
+	height:128px;
+}
+.th.img-preview{
+	width:256px;
+	height:256px;
+}
+
+li.label {
+margin-left: .1em;
+margin-bottom: .1em;
+display: inline-block;
+}
+
+li > a.button.expand:first-child:last-child{
+margin-bottom: .5rem;
+list-style: none;
+}
 
 /* 
  * slick carousel styles 
@@ -1708,10 +1778,20 @@ padding: 1em;
 /*
  * apply circular text mixin
  */
-.accordion.accordion-grid > .accordion-navigation  > .th .circular-text {
+.tabgroup.accordion-grid > .accordion-navigation  > .th .circular-text {
   @include circular-text(4rem,4,1rem,.8rem)
 }
 
+@media only print {
+	.hide-for-print{
+		display:none !important;
+	}
+}
+@media only screen {
+	.hide-for-screen{
+		display:none !important;
+	}
+}
 
 
 

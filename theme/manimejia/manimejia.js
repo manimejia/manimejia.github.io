@@ -11,24 +11,36 @@ var syncAccordionGridContentHeight;
 $(document).foundation();
 
 $(document).load(function(){
-  var locationhash = window.location.hash;
-  if (locationhash != '' && locationhash != '#') {
-    activateFoundationElement(locationhash);
-  }
 });
 
 
 $(document).ready(function(){
-  // initialize skrollr library
-  // skrollr.init();
   //skrollr.menu.init();
 
+  var locationhash = window.location.hash;
+  if (locationhash != '' && locationhash != '#') {
+    event.preventDefault();
+    scrollToElement(locationhash,false);
+  }
+
+  $('a[role="link"][href^="#"]').click(function(e){
+    scrollToElement($(this).attr('href'),true);
+    e.preventDefault();
+    return false;
+  });
+
+  $('#topbar-homepage').focus();
+  $(':focusable').toggleClass('focusable',true);
+
   // initialize aria tabpanel functionality
-  var portfolioAccordionGrid = new tabpanel('portfolio-accordion-grid', 'accordion-grid');
+  initializeAriaTabGroups();
 
   // initialize slick libary
-  initializeSlickCarousels();
+  // initializeSlickCarousels();
   
+  // initialize skrollr library
+  skrollr.init();
+
 
   // // trigger opening and closing of foundation's show-modal
   // $('#topbar').click(function(e){
@@ -111,7 +123,7 @@ $(document).ready(function(){
   //     if(target.hasClass('active')){
   //       target.hide(); // in preparation for slideDown()
   //       slideOptions.complete = function(){
-  //         scrollToElementId(targetLink,false);
+  //         scrollToElement(targetLink,false);
   //         window.location.hash = targetId;
   //         target.attr('aria-expanded', true).focus();
   //       };
@@ -310,8 +322,6 @@ function unsyncAccordionGridContentHeight() {
 function initAjaxContent($content){
   var contentId = $content.attr('id');
   var contentRole = $content.attr('role');
-  // initialize foundation
-  $content.foundation();
   // close content tabpanels from a link inside the panel
   if(contentRole == 'tabpanel'){
     $content.find($('[aria-controls="'+contentId+'"]:not([role="tab"])')).click(function(e){
@@ -319,7 +329,12 @@ function initAjaxContent($content){
       e.preventDefault();
     });
   }
-  loadClearingThumbs($content);
+  $(':focusable').toggleClass('focusable',true);
+  // initialize foundation
+  $content.foundation();
+  // initialize ariaTabGroups
+  initializeAriaTabGroups($content);
+  // loadClearingThumbs($content);
   // load remote images
   // initialize slick carousel
   // initializeSlickCarousels($content);
@@ -339,10 +354,10 @@ function activateFoundationElement(elementId){
     $target.siblings('a[href$="' + elementId + '"]').click();
 }
 
-function scrollToElementId(elementId,updateLocation){
+function scrollToElement(elementId,updateLocation){
   var $target = $(elementId);
   var targetOffset = Number($target.attr('data-scroll-offset')) || 0;
-
+  if($('body').hasClass('f-topbar-fixed')) targetOffset -= 45;
   if($target){
       //console.log('scrollTo : '+elementId+' ('+$target.offset()+')');
       //console.log($target);
@@ -496,8 +511,7 @@ function scrollToElementId(elementId,updateLocation){
 
 /**************************************************
  *************************************************
- * ARIA Accessible TabPanel javascript 
- * for controlling both tab and accordion layouts
+ * ARIA Accessible Tabs and Accordions 
  * Adapted from: 
  * Illinois Center for Information Technology and Web Accessibility
  * http://test.cita.illinois.edu/aria/tabpanel
@@ -527,8 +541,22 @@ function keyCodes() {
 
 } // end keyCodes 
 
+function initializeAriaTabGroups($content){
+  $('[id][data-aria-tab-group]',$content).each(function(){
+    var id = $(this).attr('id');
+    var settings = $(this).data('ariaTabGroup');
+    if(window.location.hash){
+        // && $(this).find('a[href="window.location.hash"][role="tab"]').length > 0
+        // console.log('window.location.hash = '+window.location.hash);
+        if(typeof settings == 'string') settings= {'extend':settings};
+        settings.defaultSelect = window.location.hash.substring(1);
+      }
+    new ariaTabGroup(id,settings);
+  });
+}
+
 /**
- * tabpanel() is a class constructor to create a ARIA-enabled tab panel widget. 
+ * ariaTabGroup() is a class constructor to create a ARIA-enabled tab panel widget. 
  * 
  * @param (id string) id is the id of the div containing the tab panel. 
  * 
@@ -544,23 +572,45 @@ function keyCodes() {
  * 
  *         2. panels are divs with class 'panel' 
  */ 
-function tabpanel(id, settings) { 
-
+function ariaTabGroup(id, settings) { 
   // define the class properties 
-  this.panel_id = id; // store the id of the containing div 
+  this.containerId = id; // store the id of the containing div 
   this.$container = $('#' + id);  // store the jQuery object for the panel 
-  this.keys = new keyCodes(); // keycodes needed for event handlers 
-  this.$tabs = this.$container.children().children('[role="tab"]'); // Array of panel tabs. 
-  this.$panels = this.$container.children().children('[role="tabpanel"]'); // Array of panel. 
 
   if(typeof(settings)==='string' ){
     this.settings = this.settingsPreset(settings);
   }else if(typeof(settings)==='object'){
-    this.settings = jQuery.extend(true,this.settingsPreset(),settings);
+    this.settings = jQuery.extend(true,this.settingsPreset(settings.extend),settings);
   } else {
     this.settings = this.settingsPreset();
   }
 
+  if(this.settings.tabDepth < 1)this.settings.tabDepth = 1;
+  if(this.settings.panelDepth < 1)this.settings.panelDepth = 1;
+
+  var tabSelector = '> [role="tab"]';
+  for (var i = 1; i < this.settings.tabDepth; i++) {
+    tabSelector = '> * '+tabSelector;
+  };
+  this.tabSelector = '#'+this.containerId+' '+tabSelector;
+
+  var panelSelector = '> [role="tabpanel"]';
+  for (var i = 1; i < this.settings.panelDepth; i++) {
+    panelSelector = '> * '+panelSelector;
+  };
+  this.panelSelector = '#'+this.containerId+' '+panelSelector;
+
+  this.layout = {'tabandpanels':null,'tabwithpanel':null};
+
+  this.keys = new keyCodes(); // keycodes needed for event handlers 
+  this.$tabs = $(this.tabSelector); // Array of panel tabs. 
+  this.$panels = $(this.panelSelector); // Array of panel. 
+
+  this.tabWrapSelector = '[role="tablist"] > *';
+  this.$tabWrappers = this.$container.find('[role="tablist"]').children().has('[role="tab"]');
+  //this.tabWrapHasPanel = $(this.tabWrapSelector).find();
+
+  if(this.settings.queueOpeningEffect) this.openingEffectTimer;
 
   // Bind event handlers 
   this.bindHandlers(); 
@@ -571,43 +621,64 @@ function tabpanel(id, settings) {
   console.log('New TabPanel:'); 
   console.log(this); 
 
-} // end tabpanel() constructor 
+} // end ariaTabGroup() constructor 
 
 
 // retrieves a set of preset settings
-tabpanel.prototype.settingsPreset = function(preset) { 
+ariaTabGroup.prototype.settingsPreset = function(preset) { 
   var defaultSettings = {
-        openoOnFocus: true, // set true to open and close panels on tab on focus
+        extend: '', // set this to the string identifier of a settings preset which to extend.
+        navigateByTabKey: true, // should both tab and arrow keys be used to navigate tabs
+        openOnFocus: true, // should a panel be opened when it's tab has focus?
+        focusOnPanel: false, // should focus be set on the first focusable item in a panel when it is opened?
         multiSelect: false, // can multiple panels be open at once?
         selfClosable: false, // can an open panel be closed by it's own tab or only by opening oanother panel?
         gridNavigation: false, // should up and down arrow keys be used to navigate accros rows if tabs span multiple rows?
-        defaultSelect: '', // id of the default panel to be opened.
+        loopingNavigation: false, // should navigation keys loop to the other end when the end is reached in a group of tabs?
+        scrollOnOpen: false, // should the browser window be scrolled to the top of a newly opened panel?
+        updateLocationHash: false, // should the browser's location hash be updated when a panel is opened?
+        defaultSelect: '', // specify the ID of a panel to be opened when the tabgroup is instantiated.
+        tabDepth: 3, // what 'desendant level' from the parent tabgroup element can the tabs be found
+        panelDepth: 2,// what 'desendant level' from the parent tabgroup element can the panels be found
         effect: 'none', // which effect should be used to hide/show the panels ['fade', 'slide', 'none']
-        effectOptions: {}, 
-        sync: function($container){return;}, // this is a function that will be called by setInterval. Use it to keep dynamic layouts in order.
+        effectOptions: {duration:200},
+        queueOpeningEffect: true, // should the opening effect be delayed till closing operations are complete
+        sync: function(tabgroup){return null;}, // this is a function that will be called by setInterval. Use it to keep dynamic layouts in order.
         syncInterval: 0, // number of milliseconds between each calling of the sync function
       };
   switch(preset){
     case 'tabs':
-      return jQuery.extend(true,defaultSettings,{
+      return jQuery.extend(true,{},defaultSettings,{
 
       });
     case 'tabs-grid':
-      return jQuery.extend(true,defaultSettings,{
+      return jQuery.extend(true,{},defaultSettings,{
+        tabDepth: 5,
+        panelDepth: 2,
+        effect: 'fade',
         gridNavigation: true,
       });
     case 'accordion':
-      return jQuery.extend(true,defaultSettings,{
+      return jQuery.extend(true,{},defaultSettings,{
         openOnFocus: false,
+        focusOnPanel: true,
         selfClosable: true,
+        tabDepth: 2,
+        panelDepth: 2,
         effect: 'slide',
-        effectOptions: {duration:200},
+        queueOpeningEffect: false,
       });
     case 'accordion-grid':
-      return jQuery.extend(true,defaultSettings,{
+      var tabgroup = this;
+      return jQuery.extend(true,{},defaultSettings,{
         openOnFocus: false,
+        focusOnPanel: true,
         selfClosable: true,
         gridNavigation: true,
+        scrollOnOpen: true,
+        updateLocationHash: true,
+        tabDepth: 2,
+        panelDepth: 2,
         effect: 'slide',
         effectOptions: {
               duration:200,
@@ -616,14 +687,12 @@ tabpanel.prototype.settingsPreset = function(preset) {
                 $(fx.elem).parent().css('padding-bottom',now+'px');
               },
             },
-        sync: function($container){
-            $container.children().has('[role="tabpanel"][aria-hidden="false"]')
-              .each(function(){
-                var tabpanelHeight = $(this).children('[role="tabpanel"][aria-hidden="false"]').height();
-                $(this).css('padding-bottom',tabpanelHeight+'px');
+        queueOpeningEffect: false,
+        sync: function(tabgroup){
+            tabgroup.$panels.filter('[aria-hidden="false"]').each(function(){
+                var tabpanelHeight = $(this).height();
+                $(this).parent().css('padding-bottom',tabpanelHeight+'px');
             });
-
-            $('.accordion-grid [role="tabpanel"][aria-hidden="false"]').height();
           },
         syncInterval: 500,
         });
@@ -639,36 +708,39 @@ tabpanel.prototype.settingsPreset = function(preset) {
 // 
 // @return N/A 
 // 
-tabpanel.prototype.init = function() { 
+ariaTabGroup.prototype.init = function() { 
+  var tabGroup = this;
   var $tab; // the active tab - if one is active 
 
   // add aria attributes to the panel container 
-  this.$container.attr('aria-multiselectable', this.settings.multiSelect); 
+  tabGroup.$container.attr('aria-multiselectable', tabGroup.settings.multiSelect); 
 
   // add aria attributes to the panels 
-  this.$panels.attr('aria-hidden', 'true'); 
+  tabGroup.$panels.attr('aria-hidden', 'true'); 
 
   // hide all the panels 
-  this.$panels.hide(); 
+  tabGroup.$panels.hide(); 
 
   // get the active tab 
-  $tab = this.$tabs.filter('.active'); 
+  $tab = tabGroup.$tabs.filter('.active'); 
 
-  if ($tab == undefined && this.settings.defaultSelect) { 
-    $tab = this.$tabs.attr('aria-controls',this.settings.defaultSelect); 
-    $tab.addClass('active'); 
+  if ($tab.length == 0 && tabGroup.settings.defaultSelect) { 
+    $tab = tabGroup.$tabs.filter('[aria-controls='+tabGroup.settings.defaultSelect+']'); 
+    //tabGroup.togglePanel($tab,true); 
   } 
 
-  var syncFunction = this.settings.sync;
-  if(typeof(syncFunction) == 'function' && this.settings.syncInterval > 0){
-    var $container = this.$container;
-    setInterval(function(){ syncFunction($container); },this.settings.syncInterval);
+  // show the panel that the active tab controls and set aria-hidden to false 
+  // tabGroup.$container.find('#' + $tab.attr('aria-controls')).show().attr('aria-hidden', 'false'); 
+  if($tab.length > 0){
+    tabGroup.togglePanel($tab,true);
+    $tab.addClass('focus').focus()
   }
 
-  // show the panel that the active tab controls and set aria-hidden to false 
-  // this.$container.find('#' + $tab.attr('aria-controls')).show().attr('aria-hidden', 'false'); 
-  //if($tab !== undefined) this.togglePanel($tab,true);
 
+  var syncFunction = tabGroup.settings.sync;
+  if(typeof(syncFunction) == 'function' && tabGroup.settings.syncInterval > 0){
+    setInterval(function(){ syncFunction(tabGroup); },tabGroup.settings.syncInterval);
+  }
 } // end init() 
 
 // 
@@ -684,7 +756,7 @@ tabpanel.prototype.init = function() {
 // 
 // @return N/A 
 // 
-tabpanel.prototype.switchTabs = function($curTab, $newTab, show) { 
+ariaTabGroup.prototype.switchTabs = function($curTab, $newTab, show) { 
   if(typeof(show)!=='undefined' && show!==false ) show = true;
 
   // Remove the highlighting from the current tab 
@@ -692,7 +764,7 @@ tabpanel.prototype.switchTabs = function($curTab, $newTab, show) {
   $curTab.removeClass('focus').blur(); 
 
   // remove tab from the tab order 
-  //$curTab.attr('tabindex', '-1'); 
+  if(this.settings.navigateByTabKey == false) $curTab.attr('tabindex', '-1'); 
 
   // update the aria attributes 
    
@@ -717,7 +789,7 @@ tabpanel.prototype.switchTabs = function($curTab, $newTab, show) {
   } 
 
   // Make new tab navigable 
-  //$newTab.attr('tabindex', '0'); 
+  if(this.settings.navigateByTabKey == false) $newTab.attr('tabindex', '0'); 
 
   // give the new tab focus 
   $newTab.addClass('focus').focus(); 
@@ -736,24 +808,33 @@ tabpanel.prototype.switchTabs = function($curTab, $newTab, show) {
 //
 // @return N/A 
 // 
-tabpanel.prototype.togglePanel = function($tab,show) { 
-  // console.log('calling togglePanel()');
-  // console.log($tab);
+ariaTabGroup.prototype.togglePanel = function($tab,show) { 
+  console.log('calling togglePanel()');
+  console.log('$tab: ');
+  console.log($tab);
+  //console.log(show);
 
   if(typeof(show)!=='undefined' && show!==false ) show = true;
+  if(!this.$tabs.filter($tab)) return false;
+  var tabGroup = this;
+  var $tabWrapper = this.$tabWrappers.has($tab);
   var $panel = this.$container.find('#' + $tab.attr('aria-controls')); 
   var panelHidden = $panel.attr('aria-hidden') == 'true' ? true : false ;
   var panelId = $panel.attr('id');
   var panelLoadUri = $panel.attr('data-load');
   var effectOptions = this.settings.effectOptions;
+  var openingDelay = 0;
   var panelsToClose = [];
-  if(panelHidden == false){
+  if(panelHidden == false && this.settings.selfClosable == true && !show){
      $panelsToClose = $panel;
-  }else if(this.settings.multiSelect == false){
-     $panelsToClose = this.$container.find('[role="tabpanel"][aria-hidden="false"]')
+     if(window.location.hash == '#'+panelId) this.clearLocationHash();
+     //show = false;
+  }else if(panelHidden == true && this.settings.multiSelect == false){
+     $panelsToClose = this.$container.find('[role="tabpanel"][aria-hidden="false"]');
   }
-  if($panelsToClose.index($panel) > -1) show = false;
-  // console.log('panelHidden = '+panelHidden);
+  // if($panelsToClose.index($panel) > -1) show = false;
+  // console.log('panelHidden: '+panelHidden+', show: '+show);
+  // console.log('$panelsToClose: ');
   // console.log($panelsToClose);
   if($panelsToClose.length > 0){ 
     // console.log('closing panels:');
@@ -763,7 +844,9 @@ tabpanel.prototype.togglePanel = function($tab,show) {
         var thisPanelId = $thisPanel.attr('id');
         var $thisPanelTab = $('[role="tab"][aria-controls="'+thisPanelId+'"]');
         $thisPanel.attr('aria-hidden', 'true').removeClass('active');
-        $thisPanelTab.attr('aria-expanded', 'false').removeClass('active').attr('tabindex', '-1'); 
+        $thisPanelTab.attr('aria-expanded', 'false').removeClass('active');//.attr('tabindex', '-1'); 
+        if(tabGroup.settings.scrollOnOpen && $panel.is($thisPanel)) scrollToElement($tabWrapper,false);
+        if($panelsToClose.is($panel)) $tab.focus();
       };
     this.effectHide($panelsToClose,effectOptions);
     //$panel.attr('aria-hidden', 'true').removeClass('active'); 
@@ -771,37 +854,43 @@ tabpanel.prototype.togglePanel = function($tab,show) {
   }
   //console.log('panelHidden = '+panelHidden );
   //if($panelsToClose.filter($panel).length == 0)
-    if(panelHidden == true || show===true) { 
-      // console.log('opening panel:');
-      // console.log($panel);
-      effectOptions.complete = function(){
-          scrollToElementId($tab,false);
-          window.location.hash = panelId;
-          $panel.attr('aria-hidden', 'false').addClass('active');
-          $tab.attr('aria-expanded', 'true').addClass('active').attr('tabindex', '0'); 
-        };
-      if(panelLoadUri){
-          $panel.attr('aria-busy',true);
-          thisObj = this;
-          $panel.load(panelLoadUri,function(){
-            $panel.attr('aria-busy',false);
-            thisObj.effectShow($panel,effectOptions);
-            initAjaxContent($panel);
-          });
-      }else{
-        this.effectShow($panel,effectOptions);
-      }
-      //$panel.attr('aria-hidden', 'false').addClass('active'); 
-      //$panel.slideDown(100); 
+  if(panelHidden == true || show===true) { 
+    if($panelsToClose.length > 0 && tabGroup.settings.queueOpeningEffect == true){
+      //openingDelay = effectOptions.duration || $.fx.speed._default;
+      openingDelay = effectOptions.duration || 400;
+    } 
+
+    // console.log('opening panel:');
+    // console.log($panel);
+    effectOptions.complete = function(){
+        if(tabGroup.settings.scrollOnOpen) scrollToElement($panel,false);
+        if(tabGroup.settings.updateLocationHash) window.location.hash = panelId;
+        $panel.attr('aria-hidden', 'false').addClass('active');
+        $tab.attr('aria-expanded', 'true').addClass('active');//.attr('tabindex', '0'); 
+        if(tabGroup.settings.focusOnPanel) $panel.find(':focusable').first().focus();
+      };
+    if(panelLoadUri){
+        $panel.attr('aria-busy',true);
+        tabGroup = this;
+        $panel.load(panelLoadUri,function(){
+          $panel.attr('aria-busy',false);
+          tabGroup.effectShow($panel,effectOptions,openingDelay);
+          initAjaxContent($panel);
+        });
+    }else{
+      this.effectShow($panel,effectOptions,openingDelay);
     }
+    //$panel.attr('aria-hidden', 'false').addClass('active'); 
+    //$panel.slideDown(100); 
+  }
   //} 
 
 } // end togglePanel() 
 
 
 // define effects to be called for hiding and showing the panels
-tabpanel.prototype.effectFunction = function(show){
-  if(typeof(show)!=='undefined' && show!==false ) show = true;
+ariaTabGroup.prototype.effectFunction = function(show){
+  if(show!==true && show!==false ) show = null;
   switch(this.settings.effect){
     case 'fade' : 
         if(show === true) return 'fadeIn';
@@ -818,21 +907,29 @@ tabpanel.prototype.effectFunction = function(show){
       return 'toggle';
   }
 }
+ariaTabGroup.prototype.effectFunctionCall = function(show,$element,effectOptions,delayEffect){
+  var effectFunction = this.effectFunction(show);
+  if($element instanceof jQuery != true) return false;
+  effectOptions = effectOptions == {} ? null : effectOptions;
+  delayEffect = $.isNumeric(delayEffect) ? Number(delayEffect) : false;
+  if(delayEffect){ 
+    //if(this.settings.multiSelect == false) clearTimeout(this.openingEffectTimer);
+    this.openingEffectTimer = setTimeout(function(){
+          $element[effectFunction](effectOptions);
+        },delayEffect);
+  }else{
+    return $element[effectFunction](effectOptions);
+  }
+}
 // use effect from settings to hide or show the panels
-tabpanel.prototype.effectHide = function($element,effectOptions){
-  console.log('effectHide : #'+$element.attr('id'));
-  var effectFunction = this.effectFunction(false);
-  return $element[effectFunction](effectOptions);
+ariaTabGroup.prototype.effectHide = function($element,effectOptions,delayEffect){
+  return this.effectFunctionCall(false,$element,effectOptions,delayEffect);
 }
-tabpanel.prototype.effectShow = function($element,effectOptions){
-  console.log('effectShow : #'+$element.attr('id'));
-  var effectFunction = this.effectFunction(true);
-  return $element[effectFunction](effectOptions);
+ariaTabGroup.prototype.effectShow = function($element,effectOptions,delayEffect){
+  return this.effectFunctionCall(true,$element,effectOptions,delayEffect);
 }
-tabpanel.prototype.effectToggle = function($element,effectOptions){
-  console.log('effectToggle : #'+$element.attr('id'));
-  var effectFunction = this.effectFunction();
-  return $element[effectFunction](effectOptions);
+ariaTabGroup.prototype.effectToggle = function($element,effectOptions,delayEffect){
+  return this.effectFunctionCall(null,$element,effectOptions,delayEffect);
 }
 
 // 
@@ -840,36 +937,36 @@ tabpanel.prototype.effectToggle = function($element,effectOptions){
 // 
 // @return N/A 
 // 
-tabpanel.prototype.bindHandlers = function() { 
+ariaTabGroup.prototype.bindHandlers = function() { 
 
-  var thisObj = this; // Store the this pointer for reference 
+  var tabGroup = this; // Store the this pointer for reference 
 
   ////////////////////////////// 
   // Bind handlers for the tabs / accordian headers 
 
   // bind a tab keydown handler 
   this.$tabs.keydown(function(e) { 
-    return thisObj.handleTabKeyDown($(this), e); 
+    return tabGroup.handleTabKeyDown($(this), e); 
   }); 
 
   // bind a tab keypress handler 
   this.$tabs.keypress(function(e) { 
-    return thisObj.handleTabKeyPress($(this), e); 
+    return tabGroup.handleTabKeyPress($(this), e); 
   }); 
 
   // bind a tab click handler 
   this.$tabs.click(function(e) { 
-    return thisObj.handleTabClick($(this), e); 
+    return tabGroup.handleTabClick($(this), e); 
   }); 
 
   // bind a tab focus handler 
   this.$tabs.focus(function(e) { 
-    return thisObj.handleTabFocus($(this), e); 
+    return tabGroup.handleTabFocus($(this), e); 
   }); 
 
   // bind a tab blur handler 
   this.$tabs.blur(function(e) { 
-    return thisObj.handleTabBlur($(this), e); 
+    return tabGroup.handleTabBlur($(this), e); 
   }); 
 
   ///////////////////////////// 
@@ -877,12 +974,12 @@ tabpanel.prototype.bindHandlers = function() {
    
   // bind a keydown handlers for the panel focusable elements 
   this.$panels.keydown(function(e) { 
-    return thisObj.handlePanelKeyDown($(this), e); 
+    return tabGroup.handlePanelKeyDown($(this), e); 
   }); 
 
   // bind a keypress handler for the panel 
   this.$panels.keypress(function(e) { 
-    return thisObj.handlePanelKeyPress($(this), e); 
+    return tabGroup.handlePanelKeyPress($(this), e); 
   }); 
 
 } // end bindHandlers() 
@@ -896,104 +993,146 @@ tabpanel.prototype.bindHandlers = function() {
 // 
 // @return (boolean) Returns true if propagating; false if consuming event 
 // 
-tabpanel.prototype.handleTabKeyDown = function($tab, e) { 
-
+ariaTabGroup.prototype.handleTabKeyDown = function($tab, e) { 
   if (e.altKey) { 
     // do nothing 
     return true; 
   } 
 
-  switch (e.keyCode) { 
+  var keyCode = e.keyCode;
+  var tabExpanded = $tab.attr('aria-expanded') == 'true' ? true : false;
+
+  if (keyCode == this.keys.tab && this.settings.navigateByTabKey === true) {
+    if(e.shiftKey){ 
+      keyCode = this.keys.left; 
+    }
+    else{ 
+      keyCode = this.keys.right; 
+    }
+  }
+
+  switch (keyCode) { 
     case this.keys.enter: 
     case this.keys.space: { 
-
-      // Only process if this is an accordian widget 
-      if (this.settings.accordian == true) { 
-        // display or collapse the panel 
-        this.togglePanel($tab); 
-
+      // only consume if $tab has an 'aria-controls' attribute
+      if($tab.attr('aria-controls')){
+        // Only toggle the panel if it has not been toggled on focus
+        if (this.settings.openOnFocus == false) { 
+          // toggle panel
+          this.togglePanel($tab); 
+        }else{
+          // set focus to panel
+          this.$panels.filter('#'+$tab.attr('aria-controls')).find(':focusable').first().focus();
+        }
         e.stopPropagation(); 
         return false; 
-      } 
+      }
 
       return true; 
     } 
+
+    case this.keys.tab: {
+      if(tabExpanded == true){
+        this.$panels.filter('#'+$tab.attr('aria-controls')).find(':focusable').first().focus();
+        e.stopPropagation(); 
+        return false; 
+      }
+    }
+
     case this.keys.left: 
     case this.keys.up: { 
 
-      var thisObj = this; 
+      var tabGroup = this; 
       var $prevTab; // holds jQuery object of tab from previous pass 
       var $newTab; // the new tab to switch to 
 
-      // use arrow keys to navigate "up" and "down" rows in a grid tab layout
-      if(this.settings.gridNavigation == true && e.keyCode == this.keys.up){
-        var tabOffset = $tab.offset();
-        var tabPrevRowOffset = tabOffset.top - $tab.outerHeight(true);
-        $newTab = this.$tabs.filter(function(index, thisTab){
-            var thisTabOffset = $(thisTab).offset();
-            if(thisTabOffset.top == tabPrevRowOffset && thisTabOffset.left == tabOffset.left) return true;
-            //console.log('upkey :: thisTab top:'+epos.top+' left:'+epos.left+' :: original top:'+position.top+' left:'+position.left+'  outerHeight:'+$parent.outerHeight(true));
-          });
-      }
-      else if (e.ctrlKey) { 
+      if (e.ctrlKey) { 
         // Ctrl+arrow moves focus from panel content to the open 
         // tab/accordian header. 
       }
       else { 
-        var curNdx = this.$tabs.index($tab); 
+       // use arrow keys to navigate "up" and "down" rows in a grid tab layout
+        if(this.settings.gridNavigation == true && keyCode == this.keys.up && tabGroup.tabWrapSelector){
+          var $tabWrapper = $tab.closest(tabGroup.$tabWrappers);
+          if($tabWrapper){
+            var tabOffset = $tabWrapper.offset();
+            var tabPrevRowOffset = tabOffset.top - $tabWrapper.outerHeight(true);
+            $newTab = tabGroup.$tabs.filter(
+              function(index, thisTab){
+                var thisTabOffset = $(thisTab).closest(tabGroup.tabWrapSelector).offset();
+                //console.log('upkey :: thisTab top:'+thisTabOffset.top+' left:'+thisTabOffset.left+' :: original top:'+tabOffset.top+' left:'+tabOffset.left+'  outerHeight:'+$tabWrapper.outerHeight(true));
+                if(thisTabOffset.top == tabPrevRowOffset && thisTabOffset.left == tabOffset.left) return true;
+              });
+          }
+        }
+        if(!$newTab){       
+          var curNdx = this.$tabs.index($tab); 
 
-        if (curNdx == 0) { 
-          // tab is the first one: 
-          // set newTab to last tab 
-          $newTab = this.$tabs.last(); 
+          if (curNdx == 0 && this.settings.loopingNavigation == true) { 
+            // tab is the first one: 
+            // set newTab to last tab 
+            $newTab = this.$tabs.last(); 
+          } 
+          else { 
+            // set newTab to previous 
+            $newTab = this.$tabs.eq(curNdx - 1); 
+          }
         } 
-        else { 
-          // set newTab to previous 
-          $newTab = this.$tabs.eq(curNdx - 1); 
-        } 
-
         // switch to the new tab 
-        this.switchTabs($tab, $newTab); 
+        if($newTab){
+          this.switchTabs($tab, $newTab);
+          e.stopPropagation(); 
+          return false;
+        } 
+        return true;
       } 
-
-      e.stopPropagation(); 
-      return false; 
     } 
     case this.keys.right: 
     case this.keys.down: { 
 
-      var thisObj = this; 
+      var tabGroup = this; 
       var foundTab = false; // set to true when current tab found in array 
       var $newTab; // the new tab to switch to 
 
-      // use arrow keys to navigate "up" and "down" rows in a grid tab layout
-      if(this.settings.gridNavigation == true && e.keyCode == this.keys.down){
-        var tabOffset = $tab.offset();
-        var tabNextRowOffset = tabOffset.top + $tab.outerHeight(true);
-        $newTab = this.$tabs.filter(function(index, thisTab){
-            var thisTabOffset = $(thisTab).offset();
-            if(thisTabOffset.top == tabNextRowOffset && thisTabOffset.left == tabOffset.left) return true;
-            //console.log('upkey :: thisTab top:'+epos.top+' left:'+epos.left+' :: original top:'+position.top+' left:'+position.left+'  outerHeight:'+$parent.outerHeight(true));
-          });
+      if (e.ctrlKey) { 
+        // Ctrl+arrow
       }
       else{
-        var curNdx = this.$tabs.index($tab); 
+        // use arrow keys to navigate "up" and "down" rows in a grid tab layout
+        if(this.settings.gridNavigation == true && keyCode == this.keys.down && tabGroup.tabWrapSelector){
+          //console.log('key down: tabWrapSelector = '+tabGroup.tabWrapSelector);
+          var $tabWrapper = $tab.closest(tabGroup.$tabWrappers);
+          if($tabWrapper){
+            var tabOffset = $tabWrapper.offset();
+            var tabNextRowOffset = tabOffset.top + $tabWrapper.outerHeight(true);
+            $newTab = tabGroup.$tabs.filter(function(index, thisTab){
+                var thisTabOffset = $(thisTab).closest(tabGroup.tabWrapSelector).offset();
+                //console.log('downkey :: thisTab top:'+thisTabOffset.top+' left:'+thisTabOffset.left+' :: original top:'+tabOffset.top+' left:'+tabOffset.left+'  outerHeight:'+$tabWrapper.outerHeight(true));
+                if(thisTabOffset.top == tabNextRowOffset && thisTabOffset.left == tabOffset.left) return true;
+              });
+          }
+        }
+        if(!$newTab){
+          var curNdx = this.$tabs.index($tab); 
 
-        if (curNdx == this.$tabs.last().index()) { 
-          // tab is the last one: 
-          // set newTab to first tab 
-          $newTab = this.$tabs.first(); 
+          if (curNdx == this.$tabs.last().index() && this.settings.loopingNavigation == true) { 
+            // tab is the last one: 
+            // set newTab to first tab 
+            $newTab = this.$tabs.first(); 
+          } 
+          else { 
+            // set newTab to next tab 
+            $newTab = this.$tabs.eq(curNdx + 1); 
+          }
         } 
-        else { 
-          // set newTab to next tab 
-          $newTab = this.$tabs.eq(curNdx + 1); 
+        // switch to the new tab 
+        if($newTab){
+          this.switchTabs($tab, $newTab);
+          e.stopPropagation(); 
+          return false;
         } 
+        return true;
       }
-      // switch to the new tab 
-      this.switchTabs($tab, $newTab); 
-
-      e.stopPropagation(); 
-      return false; 
     } 
     case this.keys.home: { 
 
@@ -1011,6 +1150,9 @@ tabpanel.prototype.handleTabKeyDown = function($tab, e) {
       e.stopPropagation(); 
       return false; 
     } 
+    case this.keys.esc:{
+      return true; 
+    }
   } 
 } // end handleTabKeyDown() 
 
@@ -1024,7 +1166,7 @@ tabpanel.prototype.handleTabKeyDown = function($tab, e) {
 // 
 // @return (boolean) Returns true if propagating; false if consuming event 
 // 
-tabpanel.prototype.handleTabKeyPress = function($tab, e) { 
+ariaTabGroup.prototype.handleTabKeyPress = function($tab, e) { 
 
   if (e.altKey) { 
     // do nothing 
@@ -1034,6 +1176,7 @@ tabpanel.prototype.handleTabKeyPress = function($tab, e) {
   switch (e.keyCode) { 
     case this.keys.enter: 
     case this.keys.space: 
+      if(!$tab.attr('aria-controls')) return true;
     case this.keys.left: 
     case this.keys.up: 
     case this.keys.right: 
@@ -1072,13 +1215,15 @@ tabpanel.prototype.handleTabKeyPress = function($tab, e) {
 // 
 // @return (boolean) returns true 
 // 
-tabpanel.prototype.handleTabClick = function($tab, e) { 
+ariaTabGroup.prototype.handleTabClick = function($tab, e) { 
 
   // remove all tabs from the tab order 
   //this.$tabs.attr('tabindex', '-1'); 
 
   // make clicked tab navigable 
   //$tab.attr('tabindex', '0'); 
+
+  if(!$tab.attr('aria-controls')) return true;
 
   // Expand the new panel 
   this.togglePanel($tab); 
@@ -1097,7 +1242,7 @@ tabpanel.prototype.handleTabClick = function($tab, e) {
 // 
 // @return (boolean) returns true 
 // 
-tabpanel.prototype.handleTabFocus = function($tab, e) { 
+ariaTabGroup.prototype.handleTabFocus = function($tab, e) { 
 
   // Add the focus class to the tab 
   $tab.addClass('focus'); 
@@ -1115,7 +1260,7 @@ tabpanel.prototype.handleTabFocus = function($tab, e) {
 // 
 // @return (boolean) returns true 
 // 
-tabpanel.prototype.handleTabBlur = function($tab, e) { 
+ariaTabGroup.prototype.handleTabBlur = function($tab, e) { 
 
   // Remove the focus class to the tab 
   $tab.removeClass('focus'); 
@@ -1138,12 +1283,15 @@ tabpanel.prototype.handleTabBlur = function($tab, e) {
 // 
 // @return (boolean) Returns true if propagating; false if consuming event 
 // 
-tabpanel.prototype.handlePanelKeyDown = function($panel, e) { 
+ariaTabGroup.prototype.handlePanelKeyDown = function($panel, e) { 
 
   if (e.altKey) { 
     // do nothing 
     return true; 
   } 
+
+  // get the jQuery object of the tab 
+  var $tab = this.$tabs.filter('[aria-controls="'+$panel.attr('id')+'"]'); 
 
   switch (e.keyCode) { 
     case this.keys.tab: { 
@@ -1152,64 +1300,86 @@ tabpanel.prototype.handlePanelKeyDown = function($panel, e) {
       var panelNdx = this.$panels.index($panel); 
       var numPanels = this.$panels.length 
 
-      if (e.shiftKey) { 
+      // if there is a shift key modifier
+      if (e.shiftKey){
         // if this is the first focusable item in the panel 
-        // find the preceding expanded panel (if any) that has 
-        // focusable items and set focus to the last one in that 
-        // panel. If there is no preceding panel or no focusable items 
-        // do not process. 
-        if (curNdx == 0 && panelNdx > 0) { 
+        if(curNdx == 0) { 
+          // if multiple panels may be open
+          // find the preceding expanded panel (if any) that has 
+          // focusable items and set focus to the last one in that panel. 
+          if (panelNdx > 0 && this.settings.multiSelect == true) { 
 
-          // Iterate through previous panels until we find one that 
-          // is expanded and has focusable elements 
-          // 
-          for (var ndx = panelNdx - 1; ndx >= 0; ndx--) { 
+            // Iterate through previous panels until we find one that 
+            // is expanded and has focusable elements 
+            // 
+            for (var ndx = panelNdx - 1; ndx >= 0; ndx--) { 
 
-            var $prevPanel = this.$panels.eq(ndx); 
+              var $prevPanel = this.$panels.eq(ndx); 
 
-            // get the focusable items in the panel 
-            $focusable.length = 0; 
-            $focusable = $prevPanel.find(':focusable'); 
+              // get the focusable items in the panel 
+              $focusable.length = 0; 
+              $focusable = $prevPanel.find(':focusable'); 
 
-            if ($focusable.length > 0) { 
-              // there are focusable items in the panel. 
-              // Set focus to the last item. 
-              $focusable.last().focus(); 
-              e.stopPropagation; 
-              return false; 
+              if ($focusable.length > 0) { 
+                // there are focusable items in the panel. 
+                // Set focus to the last item. 
+                $focusable.last().focus(); 
+                e.stopPropagation; 
+                return false; 
+              } 
             } 
-          } 
-        } 
-      } 
-      else if (panelNdx < numPanels) { 
-
+          }
+          // if there are no other panels open, set focus to current tab
+          else{
+            $tab.focus();
+            e.stopPropagation(); 
+            return false; 
+          }
+        }
+        // if there is a previous focusable item, set focus to it
+        $focusable.eq(curNdx -1).focus();
+        e.stopPropagation(); 
+        return false; 
+      }
+      // if there is no shift key modifier
+      else{
         // if this is the last focusable item in the panel 
-        // find the nearest following expanded panel (if any) that has 
-        // focusable items and set focus to the first one in that 
-        // panel. If there is no preceding panel or no focusable items 
-        // do not process. 
         if (curNdx == $focusable.length - 1) { 
+          // if multiple panels may be open
+          // find the nearest following expanded panel (if any) that has 
+          // focusable items and set focus to the first one in that panel.
+          if (panelNdx < numPanels && this.settings.multiSelect == true) { 
+            // Iterate through following panels until we find one that 
+            // is expanded and has focusable elements 
+            // 
+            for (var ndx = panelNdx + 1; ndx < numPanels; ndx++) { 
 
-          // Iterate through following panels until we find one that 
-          // is expanded and has focusable elements 
-          // 
-          for (var ndx = panelNdx + 1; ndx < numPanels; ndx++) { 
+              var $nextPanel = this.$panels.eq(ndx); 
 
-            var $nextPanel = this.$panels.eq(ndx); 
+              // get the focusable items in the panel 
+              $focusable.length = 0; 
+              $focusable = $nextPanel.find(':focusable'); 
 
-            // get the focusable items in the panel 
-            $focusable.length = 0; 
-            $focusable = $nextPanel.find(':focusable'); 
-
-            if ($focusable.length > 0) { 
-              // there are focusable items in the panel. 
-              // Set focus to the first item. 
-              $focusable.first().focus(); 
-              e.stopPropagation; 
-              return false; 
-            } 
+              if ($focusable.length > 0) { 
+                // there are focusable items in the panel. 
+                // Set focus to the first item. 
+                $focusable.first().focus(); 
+                e.stopPropagation(); 
+                return false; 
+              } 
+            }
+          }
+          // otherwise, set focus to tab
+          else{
+            $tab.focus();
+            e.stopPropagation(); 
+            return false; 
           } 
-        } 
+        }
+        // if there is a next focusable item, set focus to it
+        $focusable.eq(curNdx +1).focus();
+        e.stopPropagation(); 
+        return false;         
       } 
 
       break; 
@@ -1222,9 +1392,6 @@ tabpanel.prototype.handlePanelKeyDown = function($panel, e) {
         return true; 
       } 
    
-      // get the jQuery object of the tab 
-      var $tab = $('#' + $panel.attr('aria-labeledby')); 
-
       // Move focus to the tab 
       $tab.focus(); 
 
@@ -1239,9 +1406,6 @@ tabpanel.prototype.handlePanelKeyDown = function($panel, e) {
         // do not process 
         return true; 
       } 
-
-      // get the jQuery object of the tab 
-      var $tab = this.$tabs.filter('.active'); 
 
       // get the index of the tab in the tab list 
       var curNdx = this.$tabs.index($tab); 
@@ -1271,9 +1435,6 @@ tabpanel.prototype.handlePanelKeyDown = function($panel, e) {
         return true; 
       } 
 
-      // get the jQuery object of the tab 
-      var $tab = $('#' + $panel.attr('aria-labeledby')); 
-
       // get the index of the tab in the tab list 
       var curNdx = this.$tabs.index($tab); 
 
@@ -1294,7 +1455,7 @@ tabpanel.prototype.handlePanelKeyDown = function($panel, e) {
       return false; 
     } 
     case this.keys.esc:{
-      this.togglePanel($tab,false);
+      $tab.focus();
     }
   } 
 
@@ -1311,7 +1472,7 @@ tabpanel.prototype.handlePanelKeyDown = function($panel, e) {
 // 
 // @return (boolean) Returns true if propagating; false if consuming event 
 // 
-tabpanel.prototype.handlePanelKeyPress = function($panel, e) { 
+ariaTabGroup.prototype.handlePanelKeyPress = function($panel, e) { 
 
   if (e.altKey) { 
     // do nothing 
@@ -1335,6 +1496,48 @@ tabpanel.prototype.handlePanelKeyPress = function($panel, e) {
   return true; 
 
 } // end handlePanelKeyPress() 
+
+// tabGroup property getter
+// return a selector for the outermost element that wraps a single tab
+ariaTabGroup.prototype.getTabWrapSelector = function($tab) {
+  if(typeof $tab === 'undefined' || $tab.length == 0) $tab = this.$tabs.first();
+  //return $tab.closest('* ~ [role="tab"]');
+  var $parentWrapper;
+  var parentSelector='';
+  var parentSelectorMod = '';
+  var childSelector = '';
+  var childSelectorMod = '';
+  for (var i = 0; i == this.settings.tabDepth; i++) {
+    childSelector = ' + '+childSelectorMod+'[role="tab"]';
+    parentSelector = '[role="tab"]'+parentSelectorMod;
+    //console.log('try : tabWrapSelector = '+parentSelector);
+    $sibling = $tab.closest(childSelector);
+    if($sibling.length > 0) return parentSelector;
+    parentSelectorMod = parentSelectorMod.concat(':parent');
+    childSelectorMod = childSelectorMod.concat(' > ');
+  };
+  return null;
+} // end findTabWrapper()
+
+
+// remove location.hash without scrolling page to top
+// http://stackoverflow.com/a/5298684
+ariaTabGroup.prototype.clearLocationHash = function() { 
+    var scrollV, scrollH, loc = window.location;
+    if ("pushState" in history)
+        history.pushState("", document.title, loc.pathname + loc.search);
+    else {
+        // Prevent scrolling by storing the page's current scroll offset
+        scrollV = document.body.scrollTop;
+        scrollH = document.body.scrollLeft;
+
+        loc.hash = "";
+
+        // Restore the scroll offset, should be flicker free
+        document.body.scrollTop = scrollV;
+        document.body.scrollLeft = scrollH;
+    }
+}
 
 // focusable is a small jQuery extension to add a :focusable selector. It is used to 
 // get a list of all focusable elements in a panel. Credit to ajpiano on the jQuery forums. 
