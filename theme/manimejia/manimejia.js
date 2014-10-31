@@ -39,7 +39,7 @@ $(document).ready(function(){
   // initializeSlickCarousels();
   
   // initialize skrollr library
-  skrollr.init();
+  // skrollr.init();
 
 
   // // trigger opening and closing of foundation's show-modal
