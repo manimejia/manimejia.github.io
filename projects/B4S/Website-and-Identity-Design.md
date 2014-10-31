@@ -5,7 +5,9 @@ date: 2003-09-01
 website: /projects/B4S/b4s-WebNav/
 role: Graphic Designer
 status: archived
-display: [portfolio, resume]
+publish: 
+ print: true
+
 tags:
 - User Experience
 - HTML

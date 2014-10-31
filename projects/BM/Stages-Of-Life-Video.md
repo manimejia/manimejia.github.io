@@ -6,7 +6,8 @@ website:
 role: Multimedia Artist
 status: archived
 
-display: [drafts]
+publish: 
+ drafts: true
 
 tags:
 - Art Installation

@@ -4,27 +4,37 @@ title: Graduate Education Toolkit
 date: 2014-08-01
 website: 
 role: UX Architect
+publish:
+ print: true
+ main: true 
 
 tags:
-- User Experience
-- Salesforce
 - Higher Education
+- User Experience
 - Architecture
-- HTML
+- Responsive Design
+- Web Accessability
+- HTML5
 - CSS
 - Java
 - Javascript
+- jQuery
+- Bootstrap
 - Visualforce
-- System Audit
+- Salesforce
 - Web Application
 - Intranet Application
+- System Audit
 - Mockups and Wireframes
 - Rapid Prototype
 - Market Research
 
 
-thumbnail: 
+thumbnail: gradschool-get-icon.jpg
+
 assets: 
+ - filename: gradschool-get-screen-DAF-select.png
+   caption: 
 
 tasks: 
   - Designed comprehensive documentation of the legacy database used for managing graduate   student admissions and matriculation.

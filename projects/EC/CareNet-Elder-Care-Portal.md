@@ -6,9 +6,9 @@ website:
 role: UX Architect
 status: in development
 
-display:  
-- resume
-- featured
+publish:  
+ print: true
+ featured: true
 
 tags:
 - Drupal

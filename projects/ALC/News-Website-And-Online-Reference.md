@@ -5,7 +5,9 @@ date: 2007-07-01
 website: https://web.archive.org/web/20111016060516/http://www.animallawcoalition.com/
 role: Website Developer
 status: archived
-display: [portfolio, resume]
+publish: 
+ print: true
+ 
 tags:
 - Drupal
 - PHP

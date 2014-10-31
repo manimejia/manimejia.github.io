@@ -1,4 +1,4 @@
-<div class="{% if page.hidetopbar %}sticky{% else %}fixed{%endif%}">
+<div class="{% if page.hidetopbar %}sticky{% else %}fixed{%endif%} contain-to-grid">
   <nav class="top-bar" data-topbar id="topbar" role="navigation">
     <ul class="title-area" role="presentational">
       <li class="name" role="presentational">
@@ -10,7 +10,7 @@
       {% if site.config.topbar.left %}
       <ul class="left">
       {% for item in site.config.topbar.left %}
-        <li{% if item.class %} class="has-form"{% endif %}>
+        <li{% if item.hasform %} class="has-form"{% endif %}>
           <a href="{{ item.url }}" class="{{ item.class }}" role="link" tabindex="0">{{ item.name }}</a>
         </li>
       {% endfor %}
@@ -20,7 +20,7 @@
       {% if site.config.topbar.right %}
       <ul class="right">
       {% for item in site.config.topbar.right %}
-        <li{% if item.class %} class="has-form"{% endif %}>
+        <li {% if item.hasform %}class="has-form"{% endif %}>
           <a href="{{ item.url }}" class="{{ item.class }}" role="link" tabindex="0">{{ item.name }}</a>
         </li>
       {% endfor %}

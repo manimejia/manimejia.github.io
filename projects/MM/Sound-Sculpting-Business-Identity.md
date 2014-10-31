@@ -5,7 +5,7 @@ date: 2001-12-01
 website: 
 role: Graphic Designer
 status: archived
-display: [portfolio]
+publish:
 
 tags:
 - Fine Art

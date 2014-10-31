@@ -4,7 +4,7 @@ client: HHF
 date: 2000-06-01
 website: 
 role: Musician
-display: [portfolio]
+publish: 
 status: complete
 tags:
 - Didgeridoo

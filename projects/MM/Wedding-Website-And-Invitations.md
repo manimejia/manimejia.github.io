@@ -5,7 +5,8 @@ date: 2010-04-01
 website: http://isla.manishan.us
 role: Multimedia Designer
 status: archived
-display: [portfolio,resume]
+publish: 
+ print: true
 
 tags:
 - Fine Art
@@ -19,9 +20,15 @@ tags:
 - Event
 - Jewelery Design
 
-thumbnail: 
+thumbnail: wedding-manishan-logo.png
 
 assets: 
+ - filename: wedding-birds-manishan-savedate-2.jpg
+   caption: 
+ - filename: wedding-ring-design.jpg
+   caption: 
+ - filename: wedding-mnishan-portrait.jpg
+   caption: 
 
 tasks: 
  - Designed and developed a custom website and invitations using elements from an illustration made by myself and my bride-to-be.

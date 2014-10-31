@@ -5,7 +5,9 @@ date: 2002-06-01
 website: /projects/MBL/assets/TTD-2002-Mandala-Animation
 role: Designer / Developer
 status: archived
-display: [portfolio, resume]
+publish: 
+ print: true
+ featured: true
 tags:
 - Flash
 - Animation

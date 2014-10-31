@@ -6,9 +6,9 @@ website:
 role: UX Consultant
 status: retired
 
-display: 
-- portfolio
-- resume
+publish: 
+ main: true 
+ print: true
 
 tags:
 - Flash

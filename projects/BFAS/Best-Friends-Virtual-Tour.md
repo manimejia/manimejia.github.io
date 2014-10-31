@@ -6,10 +6,10 @@ website: /projects/bfas/assets/BFAS-Tour12
 role: Designer / Developer  
 status: archived
 
-display: 
-- portfolio
-- resume
-- featured
+publish: 
+ main: true 
+ print: true
+ featured: true
 
 tags:
 - Flash

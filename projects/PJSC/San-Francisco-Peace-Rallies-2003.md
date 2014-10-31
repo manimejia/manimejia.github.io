@@ -5,8 +5,8 @@ date: 2003-03-01
 website: 
 role: Transportation Coordinator
 status: complete
-display: 
-- portfolio
+publish: 
+ main: true 
 
 tags:
 - Logistics

@@ -5,7 +5,8 @@ date: 2003-04-01
 website: 
 role: Event Coordinator
 status: complete
-display: [portfolio]
+publish: 
+ main: true
 tags:
 - Communication
 - Event Promotion

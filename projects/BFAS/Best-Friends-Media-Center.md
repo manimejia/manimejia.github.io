@@ -6,9 +6,9 @@ website:
 role: UX Architect & Actionscript Conultant
 status: not released
 
-display: 
-- portfolio
-- resume
+publish: 
+ main: true 
+ print: true
 
 tags:
 - Flash

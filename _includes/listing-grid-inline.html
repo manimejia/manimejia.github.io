@@ -4,15 +4,15 @@ color: inherit;
 }
 
 
-.tabgroup.accordion-grid{
+.accordion-grid[role="tablist"]{
   position: relative;
   text-align:center;
 }
-.tabgroup.accordion-grid .year{
+.accordion-grid[role="tablist"] .year{
 position: absolute;
 margin: -2.2rem 0 0 -2rem;
 }
-.tabgroup.accordion-grid .year time.label{
+.accordion-grid[role="tablist"] .year time.label{
   font-size:1rem;
 }
 .year time.label::after {
@@ -28,7 +28,7 @@ right: -1.5rem;
 }
 
 
-.tabgroup.accordion-grid > .accordion-navigation{
+.accordion-grid[role="tablist"] > .accordion-grid-item{
 font-size:1rem;
 display: inline-block !important;
 vertical-align: top;
@@ -38,7 +38,7 @@ margin-top: 1rem;
 margin-bottom:0rem;
 }
 
-.tabgroup.accordion-grid > .accordion-navigation > a[role="tab"]{
+.accordion-grid[role="tablist"] > .accordion-grid-item > a[role="tab"]{
 position: relative;
 text-align: center;
 display: table;
@@ -55,25 +55,25 @@ border-radius: 50%;
 border: solid .25rem #FFF;
 }
 
-.tabgroup.accordion-grid > .accordion-navigation > a[role="tab"][aria-expanded="true"],
-.tabgroup.accordion-grid > .accordion-navigation > a[role="tab"]:hover,
-.tabgroup.accordion-grid > .accordion-navigation > a[role="tab"]:focus{
+.accordion-grid[role="tablist"] > .accordion-grid-item > a[role="tab"][aria-expanded="true"],
+.accordion-grid[role="tablist"] > .accordion-grid-item > a[role="tab"]:hover,
+.accordion-grid[role="tablist"] > .accordion-grid-item > a[role="tab"]:focus{
   font-size:1rem;
 }
 
-.tabgroup a[role="tab"][aria-expanded="true"]{
+[role="tablist"] a[role="tab"][aria-expanded="true"]{
   border-color:#222;
   /*font-size:1rem;*/
 }
-.tabgroup a[role="tab"]:focus{
+[role="tablist"] a[role="tab"]:focus{
   outline:none;
 }
-.tabgroup a[role="tab"]:hover,
-.tabgroup a[role="tab"]:focus{
+[role="tablist"] a[role="tab"]:hover,
+[role="tablist"] a[role="tab"]:focus{
   box-shadow: 0 0 .5rem .25rem #fff;
 }
 
-.tabgroup.accordion-grid > * > a[role="tab"][aria-expanded="true"]:after{
+.accordion-grid[role="tablist"] > * > a[role="tab"][aria-expanded="true"]:after{
 top: 100%;
 border: solid rgba(0, 0, 0, 0);
 content: " ";
@@ -88,7 +88,7 @@ margin: -1.3rem 0 0 -1.5rem;
 z-index: 5;
 }
 
-.tabgroup.accordion-grid > * > a[role="tab"] .caption {
+.accordion-grid[role="tablist"] > * > a[role="tab"] .caption {
   display: none;
   border-radius: 50%;
   font-size:inherit;
@@ -96,12 +96,12 @@ z-index: 5;
   text-shadow: 0 .5rem .5rem #FFF, 0 0 .1rem #FFF;
 }
 
-.tabgroup.accordion-grid > * > a[role="tab"] .client{
+.accordion-grid[role="tablist"] > * > a[role="tab"] .client{
   font-weight: bold;
   position: absolute;
   z-index: 0;
 }
-.tabgroup.accordion-grid > * > a[role="tab"] .title {
+.accordion-grid[role="tablist"] > * > a[role="tab"] .title {
 line-height: 1.3rem; 
 height: 8rem;
 width: 8rem;
@@ -113,16 +113,16 @@ letter-spacing: .05rem;
 vertical-align: middle;
 }
 
-.tabgroup.accordion-grid > * > a[role="tab"][aria-expanded="true"] .caption,
-.tabgroup.accordion-grid > * > a[role="tab"]:hover .caption,
-.tabgroup.accordion-grid > * > a[role="tab"]:focus .caption,
-.tabgroup.accordion-grid > * > a[role="tab"] .caption:hover,
-.tabgroup.accordion-grid > * > a[role="tab"] .caption:focus{
+.accordion-grid[role="tablist"] > * > a[role="tab"][aria-expanded="true"] .caption,
+.accordion-grid[role="tablist"] > * > a[role="tab"]:hover .caption,
+.accordion-grid[role="tablist"] > * > a[role="tab"]:focus .caption,
+.accordion-grid[role="tablist"] > * > a[role="tab"] .caption:hover,
+.accordion-grid[role="tablist"] > * > a[role="tab"] .caption:focus{
   display: table-cell;
 }
 
 
-/*.tabgroup.accordion-grid > .accordion-navigation > .th .title {
+/*.accordion-grid[role="tablist"] > .accordion-grid-item > .th .title {
 height: 100%;
 width: 100%;
 background-color: rgba(0, 0, 0, 0.5);
@@ -133,7 +133,7 @@ z-index: 2;
 vertical-align: middle;
 }*/
 
-.tabgroup.accordion-grid > * > a[role="tab"] .th-image{
+.accordion-grid[role="tablist"] > * > a[role="tab"] .th-image{
 width: 8rem;
 height: 8rem;
 font-size: 8rem;
@@ -145,14 +145,14 @@ top: 0;
 left: 0;
 display: block;
 }
-.tabgroup.accordion-grid > * > a[role="tab"]:hover .th-image,
-.tabgroup.accordion-grid > * > a[role="tab"] .client:hover ~ .th-image,
-.tabgroup.accordion-grid > * > a[role="tab"][aria-expanded="true"]  .th-image{
+.accordion-grid[role="tablist"] > * > a[role="tab"]:hover .th-image,
+.accordion-grid[role="tablist"] > * > a[role="tab"] .client:hover ~ .th-image,
+.accordion-grid[role="tablist"] > * > a[role="tab"][aria-expanded="true"]  .th-image{
 /*box-shadow: #fff 0 0 10px;*/
 }
 
 
-.tabgroup.accordion-grid >  * > [role="tabpanel"]{
+.accordion-grid[role="tablist"] >  * > [role="tabpanel"]{
   position: absolute;
   left: 0;
   z-index: 10;
@@ -163,23 +163,23 @@ display: block;
   /*height:auto;*/
   /*height:0px;*/
 }
-.tabgroup.accordion-grid >  * > [role="tabpanel"][aria-hidden="false"]{
+.accordion-grid[role="tablist"] >  * > [role="tabpanel"][aria-hidden="false"]{
   /*height:auto;*/
   display: initial;
 }
 
 /*
-article.accordion-navigation .th a.th-link .title{
+article.accordion-grid-item .th a.th-link .title{
   display: none;
 }
-article.accordion-navigation .th a.th-link:hover .title{
+article.accordion-grid-item .th a.th-link:hover .title{
   display: block;
 }*/
 
 
 </style>
 
-<dl id="portfolio-accordion-grid" class="tabgroup accordion-grid row" data-aria-tab-group="accordion-grid" role="tablist">
+<dl id="portfolio-accordion-grid" class="accordion-grid row" data-aria-tab-group="accordion-grid" role="tablist">
 {% assign listing_pages = site.pages | where: "category" , "project" | sort: "date"%}
 {% for this_page in listing_pages reversed %}
 
@@ -188,11 +188,11 @@ article.accordion-navigation .th a.th-link:hover .title{
   {% assign item_year = this_page.date | date: '%Y' %}
   {% unless last_item_year %}{% assign last_item_year = 0000 %}{% endunless %}
 
-    <dd id="{{ this_page_id }}-wrapper" class="accordion-navigation">
+    <dd id="{{ this_page_id }}-wrapper" class="accordion-grid-item">
     {% if item_year != last_item_year %}
       <h3 class="year inline-block" role="heading"><time class="label secondary">{{ item_year }}</time></h3>
     {% endif %}
-      <a id="{{ this_page_id }}-th" href="#{{ this_page_id }}" class="th skrollr-perspectivezoom-bottom" role="tab" tabindex="0" aria-expanded="false" aria-controls="{{this_page_id}}" data-scroll-offset="128" tile="project {{forloop.index}} of {{forloop.length}}">
+      <a id="{{ this_page_id }}-th" href="#{{ this_page_id }}" class="th" role="tab" tabindex="0" aria-expanded="false" aria-controls="{{this_page_id}}" data-scroll-offset="128" tile="project {{forloop.index}} of {{forloop.length}}">
         <!--<span class="title th-link">{{ this_page.title }}</span>-->
         <span class="client caption hidden-for-small-only hidden-for-medium-up">{{ this_client_page.title}}</span>
         <span class="client caption circular-text" aria-hidden="true">{% include split_char.html string=this_client_page.title %}</span>

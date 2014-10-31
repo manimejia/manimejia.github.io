@@ -4,16 +4,20 @@ title: Graduate School Document Workflow Solutions
 date: 2014-01-01
 website: 
 role: Website Developer
+publish:
+ print: true
+ main: true 
 
 tags:
+- Higher Education
 - User Experience
+- Architecture
 - Workflows
 - Google Apps Script
-- Higher Education
-- Architecture
 - Javascript
+- Server Side Javascript
 
-thumbnail: 
+thumbnail: gradschool-google-icon.jpg
 
 assets: 
 

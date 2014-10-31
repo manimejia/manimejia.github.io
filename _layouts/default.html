@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }}</title>
+  <title>{{site.config.name}} : {% if page.title  %}{{ page.title }}{% else %}{{site.config.description}}{%endif%}</title>
   {% include robots.html %}
   {% include meta-description.html %}
 
@@ -32,11 +32,11 @@
 </head>
 <body class="{% unless page.hidetopbar %}f-topbar-fixed{% endunless %}">
 
-{% unless page.hidetopbar %}
+{% unless page.hide.topbar %}
 {% include topbar.html %}
 {% endunless %}
 
-{% unless page.hidetitle %}
+{% unless page.hide.title %}
   <header id="page-title-row" class="row">
     <div id="page-title-column" class="column">
       <h1 id="page-title">{{ page.title }} 
@@ -48,13 +48,13 @@
   </header>
 {% endunless %}
 
-{% unless page.hidecontent %}
+{% unless page.hide.content %}
   <main id="page-content" class="{{page.category}}">
         {{ content }}
   </main>
 {% endunless %}
 
-{% unless page.hidefooter %}
+{% unless page.hide.footer %}
   <footer id="page-footer-row" class="row">
     <div id="page-footer-column" class="column">
       <hr>

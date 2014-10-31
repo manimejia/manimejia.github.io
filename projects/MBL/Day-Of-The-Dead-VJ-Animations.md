@@ -5,7 +5,9 @@ date: 2002-11-01
 website: /projects/MBL/assets/DOD-2002-vj-animation
 role: Designer / Developer
 status: archived
-display: [resume, portfolio, featured]
+publish: 
+ print: true
+ featured: true
 tags:
 - Flash
 - Animation

@@ -4,7 +4,8 @@ client: HH
 date: 2003-06-01
 website: 
 role: Multimedia Artist
-display: [drafts]
+publish: 
+ draft: true
 tags:
 - Interactive
 - Art Installation

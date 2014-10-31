@@ -6,8 +6,8 @@ website: http://elitecare.com
 role: Website Developer
 status: retired
 
-display:  
-- resume
+publish:  
+ print: true
 
 tags:
 - Drupal

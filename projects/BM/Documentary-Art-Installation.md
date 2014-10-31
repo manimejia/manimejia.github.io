@@ -6,7 +6,8 @@ website:
 role: Multimedia Artist
 status: retired
 
-display: [drafts]
+publish: 
+ draft: true
 
 tags:
 - Art Installation

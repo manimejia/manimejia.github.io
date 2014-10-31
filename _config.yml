@@ -73,8 +73,9 @@ defaults:
       category: "project"
 
 config:
-  name: ManiMejia.me
-  description: 'Artist, Athlete, and Engineer'
+  name: "Manuel Mejia"
+  description: "User Experience Architect, Web Developer, and Multimedia Creative"
+  domain: manimejia.me
   author:
     name: Manuel Mejia
     website: http://manimejia.me
@@ -91,6 +92,7 @@ config:
         url: "#services"
       - name: Portfolio
         url: "#portfolio"
-      - name: Contact
-        url: "#contact"
+      - name: Print Resume
+        url: "/resume.html"
         class: small button
+        hasform: false

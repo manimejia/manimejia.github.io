@@ -5,7 +5,7 @@ date: 2007-10-01
 website: aniphyo.com
 role: Website Developer
 status: complete
-display: [portfolio]
+publish: 
 tags:
 - Wordpress
 - PHP

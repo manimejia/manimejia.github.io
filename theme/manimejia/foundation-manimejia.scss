@@ -1694,6 +1694,42 @@ header {
 }
 
 
+// custom list styles
+
+ul.icon-list > li{
+  list-style-type: none;
+  margin-left: 2em;
+}
+ul.icon-list > li:before{
+  float:left;
+  font-size:2em;
+  padding-right:.5em;
+  height:100%;
+  margin-left:-1em;
+}
+ul.icon-list.primary > li:before{
+ color:$primary-color;
+}
+ul.icon-list.secondary > li:before{
+ color:$secondary-color;
+}
+ul.icon-list.success > li:before{
+ color:$success-color;
+}
+ul.icon-list.info > li:before{
+ color:$info-color;
+}
+ul.icon-list.warning > li:before{
+ color:$warning-color;
+}
+ul.icon-list.alert > li:before{
+ color:$alert-color;
+}
+
+li > p + ul {
+margin-top: -1em;
+margin-bottom: 1em;
+}
 /* 
  * override foundation's animation property for .th 
  * because when CSS animates 'all' properties
@@ -1741,6 +1777,9 @@ $thumb-transition-function: ease-out;
 	height:256px;
 }
 
+img.project-thumnail{border-radius:50%;}
+
+
 li.label {
 margin-left: .1em;
 margin-bottom: .1em;
@@ -1778,7 +1817,7 @@ padding: 1em;
 /*
  * apply circular text mixin
  */
-.tabgroup.accordion-grid > .accordion-navigation  > .th .circular-text {
+.accordion-grid > .accordion-grid-item  > a.th .circular-text {
   @include circular-text(4rem,4,1rem,.8rem)
 }
 

@@ -6,9 +6,9 @@ website: http://cyrusmejia.com
 role: Website Developer
 status: live
 
-display:  
-- resume
-- portfolio
+publish:  
+ print: true
+ main: true 
 
 tags:
 - Drupal

@@ -1,8 +1,9 @@
 ---
 title: Manuel Mejia
 permalink: resume.html
-hidetopbar: true
-hidefooter: true
+hide:
+ topbar: true
+ footer: true
 layout: default
 style: | 
  <style>
@@ -21,11 +22,14 @@ style: |
 {% assign base_url = 'http://manimejia.me/' %}
 
 <div class="row">
-<ul role="contentinfo" class="no-bullet column">
+<ul role="contentinfo" class="no-bullet column small-9 medium-10">
 <li><b>Website: </b><a href="{{ site.config.author.website }}">manimejia.me</a></li>
 <li><b>Email: </b>{{ site.config.author.email }}</li>
 <li><b>Phone: </b>{{ site.config.author.phone }}</li>
 </ul>
+<div class="column small-3 medium-2 hide-for-print font-xxlarger">
+<a class="button" onclick="window.print()" style="margin-top: -3em; display: block;"><i class="fi-print"></i><span class="hide-for-small"> Print</span></a>
+</div>
 </div>
 {% include services.html %}
 
@@ -43,12 +47,8 @@ style: |
 <h2 id="work-history-label" class="column">Work History</h2>
 {% for this_page in listing_pages reversed %}
 
-  {% assign display_resume = false %}
-  {% for display in this_page.display %}
-  {% if display == 'resume' %}{% assign display_resume = true %}{% endif %}
-  {% endfor %}
 
-  {% if display_resume == true %}
+  {% if this_page.publish.print == true %}
 	{% include _this_page.liquid %}
 	{% assign item_year = this_page.date | date: '%Y' %}
 	{% unless last_item_year %}{% assign last_item_year = 0000 %}{% endunless %}
@@ -61,7 +61,7 @@ style: |
 	 <article class="column" aria-labelledby="{{this_page_id}}-title">
 	 <div class="row">
 	  <aside class="left small-3 text-center" aria-hidden="true">
-	  	<img style="padding-right:1.5rem" src="{{ this_page_assetpath }}{{ this_page.thumbnail }}" alt="">
+	  	<img class="project-thumnail" style="margin-right:1.5rem" src="{{ this_page_assetpath }}{{ this_page.thumbnail }}" alt="">
 	  </aside>
 	  <header class="" role="heading">
 	      <h3 class="title" id="{{this_page_id}}-title">
@@ -115,10 +115,10 @@ style: |
 		<section id="{{this_page_id}}-tasks" class="column medium-9 medium-push-3" aria-hidden="false" ar-labelledby="{{this_page_id}}-tasks-label">
 	  	  <h4 id="{{this_page_id}}-tasks-label" class="hidden-for-small-only hidden-for-medium-up hide-for-print-only">
 	  	Responsibilities</h4>
-		  <ul class="no-bullet">
+		  <ul class="icon-list alert">
 		  {% for task in this_page.tasks %}
-		    <li class="clearfix">
-			    <i class="fi-check font-xlarger highlight left full-height" style="line-height:1em">&nbsp;</i>
+		    <li class="fi-check">
+			    <!-- <i class="fi-check font-xlarger highlight left full-height" style="line-height:1em">&nbsp;</i> -->
 			    {{ task | strip_html | strip | markdownify }}
 		    </li>
 		  {% endfor %}

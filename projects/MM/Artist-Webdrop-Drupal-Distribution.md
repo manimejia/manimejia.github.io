@@ -5,7 +5,9 @@ date: 2009-05-01
 website: 
 role: Website Developer
 status: retired
-display: [portfolio, resume]
+publish: 
+ print: true
+
 tags:
 - Drupal
 - User Experience
@@ -20,9 +22,19 @@ tags:
 - Business Plan
 - Print Media
 
-thumbnail:
+thumbnail: Webdrop-icon.jpg
 
 assets:
+- filename: webdrop-screen-flyer.jpg
+  caption: 
+- filename: webdrop-screen-dermot.png
+  caption: 
+- filename: webdrop-screen-home1.png
+  caption: 
+- filename: webdrop-screen-home2.png
+  caption: 
+- filename: webdrop-screen-whitney.png
+  caption: 
 
 tasks: 
  - Researched, designed, and developed a prepackaged website system to serve the needs of a "one click" online portfolio solution.

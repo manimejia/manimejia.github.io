@@ -6,7 +6,8 @@ website:
 role: Graphic Designer
 status: retired
 
-display: [portfolio,resume]
+publish: 
+ print: true
 
 tags:
 - Non-Profit
