@@ -2,7 +2,7 @@
 client: MBL
 title: Day Of The Dead VJ Animations
 date: 2002-11-01
-website: /projects/MBL/assets/DOD-2002-vj-animation
+website: /archive/?/projects/MBL/archive/DOD-2002-vj-animation
 role: Designer / Developer
 status: archived
 publish: 

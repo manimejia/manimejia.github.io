@@ -6,6 +6,7 @@ website:
 role: Graphic Designer
 status: archived
 publish:
+ draft: true
 
 tags:
 - Fine Art

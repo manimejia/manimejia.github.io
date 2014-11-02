@@ -7,6 +7,7 @@ role: Transportation Coordinator
 status: complete
 publish: 
  main: true 
+ draft: true
 
 tags:
 - Logistics

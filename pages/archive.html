@@ -1,0 +1,21 @@
+---
+title: 
+permalink: archive/index.html
+layout: default
+hide:
+  title: true
+  header: true
+  footer: true
+style: | 
+  main{height:100%}
+  #archive-content{width:100%;height:100%;border-width:0px;}
+script: | 
+  <script>
+  $(document).ready(function(){
+  	var query = decodeURI(window.location.search.substring(1)) || '/404.html';
+  	//var query = decodeURI(getUrlParameter('q'));
+  	$('iframe#archive-content').attr('src',query);
+  });
+  </script>
+---
+<iframe id="archive-content" src=""></iframe>

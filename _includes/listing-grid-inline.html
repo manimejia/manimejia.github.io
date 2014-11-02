@@ -7,6 +7,7 @@ color: inherit;
 .accordion-grid[role="tablist"]{
   position: relative;
   text-align:center;
+  list-style: none;
 }
 .accordion-grid[role="tablist"] .year{
 position: absolute;
@@ -179,16 +180,17 @@ article.accordion-grid-item .th a.th-link:hover .title{
 
 </style>
 
-<dl id="portfolio-accordion-grid" class="accordion-grid row" data-aria-tab-group="accordion-grid" role="tablist">
-{% assign listing_pages = site.pages | where: "category" , "project" | sort: "date"%}
-{% for this_page in listing_pages reversed %}
-
+<ul id="portfolio-accordion-grid" class="accordion-grid row" data-aria-tab-group="accordion-grid" role="tablist">
+{% assign these_pages = site.pages | where: "category" , "project" | sort: "date"%}
+{% for this_page in these_pages reversed %}
+  {% unless this_page.publish.draft %}
+  <!-- publish : {{ this_page.publish }} -->
   {% include _this_page.liquid %}
 
   {% assign item_year = this_page.date | date: '%Y' %}
   {% unless last_item_year %}{% assign last_item_year = 0000 %}{% endunless %}
 
-    <dd id="{{ this_page_id }}-wrapper" class="accordion-grid-item">
+    <li id="{{ this_page_id }}-wrapper" class="accordion-grid-item">
     {% if item_year != last_item_year %}
       <h3 class="year inline-block" role="heading"><time class="label secondary">{{ item_year }}</time></h3>
     {% endif %}
@@ -203,13 +205,13 @@ article.accordion-grid-item .th a.th-link:hover .title{
       </a>
 
       <div id="{{ this_page_id }}" class="content column" role="tabpanel"
-        data-load="{{ this_page.url }} #page-content > *" aria-hidden="true"/>
-    </dd>
+        data-load="{{ this_page.url }} #page-content > *" aria-hidden="true"></div>
+    </li>
 
-{% assign last_item_year = item_year %}
-
+  {% assign last_item_year = item_year %}
+  {% endunless %}
 {% endfor %}
-</dl>
+</ul>
 
 
 

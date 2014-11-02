@@ -4,6 +4,8 @@ title: Community Bicycles (Job Training for Dissabled Adults)
 date: 2004-04-01
 website: 
 role: Job Trainer
+publish:
+  draft: true
 tags:
 - Non-Profit
 - Bicycle Refurbish

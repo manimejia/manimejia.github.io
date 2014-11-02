@@ -5,6 +5,7 @@ date: 2000-06-01
 website: 
 role: Musician
 publish: 
+ main: true
 status: complete
 tags:
 - Didgeridoo

@@ -10,21 +10,28 @@ website: organicathlete.org
 
 role: Website Developer
 
+publish: 
+  print: true
+
 tags:
-- Drupal
-- CiviCRM
 - HTML
 - CSS
 - Javascript
 - PHP
+- Drupal
+- CiviCRM
 - Consultation
 - User Experience
 - Architecture
 - Communication
 
-thumbnail:
+thumbnail: organiathlete-logo.jpg
 
 assets:
+ - filename: organiathlete-newlook-1.png
+   caption: 
+ - filename: organicathlete-lewlook-2.png
+   caption: 
 
 tasks: 
   - Collected the requirements and collaborated with stakeholders to build a membership   management and social network website for a non-profit sports-club.

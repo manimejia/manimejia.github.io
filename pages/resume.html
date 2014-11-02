@@ -6,19 +6,17 @@ hide:
  footer: true
 layout: default
 style: | 
- <style>
- body{background: #FFF;color: #222;}
- a{color:#0386FC;}
- a.active,
- a:hover,
- a:focus,
- a:active{color:#0082F9;}
- h1,h2,h3,h4,h5,h6,header,header small{color:#222;}
- .highlight{text-shadow:none;}
- </style>
+  body{background: #FFF;color: #222;}
+  a{color:#0386FC;}
+  a.active,
+  a:hover,
+  a:focus,
+  a:active{color:#0082F9;}
+  h1,h2,h3,h4,h5,h6,header,header small{color:#222;}
+  .highlight{text-shadow:none;}
 
 ---
-{% assign listing_pages = site.pages | where: "category" , "project" | sort: "date" %}
+{% assign these_pages = site.pages | where: "category" , "project" | sort: "date" %}
 {% assign base_url = 'http://manimejia.me/' %}
 
 <div class="row">
@@ -26,12 +24,19 @@ style: |
 <li><b>Website: </b><a href="{{ site.config.author.website }}">manimejia.me</a></li>
 <li><b>Email: </b>{{ site.config.author.email }}</li>
 <li><b>Phone: </b>{{ site.config.author.phone }}</li>
+<li>References upon request</li>
 </ul>
 <div class="column small-3 medium-2 hide-for-print font-xxlarger">
-<a class="button" onclick="window.print()" style="margin-top: -3em; display: block;"><i class="fi-print"></i><span class="hide-for-small"> Print</span></a>
+<a class="button" onclick="window.print()" style="margin-top: -3em; display: block;"><i class="fi-print font-xlarger"></i><span class="hide-for-small"> Print</span></a>
 </div>
 </div>
-{% include services.html %}
+
+{% comment %}
+<!-- <section id="technical-skills" class="row" aria-labelledby="technical-skills-label">
+<h2 id="technical-skills-label" class="column">Strengths</h2>
+{% include tag-cloud.html category="project" %}
+</section> -->
+{% endcomment %}
 
 <section id="technical-experience" class="row" aria-labelledby="technical-experience-label">
 <h2 id="technical-experience-label" class="column">Technical Experience</h2>
@@ -45,7 +50,7 @@ style: |
 
 <section id="work-history" class="row" aria-labelledby="work-history-label">
 <h2 id="work-history-label" class="column">Work History</h2>
-{% for this_page in listing_pages reversed %}
+{% for this_page in these_pages reversed %}
 
 
   {% if this_page.publish.print == true %}

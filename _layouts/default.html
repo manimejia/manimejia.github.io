@@ -9,26 +9,29 @@
 
   {% for favicon in site.config.favicons %}
     {% assign size = favicon | split: '-' | last | split: '.' | first %}
-    <link rel="icon"
-      sizes="{{ size }}x{{ size }}"
-      href="{{ favicon }}">
-    <link rel="apple-touch-icon"
-      sizes="{{ size }}x{{ size }}"
-      href="{{ favicon }}">
+    <link rel="icon" sizes="{{ size }}x{{ size }}" href="{{ favicon }}">
+    <link rel="apple-touch-icon" sizes="{{ size }}x{{ size }}" href="{{ favicon }}">
   {% endfor %}
 
   <link rel="alternate" href="/blog/feed.atom"
     title="{{ site.config.name }}" type="application/atom+xml">
 
-<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:300,400|Open+Sans:400italic,600,400' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="{{ site.libraries.foundation.normalize }}">
-  <link rel="stylesheet" href="{{ site.libraries.foundation.icons }}">
-  <link rel="stylesheet" href="{{ site.libraries.slick.css }}">
-  <link rel="stylesheet" href="{{ site.libraries.manimejia.css }}">
-  {% if page.style %}
-    <!-- page.style -->
-    {{ page.style }}
-  {% endif %}
+{% for library in page.libraries %}
+{% for site_library in site.available_libraries %}
+{% if site_library.name == library %}
+{% for filepath in site_library.css %}
+<link rel="stylesheet" type='text/css' href="{{ filepath }}">
+{% endfor %}
+{% endif %}
+{% endfor %}
+{% endfor %}
+
+{% if page.style %}
+<!-- page.style -->
+<style>
+{{ page.style | scssify }}
+</style>
+{% endif %}
 </head>
 <body class="{% unless page.hidetopbar %}f-topbar-fixed{% endunless %}">
 
@@ -49,8 +52,12 @@
 {% endunless %}
 
 {% unless page.hide.content %}
-  <main id="page-content" class="{{page.category}}">
-        {{ content }}
+  <main id="page-content" class="{{page.category}} {% if page.splash %}splash-wrapper{% endif %}">
+  {% if page.splash %}
+  {% assign this_splash = site.pages | where: "category" , "splash" | where: "id" , page.splash %}
+  {{ this_splash }}
+  {% endif %}
+  {{ content }}
   </main>
 {% endunless %}
 
@@ -69,15 +76,16 @@
   </footer>
 {% endunless %}
 
-<script src="{{ site.libraries.jquery.js }}"></script>
-<script src="{{ site.libraries.modernizr.js }}"></script>
-<script src="{{ site.libraries.foundation.js }}"></script>
-<!-- <script src="{{ site.libraries.slick.js }}"></script> -->
-<!-- <script src="{{ site.libraries.skrollr_stylesheets.js }}"></script> -->
-<!-- <script src="{{ site.libraries.skrollr.js }}"></script> -->
-<!-- <script src="{{ site.libraries.skrollr_menu.js }}"></script> -->
-<script src="{{ site.libraries.manimejia.accordion }}"></script>
-<script src="{{ site.libraries.manimejia.js }}"></script>
+{% for library in page.libraries %}
+{% for site_library in site.available_libraries | where: "name", library %}
+{% if site_library.name == library %}
+{% for library_file in site_library.js %}
+<script src="{{ library_file }}"></script>
+{% endfor %}
+{% endif %}
+{% endfor %}
+{% endfor %}
+
 {% if page.script %}
   <!-- page.javascript -->
   {{ page.script }}

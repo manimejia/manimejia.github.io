@@ -400,91 +400,91 @@ function scrollToElement(elementId,updateLocation){
                var pair = vars[i].split("=");
                if(pair[0] == param){return pair[1];}
        }
-       return(false);
+       return('');
   }
 
 
-  function initializeSlickCarousels(element){
-    var $carousels;
-    var carouselSelector = '.slick-carousel:not(.slick-initialized)';
-    if(element){
-      $carousels = $(element).find(carouselSelector);
-    }else{
-      $carousels = $(carouselSelector);
-    }
-    var slickCarouselDefault = {
-        lazyLoad: 'ondemand',
-        slidesToShow: 1,
-        infinite: false,
-        slidesToScroll: 1,
-        focusOnSelect: true,
-        dots: true,
-        arrows: true,
-        variableWidth: false,
-        adaptiveHeight: false,
-        centerMode: false,
-        responsive: [
-          { breakpoint: 900,
-            settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            }},
-          { breakpoint: 600,
-            settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            }}
-        ]
-    }
-    var slickCarouselWithNavigator = {
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      asNavFor: null,
-      arrows: true,
-      fade: true,
-      adaptiveHeight: true,
-    };
-    var slickNavigator = {
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      asNavFor: null,
-      dots: true,
-      centerMode: true,
-      focusOnSelect: true
-    };
+  // function initializeSlickCarousels(element){
+  //   var $carousels;
+  //   var carouselSelector = '.slick-carousel:not(.slick-initialized)';
+  //   if(element){
+  //     $carousels = $(element).find(carouselSelector);
+  //   }else{
+  //     $carousels = $(carouselSelector);
+  //   }
+  //   var slickCarouselDefault = {
+  //       lazyLoad: 'ondemand',
+  //       slidesToShow: 1,
+  //       infinite: false,
+  //       slidesToScroll: 1,
+  //       focusOnSelect: true,
+  //       dots: true,
+  //       arrows: true,
+  //       variableWidth: false,
+  //       adaptiveHeight: false,
+  //       centerMode: false,
+  //       responsive: [
+  //         { breakpoint: 900,
+  //           settings: {
+  //           slidesToShow: 1,
+  //           slidesToScroll: 1,
+  //           }},
+  //         { breakpoint: 600,
+  //           settings: {
+  //           slidesToShow: 1,
+  //           slidesToScroll: 1,
+  //           }}
+  //       ]
+  //   }
+  //   var slickCarouselWithNavigator = {
+  //     slidesToShow: 1,
+  //     slidesToScroll: 1,
+  //     asNavFor: null,
+  //     arrows: true,
+  //     fade: true,
+  //     adaptiveHeight: true,
+  //   };
+  //   var slickNavigator = {
+  //     slidesToShow: 3,
+  //     slidesToScroll: 1,
+  //     asNavFor: null,
+  //     dots: true,
+  //     centerMode: true,
+  //     focusOnSelect: true
+  //   };
 
-    $carousels.each(function(index){
-      var slickCarouselConfig = slickCarouselDefault;
-      var addNavigator = $(this).hasClass('add-navigator');
-      var $SlickNavigator = null;
-      $(this).children(':not(div)').wrap('<div/>');
-      // $(this).children('p').wrapInner('<p/>').changeElementType('<div/>');
+  //   $carousels.each(function(index){
+  //     var slickCarouselConfig = slickCarouselDefault;
+  //     var addNavigator = $(this).hasClass('add-navigator');
+  //     var $SlickNavigator = null;
+  //     $(this).children(':not(div)').wrap('<div/>');
+  //     // $(this).children('p').wrapInner('<p/>').changeElementType('<div/>');
 
-      if(addNavigator){
-        $SlickNavigator = $(this).clone()
-          .removeClass('slick-carousel')
-          .addClass('slick-carousel-navigator')
-          .attr('id', $(this).attr('id') + '-navigator')
-          .children().css('transform','scale(.1)');
+  //     if(addNavigator){
+  //       $SlickNavigator = $(this).clone()
+  //         .removeClass('slick-carousel')
+  //         .addClass('slick-carousel-navigator')
+  //         .attr('id', $(this).attr('id') + '-navigator')
+  //         .children().css('transform','scale(.1)');
 
-        $(this).removeClass('add-navigator')
-          .wrap('<div class="slick-carousel-wrapper"/>')
-          .parent('.slick-carousel-wrapper').prepend($SlickNavigator);
+  //       $(this).removeClass('add-navigator')
+  //         .wrap('<div class="slick-carousel-wrapper"/>')
+  //         .parent('.slick-carousel-wrapper').prepend($SlickNavigator);
 
-        slickNavigatorConfig = slickNavigatorDefault;
-        slickNavigatorConfig.asNavFor = $(this).id;
-        $SlickNavigator.slick(slickNavigatorConfig);
-        $SlickNavigator.appendTo($(this).parent.prepend);
+  //       slickNavigatorConfig = slickNavigatorDefault;
+  //       slickNavigatorConfig.asNavFor = $(this).id;
+  //       $SlickNavigator.slick(slickNavigatorConfig);
+  //       $SlickNavigator.appendTo($(this).parent.prepend);
 
-        slickCarouselConfig.asNavFor = $SlickNavigator.attr('id');      
-      }
+  //       slickCarouselConfig.asNavFor = $SlickNavigator.attr('id');      
+  //     }
 
-      $(this).slick(slickCarouselConfig);
-    });
+  //     $(this).slick(slickCarouselConfig);
+  //   });
 
 
-    return $carousels;
-  }
+  //   return $carousels;
+  // }
 
 
 /**

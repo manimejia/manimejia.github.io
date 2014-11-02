@@ -2,7 +2,7 @@
 client: BFAS  
 title: Best Friends Virtual Tour  
 date: 2002-02-01  
-website: /projects/bfas/assets/BFAS-Tour12
+website: /archive/?/projects/BFAS/assets/BFAS-Tour12
 role: Designer / Developer  
 status: archived
 

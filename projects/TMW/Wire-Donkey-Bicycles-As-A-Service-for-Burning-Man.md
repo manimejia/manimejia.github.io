@@ -4,6 +4,8 @@ title: Wire Donkey (Bicycles-As-A-Service for Burning Man)
 date: 2004-08-01
 website: 
 role: Service Coordinator
+publish: 
+  draft: true
 tags:
 - Non-Profit
 - Bicycle Refurbish

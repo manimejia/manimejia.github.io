@@ -2,7 +2,7 @@
 client: EC
 title: Company Website
 date: 2009-08-01
-website: http://elitecare.com
+website: 
 role: Website Developer
 status: retired
 

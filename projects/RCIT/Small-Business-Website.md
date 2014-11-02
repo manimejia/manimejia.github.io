@@ -5,6 +5,8 @@ date: 2006-12-01
 website: 
 status: retired
 role: Website Developer
+publish:
+  draft: true
 tags:
 - Open Edit
 - User Experience

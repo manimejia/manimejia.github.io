@@ -1594,6 +1594,7 @@ $tabs-navigation-font-color: $white;
   }
 }
 
+
 .focusable{
   @include block-glowing-effect(':focus, &:hover', $glowing-effect-fade-time, $glowing-effect-color);
 }
@@ -1618,6 +1619,18 @@ $tabs-navigation-font-color: $white;
 .icon{
   font-size: 5rem;
 }
+
+.tagcloud {
+@for $t from 1 through 50 {
+	$tagsize: floor($t / 3) + .5rem;
+	.tag-count-#{$t}{
+		font-size: $tagsize;
+	}
+}
+}
+
+
+
 a.close{
 	display: inline-block;
 	line-height: 1em;
@@ -1674,6 +1687,27 @@ height: .5rem;
 body.f-topbar-fixed .clearing-blackout {
 padding-top: 45px;
 }
+
+/** section overlays **/
+main > section,
+main > .row > section {
+ padding-top: 2rem;
+ padding-bottom: 2rem;
+}
+section.overlay{
+  text-shadow: 0 0 2px #222;
+  background-color: rgba(2, 2, 2, 0.8);
+}
+section.overlay.primary{
+  background-color: rgba(1, 83, 156, 0.8);
+}
+section.overlay.secondary{
+  background-color: rgba(241,179,0, 0.8);
+}
+section.overlay.alert{
+  background-color: rgba(241, 84, 0, 0.8);
+}
+
 
 /* 
  * Apply default header styles to <header> elements 

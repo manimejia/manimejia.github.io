@@ -16,33 +16,55 @@ sass:
 
 layouts: ./_layouts
 
-libraries:
-  jquery: 
-    js: /theme/foundation/js/vendor/jquery.js
-  modernizr: 
-    js: /theme/foundation/js/vendor/modernizr.js
-  foundation: 
-    js: /theme/foundation/js/foundation.js
-    icons: /theme/foundation/icons/foundation-icons.css
-    normalize: /theme/foundation/css/normalize.css
-  skrollr:
-    js: /theme/skrollr/skrollr.min.js
-  skrollr_stylesheets:
-    js: /theme/skrollr/skrollr.stylesheets.min.js
-  skrollr_menu:
-    js: /theme/skrollr/skrollr.menu.min.js
-  slick: 
-    js: /theme/slick/slick.min.js
-    css: /theme/slick/slick.css
-  manimejia: 
-    js: /theme/manimejia/manimejia.js
-    css: /theme/manimejia/foundation-manimejia.css
-    accordion: /theme/manimejia/foundation.accordion.mm.js
+available_libraries:
+  - 
+    name: foundation 
+    js: 
+      - /theme/foundation/js/vendor/jquery.js
+      - /theme/foundation/js/vendor/modernizr.js
+      - /theme/foundation/js/foundation.js
+    css: 
+      - /theme/foundation/icons/foundation-icons.css
+      - /theme/foundation/css/normalize.css
+  - 
+    name: skrollr
+    js: 
+      - /theme/skrollr/skrollr.min.js
+  - 
+    name: skrollr_stylesheets
+    js: 
+      - /theme/skrollr/skrollr.stylesheets.min.js
+  - 
+    name: skrollr_menu
+    js: 
+      - /theme/skrollr/skrollr.menu.min.js
+  - 
+    name: slick
+    js: 
+      - /theme/slick/slick.min.js
+    css: 
+      - /theme/slick/slick.css
+  - 
+    name: manimejia
+    js: 
+      - /theme/manimejia/manimejia.js
+    #- /theme/manimejia/foundation.accordion.mm.js
+    css:
+      - "http://fonts.googleapis.com/css?family=Josefin+Sans:300,400|Open+Sans:400italic,600,400" 
+      - /theme/manimejia/foundation-manimejia.css
 
 
 defaults:
+  - 
+    scope: # All Posts
+      type: "post"
+      path: ""
+    values:
+      libraries: 
+        - foundation
+        - manimejia
   -
-    scope:
+    scope: # All Pages
       type: "page"
       path: ""
     values:
@@ -53,6 +75,9 @@ defaults:
       assetpath: "assets/"
       assetpath_is_relative_to_siteroot: false
       libraries: 
+        - foundation
+        - manimejia
+      splash: 
       script: | 
       style: | 
       publish:
@@ -86,7 +111,7 @@ config:
   favicons:
     - /resources/favicon-152.png
   topbar:
-    toggle: Menu
+    toggle: 
     right:
       - name: Services
         url: "#services"

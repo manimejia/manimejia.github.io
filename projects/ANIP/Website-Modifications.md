@@ -6,6 +6,8 @@ website: aniphyo.com
 role: Website Developer
 status: complete
 publish: 
+  draft: true
+  print: false
 tags:
 - Wordpress
 - PHP

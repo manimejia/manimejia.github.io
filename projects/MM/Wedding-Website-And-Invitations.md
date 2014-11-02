@@ -7,18 +7,20 @@ role: Multimedia Designer
 status: archived
 publish: 
  print: true
+ main: true
+
 
 tags:
 - Fine Art
 - Print Media
 - Vector Illustration
-- Drupal
 - HTML
 - CSS
+- Drupal
 - Architecture
 - Communication
-- Event
-- Jewelery Design
+- Event Promotion
+- Jewlery Design
 
 thumbnail: wedding-manishan-logo.png
 
@@ -31,8 +33,8 @@ assets:
    caption: 
 
 tasks: 
- - Designed and developed a custom website and invitations using elements from an illustration made by myself and my bride-to-be.
+ - Designed and developed a custom website and printed invitations using elements from an illustration made by myself and my bride-to-be.
  - Isolated elements from the drawing to use as background graphics in a responsive website layout. 
- - Designed a printed invitation, menu, and thank you letter around the same drawing.
- - Designed a pair of matching rings, based on a few modern designs from the 70s and 80s.
+ - Designed a wedding invitation, menu, and thank you letter around the same drawing.
+ - Designed a pair of matching rings, based on modern ring designs from the 70s and 80s.
 ---

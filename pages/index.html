@@ -5,13 +5,12 @@ hide:
  title: true
 #topbar: true
 permalink: /index.html
+splash: manicanfly
+
 ---
 
-{% assign all_seasons = site.pages | where: "category" , "season" | sort: "date" , "last" %}
-<div id="season-wrapper" class="row {{ all_seasons.first.season | slugify }}" role="main">
-  {{ all_seasons.first.content }}
-
-<section id="services" class="text-center column" role="region" aria-labelledby="services-heading" tabindex="0">
+<div class="row">
+<section id="services" class="text-center column overlay primary" role="region" aria-labelledby="services-heading" tabindex="0">
 <h2 id="services-heading" class="text-center skrollr-perspectivezoom-bottom">Professional Services</h2>
   {% include services.html %}
 </section><!-- #services -->
@@ -21,7 +20,12 @@ permalink: /index.html
 {% include listing-grid-inline.html category="project" %}
 </section> <!-- #portfolio-grid -->
 
+<section id="aboutme" class="text-center column overlay alert" role="region" aria-labelledby="aboutme-heading" tabindex="0">
+<h2 id="aboutme-heading" class="">About Manuel</h2>
+  {% include aboutme.html %}
+</section><!-- #aboutme -->
 </div>
+
 <!--
   <div class="row">
     <div class="columns">

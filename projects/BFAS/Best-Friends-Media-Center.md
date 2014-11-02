@@ -4,7 +4,7 @@ title: Best Friends Media Center
 date: 2007-06-01
 website: 
 role: UX Architect & Actionscript Conultant
-status: not released
+status: retired
 
 publish: 
  main: true 

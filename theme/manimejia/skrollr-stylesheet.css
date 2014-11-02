@@ -1,0 +1,51 @@
+  .skrollr-perspectivezoom-bottom{
+    -skrollr-animation-name: content-perspectivezoom-bottom
+  }
+  .skrollr-perspectivezoom-em-bottom{
+    -skrollr-animation-name: content-perspectivezoom-em-bottom
+  }
+  
+  @-skrollr-keyframes background-zoomin-bottom{
+      top-top {
+          background-size: 100%; background-position: 50% 100%;
+      } 
+      top-bottom {
+          background-size: 200%; background-position: 50% 0%;
+      }
+  }
+  @-skrollr-keyframes content-zoomin-top {
+      top-bottom {
+          transform: scale(1.5); top:100px;
+      }
+      top-top {
+          transform: scale(1); top:0px;
+      }
+  
+  }
+  @-skrollr-keyframes content-fadeout-bottom {
+      center-bottom {
+          opacity: 0;
+      }
+      center-top {
+          opacity: 1;
+      }
+  }
+  
+  @-skrollr-keyframes content-perspectivezoom-bottom {
+      center-top {
+          transform: scale(1);
+      }
+      bottom-top {
+          transform: scale(.1);
+      }
+  
+  }
+  @-skrollr-keyframes content-perspectivezoom-em-bottom {
+      center-top {
+          font-size:1rem;
+      }
+      bottom-top {
+          font-size:.1rem;
+      }
+  
+  }

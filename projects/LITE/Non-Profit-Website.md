@@ -7,7 +7,7 @@ role: Graphic Designer
 status: retired
 
 publish: 
- print: true
+ print: false
 
 tags:
 - Non-Profit

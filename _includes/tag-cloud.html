@@ -1,0 +1,27 @@
+{% unless these_pages %}{% assign these_pages = site.pages | where: "category" , include.category %}{% endunless %}
+
+{% assign site_tag_list = '' %}
+{% for this_page in these_pages %}
+{% assign this_page_tag_list = this_page.tags | join: ',' %}
+{% assign site_tag_list = site_tag_list | append: ',' | append: this_page_tag_list %}
+{% endfor %}
+{% assign site_tag_list = site_tag_list | split: ',' | sort %}
+
+{% assign tag_count = 1 %}
+
+<ul class="taglist tagcloud">
+{% for site_tag in site_tag_list %}
+{% unless old_tag %}{% assign old_tag = site_tag %}{% endunless %}
+<!-- old_tag:"{{old_tag}}" == site_tag:"{{site_tag}}" -->
+{% if old_tag == site_tag %}{% assign tag_count = tag_count | plus: 1 %}
+{% elsif old_tag %}
+<!-- tag_count:{{tag_count}}-->
+{% if tag_count > 0 %}
+{% assign tag_size = tag_count | times: .3 %}
+<li class="label radius success tag-count-{{tag_count}}">{{old_tag}}</li>
+{% assign tag_count = 1 %}
+{% endif %}
+{% endif %}
+{% assign old_tag = site_tag %}
+{% endfor %}
+</ul>

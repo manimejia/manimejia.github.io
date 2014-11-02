@@ -7,6 +7,7 @@ role: Website Developer
 status: retired
 publish: 
  print: true
+ featured: true
 
 tags:
 - Drupal
