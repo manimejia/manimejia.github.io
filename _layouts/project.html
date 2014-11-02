@@ -3,15 +3,20 @@
 ---
 {% assign this_page = page %}
 {% include _this_page.liquid %}
-{% assign page_content = page.content | strip | lstrip | rstrip | strip_newlines %}
+{% assign has_page_content = page.content | strip_html | strip | lstrip | rstrip | strip_newlines %}
 <article class="row" aria-labelledby="{{this_page_id}}-title">
   <nav class="column small-2 small-push-10 medium-1 medium-push-11 text-right" id="{{this_page_id}}-navigation">
     <a title="close this tab" aria-controls="{{this_page_id}}" href="#{{this_page_id}}" class="close"><i class="fi-x"></i></a>
   </nav>
   <header class="column small-10 small-pull-2 medium-8 medium-pull-1 large-9">
       <h3 class="title left" id="{{this_page_id}}-title">
-          <small class="client-title">{{ this_client_page.title }}</small><br/>
-          <span class="page-title">{{ page.title }}</span> 
+        <small class="client-title">
+        {% if this_client_page.website %}
+          <a class="client-title" href="{{ this_client_page.website }}" target="_blank" title="clienwebsite">{{ this_client_page.title }}</a>
+        {% else %}
+        {{ this_client_page.title }} 
+        {% endif %}</small><br/>
+        <span class="page-title">{{ page.title }}</span> 
       </h3>
   </header>
   <aside class="column small-12 medium-3 medium-pull-1 large-2" role="contentinfo">
@@ -69,12 +74,12 @@
           <i class="fi-list-thumbnails"></i> Summary</a>
           </li>
         {% endif %}
-        {% if page_content %}
+        {% unless has_page_content == '' %}
           <li role="presentational" class="column small-{{tabbuttonsmall}} medium-12">
           <a id="{{this_page_id}}-story-tab" href="#{{this_page_id}}-story" class="button tiny expand alert font-larger" role="tab" tabindex="0" aria-expanded="false" aria-controls="{{this_page_id}}-story">
           <i class="fi-align-justify"></i> Full Story</a>
           </li>
-        {% endif %}
+        {% endunless %}
         {% if page.website %}
           <li role="presentational" class="column small-{{tabbuttonsmall}} medium-12">
           <a id="{{this_page_id}}-website-button" href="{{page.website}}" target="_blank" title="go to {{ page.status }} website" class="button tiny expand success font-larger" role="tab" tabindex="0">
@@ -109,11 +114,13 @@
         </ul>
       </section>
       {% endif %}
-      {% if page_content %}
+      {% unless has_page_content == '' %}
       <section id="{{this_page_id}}-story" role="tabpanel" aria-hidden="true" aria-labelledby="{{this_page_id}}-story-tab">
-        {{ page_content | markdownify }}
+        <!-- has_page_content : -->
+        <!--{{ has_page_content }}-->
+        {{ page.content | markdownify }}
       </section>
-      {% endif %}
+      {% endunless %}
       {% if page.assets %}
       {% for asset in page.assets %}
       {% if asset.filename %}

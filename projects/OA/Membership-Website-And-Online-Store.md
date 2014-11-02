@@ -6,7 +6,7 @@ title: Non-Profit Membership Website & Online Store
 
 date: 2008-11-01
 
-website: organicathlete.org
+website: http://organicathlete.org
 
 role: Website Developer
 

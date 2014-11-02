@@ -879,10 +879,10 @@ ariaTabGroup.prototype.togglePanel = function($tab,show) {
         if(tabGroup.settings.focusOnPanel) $panel.find(':focusable').first().focus();
       };
     if(panelLoadUri){
-        $panel.attr('aria-busy',true);
+        $tab.attr('aria-busy',true);
         tabGroup = this;
         $panel.load(panelLoadUri,function(){
-          $panel.attr('aria-busy',false);
+          $tab.attr('aria-busy',false);
           tabGroup.effectShow($panel,effectOptions,openingDelay);
           initAjaxContent($panel);
         });

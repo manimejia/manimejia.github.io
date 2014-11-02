@@ -1,5 +1,5 @@
 ---
-title: Manuel Mejia - Resume
+title: Manuel Mej&iacute;a - Resum&eacute;
 permalink: resume.html
 hide:
  topbar: false
@@ -19,6 +19,7 @@ style: |
 ---
 {% assign these_pages = site.pages | where: "category" , "project" | sort: "date" %}
 {% assign base_url = 'http://manimejia.me/' %}
+{% assign base_url = 'http://manimejia.githubpages.io/' %}
 
 
 
@@ -64,8 +65,13 @@ style: |
 	  </aside>
 	  <header class="" role="heading">
 	      <h3 class="title" id="{{this_page_id}}-title">
-	          <small class="client-title">{{ this_client_page.title }}</small><br/>
-	          <span class="page-title">{{ this_page.title }}</span> 
+            <small class="client-title">
+            {% if this_client_page.website %}
+              <a class="client-title" href="{{ this_client_page.website }}" target="_blank" title="client   website">{{ this_client_page.title }}</a>
+            {% else %}
+            {{ this_client_page.title }} 
+            {% endif %}</small><br/>
+	        <span class="page-title">{{ this_page.title }}</span> 
 	      </h3>
 	  </header>
 	  <aside class="" role="contentinfo">
@@ -132,8 +138,9 @@ style: |
 	        <li class="label radius success">{{ tag }}</li>
 	      {% endfor %}
 	      </ul>
-	      <a href="{{base_url}}#{{ this_page_id }}" title="project page" class="button info expand"><i class="fi-link"></i> Read More</a>
 	    {% endif %} 
+	      <a href="{{base_url}}#{{ this_page_id }}" title="project page" class="button info expand"><i class="fi-link"></i> Read More</a>
+	    </aside>
 	  </div>
 
 	</article>

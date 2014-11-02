@@ -2,7 +2,7 @@
 client: B4S
 title: Non-Profit Identity Design
 date: 2003-09-01
-website: /archive/?/projects/B4S/b4s-WebNav/
+website: archive/?/projects/B4S/assets/b4s-WebNav/schoolbus.html
 role: Graphic Designer
 status: archived
 publish: 

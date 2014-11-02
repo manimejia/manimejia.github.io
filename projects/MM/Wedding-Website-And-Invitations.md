@@ -2,7 +2,7 @@
 client: MM
 title: Wedding Website, Invitations, and Ring Design
 date: 2010-04-01
-website: http://isla.manishan.us
+website: 
 role: Multimedia Designer
 status: archived
 publish: 

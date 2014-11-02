@@ -2,7 +2,7 @@
 client: ANIP
 title: Blog and eCommerce Modifications
 date: 2007-10-01
-website: aniphyo.com
+website: 
 role: Website Developer
 status: complete
 publish: 
