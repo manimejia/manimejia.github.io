@@ -23,10 +23,19 @@ $(document).ready(function(){
     scrollToElement(locationhash,false);
   }
 
-  $('a[role="link"][href^="#"]').click(function(e){
-    scrollToElement($(this).attr('href'),true);
-    e.preventDefault();
-    return false;
+  // add scrolling animation to internal hash links
+  $('a[role="link"]').each(function(e){
+    var $target = $(this.hash);
+    var sameHostname = this.hostname == window.location.hostname;
+    var samePathname = this.pathname == window.location.pathname;
+    if(this.hash && $target.length > 0 && sameHostname && samePathname){
+        $(this).attr('aria-flowto',this.hash.substring(1));
+        $(this).click(function(e){
+          scrollToElement($target,true);
+          e.preventDefault();
+          return false;
+        });
+      }
   });
 
   $('#topbar-homepage').focus();

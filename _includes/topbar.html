@@ -1,4 +1,4 @@
-<div class="{% if page.hidetopbar %}sticky{% else %}fixed{%endif%} contain-to-grid">
+<div class="{% if page.hidetopbar %}sticky{% else %}fixed{%endif%} contain-to-grid hide-for-print">
   <nav class="top-bar" data-topbar id="topbar" role="navigation">
     <ul class="title-area" role="presentational">
       <li class="name" role="presentational">
@@ -24,6 +24,11 @@
           <a href="{{ item.url }}" class="{{ item.class }}" role="link" tabindex="0">{{ item.name }}</a>
         </li>
       {% endfor %}
+      {% if page.printable %}
+        <li>
+          <a class="small button" onclick="window.print()"><i class="fi-print"></i><span class="hide-for-small"> Print</span></a>
+        </li>
+      {% endif %}
       </ul>
       {% endif %}
     </div>

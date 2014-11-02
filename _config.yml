@@ -72,6 +72,7 @@ defaults:
       category: 
       tags: 
       layout: "page"
+      printable: false
       assetpath: "assets/"
       assetpath_is_relative_to_siteroot: false
       libraries: 
@@ -103,6 +104,8 @@ config:
   domain: manimejia.me
   author:
     name: Manuel Mejia
+    locality: Ann Arbor
+    state: Mi.
     website: http://manimejia.me
     email: hello-at-manimejia.me
     phone: (971) 533 7591
@@ -114,10 +117,12 @@ config:
     toggle: 
     right:
       - name: Services
-        url: "#services"
+        url: "/#services"
       - name: Portfolio
-        url: "#portfolio"
-      - name: Print Resume
+        url: "/#portfolio"
+      - name: About Me
+        url: "/#aboutme"
+      - name: Resume
         url: "/resume.html"
-        class: small button
-        hasform: false
+        #class: small button
+        #hasform: false

@@ -1,9 +1,16 @@
-<div class="row skrollr-perspectivezoom-bottom text-justify">
+<div class="row text-justify">
     <div class="column medium-4">
-        <figure class="th">
-        <img src="/assets/manimejia-mexico-sunset-selfie.jpg"/>
-        <figcaption></figcaption>
-        </figure>
+        <ul role="contentinfo" class="vcard">
+          <li class="fn hide-for-print"><img src="/assets/manimejia-mexico-sunset-selfie.jpg" alt="{{ site.config.author.name }}"/></li>
+          <li class="website"><b>Website: </b><a href="{{ site.config.author.website }}">manimejia.me</a></li>
+          <li class="email"><b>Email: </b>{{ site.config.author.email }}</li>
+          <li class="phone"><b>Phone: </b>{{ site.config.author.phone }}</li>
+          <li class="locality"><b>Location: </b>{{{ site.config.author.locality }}, 
+              <span class="state">{{ site.config.author.state }}</span>
+          </li>
+          <li><b>References upon request</b></li>
+
+        </ul>
     </div>
     <div class="column medium-8">
         <p>

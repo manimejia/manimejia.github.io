@@ -1,10 +1,11 @@
 ---
-title: Manuel Mejia
+title: Manuel Mejia - Resume
 permalink: resume.html
 hide:
- topbar: true
+ topbar: false
  footer: true
 layout: default
+printable: true
 style: | 
   body{background: #FFF;color: #222;}
   a{color:#0386FC;}
@@ -19,17 +20,10 @@ style: |
 {% assign these_pages = site.pages | where: "category" , "project" | sort: "date" %}
 {% assign base_url = 'http://manimejia.me/' %}
 
-<div class="row">
-<ul role="contentinfo" class="no-bullet column small-9 medium-10">
-<li><b>Website: </b><a href="{{ site.config.author.website }}">manimejia.me</a></li>
-<li><b>Email: </b>{{ site.config.author.email }}</li>
-<li><b>Phone: </b>{{ site.config.author.phone }}</li>
-<li>References upon request</li>
-</ul>
-<div class="column small-3 medium-2 hide-for-print font-xxlarger">
-<a class="button" onclick="window.print()" style="margin-top: -3em; display: block;"><i class="fi-print font-xlarger"></i><span class="hide-for-small"> Print</span></a>
-</div>
-</div>
+
+
+  {% include aboutme.html %}
+
 
 {% comment %}
 <!-- <section id="technical-skills" class="row" aria-labelledby="technical-skills-label">
