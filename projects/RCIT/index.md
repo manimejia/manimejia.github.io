@@ -3,7 +3,7 @@ client: RCIT
 title: Red Coyote IT
 logo: 
 website:
-locaiton: Virgin, Ut.
+location: Virgin, Ut.
 category: client
 layout: client
 ---

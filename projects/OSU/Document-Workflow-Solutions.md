@@ -22,7 +22,7 @@ thumbnail: gradschool-google-icon.jpg
 assets: 
 
 tasks: 
-  - Collected the technical and ux requirements from stakeholders to build a document   workflow solution for the postdoctoral mentorship program at OSU.
+  - Collected the technical and UX requirements from stakeholders to build a document   workflow solution for the postdoctoral mentorship program at OSU.
   - Researched a number of possible platforms on which to develop a simple solution. Ended   up choosing Google Apps, for it's ease of use (in editing and managing documents) and   because it had already been adopted by the University.
   - Designed a solution using a central Google spreadsheet which managed the scheduled   generation of new documents from templates, tracking of document status, and emailing of   document communications.
   - Customized existing open source Google Apps Scripts to drive the required functionality.

@@ -3,7 +3,7 @@ client: GBSC
 title: Green Bloc of Sonoma County
 logo: 
 website: 
-location: Sonama County, Ca.
+location: Sonoma County, Ca.
 category: client
 layout: client
 ---

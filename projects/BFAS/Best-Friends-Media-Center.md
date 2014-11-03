@@ -3,7 +3,7 @@ client: BFAS
 title: Best Friends Media Center
 date: 2007-06-01
 website: 
-role: UX Architect & Actionscript Conultant
+role: UX Architect & ActionScript Consultant
 status: retired
 
 publish: 
@@ -46,16 +46,14 @@ assets:
   caption: Image 2 of 2 showing architectural diagram of controller and view classes for BFAS Media Center
 
 tasks: 
-- Collected the technical and ux requirements from stakeholders to build an interactive video player and media gallery.
+- Collected the technical and UX requirements from stakeholders to build an interactive video player and media gallery.
 - Documented and diagramed a Flash and AS3 based architecture that would meet the given requirements. 
 - Collaborated with product owners to design the user experience.
 - Created a series of increasing fidelity mockups and wireframes to illustrate the UX design.
 
 ---
 
-After many years as a freelance website and multimedia developer, Best Friends asked me back as a "flash expert" to collaborate on the development of a new video publishing  web application. You tube had just hit the scene hard, and they wanted to have the next best thing in the animal care community. They had decided to build this application using Adobe Flash, and brought me in as a UX Architect and Actionscript Consultant. Over the course of a few months, we nailed down the requirements, drew up wireframes of multiple fidelity, diagramed the class architecture, and roughed out a proof-of-concept in AS3.
-
-The [current BFAS video gallery](http://bestfriends.org/News-And-Features/Videos/) is built on good ol' fashioned HTML, and does not use the Flash architecture we had developed. 
+After many years as a freelance website and multimedia developer, Best Friends asked me back as a "flash expert" to collaborate on the development of a new video publishing  web application. You tube had just hit the scene hard, and they wanted to have the next best thing in the animal care community. They had decided to build this application using Adobe Flash, and brought me in as a UX Architect and ActionScript Consultant. Over the course of a few months, we nailed down the requirements, drew up wireframes of multiple fidelity, diagramed the class architecture, and roughed out a proof-of-concept in AS3.
 
 
 

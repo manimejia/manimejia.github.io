@@ -13,7 +13,7 @@ tags:
 - Architecture
 - User Experience
 - Responsive Design
-- Web Accessability
+- Web Accessibility
 - HTML5
 - CSS
 - Javascript
@@ -22,7 +22,7 @@ tags:
 - PHP
 - Drupal
 - Team Building
-- Communicaiton
+- Communication
 - Consultation
 - Management
 
@@ -48,7 +48,8 @@ tasks:
 - Met regularly with stakeholders to discuss the current interface and architectural designs for the new website.
 - Developed wireframes, diagrams. and questionnaires to communicate these designs and collect feedback from stakeholders.
 - | 
- Developed numerous usability innovations, which allowed this academic website to stand out from others and receive much recognition. This included, in part:
+  Developed numerous usability innovations, which allowed this academic website to stand out from others 
+  and receive much recognition. This included, in part:
 
   - A 'multi-audience' home page layout and 'content agnostic' homepage carousel
   - A searchable and very informative listing of all current Graduate Programs
@@ -57,7 +58,6 @@ tasks:
   - A prominent notifications display, with easy to manage set of notification templates.
   - Many integrated forms and tools for collecting data
   - A simple API for sending website data to Google spreadsheets  
-  
   
 - Developed a number of custom Drupal 'feature modules' to achieve the required   functionality.
 - Provided continuous development and refinement of features as needs grew.

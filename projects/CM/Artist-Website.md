@@ -43,7 +43,7 @@ tasks:
 - Fit all required functionality into an app-like "fixed width" and "fixed height"   layout.
 - Customized all user interface elements (even overriding core styles) in a scalable   manner, to match the desired app-like look and feel.
 - Developed a "thumbnail slider" display to preview the content of each gallery from a   gallery listing page.
-- Developed lightweight solutions to seamlessly integrate third party web services,   including a PayPal based ecommerce solution and MailChimp based newsletter subscriptions. 
+- Developed lightweight solutions to seamlessly integrate third party web services, including a PayPal based e-commerce solution and MailChimp based newsletter subscriptions. 
 
 ---
 

@@ -18,7 +18,7 @@ tags:
 - Javascript
 - PHP
 - Architecture
-- Communicaiton
+- Communication
 - Distribution
 - Business Plan
 - Print Media

@@ -20,7 +20,7 @@ tags:
 - PHP
 - Architecture
 - Care Management
-- Communicaiton
+- Communication
 - Health Care
 - Web Application
 - Intranet Application
@@ -62,7 +62,7 @@ tasks:
   - Collaborated with the company founders, developing numerous iterations of wireframes and mockups to communicate the desired user experience of a new care management system. 
   - Designed a collection of "care management" icons to support the application's user interface needs.
   - Performed extensive research and provided documentation to help determine the most appropriate platform for future development. 
-  - Designed and documented an architecture to develop this next gen system on the Drupal 7 platform.
+  - Designed and documented an architecture to develop this next-gen system on the Drupal 7 platform.
   - Developed a working proof-of-concept (POC) on the Drupal 7 platform.
   - Developed a number of custom "fields" and "field widgets" to facilitate application configuration and content editing by non-technical staff.
   -  Developed a "natural language" system for rendering structured data in a readable journal format.

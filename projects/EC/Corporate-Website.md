@@ -18,7 +18,7 @@ tags:
 - Javascript
 - PHP
 - Architecture
-- Communicaiton
+- Communication
 - Drupal Modules
 - Drupal Theme
 - Mockups and Wireframes

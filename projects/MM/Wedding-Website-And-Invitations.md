@@ -20,7 +20,7 @@ tags:
 - Architecture
 - Communication
 - Event Promotion
-- Jewlery Design
+- Jewelry Design
 
 thumbnail: wedding-manishan-logo.png
 

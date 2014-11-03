@@ -13,14 +13,14 @@ tags:
 - User Experience
 - Architecture
 - Responsive Design
-- Web Accessability
+- Web Accessibility
 - HTML5
 - CSS
 - Java
 - Javascript
 - jQuery
 - Bootstrap
-- Visualforce
+- VisualForce
 - Salesforce
 - Web Application
 - Intranet Application

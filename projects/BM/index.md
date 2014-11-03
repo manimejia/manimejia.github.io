@@ -3,7 +3,7 @@ client: BM
 title: Burning Man Arts Festival
 logo: 
 website:
-locaiton: 
+location: 
 category: client
 layout: client
 ---

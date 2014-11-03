@@ -24,7 +24,7 @@ assets:
 - filename: lite-program-icons.png
   caption: Program specific icons
 - filename: lite-webheader.png
-  caption: Live screenshot of assembled in the websit navigation header
+  caption: Live screenshot of assembled in the website navigation header
 
 tasks: 
  - Designed a primary and supporting logos for a new local non-profit organization and it's umbrella programs.

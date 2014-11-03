@@ -10,7 +10,7 @@ tags:
 - Non-Profit
 - Bicycle Refurbish
 - Fund Raiser
-- Dissabled Adults
+- Disabled Adults
 - Burning Man
 - Website
 - Communication

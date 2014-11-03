@@ -1,6 +1,6 @@
 ---
 client: TMW
-title: Community Bicycles (Job Training for Dissabled Adults)
+title: Community Bicycles (Job Training for Disabled Adults)
 date: 2004-04-01
 website: 
 role: Job Trainer
@@ -9,7 +9,7 @@ publish:
 tags:
 - Non-Profit
 - Bicycle Refurbish
-- Dissabled Adults
+- Disabled Adults
 - Job Training
 - Logo Design
 - Print Media
