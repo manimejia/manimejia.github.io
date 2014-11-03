@@ -33,7 +33,7 @@ assets:
    caption: 
 
 tasks: 
- - Designed and developed a custom website and printed invitations using elements from an illustration made by myself and my bride-to-be.
+ - Designed a logo and hand drawn illustrations for my wedding website and printed invitations.
  - Isolated elements from the drawing to use as background graphics in a responsive website layout. 
  - Designed a wedding invitation, menu, and thank you letter around the same drawing.
  - Designed a pair of matching rings, based on modern ring designs from the 70s and 80s.

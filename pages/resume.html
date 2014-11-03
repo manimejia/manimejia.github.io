@@ -55,7 +55,7 @@ style: |
 
 	<hr/>
     {% if item_year != last_item_year %}
-    <h3 class="year text-center alert-box warning font-larger" role="heading"><time>{{ item_year }}</time></h3>
+    <h3 class="year text-center alert-box warning font-larger hide-for-print" role="heading"><time>{{ item_year }}</time></h3>
     {% endif %}
 
 	 <article class="column" aria-labelledby="{{this_page_id}}-title">
@@ -79,7 +79,7 @@ style: |
 	      {% if this_page.date %}
 	      <li role="presentational">
 	      	<div>
-	        <label class="hidden-for-small-only hidden-for-medium-up hide-for-print-only">Completed:</label> 
+	        <label class="hidden-for-small-only hidden-for-medium-up hide-for-print">Completed:</label> 
 	        <i class="fi-clock font-larger"></i>&nbsp;<time>{{ this_page.date | date: "%b %-d, %Y" }}</time>
 	        </div>
 	      </li>
@@ -88,7 +88,7 @@ style: |
 	      {% if this_page.role %}
 	      <li role="presentational">
 	      <div>
-	        <label class="hidden-for-small-only hidden-for-medium-up hide-for-print-only">Role:</label> 
+	        <label class="hidden-for-small-only hidden-for-medium-up hide-for-print">Role:</label> 
 	        <i class="fi-at-sign font-larger"></i>&nbsp;<b>{{ this_page.role }}</b>
 	        </div>
 	      </li>
@@ -96,7 +96,7 @@ style: |
 	      {% if this_page.website %}
 	      <li role="presentational">
 	      	<div>
-	        <label class="hidden-for-small-only hidden-for-medium-up hide-for-print-only">Status:</label> 
+	        <label class="hidden-for-small-only hidden-for-medium-up hide-for-print">Link:</label> 
 	        <a href="{{this_page.website}}" target="_blank" title="go to {{ this_page.status }} website">
 	        <i class="fi-play-circle font-larger"></i>&nbsp;
 	        {% if this_page.status %}{{ this_page.status }} {% endif %}website
