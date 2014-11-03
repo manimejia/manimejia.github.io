@@ -1,8 +1,9 @@
 ---
-title: Manuel Mej&iacute;a - Resum&eacute;
+title: Resum&eacute;
 permalink: resume.html
 hide:
  topbar: false
+ title: true
  footer: true
 layout: default
 printable: true
@@ -21,9 +22,9 @@ style: |
 {% assign base_url = 'http://manimejia.me/' %}
 
 
+{% include page-title.html title=site.config.name small=site.config.description %}
 
-  {% include aboutme.html %}
-
+{% include aboutme.html %}
 
 {% comment %}
 <!-- <section id="technical-skills" class="row" aria-labelledby="technical-skills-label">
