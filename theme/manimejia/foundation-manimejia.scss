@@ -1548,7 +1548,7 @@ $tabs-navigation-font-color: $white;
 	  .char {
 	    position: absolute;
 	    top: 0rem;
-	    height: 50%;
+	    height: $circle-radius;
 	    width: $char-width;
 	    transform-origin: bottom center;
 	    padding-top:$circle-padding;
