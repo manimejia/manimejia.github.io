@@ -365,16 +365,23 @@ function activateFoundationElement(elementId){
 
 function scrollToElement(elementId,updateLocation){
   var $target = $(elementId);
-  var targetOffset = Number($target.attr('data-scroll-offset')) || 0;
-  if($('body').hasClass('f-topbar-fixed')) targetOffset -= 45;
-  if($target){
-      //console.log('scrollTo : '+elementId+' ('+$target.offset()+')');
-      //console.log($target);
-      $('html, body').stop().animate({
-          'scrollTop': $target.offset().top + targetOffset
-      }, 900, 'swing', function () {
-          if(updateLocation) window.location.hash = $target.attr('id');
-      });
+  if($target.length >0 ){
+    var scrollOffset = Number($target.attr('data-scroll-offset')) || 0;
+    var targetOffset = 0;
+    if($target.offset()){
+      targetOffset = $target.offset()['top'];
+    }else{
+     targetOffset = $target.offsetParent().offset()['top'];
+     targetOffset = targetOffset + $target.position()['top'];
+    }
+    if($('body').hasClass('f-topbar-fixed')) targetOffset -= 45;
+    // console.log('scrollTo : '+elementId+' ('+targetOffset+')');
+    // console.log($target.offset());
+    $('html, body').stop().animate({
+        'scrollTop': targetOffset + scrollOffset
+    }, 900, 'swing', function () {
+        if(updateLocation) window.location.hash = $target.attr('id');
+    });
   }
 }
 
@@ -818,9 +825,9 @@ ariaTabGroup.prototype.switchTabs = function($curTab, $newTab, show) {
 // @return N/A 
 // 
 ariaTabGroup.prototype.togglePanel = function($tab,show) { 
-  console.log('calling togglePanel()');
-  console.log('$tab: ');
-  console.log($tab);
+  // console.log('calling togglePanel()');
+  // console.log('$tab: ');
+  // console.log($tab);
   //console.log(show);
 
   if(typeof(show)!=='undefined' && show!==false ) show = true;
@@ -848,17 +855,18 @@ ariaTabGroup.prototype.togglePanel = function($tab,show) {
   if($panelsToClose.length > 0){ 
     // console.log('closing panels:');
     // console.log($panelsToClose);
+    if($panelsToClose.is($panel) && tabGroup.settings.scrollOnOpen){ 
+      scrollToElement($tabWrapper,false);
+      $tab.focus(); //$panel.attr('aria-hidden', 'true').removeClass('active'); 
+    }
     effectOptions.complete = function(){
         var $thisPanel = $(this);
         var thisPanelId = $thisPanel.attr('id');
         var $thisPanelTab = $('[role="tab"][aria-controls="'+thisPanelId+'"]');
         $thisPanel.attr('aria-hidden', 'true').removeClass('active');
         $thisPanelTab.attr('aria-expanded', 'false').removeClass('active');//.attr('tabindex', '-1'); 
-        if(tabGroup.settings.scrollOnOpen && $panel.is($thisPanel)) scrollToElement($tabWrapper,false);
-        if($panelsToClose.is($panel)) $tab.focus();
       };
     this.effectHide($panelsToClose,effectOptions);
-    //$panel.attr('aria-hidden', 'true').removeClass('active'); 
     //$panel.slideUp(100); 
   }
   //console.log('panelHidden = '+panelHidden );
@@ -882,6 +890,7 @@ ariaTabGroup.prototype.togglePanel = function($tab,show) {
         $tab.attr('aria-busy',true);
         tabGroup = this;
         $panel.load(panelLoadUri,function(){
+          $panel.attr('data-loaded',panelLoadUri).removeAttr('data-load');
           $tab.attr('aria-busy',false);
           tabGroup.effectShow($panel,effectOptions,openingDelay);
           initAjaxContent($panel);
