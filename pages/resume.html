@@ -32,19 +32,18 @@ style: |
 {% include tag-cloud.html category="project" %}
 </section> -->
 {% endcomment %}
-
 <section id="technical-experience" class="row" aria-labelledby="technical-experience-label">
-<h2 id="technical-experience-label" class="column">Technical Experience</h2>
+<h2 id="technical-experience-label" class="column hide-for-print">Technical Experience</h2>
 <figure class="column text-center">
 <img src="https://docs.google.com/spreadsheets/d/1gBdIVCMZN1qdhwwWIwwZjQtkmucS-or_XAKocYftV48/pubchart?oid=1386956387&format=image" alt="Chart showing Manuel Mejia's work experience since 2001">
-<figcaption>
+<figcaption class="hide-for-print">
 <a href="https://docs.google.com/spreadsheets/d/1gBdIVCMZN1qdhwwWIwwZjQtkmucS-or_XAKocYftV48/pubhtml?gid=0&single=true" title="online spreadsheet from which the chart is made">chart data</a>
 </figcaption>
 </figure>
 </section>
 
 <section id="work-history" class="row" aria-labelledby="work-history-label">
-<h2 id="work-history-label" class="column">Work History</h2>
+<h2 id="work-history-label" class="column hide-for-print">Work History</h2>
 {% for this_page in these_pages reversed %}
 
 
@@ -118,7 +117,7 @@ style: |
 	  <div class="row">
 		{% if this_page.tasks %}
 		<section id="{{this_page_id}}-tasks" class="column medium-9 medium-push-3" aria-hidden="false" ar-labelledby="{{this_page_id}}-tasks-label">
-	  	  <h4 id="{{this_page_id}}-tasks-label" class="hidden-for-small-only hidden-for-medium-up hide-for-print-only">
+	  	  <h4 id="{{this_page_id}}-tasks-label" class="hidden-for-small-only hidden-for-medium-up hide-for-print">
 	  	Responsibilities</h4>
 		  <ul class="icon-list alert">
 		  {% for task in this_page.tasks %}
@@ -132,7 +131,7 @@ style: |
 		{% endif %}
 	    {% if this_page.tags %}
 	    <aside id="{{this_page_id}}-tags" role="complementary" class="column medium-3 medium-pull-9" aria-labelledby="{{this_page_id}}-tags-label">
-	      <h4 id="{{this_page_id}}-tags-label"  class="hidden-for-small-only hidden-for-medium-up hide-for-print-only">Skills</h4>
+	      <h4 id="{{this_page_id}}-tags-label"  class="hidden-for-small-only hidden-for-medium-up hide-for-print">Skills</h4>
 	      <ul class="taglist">
 	      {% for tag in this_page.tags %}
 	        <li class="label radius success">{{ tag }}</li>

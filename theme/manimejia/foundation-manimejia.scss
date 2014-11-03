@@ -1,5 +1,6 @@
 ---
 # permalink: /theme/manimejia/foundation-manimejia.css
+layout: none
 ---
 
 // Global Foundation Settings
@@ -1858,6 +1859,14 @@ padding: 1em;
 }
 
 @media only print {
+	body{
+		font-size:12px;
+		line-height:1.2em;
+	}
+  hr{
+	  page-break-before: always;
+	  page-break-after: avoid;
+	}
 	.hide-for-print{
 		display:none !important;
 	}

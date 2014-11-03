@@ -2,7 +2,7 @@
 client: MBL
 title: Mandala Animation for Techno Tribal Dance
 date: 2002-06-01
-website: /archive/?//www.youtube.com/embed/uOOMJqwrz9E
+website: http://manimejia.me/archive/?//www.youtube.com/embed/uOOMJqwrz9E
 role: Designer / Developer
 status: archived
 publish: 

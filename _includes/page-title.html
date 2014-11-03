@@ -1,6 +1,11 @@
 <header id="page-title-row" class="row">
-  <div id="page-title-column" class="column">
+  <div id="page-title-column" class="column {% if page.printable  %}small-12 medium-10{%endif%}">
     <h1 id="page-title">{% if include.title  %}{{ include.title }}{% else %}{{page.title}}{%endif%}
     {% if include.small  %}<br/><small>{{ include.small }}</small>{%endif%}</h1>
   </div>
+	{% if page.printable  %}
+	<div class="column hide-for-small-only medium-2 hide-for-print">
+		<a class="button expand" onclick="window.print()" title="Print this page"><i class="fi-print font-larger"></i>&nbsp;Print</a>
+	</div>
+	{%endif%}
 </header>
