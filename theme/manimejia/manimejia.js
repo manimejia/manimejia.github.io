@@ -16,12 +16,12 @@ $(document).load(function(){
 
 $(document).ready(function(){
   //skrollr.menu.init();
-
-  var locationhash = window.location.hash;
-  if (locationhash != '' && locationhash != '#') {
-    event.preventDefault();
-    scrollToElement(locationhash,false);
-  }
+  // 
+  // var locationhash = window.location.hash;
+  // if (locationhash != '' && locationhash != '#') {
+  //   event.preventDefault();
+  //   scrollToElement(locationhash,false);
+  // }
 
   // add scrolling animation to internal hash links
   $('a[role="link"]').each(function(e){
@@ -37,6 +37,11 @@ $(document).ready(function(){
         });
       }
   });
+
+  //$('.top-bar .toggle-topbar a').attr('href','');
+	$('.top-bar .top-bar-section a').click(function(e){
+		$(this).closest('.top-bar').find('.toggle-topbar:visible a').click();
+	});
 	
 	// // HACK various fixes for mobile browsers... 
 	// // http://stackoverflow.com/a/3540295

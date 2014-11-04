@@ -17,16 +17,31 @@ body{
 }
 
 main#page-content.splash-wrapper{
-  /*height:100%;*/
+  height:100%;
   max-width:1140px; 
   margin:0 auto;
-  position:relative;
+/*  position:relative;
   background-position: 50% 100%;
   background-color: #0386FC;
   background-image: url(/splash/manicanfly//ManiCanFly-web.hyperesources/ManiCanFly-bg.jpg);
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed;*/
 }
+
+#page-content::before {
+content: '';
+position: fixed;
+background-position: 50% 100%;
+background-color: #0386FC;
+background-image: url(/splash/manicanfly//ManiCanFly-web.hyperesources/ManiCanFly-bg.jpg);
+background-repeat: no-repeat;
+background-attachment: fixed;
+width: 100%;
+height: 100%;
+margin: 0 auto;
+max-width: inherit;
+}
+
 
 main#page-content.splash-wrapper #portfolio h2{
   color: #222;
@@ -42,7 +57,7 @@ main#page-content.splash-wrapper #portfolio h2{
 #manicanflyweb_hype_container{
   position:relative;
   width:100%;
-  height:550px;
+  height:90%;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   background:transparent;
 }
@@ -54,9 +69,13 @@ color: #222;
 text-shadow: #FFF 0 0 .1em, #FFF 0 0 2em;
 width: 100%;
 margin: 0px auto 0;
-bottom: 45px;
-/*position: absolute;*/
+height:10%;
 position: relative;
+}
+@media only screen and (max-width: 40.063em){
+	#manicanfly-memetext{
+	font-size: 2em;
+	}
 }
 
 #page-content.splash-wrapper{
@@ -70,7 +89,7 @@ position: relative;
 }
 </style>
 
-<figure id="manicanfly-splash" aria-hidden="true" class="show-for-medium-up">
+<figure id="manicanfly-splash" aria-hidden="true" class="">
   <div id="manicanflyweb_hype_container" class="hype-container">
     <script type="text/javascript" charset="utf-8" src="/splash/manicanfly/ManiCanFly-web.hyperesources/manicanflyweb_hype_generated_script.js"></script>
   </div>
