@@ -38,12 +38,12 @@ $(document).ready(function(){
       }
   });
 	
-	// HACK various fixes for mobile browsers... 
-	// http://stackoverflow.com/a/3540295
-  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-	 $('.accordion-grid[role="tablist"] > * > a[role="tab"] .circular-text .char').css('height','100%');
-	 $('main#page-content.splash-wrapper').css('background-attachment','scroll').css('background-position','50% -105px;');
-	}
+	// // HACK various fixes for mobile browsers... 
+	// // http://stackoverflow.com/a/3540295
+	//   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+	//  $('.accordion-grid[role="tablist"] > * > a[role="tab"] .circular-text .char').css('height','100%');
+	//  $('main#page-content.splash-wrapper').css('background-attachment','scroll').css('background-position','50% -105px;');
+	// }
 
   $('#topbar-homepage').focus();
   $(':focusable').toggleClass('focusable',true);
