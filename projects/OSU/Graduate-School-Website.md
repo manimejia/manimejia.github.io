@@ -2,7 +2,7 @@
 client: OSU
 title: Graduate School Website
 date: 2014-02-01
-website: http://gradschool.oreognstate.edu
+website: http://gradschool.oregonstate.edu
 role: Website Developer
 publish:
  print: true
