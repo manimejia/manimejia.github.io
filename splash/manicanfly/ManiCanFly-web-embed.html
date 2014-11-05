@@ -28,18 +28,20 @@ main#page-content.splash-wrapper{
   background-attachment: fixed;*/
 }
 
-#page-content::before {
-content: '';
-position: fixed;
-background-position: 50% 100%;
-background-color: #0386FC;
-background-image: url(/splash/manicanfly//ManiCanFly-web.hyperesources/ManiCanFly-bg.jpg);
-background-repeat: no-repeat;
-background-attachment: fixed;
-width: 100%;
-height: 100%;
-margin: 0 auto;
-max-width: inherit;
+#page-content::before{
+	content: '';
+	position: absolute;
+	background-attachment: scroll;
+	background-position: 50% 100%;
+	background-color: #0386FC;
+	background-image: url(/splash/manicanfly//ManiCanFly-web.hyperesources/ManiCanFly-bg.jpg);
+	background-repeat: no-repeat;
+	position: fixed;
+	background-attachment: fixed;
+	width: 100%;
+	height: 100%;
+	margin: -45px auto 0;
+	max-width: inherit;
 }
 
 
@@ -57,7 +59,7 @@ main#page-content.splash-wrapper #portfolio h2{
 #manicanflyweb_hype_container{
   position:relative;
   width:100%;
-  height:90%;
+  height:100%;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   background:transparent;
 }
@@ -68,14 +70,23 @@ font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvet
 color: #222;
 text-shadow: #FFF 0 0 .1em, #FFF 0 0 2em;
 width: 100%;
-margin: 0px auto 0;
-height:10%;
-position: relative;
+height:auto;
+margin: 0 auto 0;
+position: absolute;
+bottom:0;
 }
 @media only screen and (max-width: 40.063em){
-	#manicanfly-memetext{
-	font-size: 2em;
+	body{
+		background-color: #0386FC;
 	}
+	#page-content::before {
+	}
+	
+	#manicanfly-memetext{font-size: 2em;}
+	#hype-manicanfly-tree{display:none !important;}
+	#hype-manicanfly-maniswing{top:0px !important;}
+	#hype-manicanfly-buttongroup{}
+		
 }
 
 #page-content.splash-wrapper{
