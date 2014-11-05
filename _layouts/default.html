@@ -46,8 +46,8 @@
 {% unless page.hide.content %}
   <main id="page-content" class="{{page.category}} {% if page.splash %}splash-wrapper{% endif %}">
   {% if page.splash %}
-  {% assign this_splash = site.pages | where: "category" , "splash" | where: "id" , page.splash %}
-  {{ this_splash }}
+  {% assign splash_page = site.pages | where: "category" , "splash" | where: "id" , page.splash %}
+  {{ splash_page }}
   {% endif %}
   {{ content }}
   </main>
@@ -78,8 +78,14 @@
 {% endfor %}
 {% endfor %}
 
+{% if splash_page %}
+<!-- splash script -->
+{%for this_splash in splash_page %}{{ this_splash.script }}{% endfor %}
+{% endif %}
+
+
 {% if page.script %}
-  <!-- page.javascript -->
+  <!-- page script -->
   {{ page.script }}
 {% endif %}
 
