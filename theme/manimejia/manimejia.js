@@ -980,7 +980,7 @@ ariaTabGroup.prototype.bindHandlers = function() {
   }); 
 
   // bind a tab click handler 
-  this.$tabs.on('click touch',function(e) { 
+  this.$tabs.on('click touchstart',function(e) { 
     return tabGroup.handleTabClick($(this), e); 
   }); 
 
