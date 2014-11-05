@@ -633,6 +633,8 @@ function ariaTabGroup(id, settings) {
   this.$tabWrappers = this.$container.find('[role="tablist"]').children().has('[role="tab"]');
   //this.tabWrapHasPanel = $(this.tabWrapSelector).find();
 
+  this.tabClick = false; // flag to track and touch click events
+
   if(this.settings.queueOpeningEffect) this.openingEffectTimer;
 
   // Bind event handlers 
@@ -980,8 +982,21 @@ ariaTabGroup.prototype.bindHandlers = function() {
   }); 
 
   // bind a tab click handler 
-  this.$tabs.on('click touchend',function(e) { 
-    return tabGroup.handleTabClick($(this), e); 
+  this.$tabs.on('click touchstart touchmove touchend',function(e) { 
+		switch(event.type){
+			case 'touchstart':
+				tabGroup.tabClick = true;
+				return;
+			case 'touchmove':
+				tabGroup.tabClick = false;
+				return;
+			case 'click':
+				tabGroup.tabClick = true;			
+		}
+		if(tabGroup.tabClick == true){
+			tabGroup.tabClick = false;
+    	return tabGroup.handleTabClick($(this), e); 
+		}
   }); 
 
   // bind a tab focus handler 
