@@ -100,7 +100,7 @@ defaults:
 
 config:
   name: "Manuel Mej&iacute;a"
-  description: "UX Architect, Web Developer, and Multimedia Creative"
+  description: "Experience Architect, Web Developer, and Multimedia Creative"
   domain: manimejia.me
   author:
     name: Manuel Mej&iacute;a
@@ -109,6 +109,10 @@ config:
     website: http://manimejia.me
     email: hello-at-manimejia.me
     phone: (971) 533 7591
+    services:
+     - Experience Architect
+     - Web Developer
+     - Multimedia Creative
 
   lang: en
   favicons:
