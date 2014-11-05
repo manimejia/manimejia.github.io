@@ -532,8 +532,6 @@ function scrollToElement(elementId,updateLocation){
 })(jQuery);
 
 
-
-
 /**************************************************
  *************************************************
  * ARIA Accessible Tabs and Accordions 
@@ -982,7 +980,7 @@ ariaTabGroup.prototype.bindHandlers = function() {
   }); 
 
   // bind a tab click handler 
-  this.$tabs.click(function(e) { 
+  this.$tabs.on('click touch',function(e) { 
     return tabGroup.handleTabClick($(this), e); 
   }); 
 
