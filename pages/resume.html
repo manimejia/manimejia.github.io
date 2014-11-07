@@ -32,18 +32,27 @@ style: |
 {% include tag-cloud.html category="project" %}
 </section> -->
 {% endcomment %}
-<section id="technical-experience" class="row" aria-labelledby="technical-experience-label">
-<h2 id="technical-experience-label" class="column hide-for-print">Technical Experience</h2>
-<figure class="column text-center">
+<hr/>
+<div id="technical-experience" class="row" aria-labelledby="technical-experience-label">
+<h2 id="technical-experience-label" class="column">Technical Experience</h2>
+<figure class="column text-center" style="margin:0">
 <img src="https://docs.google.com/spreadsheets/d/1gBdIVCMZN1qdhwwWIwwZjQtkmucS-or_XAKocYftV48/pubchart?oid=1386956387&format=image" alt="Chart showing Manuel Mejia's work experience since 2001">
 <figcaption class="hide-for-print">
 <a href="https://docs.google.com/spreadsheets/d/1gBdIVCMZN1qdhwwWIwwZjQtkmucS-or_XAKocYftV48/pubhtml?gid=0&single=true" title="online spreadsheet from which the chart is made">chart data</a>
 </figcaption>
 </figure>
+</div>
+
+<section id="education" class="row" aria-labelledby="education-label">
+<h2 id="education-label" class="column">Education</h2>
+<div class="column">
+{% include education.html person=site.data.people.manimejia %}
+</div>
 </section>
 
+
 <section id="work-history" class="row" aria-labelledby="work-history-label">
-<h2 id="work-history-label" class="column hide-for-print">Work History</h2>
+<h2 id="work-history-label" class="column hide-for-print">Career Highlights</h2>
 {% for this_page in these_pages reversed %}
 
 
@@ -134,7 +143,7 @@ style: |
 	      <h4 id="{{this_page_id}}-tags-label"  class="hidden-for-small-only hidden-for-medium-up hide-for-print">Skills</h4>
 	      <ul class="taglist">
 	      {% for tag in this_page.tags %}
-	        <li class="label radius success">{{ tag }}</li>
+	        <li class="label radius info">{{ tag }}</li>
 	      {% endfor %}
 	      </ul>
 	    {% endif %} 

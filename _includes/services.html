@@ -2,35 +2,16 @@
 	
 	 	<div class="column medium-8 medium-offset-2 end">
 		  <p style="color: #FFDD7A;font-size: 1.2em;">
-	    As a full-spectrum web professional since 2001, I offer a people-centered approach to software development and experience design.
+	    {{ site.data.services.summary }}
 	    </p>
 		</div>
-
+{% for service in site.data.services.list %}
     <div class="column medium-4">        
         <h4 class="text-center">
-        <i class="fi-results-demographics icon highlight"></i>
+        <i class="fi-{{service.icon}} icon highlight"></i>
         <br class="hide-for-print"/>
-        Experience Architect</h4>
-        <p>
-        A people watcher from day one, my awareness of communication and movement keeps me connected to the real world needs of clients and users. From formal meetings to impromptu demonstrations, I am an active listener always focused on finding and evolving the simplest solution. The resulting product is an interactive experience that continually drives and redirects attention to the content that matters.
-        </p>
+        {{service.name}}</h4>
+        {{service.description | markdownify }}
     </div>
-    <div class="column medium-4">
-        <h4 class="text-center">
-        <i class="fi-html5 icon highlight"></i>
-        <br class="hide-for-print"/>
-        Web Developer</h4>
-        <p>
-        As an insufferable tinkerer, I can often be found neck deep in code trying to make software suck less. This 'no fear' and 'can do' attitude has exposed me to a variety of programming tools and methodologies over the years, and allowed me to stay current with the changing landscape. As a self taught and alway curious web professional, I bring a well-rounded skill set and healthy optimism to any development team.
-        </p>
-    </div>
-    <div class="column medium-4">
-        <h4 class="text-center">
-        <i class="fi-lightbulb icon highlight"></i>
-        <br class="hide-for-print"/>
-        Multimedia Creative</h4>
-        <p>
-        Thinking out side the box is so last decade. In this evolving digital playground we call "Web 2.0", our task is now to think outside the <em>page</em>. The demand for rich media and immersive content is only getting <b>bigger</b>. This new breed of interactive presentation must also be smart and context aware, to be accessible by all variety of people and all manner of devices. The future is now. <em>Carpe Diem</em>
-        </p>
-    </div>	
+{% endfor %}	
 </div>

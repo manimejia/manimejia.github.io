@@ -1,0 +1,49 @@
+manimejia:
+  name: Manuel Mej&iacute;a
+  locality: Ann Arbor
+  state: Mi.
+  website: manimejia.me
+  email: hello(at)manimejia.me
+  phone: (971) 533 7591
+  summary: | 
+    
+  bio: | 
+    My career as a web designer/developer started in 2001, when I discovered the multimedia possibilities of Flash. I was quickly engrossed, making simple animations for family and friends. Within a year, I had learned enough and made the right connections to approach the nation's largest animal sanctuary with a novel idea for a virtual tour of their campus. I landed the job, and set out in earnest to realize this [huge accomplishment][P1] over the following ten months. 
+    
+    Early in my career I came to see that truly scalable and manageable presentations need to have a smart backend to facilitate editing the content. While continuing my work as a [flash][P2] [designer][P3] and [developer][P4], I started to research CMS solutions on which these presentations could be 'hosted'. This lead me to Drupal, in 2006, and offering my services as a website developer to an even wider client base. I spent the next few years designing [web][P5] [graphics][P6], [small][P7] [business][P8] [websites][P9], and [applications][P10] for a variety of clients ([and brides-to-be][P11]). By this time, my interests had moved away from Flash, and toward HTML5 as a creative platform of choice for dynamic multimedia content. 
+    
+    In 2012 I was hired as a web developer by the Graduate School of Oregon State University. This was a great opportunity for me to move beyond self employment, and experience the needs and inner workings of a large organization. I found myself [rebuilding the Graduate School website][P12] from the ground up, designing functional [user experience solutions][P13] for a variety of web systems, and streamlining their [workflow processes][P14]. In September 2014, after moving to Ann Arbor, I worked remotely for a few weeks until they had hired my replacement.
+    
+    With more than a decade serving various roles in the web industry, I have collected a wide range of professional experiences. This has allowed me to identify and hone my core strength as a creative digital communicator.
+    
+    [P1]: /#BFAS-Best-Friends-Virtual-Tour
+    [P2]: /#MBL-Day-Of-The-Dead-VJ-Animations
+    [P3]: /#MBL-Mandala-Animation
+    [P4]: /#BFAS-Best-Friends-Media-Center
+    [P5]: /#B4S-Website-and-Identity-Design
+    [P6]: /#LITE-Non-Profit-Website
+    [P7]: /#CM-Artist-Website
+    [P8]: /#OA-Membership-Website-And-Online-Store
+    [P9]: /#EC-Corporate-Website
+    [P10]: /#EC-CareNet-Elder-Care-Portal
+    [P11]: /#MM-Wedding-Website-And-Invitations
+    [P12]: /#OSU-Graduate-School-Website
+    [P13]: /#OSU-Graduate-Education-Toolkit
+    [P14]: /#OSU-Document-Workflow-Solutions
+
+  education:
+    - 
+     school: Art Student's League of Denver
+     study: Fine Art
+     years: 1991 - 1992
+     degree: N/A
+    - 
+     school: Kanab High School
+     study: 
+     years: 1992
+     degree: "yes"
+    - 
+     school: University of Northern Colorado
+     study: Musical Theater
+     years: 1993 - 1994
+     degree: "no"

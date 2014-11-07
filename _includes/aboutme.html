@@ -1,19 +1,7 @@
 <div class="row text-justify">
     <div class="column medium-3">
-			<div class="row">
-	      <div class="th hide-for-print column small-4 medium-12">
-					<img src="/assets/manimejia-mexico-sunset-selfie.jpg" alt="{{ site.config.author.name }}"/>
-				</div>
-	       <ul role="contentinfo" class="vcard column small-8 medium-12">
-	         <li class="website"><b>Website: </b><a href="{{ site.config.author.website }}">manimejia.me</a></li>
-	         <li class="email"><b>Email: </b>{{ site.config.author.email }}</li>
-	         <li class="phone"><b>Phone: </b>{{ site.config.author.phone }}</li>
-	         <li class="locality"><b>Location: </b>{{ site.config.author.locality }}, 
-	             <span class="state">{{ site.config.author.state }}</span>
-	         </li>
-	         <li><b>References upon request</b></li>
-	       </ul>
-			</div>
+			{% include vcard.html person=site.data.people.manimejia %}
+			
     </div>
     <div class="column medium-9">
   <p>I am a communicator. This is the focus of my work in every project and every relationship. </p>

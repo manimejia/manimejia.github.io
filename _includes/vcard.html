@@ -1,0 +1,19 @@
+{% if include.person %}
+{% assign vcard_message = include.msg | default: "References upon request" %}
+<div role="contentinfo" class="vcard">
+	<div class="row">
+  <div class="hide-for-print column small-4 medium-12">
+		<img src="/assets/manimejia-mexico-sunset-selfie.jpg" alt="{{ include.person.name }}"/>
+	</div>
+   <ul class="column small-8 medium-12">
+     <li class="website"><b>Website: </b><a href="http://{{ include.person.website }}">{{ include.person.website }}</a></li>
+     <li class="email"><b>Email: </b>{{ include.person.email }}</li>
+     <li class="phone"><b>Phone: </b>{{ include.person.phone }}</li>
+     <li class="locality"><b>Location: </b>{{ include.person.locality }}, 
+         <span class="state">{{ include.person.state }}</span>
+     </li>
+     <li><b>{{ vcard_message }}</b></li>
+   </ul>
+</div>
+</div>
+{% endif %}
