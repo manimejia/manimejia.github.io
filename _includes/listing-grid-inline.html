@@ -16,17 +16,6 @@ margin: -2.2rem 0 0 -2rem;
 .accordion-grid[role="tablist"] .year time.label{
   font-size:1rem;
 }
-.year time.label::after {
-bottom: 0px;
-border: 0.8rem solid rgba(0, 0, 0, 0);
-content: ' ';
-height: 0px;
-width: 0px;
-position: absolute;
-pointer-events: none;
-border-left-color: #FFBE00;
-right: -1.5rem;
-}
 
 
 .accordion-grid[role="tablist"] > .accordion-grid-item{
@@ -34,7 +23,7 @@ font-size:1rem;
 display: inline-block !important;
 vertical-align: top;
 padding-top: 1rem;
-border-top: 1px dotted #555;
+border-top: 1px dashed #FFD849;
 margin-top: 1rem;
 margin-bottom:0rem;
 }
@@ -93,7 +82,7 @@ z-index: 5;
   display: none;
   border-radius: 50%;
   font-size:inherit;
-  color: #222;
+/*  color: #222;*/
   text-shadow: 0 .5rem .5rem #FFF, 0 0 .1rem #FFF;
 }
 
@@ -111,6 +100,7 @@ width: 8rem;
 position: relative;
 z-index: 2;
 background: rgba(255, 255, 255, 0.8);
+color: #222;
 font-weight: normal;
 letter-spacing: .05rem;
 vertical-align: middle;
@@ -248,7 +238,7 @@ article.accordion-grid-item .th a.th-link:hover .title{
 
     <li id="{{ this_page_id }}-wrapper" class="accordion-grid-item">
     {% if item_year != last_item_year %}
-      <h3 class="year inline-block" role="heading"><time class="label secondary">{{ item_year }}</time></h3>
+      <h3 class="year inline-block" role="heading"><time class="label secondary point-right">{{ item_year }}</time></h3>
     {% endif %}
       <a id="{{ this_page_id }}-th" href="#{{ this_page_id }}" class="th" role="tab" tabindex="0" aria-expanded="false" aria-controls="{{this_page_id}}" data-scroll-offset="128" tile="project {{forloop.index}} of {{forloop.length}}">
         <!--<span class="title th-link">{{ this_page.title }}</span>-->

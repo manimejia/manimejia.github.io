@@ -105,16 +105,60 @@ $font-weight-normal: normal !default;
 $font-weight-bold: 600 !default;
 
 /************* COLORS **********************
-http://paletton.com/#uid=33z0r0kVCZWgGWwsGY+YsufUshz
+http://paletton.com/#uid=c3J1i2+0w1kWhVojNUrtPVLUCt7SgiAk++LJhc++mN++++p5++eSkxYyRiCLGoUD2ywnCETfmkR5u7pkOFJ8PZRBm5Uqcx
 *******************************************/
 
 // We use these as default colors throughout
-$primary-color: #0386FC;
-$secondary-color: #FFBE00;
-$alert-color: #FF5900;
-$success-color: #7DBBF2;
-$warning-color: #FFDD7A;
-$info-color: #FFA87A;
+$primary-color:             #0453F0;	/* blue */
+$primary-color-lightest:    #6996EE;     
+$primary-color-lighter:     #276BF1;     
+$primary-color-darker:      #03369B;     
+$primary-color-darkest:     #032363;     
+                                         
+$secondary-color:           #FFC900;	/* yellow */
+$secondary-color-lightest:  #FFE276;     
+$secondary-color-lighter:   #FFD849;     
+$secondary-color-darker:    #C89D00;     
+$secondary-color-darkest:   #765D00;     
+                                         
+$tertiary-color:            #F07100;	/* orange */
+$tertiary-color-lightest:   #FF9435;     
+$tertiary-color-lighter:    #FF7800;     
+$tertiary-color-darker:     #B05300;     
+$tertiary-color-darkest:    #642F00;     
+                                         
+$quaternary-color:          #00BB57;	/* green */
+$quaternary-color-lightest: #5CDB97;
+$quaternary-color-lighter:  #2CC774;
+$quaternary-color-darker:   #00853E;
+$quaternary-color-darkest:  #005628;
+
+/*******************************************/
+
+$info-color:                $primary-color;            	/* blue */
+$info-color-lightest:       $primary-color-lightest;        
+$info-color-lighter:        $primary-color-lighter;         
+$info-color-darker:         $primary-color-darker;          
+$info-color-darkest:        $primary-color-darkest;         
+                                                            
+$warning-color:             $secondary-color;          	/* yellow */
+$warning-color-lightest:    $secondary-color-lightest;      
+$warning-color-lighter:     $secondary-color-lighter;       
+$warning-color-darker:      $secondary-color-darker;        
+$warning-color-darkest:     $secondary-color-darkest;       
+                                                            
+$alert-color:               $tertiary-color;           	/* orange */
+$alert-color-lightest:      $tertiary-color-lightest;       
+$alert-color-lighter:       $tertiary-color-lighter;        
+$alert-color-darker:        $tertiary-color-darker;         
+$alert-color-darkest:       $tertiary-color-darkest;        
+                                                               
+$success-color:             $quaternary-color;         	/* green */
+$success-color-lightest:    $quaternary-color-lightest;
+$success-color-lighter:     $quaternary-color-lighter; 
+$success-color-darker:      $quaternary-color-darker;  
+$success-color-darkest:     $quaternary-color-darkest; 
+
 
 $white       : #FFFFFF;
 $ghost       : #FAFAFA;
@@ -269,8 +313,8 @@ $header-font-color: $vapor;
 // We use these to style anchors
 // $anchor-text-decoration: none;
 // $anchor-text-decoration-hover: none;
-$anchor-font-color: $warning-color;
-$anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -10%);
+$anchor-font-color: $secondary-color-lightest;
+$anchor-font-color-hover: $secondary-color-lighter;
 
 // We use these to style the <hr> element
 // $hr-border-width: 1px;
@@ -799,8 +843,8 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: 3%);
 // We use these to style the label text
 // $label-font-sizing: rem-calc(11);
 // $label-font-weight: $font-weight-normal;
-// $label-font-color: $oil;
-// $label-font-color-alt: $white;
+$label-font-color: $primary-color-darkest;
+$label-font-color-alt: $secondary-color-lightest;
 // $label-font-family: $body-font-family;
 
 // 17. Magellan
@@ -1461,48 +1505,48 @@ $tabs-navigation-font-color: $white;
 
 // Comment out this import 
 // if you are customizing you imports below
-@import "foundation";
+// @import "foundation";
 
 // Import specific parts of Foundation 
 // by commenting the import "foundation"
 // and uncommenting what you want below.
 
-// @import
-//   "foundation/components/accordion",
-//   "foundation/components/alert-boxes",
-//   "foundation/components/block-grid",
-//   "foundation/components/breadcrumbs",
-//   "foundation/components/button-groups",
-//   "foundation/components/buttons",
-//   "foundation/components/clearing",
-//   "foundation/components/dropdown",
-//   "foundation/components/dropdown-buttons",
-//   "foundation/components/flex-video",
-//   "foundation/components/forms",
-//   "foundation/components/grid",
-//   "foundation/components/inline-lists",
-//   "foundation/components/joyride",
-//   "foundation/components/keystrokes",
+ @import
+   "foundation/components/accordion",
+   "foundation/components/alert-boxes",
+   "foundation/components/block-grid",
+   "foundation/components/breadcrumbs",
+   "foundation/components/button-groups",
+   "foundation/components/buttons",
+   "foundation/components/clearing",
+   "foundation/components/dropdown",
+   "foundation/components/dropdown-buttons",
+   "foundation/components/flex-video",
+   "foundation/components/forms",
+   "foundation/components/grid",
+   "foundation/components/inline-lists",
+   "foundation/components/joyride",
+   "foundation/components/keystrokes",
 //   "foundation/components/labels",
-//   "foundation/components/magellan",
-//   "foundation/components/orbit",
-//   "foundation/components/pagination",
-//   "foundation/components/panels",
-//   "foundation/components/pricing-tables",
-//   "foundation/components/progress-bars",
-//   "foundation/components/reveal",
-//   "foundation/components/side-nav",
-//   "foundation/components/split-buttons",
-//   "foundation/components/sub-nav",
-//   "foundation/components/switches",
-//   "foundation/components/tables",
-//   "foundation/components/tabs",
-//   "foundation/components/thumbs",
-//   "foundation/components/tooltips",
-//   "foundation/components/top-bar",
-//   "foundation/components/type",
-//   "foundation/components/offcanvas",
-//   "foundation/components/visibility";
+   "foundation/components/magellan",
+   "foundation/components/orbit",
+   "foundation/components/pagination",
+   "foundation/components/panels",
+   "foundation/components/pricing-tables",
+   "foundation/components/progress-bars",
+   "foundation/components/reveal",
+   "foundation/components/side-nav",
+   "foundation/components/split-buttons",
+   "foundation/components/sub-nav",
+   "foundation/components/switches",
+   "foundation/components/tables",
+   "foundation/components/tabs",
+   "foundation/components/thumbs",
+   "foundation/components/tooltips",
+   "foundation/components/top-bar",
+   "foundation/components/type",
+   "foundation/components/offcanvas",
+   "foundation/components/visibility";
 
 // Compass Imports
 // @import "compass/css3/box-shadow";
@@ -1522,6 +1566,121 @@ $tabs-navigation-font-color: $white;
 // @import "almost-flat-ui/sidenav";
 // @import "almost-flat-ui/breadcrumbs";
 // @import "almost-flat-ui/misc";
+
+
+//////////////////////////////////////////////////
+///////////////////////////////////////////////////
+//    Foundation Overrides
+
+/********************************
+Foundation Labels 
+*/
+
+// @import "global";
+
+//
+// @variables
+//
+$include-html-label-classes: $include-html-classes !default;
+
+// We use these to style the labels
+$label-padding: rem-calc(4 8 4) !default;
+$label-radius: $global-radius !default;
+
+// We use these to style the label text
+$label-font-sizing: rem-calc(11) !default;
+$label-font-weight: $font-weight-normal !default;
+$label-font-color: $oil !default;
+$label-font-color-alt: $white !default;
+$label-font-family: $body-font-family !default;
+
+//
+// @mixins
+//
+// We use this mixin to create a default label base.
+@mixin label-base {
+  font-weight: $label-font-weight;
+  font-family: $label-font-family;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  margin-bottom: inherit;
+}
+
+// @mixins
+//
+// We use this mixin to add label size styles.
+// $padding - Used to determine label padding. Default: $label-padding || rem-calc(3 10 4) !default
+// $text-size - Used to determine label text-size. Default: $text-size found in settings
+@mixin label-size($padding:$label-padding, $text-size:$label-font-sizing) {
+  @if $padding { padding: $padding; }
+  @if $text-size { font-size: $text-size; }
+}
+
+// @mixins
+//
+// We use this mixin to add label styles.
+// $bg - Default: $primary-color (found in settings file)
+// $radius - Default: false, Options: true, sets radius to $global-radius (found in settings file)
+@mixin label-style($bg:$primary-color, $radius:false) {
+
+  // We control which background color comes through
+  @if $bg {
+
+    // This find the lightness percentage of the background color.
+    $bg-lightness: lightness($bg);
+
+    background-color: $bg;
+    border-color: $bg;
+
+    // We control the text color for you based on the background color.
+    @if $bg-lightness < 50% { color: $label-font-color-alt; }
+    @else { color: $label-font-color; }
+  }
+
+  // We use this to control the radius on labels.
+  @if $radius == true { @include radius($label-radius); }
+  @else if $radius { @include radius($radius); }
+
+}
+
+// @mixins
+//
+// We use this to add close buttons to alerts
+// $padding - Default: $label-padding,
+// $text-size - Default: $label-font-sizing,
+// $bg - Default: $primary-color(found in settings file)
+// $radius - Default: false, Options: true which sets radius to $global-radius (found in settings file)
+@mixin label($padding:$label-padding, $text-size:$label-font-sizing, $bg:$primary-color, $radius:false) {
+
+  @include label-base;
+  @include label-size($padding, $text-size);
+  @include label-style($bg, $radius);
+}
+
+@include exports("label") {
+  @if $include-html-label-classes {
+    .label {
+      @include label-base;
+      @include label-size;
+      @include label-style;
+
+      &.radius { @include label-style(false, true); }
+      &.round { @include label-style(false, $radius:1000px); }
+
+      &.alert     { @include label-style($alert-color-lightest); }
+      &.warning   { @include label-style($warning-color-lighter); }
+      &.success   { @include label-style($success-color-lightest); }
+      &.secondary { @include label-style($secondary-color); }
+      &.info      { @include label-style($info-color-lightest); }
+    }
+  }
+}
+
+
 
 
 
@@ -1709,19 +1868,54 @@ main > .row > section {
  padding-bottom: 2rem;
 }
 section.overlay{
-  text-shadow: 0 0 2px #222;
-  background-color: rgba(2, 2, 2, 0.8);
-}
-section.overlay.primary{
-  background-color: rgba(1, 83, 156, 0.8);
-}
-section.overlay.secondary{
-  background-color: rgba(241,179,0, 0.8);
+  background-color: rgba($body-bg, 0.8);
+ p{
+  	text-shadow: 0 0 2px $body-bg, 0 0 5px $body-bg,0 0 8px $body-bg;
+	}
 }
 section.overlay.alert{
-  background-color: rgba(241, 84, 0, 0.8);
+  background-color: rgba($alert-color-darker, 0.8);
+	p{
+  	text-shadow: 0 0 2px $alert-color-darkest, 0 0 5px $alert-color-darkest, 0 0 8px $alert-color-darkest;
+	}
+}
+section.overlay.warning{
+  background-color: rgba($warning-color-darker, 0.8);
+	p{
+  	text-shadow: 0 0 2px $warning-color-darkest, 0 0 5px $warning-color-darkest, 0 0 8px $warning-color-darkest;
+	}
+}
+section.overlay.info{
+  background-color: rgba($info-color-darker, 0.8);
+	p{
+  	text-shadow: 0 0 2px $info-color-darkest, 0 0 5px $info-color-darkest, 0 0 8px $info-color-darkest;
+  }
+}
+section.overlay.success{
+  background-color: rgba($success-color-darker, 0.8);
+	p{
+  	text-shadow: 0 0 2px $success-color-darkest, 0 0 5px $success-color-darkest, 0 0 8px $success-color-darkest;
+  }
 }
 
+.alert-box.warning,
+.alert-box.secondary{
+	color:$primary-color-darkest;
+}
+
+.label.point-right::after {
+content: ' ';
+pointer-events: none;
+position: absolute;
+height: 0px;
+width: 0px;
+bottom: 0px;
+right: -1.5rem;
+border-width: 0.8rem;
+border-style: solid;
+border-color: rgba(0, 0, 0, 0);
+border-left-color: inherit;
+}
 
 /* 
  * Apply default header styles to <header> elements 
@@ -1894,5 +2088,10 @@ padding: 1em;
 	}
 }
 
+@media only screen and (max-width: 40.063em){
+	body{
+		background-color:$primary-color-darkest;
+	}
+}
 
 

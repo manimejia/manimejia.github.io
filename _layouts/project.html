@@ -6,7 +6,7 @@
 {% assign has_page_content = page.content | strip_html | strip | lstrip | rstrip | strip_newlines %}
 <article class="row" aria-labelledby="{{this_page_id}}-title">
   <nav class="column small-2 small-push-10 medium-1 medium-push-11 text-right" id="{{this_page_id}}-navigation">
-    <a title="close this tab" aria-controls="{{this_page_id}}" href="#{{this_page_id}}" class="close"><i class="fi-x"></i></a>
+    <a title="close this tab" href="#{{this_page_id}}" class="close"><i class="fi-x"></i></a>
   </nav>
   <header class="column small-10 small-pull-2 medium-8 medium-pull-1 large-9">
       <h3 class="title left" id="{{this_page_id}}-title">
@@ -62,11 +62,11 @@
     Project Details</h4>
     <div class="column {% if page.assets %}medium-3 large-4{% else %}medium-2 large-3{% endif %}">
       <nav role="navigation">
+	
         <ul id="" class="row no-bullet " role="tablist">
-        {% assign tabbuttonsmall = 16 %}
-        {% if page.tasks %}{% assign tabbuttonsmall = tabbuttonsmall - 4 %}{% endif %}
-        {% if page.content %}{% assign tabbuttonsmall = tabbuttonsmall - 4 %}{% endif %}
-        {% if page.website %}{% assign tabbuttonsmall = tabbuttonsmall - 4 %}{% endif %}
+        {% assign tabbuttonsmall = 18 %}
+        {% if page.tasks %}{% assign tabbuttonsmall = tabbuttonsmall - 6 %}{% endif %}
+        {% if page.content %}{% assign tabbuttonsmall = tabbuttonsmall - 6 %}{% endif %}
          
         {% if page.tasks %}
           <li role="presentational" class="column small-{{tabbuttonsmall}} medium-12">
@@ -80,15 +80,8 @@
           <i class="fi-align-justify"></i> Full Story</a>
           </li>
         {% endunless %}
-        {% if page.website %}
-          <li role="presentational" class="column small-{{tabbuttonsmall}} medium-12">
-          <a id="{{this_page_id}}-website-button" href="{{page.website}}" target="_blank" title="go to {{ page.status }} website" class="button tiny expand success font-larger" role="tab" tabindex="0">
-            <i class="fi-link"></i> 
-            {% if page.status %}{{ page.status | capitalize }}{% endif %} Website
-          </a>
-          </li>
-        {% endif %}
         </ul>
+
       {% if page.assets %}
         <br/>
         <ul class="small-block-grid-4 medium-block-grid-2 large-block-grid-3 text-center" role="tablist">
@@ -101,7 +94,17 @@
         {% endif %}
         {% endfor %}
         </ul>
-      {% endif %} 
+      {% endif %}
+
+      {% if page.website %}
+			<div class="text-center">
+        <a id="{{this_page_id}}-website-button" href="{{page.website}}" target="_blank" title="go to {{ page.status }} website" class="font-larger" tabindex="0">
+          <i class="fi-link"></i> 
+          {% if page.status %}{{ page.status | capitalize }}{% endif %} Website
+        </a>
+      {% endif %}
+ 			<div>
+	
       </nav>
     </div><!-- tablist -->
     <div class="column {% if page.assets %}medium-9 large-8{% else %}medium-10 large-9{% endif %}" role="presentational">
@@ -141,14 +144,14 @@
       <h4 class="hidden-for-small-only hidden-for-medium-up">Tags</h4>
       <ul class="taglist">
       {% for tag in page.tags %}
-        <li class="label radius success">{{ tag }}</li>
+        <li class="label radius info">{{ tag }}</li>
       {% endfor %}
       </ul>
     </aside>
     {% endif %} 
   </section>
   <nav class="text-center column">
-      <a title="close this tab" aria-controls="{{this_page_id}}" href="#{{this_page_id}}" class="grippy" tabindex="0">&nbsp;</a>
+      <a title="close this tab" href="#{{this_page_id}}" class="grippy" tabindex="0">&nbsp;</a>
   </nav>
 </article>
 

@@ -17,8 +17,7 @@ sass:
 layouts: ./_layouts
 
 available_libraries:
-  - 
-    name: foundation 
+  - name: foundation 
     js: 
       - /theme/foundation/js/vendor/jquery.js
       - /theme/foundation/js/vendor/modernizr.js
@@ -26,32 +25,32 @@ available_libraries:
     css: 
       - /theme/foundation/icons/foundation-icons.css
       - /theme/foundation/css/normalize.css
-  - 
-    name: skrollr
+
+  - name: skrollr
     js: 
       - /theme/skrollr/skrollr.min.js
-  - 
-    name: skrollr_stylesheets
+
+  - name: skrollr_stylesheets
     js: 
       - /theme/skrollr/skrollr.stylesheets.min.js
-  - 
-    name: skrollr_menu
+
+  - name: skrollr_menu
     js: 
       - /theme/skrollr/skrollr.menu.min.js
-  - 
-    name: slick
+
+  - name: slick
     js: 
       - /theme/slick/slick.min.js
     css: 
       - /theme/slick/slick.css
-  - 
-    name: manimejia
+
+  - name: manimejia
     js: 
       - /theme/manimejia/manimejia.js
-    #- /theme/manimejia/foundation.accordion.mm.js
+     #- /theme/manimejia/foundation.accordion.mm.js
     css:
       - "http://fonts.googleapis.com/css?family=Josefin+Sans:300,400|Open+Sans:400italic,600,400" 
-      - /theme/manimejia/foundation-manimejia.css
+      - /theme/manimejia/foundation-manimejia-fourcolor.css
 
 
 defaults:
@@ -107,7 +106,7 @@ config:
     locality: Ann Arbor
     state: Mi.
     website: http://manimejia.me
-    email: hello-at-manimejia.me
+    email: hello(at)manimejia.me
     phone: (971) 533 7591
     services:
      - Experience Architect
