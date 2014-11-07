@@ -1937,7 +1937,9 @@ header {
 
 
 // custom list styles
-
+ul.column{
+	margin:0;
+}
 ul.icon-list > li{
   list-style-type: none;
   margin-left: 2em;
