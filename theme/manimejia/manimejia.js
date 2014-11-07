@@ -336,15 +336,15 @@ function unsyncAccordionGridContentHeight() {
 }
 
 function initAjaxContent($content){
-  var contentId = $content.attr('id');
-  var contentRole = $content.attr('role');
+  // var contentId = $content.attr('id');
+  //   var contentRole = $content.attr('role');
   // close content tabpanels from a link inside the panel
-  if(contentRole == 'tabpanel'){
-    $content.find($('[aria-controls="'+contentId+'"]:not([role="tab"])')).click(function(e){
-      $('[role="tab"][aria-controls="'+contentId+'"]').first().click();
-      e.preventDefault();
-    });
-  }
+  // if(contentRole == 'tabpanel'){
+  //   $content.find($('[aria-controls="'+contentId+'"]:not([role="tab"])')).click(function(e){
+  //     $('[role="tab"][aria-controls="'+contentId+'"]').first().click();
+  //     e.preventDefault();
+  //   });
+  // }
   $(':focusable').toggleClass('focusable',true);
   // initialize foundation
   $content.foundation();
@@ -761,12 +761,29 @@ ariaTabGroup.prototype.init = function() {
     $tab.addClass('focus').focus()
   }
 
-
   var syncFunction = tabGroup.settings.sync;
   if(typeof(syncFunction) == 'function' && tabGroup.settings.syncInterval > 0){
     setInterval(function(){ syncFunction(tabGroup); },tabGroup.settings.syncInterval);
   }
+
+  // initialize remote tab links that lie outside this tabGroup
+	this.initRemoteTabLinks();
 } // end init() 
+
+// initialize remote tab links 
+ariaTabGroup.prototype.initRemoteTabLinks = function($element){
+	if(!$element || $element.length > 0) var $element = $('body');
+	var tabGroup = this;
+	$element.find($('a[role="link"],a:not([role])')).each(function(){
+		var $targetTab = $('a[role="tab"][aria-controls="'+this.hash.substring(1)+'"]');
+		if(tabGroup.$tabs.is($targetTab)){
+			$(this).click(function(e){
+				$targetTab.click()
+				e.preventDefault();
+			});
+		}
+	});
+}
 
 // 
 // Function switchTabs() is a member function to give focus to a new tab or accordian header. 
@@ -903,6 +920,7 @@ ariaTabGroup.prototype.togglePanel = function($tab,show) {
           $tab.attr('aria-busy',false);
           tabGroup.effectShow($panel,effectOptions,openingDelay);
           initAjaxContent($panel);
+					tabGroup.initRemoteTabLinks($panel);
         });
     }else{
       this.effectShow($panel,effectOptions,openingDelay);
