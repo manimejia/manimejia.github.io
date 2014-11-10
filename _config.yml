@@ -96,6 +96,8 @@ defaults:
     values:
       layout: "project" 
       category: "project"
+      hide: 
+        title: true
 
 config:
   name: "Manuel Mej&iacute;a"

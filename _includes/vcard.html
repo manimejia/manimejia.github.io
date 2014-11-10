@@ -1,30 +1,34 @@
 {% if include.person %}
-{% assign vcard_message = include.msg | default: "References upon request" %}
-<div role="contentinfo" class="vcard">
+{% assign vcard_id = include.person.uid |  default: "person" | append: "-vcard" %}
+<div role="contentinfo" class="vcard" aria-labelledby="{{ vcard_id }}-name">
 	<div class="row">
-  <div class="hide-for-print column small-4 medium-12">
+  <div class="hide-for-print column small-4 medium-12" aria-hidden="true" >
 		<img src="/assets/manimejia-mexico-sunset-selfie.jpg" alt="{{ include.person.name }}"/>
 	</div>
-   <ul class="column small-8 medium-12">
-     <li class="website">
+   <ul class="column small-8 medium-12" role="presentational">
+     <li class="fn" class="hide-for-print" role="presentational">
+				<strong id="{{ vcard_id }}-name">{{ include.person.name }}</strong></li>
+     <li class="website" role="presentational">
 				<b class="hidden-for-small-only hidden-for-medium-up">Website: </b>
 				<i class="fi-web"></i>&nbsp;
 				<a href="http://{{ include.person.website }}">{{ include.person.website }}</a></li>
-     <li class="email">
+     <li class="email" role="presentational">
 				<b class="hidden-for-small-only hidden-for-medium-up">Email: </b>
 				<i class="fi-mail"></i>&nbsp;
 				{{ include.person.email }}</li>
-     <li class="phone">
+     <li class="phone" role="presentational">
 				<b class="hidden-for-small-only hidden-for-medium-up">Phone: </b>
 				<i class="fi-telephone"></i>&nbsp;
 				{{ include.person.phone }}</li>
-     <li class="locality">
+     <li class="locality" role="presentational">
 				<b class="hidden-for-small-only hidden-for-medium-up">Location: </b>
 				<i class="fi-marker"></i>&nbsp;
 				{{ include.person.locality }}, 
          <span class="state">{{ include.person.state }}</span>
      </li>
-     <li><b>{{ vcard_message }}</b></li>
+     {%if include.message %}
+		 <li><b>{{ include.message }}</b></li>
+		 {%endif%}
    </ul>
 </div>
 </div>
