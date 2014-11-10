@@ -105,60 +105,142 @@ $font-weight-normal: normal !default;
 $font-weight-bold: 600 !default;
 
 /************* COLORS **********************
-http://paletton.com/#uid=c3J1i2+0w1kWhVojNUrtPVLUCt7SgiAk++LJhc++mN++++p5++eSkxYyRiCLGoUD2ywnCETfmkR5u7pkOFJ8PZRBm5Uqcx
+http://paletton.com/#uid=c3J112+0t1kWhVocCX2mwXgV0zbSgiAk++LJbS+9iw++YAiLZc9zkxYyRczNxknFlwokHGqbakR5u7g7QmpRPeOxl7Tb96
 *******************************************/
 
 // We use these as default colors throughout
-$primary-color:             #0453F0;	/* blue */
-$primary-color-lightest:    #6996EE;     
-$primary-color-lighter:     #276BF1;     
-$primary-color-darker:      #03369B;     
-$primary-color-darkest:     #032363;     
-                                         
-$secondary-color:           #FFC900;	/* yellow */
-$secondary-color-lightest:  #FFE276;     
-$secondary-color-lighter:   #FFD849;     
-$secondary-color-darker:    #C89D00;     
-$secondary-color-darkest:   #765D00;     
-                                         
-$tertiary-color:            #F07100;	/* orange */
-$tertiary-color-lightest:   #FF9435;     
-$tertiary-color-lighter:    #FF7800;     
-$tertiary-color-darker:     #B05300;     
-$tertiary-color-darkest:    #642F00;     
-                                         
-$quaternary-color:          #00BB57;	/* green */
-$quaternary-color-lightest: #5CDB97;
-$quaternary-color-lighter:  #2CC774;
-$quaternary-color-darker:   #00853E;
-$quaternary-color-darkest:  #005628;
+// $primary-color:             #0453F0;	/* blue */
+// $primary-color-lightest:    #9EBBF4;     
+// $primary-color-lighter:     #5A8EF5;     
+// $primary-color-darker:      #033EB2;     
+// $primary-color-darkest:     #032363;     
+//                                          
+// $secondary-color:           #FFB100;	/* yellow */
+// $secondary-color-lightest:  #FFE2A0;     
+// $secondary-color-lighter:   #FFD26C;     
+// $secondary-color-darker:    #956800;     
+// $secondary-color-darkest:   #4C3500;     
+//                                          
+// $tertiary-color:            #F06B00;	/* orange */
+// $tertiary-color-lightest:   #FFB87F;     
+// $tertiary-color-lighter:    #FF8C31;     
+// $tertiary-color-darker:     #A84B00;     
+// $tertiary-color-darkest:    #482000;     
+//                                          
+// $quaternary-color:          #00BB57;	/* green */
+// $quaternary-color-lightest: #88E0B1;
+// $quaternary-color-lighter:  #4ACC87;
+// $quaternary-color-darker:   #007536;
+// $quaternary-color-darkest:  #003F1D;
+// 
+// /*******************************************/
+// 
+// $info-color:                $primary-color;            	/* blue */
+// $info-color-lightest:       $primary-color-lightest;        
+// $info-color-lighter:        $primary-color-lighter;         
+// $info-color-darker:         $primary-color-darker;          
+// $info-color-darkest:        $primary-color-darkest;         
+//                                                             
+// $warning-color:             $secondary-color;          	/* yellow */
+// $warning-color-lightest:    $secondary-color-lightest;      
+// $warning-color-lighter:     $secondary-color-lighter;       
+// $warning-color-darker:      $secondary-color-darker;        
+// $warning-color-darkest:     $secondary-color-darkest;       
+//                                                             
+// $alert-color:               $tertiary-color;           	/* orange */
+// $alert-color-lightest:      $tertiary-color-lightest;       
+// $alert-color-lighter:       $tertiary-color-lighter;        
+// $alert-color-darker:        $tertiary-color-darker;         
+// $alert-color-darkest:       $tertiary-color-darkest;        
+//                                                                
+// $success-color:             $quaternary-color;         	/* green */
+// $success-color-lightest:    $quaternary-color-lightest;
+// $success-color-lighter:     $quaternary-color-lighter; 
+// $success-color-darker:      $quaternary-color-darker;  
+// $success-color-darkest:     $quaternary-color-darkest; 
 
-/*******************************************/
 
-$info-color:                $primary-color;            	/* blue */
-$info-color-lightest:       $primary-color-lightest;        
-$info-color-lighter:        $primary-color-lighter;         
-$info-color-darker:         $primary-color-darker;          
-$info-color-darkest:        $primary-color-darkest;         
-                                                            
-$warning-color:             $secondary-color;          	/* yellow */
-$warning-color-lightest:    $secondary-color-lightest;      
-$warning-color-lighter:     $secondary-color-lighter;       
-$warning-color-darker:      $secondary-color-darker;        
-$warning-color-darkest:     $secondary-color-darkest;       
-                                                            
-$alert-color:               $tertiary-color;           	/* orange */
-$alert-color-lightest:      $tertiary-color-lightest;       
-$alert-color-lighter:       $tertiary-color-lighter;        
-$alert-color-darker:        $tertiary-color-darker;         
-$alert-color-darkest:       $tertiary-color-darkest;        
-                                                               
-$success-color:             $quaternary-color;         	/* green */
-$success-color-lightest:    $quaternary-color-lightest;
-$success-color-lighter:     $quaternary-color-lighter; 
-$success-color-darker:      $quaternary-color-darker;  
-$success-color-darkest:     $quaternary-color-darkest; 
+$colors: (
+	primary: info,
+	secondary: warning,
+	info:( /* blue */
+			base:           #0453F0,
+			lightest:       #9EBBF4,
+			lighter:        #5A8EF5,
+			darker:         #033EB2,
+			darkest:        #032363,
+		),                        
+	warning:( /* yellow */       
+			base:           #FFB100,
+			lightest:       #FFE2A0,
+			lighter:        #FFD26C,
+			darker:         #956800,
+			darkest:        #4C3500,
+		),                        
+	alert:( /* orange */         
+			base:           #F06B00,
+			lightest:       #FFB87F,
+			lighter:        #FF8C31,
+			darker:         #A84B00,
+			darkest:        #482000,
+		),                        
+	success:( /* green */        
+			base:           #00BB57,
+			lightest:       #88E0B1,
+			lighter:        #4ACC87,
+			darker:         #007536,
+			darkest:        #003F1D,
+		),
+	);
 
+@function get-color($color: primary, $tone: base) {
+	$color: if(index(secondary info warning alert success, $color),$color, primary);
+	$tone: if(index(lightest lighter darker darkest, $tone),$tone, base);
+	$output: #fff;
+	$colorMap: map-get($colors,$color);
+	$colorType: type-of($colorMap);
+	// get the requested $tone for an arbitrary color
+	@if $colorType == color {
+		@if $tone == lightest{
+			$output: lighten($colorMap,60%);			
+		}
+		@else if $tone == lighter{
+			$output: lighten($colorMap,20%);			
+		}
+		@else if $tone == darker{
+			$output: darken($colorMap,20%);			
+		}
+		@else if $tone == darkest{
+			$output: darken($colorMap,60%);			
+		}
+		@else{
+			$output: $colorMap;			
+		}
+	}
+	// get the requested $tone using another key in the $colors map
+	@else if $colorType == string {
+		$output: get-color($colorMap, $tone);
+	}
+	// get the requested tone from this map of color tones 
+	@else if $colorType == map {
+		// TODO: what if tone key is not specified in colorMap;
+		$output: map-get($colorMap,$tone);
+	}
+	// get the requested color and tone when color key does not exist in colors map
+	@else{
+		// TODO 
+	}
+	
+  @return $output;
+}
+
+
+$primary-color: 	get-color(primary);
+$secondary-color: 	get-color(secodary);
+$info-color: 			get-color(info, base);
+$warning-color: 	get-color(warning, base);
+$alert-color: 		get-color(alert, base);
+$success-color: 	get-color(success, base);
 
 $white       : #FFFFFF;
 $ghost       : #FAFAFA;
@@ -313,8 +395,8 @@ $header-font-color: $vapor;
 // We use these to style anchors
 // $anchor-text-decoration: none;
 // $anchor-text-decoration-hover: none;
-$anchor-font-color: $secondary-color-lightest;
-$anchor-font-color-hover: $secondary-color-lighter;
+$anchor-font-color: inherit;
+$anchor-font-color-hover: get-color(secondary,darkest);
 
 // We use these to style the <hr> element
 // $hr-border-width: 1px;
@@ -389,7 +471,9 @@ $accordion-content-active-bg-color: $jet;
 // 02. Alert Boxes
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-alert-classes: $include-html-classes;
+$include-html-alert-classes: false;
+$alert-tone: base;
+$alert-font-tone: darkest;
 
 // We use this to control alert padding.
 // $alert-padding-top: rem-calc(14);
@@ -834,7 +918,10 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: 3%);
 // 16. Labels
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-label-classes: $include-html-classes;
+$include-html-label-classes: false;
+
+$label-tone: lighter;
+$label-font-tone: darkest;
 
 // We use these to style the labels
 // $label-padding: rem-calc(4 8 4);
@@ -843,8 +930,8 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: 3%);
 // We use these to style the label text
 // $label-font-sizing: rem-calc(11);
 // $label-font-weight: $font-weight-normal;
-$label-font-color: $primary-color-darkest;
-$label-font-color-alt: $secondary-color-lightest;
+// $label-font-color: get-color(primary darkest);
+// $label-font-color-alt: get-color(secondary,lightest);
 // $label-font-family: $body-font-family;
 
 // 17. Magellan
@@ -1512,40 +1599,40 @@ $tabs-navigation-font-color: $white;
 // and uncommenting what you want below.
 
  @import
-   "foundation/components/accordion",
+//   "foundation/components/accordion",
    "foundation/components/alert-boxes",
    "foundation/components/block-grid",
-   "foundation/components/breadcrumbs",
+//   "foundation/components/breadcrumbs",
    "foundation/components/button-groups",
    "foundation/components/buttons",
-   "foundation/components/clearing",
-   "foundation/components/dropdown",
-   "foundation/components/dropdown-buttons",
-   "foundation/components/flex-video",
+//   "foundation/components/clearing",
+//   "foundation/components/dropdown",
+//   "foundation/components/dropdown-buttons",
+//   "foundation/components/flex-video",
    "foundation/components/forms",
    "foundation/components/grid",
    "foundation/components/inline-lists",
-   "foundation/components/joyride",
+//   "foundation/components/joyride",
    "foundation/components/keystrokes",
-//   "foundation/components/labels",
-   "foundation/components/magellan",
-   "foundation/components/orbit",
-   "foundation/components/pagination",
+   "foundation/components/labels",
+//   "foundation/components/magellan",
+//   "foundation/components/orbit",
+//   "foundation/components/pagination",
    "foundation/components/panels",
-   "foundation/components/pricing-tables",
-   "foundation/components/progress-bars",
-   "foundation/components/reveal",
-   "foundation/components/side-nav",
+//   "foundation/components/pricing-tables",
+//   "foundation/components/progress-bars",
+//   "foundation/components/reveal",
+//   "foundation/components/side-nav",
    "foundation/components/split-buttons",
    "foundation/components/sub-nav",
-   "foundation/components/switches",
-   "foundation/components/tables",
-   "foundation/components/tabs",
+//   "foundation/components/switches",
+//   "foundation/components/tables",
+//   "foundation/components/tabs",
    "foundation/components/thumbs",
    "foundation/components/tooltips",
    "foundation/components/top-bar",
    "foundation/components/type",
-   "foundation/components/offcanvas",
+//   "foundation/components/offcanvas",
    "foundation/components/visibility";
 
 // Compass Imports
@@ -1570,124 +1657,91 @@ $tabs-navigation-font-color: $white;
 
 //////////////////////////////////////////////////
 ///////////////////////////////////////////////////
-//    Foundation Overrides
-
-/********************************
-Foundation Labels 
-*/
-
-// @import "global";
-
+//    Foundation HTML classes
+//@each $color in alert, warning, success, info, primary, secondary {
+// @each $tone-selector,$bg-tone in (light: "-lightest", base: "", dark:"-darkest") {
+//		.alert-box.#{$color}.#{$tone}{
+//	    background-image: url('/images/#{$animal}.png');
+//	  }
+//	}	
+//}
 //
-// @variables
-//
-$include-html-label-classes: $include-html-classes !default;
 
-// We use these to style the labels
-$label-padding: rem-calc(4 8 4) !default;
-$label-radius: $global-radius !default;
-
-// We use these to style the label text
-$label-font-sizing: rem-calc(11) !default;
-$label-font-weight: $font-weight-normal !default;
-$label-font-color: $oil !default;
-$label-font-color-alt: $white !default;
-$label-font-family: $body-font-family !default;
-
-//
-// @mixins
-//
-// We use this mixin to create a default label base.
-@mixin label-base {
-  font-weight: $label-font-weight;
-  font-family: $label-font-family;
-  text-align: center;
-  text-decoration: none;
-  line-height: 1;
-  white-space: nowrap;
-  display: inline-block;
-  position: relative;
-  margin-bottom: inherit;
-}
-
-// @mixins
-//
-// We use this mixin to add label size styles.
-// $padding - Used to determine label padding. Default: $label-padding || rem-calc(3 10 4) !default
-// $text-size - Used to determine label text-size. Default: $text-size found in settings
-@mixin label-size($padding:$label-padding, $text-size:$label-font-sizing) {
-  @if $padding { padding: $padding; }
-  @if $text-size { font-size: $text-size; }
-}
-
-// @mixins
-//
-// We use this mixin to add label styles.
-// $bg - Default: $primary-color (found in settings file)
-// $radius - Default: false, Options: true, sets radius to $global-radius (found in settings file)
-@mixin label-style($bg:$primary-color, $radius:false) {
-
-  // We control which background color comes through
-  @if $bg {
-
-    // This find the lightness percentage of the background color.
-    $bg-lightness: lightness($bg);
-
-    background-color: $bg;
-    border-color: $bg;
-
-    // We control the text color for you based on the background color.
-    @if $bg-lightness < 50% { color: $label-font-color-alt; }
-    @else { color: $label-font-color; }
-  }
-
-  // We use this to control the radius on labels.
-  @if $radius == true { @include radius($label-radius); }
-  @else if $radius { @include radius($radius); }
-
-}
-
-// @mixins
-//
-// We use this to add close buttons to alerts
-// $padding - Default: $label-padding,
-// $text-size - Default: $label-font-sizing,
-// $bg - Default: $primary-color(found in settings file)
-// $radius - Default: false, Options: true which sets radius to $global-radius (found in settings file)
-@mixin label($padding:$label-padding, $text-size:$label-font-sizing, $bg:$primary-color, $radius:false) {
-
-  @include label-base;
-  @include label-size($padding, $text-size);
-  @include label-style($bg, $radius);
-}
-
-@include exports("label") {
-  @if $include-html-label-classes {
+//////////////////////////////////
+// custom html classes for labels
+// - uses get-color() function
+$label-tone: base !default;	 			// will set the tone of the label background color
+$label-font-tone: false !default; // will set the font color to a tonal variant of the label background color
+																	// if $label-font-tone is null or false, the default @mixin functionality 
+																	// will determine usage of $label-font-color or $label-font-color-alt
+//@include exports("label") {
+  @if $include-html-label-classes == false {
     .label {
       @include label-base;
       @include label-size;
-      @include label-style;
+      @include label-style(get-color(primary,$label-tone));
 
       &.radius { @include label-style(false, true); }
       &.round { @include label-style(false, $radius:1000px); }
 
-      &.alert     { @include label-style($alert-color-lightest); }
-      &.warning   { @include label-style($warning-color-lighter); }
-      &.success   { @include label-style($success-color-lightest); }
-      &.secondary { @include label-style($secondary-color); }
-      &.info      { @include label-style($info-color-lightest); }
+			@each $colorKey in map-keys($colors) {
+				$bg: get-color($colorKey,$label-tone);
+        &.#{$colorKey}{ 
+					@include label-style($bg);
+					border-color: $bg;
+					@if $label-font-tone {
+					  color: get-color($colorKey,$label-font-tone);
+					}
+				}
+			}
     }
   }
-}
+//}
 
+////////////////////////////////////
+// custom HTML classes for alerts
+$alert-tone: base !default; 			// will set the tone of the alert background color
+$alert-font-tone: false !default; // will set the font color to a tonal variant of the alert background color
+																	// if $alert-font-tone is null or false, the default @mixin functionality 
+																	// will determine usage of $alert-font-color or $alert-font-color-alt
+//@include exports("alert-box") {
+  //@if $include-html-alert-classes == false {
+    .alert-box {
+      @include alert(get-color(primary,$alert-tone));
 
+      .close      { @include alert-close; }
 
+      &.radius    { @include radius($alert-radius); }
+      &.round     { @include radius($global-rounded); }
+
+			@each $colorKey in map-keys($colors) {
+				$bg: get-color($colorKey,$alert-tone);
+        &.#{$colorKey}{ 
+					@include alert-style($bg);
+					@if $alert-font-tone {
+					  color: get-color($colorKey,$alert-font-tone);
+					}
+				}
+			}
+
+      &.alert-close { opacity: 0}
+    }
+  //}
+//}
 
 
 
 ////////////////////////////////////////////////////
 ////////////////////////////////////////////////////
 // ManiMejia Custom SCSS
+
+// colored text
+@each $colorKey in map-keys($colors) {
+  .#{$colorKey}-text { 
+		color: get-color($colorKey,base);
+	}
+}
+
 
 
 // http://css-tricks.com/set-text-on-a-circle/
@@ -1763,25 +1817,48 @@ $label-font-family: $body-font-family !default;
 }
 
 
+a{
+	border-color: #FFF;
+	border-bottom-style: solid;
+	border-width: 1px;
+}
+a:hover, a:focus {
+	border-color: rgba(0, 0, 0, 0);
+	background-color: rgba(255, 255, 255, 0.8);
+	text-shadow: none;
+}
+.top-bar a,
+.top-bar a:hover,
+.top-bar a:focus {
+	border-color: rgba(0, 0, 0, 0);
+	background: none;
+}
+
 .focusable{
   @include block-glowing-effect(':focus, &:hover', $glowing-effect-fade-time, $glowing-effect-color);
+	//' single quote here because sublime and textmate both mess up syntax coloring on the quoted selector in previous line
+	border-radius: 10px;
 }
-//' single quote here because sublime bugs syntax coloring on the quoted selector in previous line
+.focusable:focus{
+}
 
 .font-xsmaller{
-	font-size: .5em !important;
+	font-size: .5rem !important;
 }
 .font-smaller{
-	font-size: .8em !important;
+	font-size: .8rem !important;
+}
+.font-large{
+	font-size: 1.2rem !important;
 }
 .font-larger{
-	font-size: 1.5em !important;
+	font-size: 1.5rem !important;
 }
 .font-xlarger{
-	font-size: 2em !important;
+	font-size: 2rem !important;
 }
 .font-xxlarger{
-	font-size: 3em !important;
+	font-size: 3rem !important;
 }
 
 .icon{
@@ -1868,40 +1945,41 @@ main > .row > section {
  padding-bottom: 2rem;
 }
 section.overlay{
+	color: $white;
   background-color: rgba($body-bg, 0.8);
  p{
   	text-shadow: 0 0 2px $body-bg, 0 0 5px $body-bg,0 0 8px $body-bg;
 	}
 }
 section.overlay.alert{
-  background-color: rgba($alert-color-darker, 0.8);
+  background-color: rgba(get-color(alert,darker), 0.8);
 	p{
-  	text-shadow: 0 0 2px $alert-color-darkest, 0 0 5px $alert-color-darkest, 0 0 8px $alert-color-darkest;
+  	text-shadow: 0 0 2px get-color(alert,darkest), 0 0 5px get-color(alert,darkest);
 	}
 }
 section.overlay.warning{
-  background-color: rgba($warning-color-darker, 0.8);
+  background-color: rgba(get-color(warning,darker), 0.8);
 	p{
-  	text-shadow: 0 0 2px $warning-color-darkest, 0 0 5px $warning-color-darkest, 0 0 8px $warning-color-darkest;
+  	text-shadow: 0 0 2px get-color(warning,darkest), 0 0 5px get-color(warning,darkest);
 	}
 }
 section.overlay.info{
-  background-color: rgba($info-color-darker, 0.8);
+  background-color: rgba(get-color(info,darker), 0.8);
 	p{
-  	text-shadow: 0 0 2px $info-color-darkest, 0 0 5px $info-color-darkest, 0 0 8px $info-color-darkest;
+  	text-shadow: 0 0 2px get-color(info,darkest), 0 0 5px get-color(info,darkest);
   }
 }
 section.overlay.success{
-  background-color: rgba($success-color-darker, 0.8);
+  background-color: rgba(get-color(success,darker), 0.8);
 	p{
-  	text-shadow: 0 0 2px $success-color-darkest, 0 0 5px $success-color-darkest, 0 0 8px $success-color-darkest;
+  	text-shadow: 0 0 2px get-color(success,darkest), 0 0 5px get-color(success,darkest);
   }
 }
 
-.alert-box.warning,
+/*.alert-box.warning,
 .alert-box.secondary{
-	color:$primary-color-darkest;
-}
+	color:get-color(primary,darkest);
+}*/
 
 .label.point-right::after {
 content: ' ';
@@ -1951,24 +2029,15 @@ ul.icon-list > li:before{
   height:100%;
   margin-left:-1em;
 }
-ul.icon-list.primary > li:before{
- color:$primary-color;
+
+ul.icon-list {
+	@each $colorKey in map-keys($colors) {
+	  &.#{$colorKey} > li:before { 
+		  color: get-color($colorKey,base);
+		}
+	}
 }
-ul.icon-list.secondary > li:before{
- color:$secondary-color;
-}
-ul.icon-list.success > li:before{
- color:$success-color;
-}
-ul.icon-list.info > li:before{
- color:$info-color;
-}
-ul.icon-list.warning > li:before{
- color:$warning-color;
-}
-ul.icon-list.alert > li:before{
- color:$alert-color;
-}
+
 
 li > p + ul {
 margin-top: -1em;
@@ -2070,6 +2139,16 @@ padding: 1em;
 .accordion-grid > .accordion-grid-item  > a.th .circular-text {
   @include circular-text(4rem,4,1rem,.8rem)
 }
+/*
+ * tabgroup specific styles
+ */
+.show-in-tabpanel-only{
+	display:none;
+}
+[role="tabpanel"] .show-in-tabpanel-only{
+	display:initial;
+}
+
 
 @media only print {
 	body{
@@ -2092,7 +2171,7 @@ padding: 1em;
 
 @media only screen and (max-width: 40.063em){
 	body{
-		background-color:$primary-color-darkest;
+		background-color:get-color(primary,darkest);
 	}
 }
 
