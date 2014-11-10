@@ -245,8 +245,8 @@ article.accordion-grid-item .th a.th-link:hover .title{
       <a id="{{ this_page_id }}-th" href="{{ this_page.url }}" class="th" role="tab" tabindex="0" aria-expanded="false" aria-controls="{{this_page_id}}" data-scroll-offset="128" tile="project {{forloop.index}} of {{forloop.length}}">
         <!--<span class="title th-link">{{ this_page.title }}</span>-->
         <span class="hidden-for-small-only hidden-for-medium-up">{{ this_client_page.title}}</span>
-        <span class="client caption circular-text" aria-hidden="true">{% include split_char.html string=this_client_page.title %}</span>
-        <span class="title caption" >{{ this_page.title }}</span> 
+        <span class="client caption circular-text" aria-hidden="true" hidden>{% include split_char.html string=this_client_page.title %}</span>
+        <span class="title caption" hidden >{{ this_page.title }}</span> 
         {% if this_page.thumbnail %}
         <img class="th-image" src="{{ this_page_assetpath }}{{ this_page.thumbnail }}" alt="" aria-hidden="true">
         {% endif %}
