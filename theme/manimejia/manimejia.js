@@ -746,6 +746,12 @@ ariaTabGroup.prototype.init = function() {
   // hide all the panels 
   tabGroup.$panels.hide(); 
 
+	// swap tab href values for the aria-controls value
+	// href value might be pointing to URL of remote content for graceful degradation
+	tabGroup.$tabs.each(function(){
+		$(this).attr('href','#'+$(this).attr('aria-controls'));
+	});
+
   // get the active tab 
   $tab = tabGroup.$tabs.filter('.active'); 
 

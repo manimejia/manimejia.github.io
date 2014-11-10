@@ -1,4 +1,5 @@
 manimejia:
+  uid: manimejia
   name: Manuel Mej&iacute;a
   locality: Ann Arbor
   state: Mi.
@@ -16,20 +17,20 @@ manimejia:
     
     With more than a decade serving various roles in the web industry, I have collected a wide range of professional experiences. This has allowed me to identify and hone my core strength as a creative digital communicator.
     
-    [P1]: /#BFAS-Best-Friends-Virtual-Tour
-    [P2]: /#MBL-Day-Of-The-Dead-VJ-Animations
-    [P3]: /#MBL-Mandala-Animation
-    [P4]: /#BFAS-Best-Friends-Media-Center
-    [P5]: /#B4S-Website-and-Identity-Design
-    [P6]: /#LITE-Non-Profit-Website
-    [P7]: /#CM-Artist-Website
-    [P8]: /#OA-Membership-Website-And-Online-Store
-    [P9]: /#EC-Corporate-Website
-    [P10]: /#EC-CareNet-Elder-Care-Portal
-    [P11]: /#MM-Wedding-Website-And-Invitations
-    [P12]: /#OSU-Graduate-School-Website
-    [P13]: /#OSU-Graduate-Education-Toolkit
-    [P14]: /#OSU-Document-Workflow-Solutions
+    [P1]: /#BFAS-Best-Friends-Virtual-Tour "Best Friends Virtual Tour - project details"
+    [P2]: /#MBL-Day-Of-The-Dead-VJ-Animations "Day of the Dead VJ Animations - project details"
+    [P3]: /#MBL-Mandala-Animation " Mandala Animation - project details"
+    [P4]: /#BFAS-Best-Friends-Media-Center "Best Friends Media Center - project details"
+    [P5]: /#B4S-Website-and-Identity-Design "Biofuels for Schools - project details"
+    [P6]: /#LITE-Non-Profit-Website "L.I.T.E. Non Profit Website - project details"
+    [P7]: /#CM-Artist-Website "Artists Website - project details"
+    [P8]: /#OA-Membership-Website-And-Online-Store "Organic Athlete Website - project details"
+    [P9]: /#EC-Corporate-Website "Elite Care Website - project details"
+    [P10]: /#EC-CareNet-Elder-Care-Portal "Elite Care Carenet Elder Care Portal - project details"
+    [P11]: /#MM-Wedding-Website-And-Invitations "Mejia Wedding Website and Invitations - project details"
+    [P12]: /#OSU-Graduate-School-Website "Graduate School Website - project details"
+    [P13]: /#OSU-Graduate-Education-Toolkit "Graduate Education Tolkit - project details"
+    [P14]: /#OSU-Document-Workflow-Solutions "University Document Workflow Solutions - project details"
 
   education:
     - 

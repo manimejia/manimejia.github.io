@@ -1,10 +1,12 @@
 ---
  layout: default
 ---
+{% include page-title.html title="Project Details" %}
+
 {% assign this_page = page %}
 {% include _this_page.liquid %}
 {% assign has_page_content = page.content | strip_html | strip | lstrip | rstrip | strip_newlines %}
-<article class="row" aria-labelledby="{{this_page_id}}-title">
+<article class="row" id="{{this_page_id}}-article" aria-labelledby="{{this_page_id}}-title">
   <nav class="column small-2 small-push-10 medium-1 medium-push-11 text-right" id="{{this_page_id}}-navigation">
     <a title="close this tab" href="#{{this_page_id}}" class="close"><i class="fi-x"></i></a>
   </nav>

@@ -172,6 +172,8 @@ display: block;
 [role="tabpanel"] > figure{
 	margin:0;
 }
+
+
 /*
 article.accordion-grid-item .th a.th-link .title{
   display: none;
@@ -240,18 +242,18 @@ article.accordion-grid-item .th a.th-link:hover .title{
     {% if item_year != last_item_year %}
       <h3 class="year inline-block" role="heading"><time class="label secondary point-right">{{ item_year }}</time></h3>
     {% endif %}
-      <a id="{{ this_page_id }}-th" href="#{{ this_page_id }}" class="th" role="tab" tabindex="0" aria-expanded="false" aria-controls="{{this_page_id}}" data-scroll-offset="128" tile="project {{forloop.index}} of {{forloop.length}}">
+      <a id="{{ this_page_id }}-th" href="{{ this_page.url }}" class="th" role="tab" tabindex="0" aria-expanded="false" aria-controls="{{this_page_id}}" data-scroll-offset="128" tile="project {{forloop.index}} of {{forloop.length}}">
         <!--<span class="title th-link">{{ this_page.title }}</span>-->
         <span class="hidden-for-small-only hidden-for-medium-up">{{ this_client_page.title}}</span>
         <span class="client caption circular-text" aria-hidden="true">{% include split_char.html string=this_client_page.title %}</span>
         <span class="title caption" >{{ this_page.title }}</span> 
         {% if this_page.thumbnail %}
-        <img class="th-image" src="{{ this_page_assetpath }}{{ this_page.thumbnail }}" aria-hidden="true">
+        <img class="th-image" src="{{ this_page_assetpath }}{{ this_page.thumbnail }}" alt="" aria-hidden="true">
         {% endif %}
       </a>
 
       <div id="{{ this_page_id }}" class="content column" role="tabpanel"
-        data-load="{{ this_page.url }} #page-content > *" aria-hidden="true"></div>
+        data-load="{{ this_page.url }} #{{ this_page_id }}-article" aria-hidden="true"></div>
     </li>
 
   {% assign last_item_year = item_year %}
