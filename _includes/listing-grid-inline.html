@@ -36,7 +36,7 @@ width: 8.5rem;
 height: 8.5rem;
 margin: 2.2rem 2.2rem 1.5rem;
 color: #FFF;
-background: initial;
+background: none;
 padding: initial;
 font-family: inherit;
 font-size: 0;
@@ -49,6 +49,7 @@ border: solid .25rem #FFF;
 .accordion-grid[role="tablist"] > .accordion-grid-item > a[role="tab"]:hover,
 .accordion-grid[role="tablist"] > .accordion-grid-item > a[role="tab"]:focus{
   font-size:1rem;
+	background: none;
 }
 
 [role="tablist"] a[role="tab"][aria-expanded="true"]{
@@ -83,13 +84,13 @@ z-index: 5;
   border-radius: 50%;
   font-size:inherit;
 /*  color: #222;*/
-  text-shadow: 0 .5rem .5rem #FFF, 0 0 .1rem #FFF;
 }
 
 .accordion-grid[role="tablist"] > * > a[role="tab"] .client{
   /*width: 12.5rem;
     height: 12.5rem;*/
   font-weight: bold;
+  text-shadow: 0 .5rem .5rem #FFF,0 0rem .1rem #FFF;
   position: absolute;
   z-index: 0;
 }
@@ -103,6 +104,7 @@ background: rgba(255, 255, 255, 0.8);
 color: #222;
 font-weight: normal;
 letter-spacing: .05rem;
+text-shadow: 0 0rem .5rem #FFF;
 vertical-align: middle;
 }
 
