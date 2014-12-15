@@ -32,7 +32,7 @@ assets:
   caption: Screenshot showing a community page, featuring an accessible sidebar menu, on the live website.
  
 tasks: 
-  - Developed a new Drupal 6 website with a custom module, theme, and graphics to meets the   client's requirements for a small business website.
+  - Developed a new Drupal 6 website with a custom module, theme, and graphics to meet the client's specific requirements.
   - Worked with existing Photoshop mockups provided by the graphic designer.
   - Developed a unique SEO solution to present the different "field sets" of each community "node" at individual URLs. This allowed deep search engine access to the discrete   community information while maintaining a single editing experience for each community.
   - Developed a more integrated content authoring and editing experience, filling in where   Drupal has historically been weak.

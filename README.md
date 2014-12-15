@@ -1,24 +1,11 @@
-[Noita][1]
+ManiMejia Portfolio Website
 ==================
 
-[![Build Status](https://travis-ci.org/penibelst/jekyll-noita.svg)](https://travis-ci.org/penibelst/jekyll-noita)
+This is the code and content for my entire [portfolio website](http://manimejia.me). It is built on the 
+[Jekyll](http://jekyllrb.com) platform, using [Noita](http://noita.penibelst.de) as a base theme from which I expanded. Other libraries and open source projects used are as follows:
 
-[Jekyll][2] theme built with [Foundation][3]. Check out the [demo site][1] with description and tests.
+- [Foundation](http://foundation.zurb.com/)
+- [jQuery](http://jquery.org)
+- [skrollr](https://github.com/Prinzhorn/skrollr)
+- [ICITA Aria Examples](http://test.cita.illinois.edu/aria/tabpanel/index.php)
 
-[1]: http://noita.penibelst.de/
-[2]: http://jekyllrb.com/
-[3]: http://foundation.zurb.com/
-
-## Installation Instructions
-
-Foundation is a submodule of this project so if you want to install `jekyll-noita` on your local machine follow these steps.
-
-```bash
-git clone git@github.com:penibelst/jekyll-noita.git
-cd jekyll-noita
-git submodule init
-git submodule update
-jekyll serve
-```
-
-You will find your blog at `http://0.0.0.0:4000/`
