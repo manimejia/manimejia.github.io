@@ -171,11 +171,11 @@ $colors: (
 			darkest:        #032363,
 		),                        
 	warning:( /* yellow */       
-			base:           #FFBC00,
-			lightest:       #FFE6A0,
-			lighter:        #FFD86C,
-			darker:         #956E00,
-			darkest:        #4C3800,
+			base:           #FFB100,
+			lightest:       #FFE2A0,
+			lighter:        #FFD26C,
+			darker:         #956800,
+			darkest:        #4C3500,
 		),                        
 	alert:( /* orange */         
 			base:           #F06B00,
@@ -1944,13 +1944,25 @@ main > .row > section {
  padding-top: 2rem;
  padding-bottom: 2rem;
 }
+
+
 section.overlay{
 	color: $white;
-  background-color: rgba($body-bg, 0.8);
+  background-color: rgba($body-bg, 1);
  p{
   	text-shadow: 0 0 2px $body-bg, 0 0 5px $body-bg,0 0 8px $body-bg;
 	}
 }
+// colored overlays
+@each $colorKey in map-keys($colors) {
+	section.overlay.#{$colorKey}{
+	  background-color: rgba(get-color($colorKey,darker), 1);
+		p{
+	  	text-shadow: 0 0 2px get-color($colorKey,darkest), 0 0 5px get-color($colorKey,darkest);
+		}
+	}
+}
+/*
 section.overlay.alert{
   background-color: rgba(get-color(alert,darker), 0.8);
 	p{
@@ -1974,7 +1986,7 @@ section.overlay.success{
 	p{
   	text-shadow: 0 0 2px get-color(success,darkest), 0 0 5px get-color(success,darkest);
   }
-}
+}*/
 
 /*.alert-box.warning,
 .alert-box.secondary{

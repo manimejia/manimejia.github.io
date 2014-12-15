@@ -45,13 +45,6 @@ border-radius: 50%;
 border: solid .25rem #FFF;
 }
 
-.accordion-grid[role="tablist"] > .accordion-grid-item > a[role="tab"][aria-expanded="true"],
-.accordion-grid[role="tablist"] > .accordion-grid-item > a[role="tab"]:hover,
-.accordion-grid[role="tablist"] > .accordion-grid-item > a[role="tab"]:focus{
-  font-size:1rem;
-	background: none;
-}
-
 [role="tablist"] a[role="tab"][aria-expanded="true"]{
   border-color:#222;
   /*font-size:1rem;*/
@@ -90,7 +83,6 @@ z-index: 5;
   /*width: 12.5rem;
     height: 12.5rem;*/
   font-weight: bold;
-  text-shadow: 0 .5rem .5rem #FFF,0 0rem .1rem #FFF;
   position: absolute;
   z-index: 0;
 }
@@ -104,10 +96,19 @@ background: rgba(255, 255, 255, 0.8);
 color: #222;
 font-weight: normal;
 letter-spacing: .05rem;
-text-shadow: 0 0rem .5rem #FFF;
 vertical-align: middle;
 }
 
+
+html.touch .accordion-grid[role="tablist"] > .accordion-grid-item > a[role="tab"],
+.accordion-grid[role="tablist"] > .accordion-grid-item > a[role="tab"][aria-expanded="true"],
+.accordion-grid[role="tablist"] > .accordion-grid-item > a[role="tab"]:hover,
+.accordion-grid[role="tablist"] > .accordion-grid-item > a[role="tab"]:focus{
+  font-size:1rem;
+	background: none;
+}
+
+html.touch .accordion-grid[role="tablist"] > * > a[role="tab"] .caption,
 .accordion-grid[role="tablist"] > * > a[role="tab"][aria-expanded="true"] .caption,
 .accordion-grid[role="tablist"] > * > a[role="tab"]:hover .caption,
 .accordion-grid[role="tablist"] > * > a[role="tab"]:focus .caption,
@@ -115,6 +116,21 @@ vertical-align: middle;
 .accordion-grid[role="tablist"] > * > a[role="tab"] .caption:focus{
   display: table-cell;
 }
+
+.accordion-grid[role="tablist"] > * > a[role="tab"]:hover .caption.client,
+.accordion-grid[role="tablist"] > * > a[role="tab"]:focus .caption.client,
+.accordion-grid[role="tablist"] > * > a[role="tab"] .caption.client:hover,
+.accordion-grid[role="tablist"] > * > a[role="tab"] .caption.client:focus{
+  text-shadow: 0 .5rem .5rem #FFF,0 0rem .1rem #FFF;
+}
+
+.accordion-grid[role="tablist"] > * > a[role="tab"]:hover .caption.title,
+.accordion-grid[role="tablist"] > * > a[role="tab"]:focus .caption.title,
+.accordion-grid[role="tablist"] > * > a[role="tab"] .caption.title:hover,
+.accordion-grid[role="tablist"] > * > a[role="tab"] .caption.title:focus{
+	text-shadow: 0 0rem .5rem #FFF;
+}
+
 /*
 .accordion-grid[role="tablist"] > * > a[role="tab"][aria-expanded="true"] .caption.client,
 .accordion-grid[role="tablist"] > * > a[role="tab"]:hover .caption.client,
@@ -244,11 +260,11 @@ article.accordion-grid-item .th a.th-link:hover .title{
     {% if item_year != last_item_year %}
       <h3 class="year inline-block" role="heading"><time class="label secondary point-right">{{ item_year }}</time></h3>
     {% endif %}
-      <a id="{{ this_page_id }}-th" href="{{ this_page.url }}" class="th" role="tab" tabindex="0" aria-expanded="false" aria-controls="{{this_page_id}}" data-scroll-offset="128" tile="project {{forloop.index}} of {{forloop.length}}">
+      <a id="{{ this_page_id }}-th" href="{{ this_page.url }}" class="th skrollr-perspectivezoom-bottom" role="tab" aria-controls="{{this_page_id}}" data-scroll-offset="128" tile="project {{forloop.index}} of {{forloop.length}}">
         <!--<span class="title th-link">{{ this_page.title }}</span>-->
-        <span class="hidden-for-small-only hidden-for-medium-up">{{ this_client_page.title}}</span>
+        <span class="hidden-for-small-only hidden-for-medium-up">{{ this_client_page.title}} - {{ this_page.title }}</span>
         <span class="client caption circular-text" aria-hidden="true" hidden>{% include split_char.html string=this_client_page.title %}</span>
-        <span class="title caption" hidden >{{ this_page.title }}</span> 
+        <span class="title caption" aria-hidden="true" hidden>{{ this_page.title }}</span> 
         {% if this_page.thumbnail %}
         <img class="th-image" src="{{ this_page_assetpath }}{{ this_page.thumbnail }}" alt="" aria-hidden="true">
         {% endif %}

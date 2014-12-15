@@ -35,7 +35,7 @@ main#page-content.splash-wrapper{
   background-attachment: fixed;*/
 }
 
-#page-content::before{
+#page-content.splash-wrapper::before{
 	content: '';
 	background-position: 50% 100%;
 	background-color: #0386FC;
@@ -48,8 +48,13 @@ main#page-content.splash-wrapper{
 	margin: -45px auto 0;
 	max-width: inherit;
 }
-
-
+/*#page-content.splash-wrapper #manicanfly-splash + *{
+	background-position: 50% 100%;
+	background-image: url(/splash/manicanfly//ManiCanFly-web.hyperesources/ManiCanFly-bg-bw.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+*/
 main#page-content.splash-wrapper #portfolio h2{
 /*  color: #222;*/
 }
@@ -88,16 +93,28 @@ bottom:0;
 	#hype-manicanfly-buttongroup{}
 		
 }
-
+{% comment %}
+/*
 #page-content.splash-wrapper{
-    /*-skrollr-animation-name: background-zoomin-bottom;*/
+    -skrollr-animation-name: background-zoomin-bottom;
 }
-#page-content.splash-wrapper #manicanfly-splash #manicanflyweb_hype_container{
-    /*-skrollr-animation-name: content-zoomin-top;*/
+*/
+{% endcomment %}
+
+html.skrollr body {
+height: inherit !important;
 }
-#page-content.splash-wrapper #manicanfly-splash #manicanfly-memetext{
-    /*-skrollr-animation-name: content-fadeout-bottom;*/
+
+#page-content.splash-wrapper #manicanflyweb_hype_container,
+#page-content.splash-wrapper #manicanflyweb_hype_container #hype-manicanfly-tree,
+#page-content.splash-wrapper #manicanflyweb_hype_container #hype-manicanfly-manigroup{
+    -skrollr-animation-name: content-zoomin-top;
 }
+#page-content.splash-wrapper #manicanflyweb_hype_container #hype-manicanfly-buttongroup,
+#page-content.splash-wrapper #manicanfly-memetext{
+    -skrollr-animation-name: content-fadeout-bottom;
+}
+
 </style>
 
 

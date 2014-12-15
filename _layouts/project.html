@@ -18,14 +18,18 @@
         {% else %}
         {{ this_client_page.title }} 
         {% endif %}</small><br/>
-        <span class="page-title">{{ page.title }}</span> 
+        <span class="page-title">{{ page.title }}</span>
+ 				{% if page.website %}
+	        <a href="{{page.website}}" target="_blank" title="go to {{ page.status }} website">
+	        <i class="fi-play-circle font-larger"></i></a>
+	      {% endif %}
       </h3>
   </header>
   <aside class="column small-12 medium-3 medium-pull-1 large-2" role="contentinfo">
     <h4 class="hidden-for-small-only hidden-for-medium-up">Project Meta</h4>
       <ul class="row no-bullet text-left" role="presentational">
       {% if page.date %}
-      <li class="column small-5 large-12" role="presentational">
+      <li class="column small-5 medium-12" role="presentational">
         <label class="hidden-for-small-only hidden-for-medium-up">Completed:</label> 
         <i class="fi-clock font-larger"></i> 
         <time>{{ page.date | date: "%b %-d, %Y" }}</time>
@@ -33,7 +37,7 @@
       {% endif %}
 
       {% if page.role %}
-      <li class="column small-7 large-12" role="presentational">
+      <li class="column small-7 medium-12" role="presentational">
         <label class="hidden-for-small-only hidden-for-medium-up">Role:</label> 
         <i class="fi-at-sign font-larger"></i> 
         <b>{{ page.role }}</b>
@@ -72,13 +76,13 @@
          
         {% if page.tasks %}
           <li role="presentational" class="column small-{{tabbuttonsmall}} medium-12">
-          <a id="{{this_page_id}}-tasks-tab" href="#{{this_page_id}}-tasks" class="button tiny expand active warning font-larger" role="tab" tabindex="0" aria-expanded="true" aria-controls="{{this_page_id}}-tasks">
+          <a id="{{this_page_id}}-tasks-tab" href="#{{this_page_id}}-tasks" class="button tiny expand active warning font-larger" role="tab" aria-expanded="true" aria-controls="{{this_page_id}}-tasks">
           <i class="fi-list-thumbnails"></i> Summary</a>
           </li>
         {% endif %}
         {% unless has_page_content == '' %}
           <li role="presentational" class="column small-{{tabbuttonsmall}} medium-12">
-          <a id="{{this_page_id}}-story-tab" href="#{{this_page_id}}-story" class="button tiny expand alert font-larger" role="tab" tabindex="0" aria-expanded="false" aria-controls="{{this_page_id}}-story">
+          <a id="{{this_page_id}}-story-tab" href="#{{this_page_id}}-story" class="button tiny expand alert font-larger" role="tab" aria-expanded="false" aria-controls="{{this_page_id}}-story">
           <i class="fi-align-justify"></i> Full Story</a>
           </li>
         {% endunless %}
@@ -90,7 +94,7 @@
         {% for asset in page.assets %}
         {% if asset.filename %}
           <li role="presentational">
-          <a id="{{this_page_id}}-asset{{forloop.index}}-tab" href="{{this_page_id}}-asset{{forloop.index}}" class="th img-micro" role="tab" tabindex="0" aria-expanded="false" aria-controls="{{this_page_id}}-asset{{forloop.index}}" style="background-image:url({{this_page_assetpath}}{{asset.filename}})" title="image {{forloop.index}} of {{forloop.length}}">
+          <a id="{{this_page_id}}-asset{{forloop.index}}-tab" href="{{this_page_id}}-asset{{forloop.index}}" class="th img-micro" role="tab" aria-expanded="false" aria-controls="{{this_page_id}}-asset{{forloop.index}}" style="background-image:url({{this_page_assetpath}}{{asset.filename}})" title="image {{forloop.index}} of {{forloop.length}}"><img src="" alt="{{asset.caption}}"/>
           </a>
           </li>
         {% endif %}
@@ -100,8 +104,8 @@
 
       {% if page.website %}
 			<div class="text-center">
-        <a id="{{this_page_id}}-website-button" href="{{page.website}}" target="_blank" title="go to {{ page.status }} website" class="font-larger" tabindex="0">
-          <i class="fi-link"></i> 
+        <a id="{{this_page_id}}-website-button" href="{{page.website}}" target="_blank" title="go to {{ page.status }} website" tabindex="0">
+          <i class="fi-play-circle"></i> 
           {% if page.status %}{{ page.status | capitalize }}{% endif %} Website
         </a>
       {% endif %}

@@ -1,10 +1,20 @@
   .skrollr-perspectivezoom-bottom{
-    -skrollr-animation-name: content-perspectivezoom-bottom
+    -skrollr-animation-name: content-perspectivezoom-bottom;
   }
   .skrollr-perspectivezoom-em-bottom{
-    -skrollr-animation-name: content-perspectivezoom-em-bottom
+    -skrollr-animation-name: content-perspectivezoom-em-bottom;
   }
   
+  .skrollr-background-zoomin-bottom{
+    -skrollr-animation-name: background-zoomin-bottom;
+  }
+  .skrollr-content-zoomin-top{
+    -skrollr-animation-name: content-zoomin-top;
+  }
+  .skrollr-content-fadeout-bottom{
+    -skrollr-animation-name: content-fadeout-bottom;
+  }
+
   @-skrollr-keyframes background-zoomin-bottom{
       top-top {
           background-size: 100%; background-position: 50% 100%;
@@ -23,12 +33,12 @@
   
   }
   @-skrollr-keyframes content-fadeout-bottom {
-      center-bottom {
-          opacity: 0;
-      }
-      center-top {
-          opacity: 1;
-      }
+    center-bottom {
+        opacity: 0;
+    }
+    center-top {
+        opacity: 1;
+    }
   }
   
   @-skrollr-keyframes content-perspectivezoom-bottom {
