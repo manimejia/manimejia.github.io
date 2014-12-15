@@ -14,6 +14,9 @@ exclude:
 sass:
    sass_dir: theme/foundation/scss
 
+gems:
+  - jekyll-redirect-from
+
 layouts: ./_layouts
 
 available_libraries:
@@ -33,6 +36,8 @@ available_libraries:
   - name: skrollr_stylesheets
     js: 
       - /theme/skrollr/skrollr.stylesheets.min.js
+    head:
+      - "<link rel='stylesheet' type='text/css' href='/theme/manimejia/skrollr-stylesheet.css' data-skrollr-stylesheet />"
 
   - name: skrollr_menu
     js: 
@@ -98,6 +103,16 @@ defaults:
       category: "project"
       hide: 
         title: true
+  -
+    scope:
+      type: "page"
+      path: "pages"
+    values:
+      libraries: 
+        - foundation
+        # - skrollr_stylesheets
+        # - skrollr
+        - manimejia
 
 config:
   name: "Manuel Mej&iacute;a"
