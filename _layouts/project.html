@@ -63,7 +63,7 @@
       </ul>
   </aside>
   <hr/>
-  <section id="{{this_page_id}}-content" class="column" data-aria-tab-group="tabs-grid" aria-labelledby="{{this_page_id}}-content-label">
+  <section id="{{this_page_id}}-content" class="column" data-tabsgrid data-aria-tab-group="tabs-grid" aria-labelledby="{{this_page_id}}-content-label">
     <h4 id="{{this_page_id}}-content-label" class="hidden-for-small-only hidden-for-medium-up">
     Project Details</h4>
     <div class="column {% if page.assets %}medium-3 large-4{% else %}medium-2 large-3{% endif %}">
@@ -115,7 +115,7 @@
     </div><!-- tablist -->
     <div class="column {% if page.assets %}medium-9 large-8{% else %}medium-10 large-9{% endif %}" role="presentational">
       {% if page.tasks %}
-      <section id="{{this_page_id}}-tasks" class="active" role="tabpanel" aria-hidden="false" aria-labelledby="{{this_page_id}}-tasks-tab">
+      <section id="{{this_page_id}}-tasks" class="active" role="tabpanel" aria-labelledby="{{this_page_id}}-tasks-tab">
         <ul class="circle">
         {% for task in page.tasks %}
           <li>{{ task | strip_html | markdownify }}</li>
@@ -124,7 +124,7 @@
       </section>
       {% endif %}
       {% unless has_page_content == '' %}
-      <section id="{{this_page_id}}-story" role="tabpanel" aria-hidden="true" aria-labelledby="{{this_page_id}}-story-tab">
+      <section id="{{this_page_id}}-story" role="tabpanel" aria-labelledby="{{this_page_id}}-story-tab">
         <!-- has_page_content : -->
         <!--{{ has_page_content }}-->
         {{ page.content | markdownify }}
@@ -133,7 +133,7 @@
       {% if page.assets %}
       {% for asset in page.assets %}
       {% if asset.filename %}
-      <section id="{{this_page_id}}-asset{{forloop.index}}" role="tabpanel" aria-hidden="true" aria-labelledby="{{this_page_id}}-asset{{forloop.index}}-caption">
+      <section id="{{this_page_id}}-asset{{forloop.index}}" role="tabpanel" aria-labelledby="{{this_page_id}}-asset{{forloop.index}}-caption">
         <figure class="text-center">
           <figcaption id="{{this_page_id}}-asset{{forloop.index}}-caption">{{asset.caption}}</figcaption><br/>
           <img src="{{this_page_assetpath}}{{asset.filename}}" alt=""/>

@@ -21,7 +21,7 @@
       <ul class="right">
       {% for item in site.config.topbar.right %}
         <li {% if item.hasform %}class="has-form"{% endif %}>
-          <a href="{{ item.url }}" class="{{ item.class }}" role="link" tabindex="0">{{ item.name }}</a>
+          <a href="{{ item.url }}" class="{{ item.class }}" title="{{ item.title }}" target="{{ item.target }}" role="link" tabindex="0">{{ item.name }}</a>
         </li>
       {% endfor %}
       {% if page.printable %}

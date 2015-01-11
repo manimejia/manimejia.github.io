@@ -246,7 +246,7 @@ article.accordion-grid-item .th a.th-link:hover .title{
 
 </style>
 
-<ul id="portfolio-accordion-grid" class="accordion-grid row" data-aria-tab-group="accordion-grid" role="tablist">
+<ul id="portfolio-accordion-grid" class="accordion-grid row" data-accordiongrid='{"getExpandedTabFromLocationHash":true,"setLocationHashToExpandedTab":true}'  data-aria-tab-group="accordion-grid" role="tablist">
 {% assign these_pages = site.pages | where: "category" , "project" | sort: "date"%}
 {% for this_page in these_pages reversed %}
   {% unless this_page.publish.draft %}
@@ -271,7 +271,10 @@ article.accordion-grid-item .th a.th-link:hover .title{
       </a>
 
       <div id="{{ this_page_id }}" class="content column" role="tabpanel"
-        data-load="{{ this_page.url }} #{{ this_page_id }}-article" aria-hidden="true"></div>
+        data-load="{{ this_page.url }} #{{ this_page_id }}-article" 
+				data-ajax-url="{{ this_page.url }}" 
+				data-ajax-selector="#{{ this_page_id }}-article" 
+				aria-hidden="true" aria-busy="true"></div>
     </li>
 
   {% assign last_item_year = item_year %}

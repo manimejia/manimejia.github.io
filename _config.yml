@@ -19,6 +19,19 @@ gems:
 
 layouts: ./_layouts
 
+# available_libraries 
+# define external JS and CSS files or related HTML snippets to be made available for referencing by pages and posts.
+# this does not actually add file references to the pages or posts, but simply makes them available to easily reference.
+# any library defined here may be referenced by a page or post in the 'libraries' front matter variable (see defaults below).
+# each page will then (in the order referenced) have the reference the files and snippets of each library 
+# loaded by the output HTML document
+# see default.html layout for examples on how this configuration is then added to the page template.
+# 
+# name : the name to reference the library by, in a page's 'libraries' array.
+# js: an array of javascript file paths to be referenced by the output HTML document
+# css: an array of css file paths to be referenced by the output HTML document
+# head: an array of HTML snippets (<link/> <style/> <script/> ect...) to be appended to the <head/> of the output HTML document
+# body: an array of HTML snippets (<style/> <script/> ect...) to be appended to the <body/> of the output HTML document
 available_libraries:
   - name: foundation 
     js: 
@@ -28,6 +41,14 @@ available_libraries:
     css: 
       - /theme/foundation/icons/foundation-icons.css
       - /theme/foundation/css/normalize.css
+
+  - name: jquery_ui
+    js:
+     - /theme/jquery-ui/jquery-ui.js
+
+  - name: uix
+    js:
+     - /theme/uix-widgets/uix-widgets.js
 
   - name: skrollr
     js: 
@@ -81,6 +102,8 @@ defaults:
       assetpath_is_relative_to_siteroot: false
       libraries: 
         - foundation
+        - jquery_ui
+        - uix
         - manimejia
       splash: 
       script: | 
@@ -95,7 +118,7 @@ defaults:
         title: false
         footer: false
   -
-    scope:
+    scope: # Project Pages
       type: "page"
       path: "projects"
     values:
@@ -103,16 +126,16 @@ defaults:
       category: "project"
       hide: 
         title: true
-  -
-    scope:
-      type: "page"
-      path: "pages"
-    values:
-      libraries: 
-        - foundation
-        # - skrollr_stylesheets
-        # - skrollr
-        - manimejia
+  # -
+  #   scope:
+  #     type: "page"
+  #     path: "pages"
+  #   values:
+  #     libraries: 
+  #       - foundation
+  #       - skrollr_stylesheets
+  #       - skrollr
+  #       - manimejia
 
 config:
   name: "Manuel Mej&iacute;a"
@@ -146,3 +169,11 @@ config:
         url: "/resume.html"
         #class: small button
         #hasform: false
+      - name: "<i class='fi-social-linkedin font-larger'></i>"
+        url: "http://linkedin.com/in/manimejia"
+        title: View my LinkedIn Profile
+        target: _blank
+      - name: "<i class='fi-social-github font-larger'></i>"
+        url: "http://github.com/manimejia"
+        title: Check out my code on GitHub
+        target: _blank

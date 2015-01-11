@@ -5,7 +5,7 @@
 
 ****/
 
-var syncAccordionGridContentHeight;
+// var syncAccordionGridContentHeight;
 
 // initialize foundation
 $(document).foundation();
@@ -50,8 +50,8 @@ $(document).ready(function(){
 
 
   // initialize aria tabpanel functionality
-  initializeAriaTabGroups();
-
+  // initializeAriaTabGroups();
+	$.uix.init();
   // initialize slick libary
   // initializeSlickCarousels();
   
@@ -324,17 +324,17 @@ $(document).ready(function(){
 
 
 
-syncAccordionGridContentHeight = setInterval(function(){
-  $(".accordion-grid .accordion-navigation.active").each(function(){
-    var contentHeight = $(this).children('.content').first().css('height');
-    $(this).css('padding-bottom',contentHeight);
-  });
-
-}, 500);
-
-function unsyncAccordionGridContentHeight() {
-    clearInterval(syncAccordionGridContentHeight);
-}
+// syncAccordionGridContentHeight = setInterval(function(){
+//   $(".accordion-grid .accordion-navigation.active").each(function(){
+//     var contentHeight = $(this).children('.content').first().css('height');
+//     $(this).css('padding-bottom',contentHeight);
+//   });
+// 
+// }, 500);
+// 
+// function unsyncAccordionGridContentHeight() {
+//     clearInterval(syncAccordionGridContentHeight);
+// }
 
 function initAjaxContent($content){
   // var contentId = $content.attr('id');
@@ -350,7 +350,8 @@ function initAjaxContent($content){
   // initialize foundation
   $content.foundation();
   // initialize ariaTabGroups
-  initializeAriaTabGroups($content);
+  // initializeAriaTabGroups($content);
+  $.uix.init($content);
   // loadClearingThumbs($content);
   // load remote images
   // initialize slick carousel
@@ -371,27 +372,27 @@ function activateFoundationElement(elementId){
     $target.siblings('a[href$="' + elementId + '"]').click();
 }
 
-function scrollToElement(elementId,updateLocation){
-  var $target = $(elementId);
-  if($target.length >0 ){
-    var scrollOffset = Number($target.attr('data-scroll-offset')) || 0;
-    var targetOffset = 0;
-    if($target.offset()){
-      targetOffset = $target.offset()['top'];
-    }else{
-     targetOffset = $target.offsetParent().offset()['top'];
-     targetOffset = targetOffset + $target.position()['top'];
-    }
-    if($('body').hasClass('f-topbar-fixed')) targetOffset -= 45;
-    // console.log('scrollTo : '+elementId+' ('+targetOffset+')');
-    // console.log($target.offset());
-    $('html, body').stop().animate({
-        'scrollTop': targetOffset + scrollOffset
-    }, 900, 'swing', function () {
-        if(updateLocation) window.location.hash = $target.attr('id');
-    });
-  }
-}
+// function scrollToElement(elementId,updateLocation){
+//   var $target = $(elementId);
+//   if($target.length >0 ){
+//     var scrollOffset = Number($target.attr('data-scroll-offset')) || 0;
+//     var targetOffset = 0;
+//     if($target.offset()){
+//       targetOffset = $target.offset()['top'];
+//     }else{
+//      targetOffset = $target.offsetParent().offset()['top'];
+//      targetOffset = targetOffset + $target.position()['top'];
+//     }
+//     if($('body').hasClass('f-topbar-fixed')) targetOffset -= 45;
+//     // console.log('scrollTo : '+elementId+' ('+targetOffset+')');
+//     // console.log($target.offset());
+//     $('html, body').stop().animate({
+//         'scrollTop': targetOffset + scrollOffset
+//     }, 900, 'swing', function () {
+//         if(updateLocation) window.location.hash = $target.attr('id');
+//     });
+//   }
+// }
 
 
 
@@ -546,38 +547,39 @@ function scrollToElement(elementId,updateLocation){
 // 
 // keyCodes() is an object to contain keycodes needed for the application 
 // 
-function keyCodes() { 
-  // Define values for keycodes 
-  this.tab        = 9; 
-  this.enter      = 13; 
-  this.esc        = 27; 
+// function keyCodes() { 
+//   // Define values for keycodes 
+//   this.tab        = 9; 
+//   this.enter      = 13; 
+//   this.esc        = 27; 
+// 
+//   this.space      = 32; 
+//   this.pageup     = 33; 
+//   this.pagedown   = 34; 
+//   this.end        = 35; 
+//   this.home       = 36; 
+// 
+//   this.left       = 37; 
+//   this.up         = 38; 
+//   this.right      = 39; 
+//   this.down       = 40; 
+// 
+// } // end keyCodes 
 
-  this.space      = 32; 
-  this.pageup     = 33; 
-  this.pagedown   = 34; 
-  this.end        = 35; 
-  this.home       = 36; 
-
-  this.left       = 37; 
-  this.up         = 38; 
-  this.right      = 39; 
-  this.down       = 40; 
-
-} // end keyCodes 
-
-function initializeAriaTabGroups($content){
-  $('[id][data-aria-tab-group]',$content).each(function(){
-    var id = $(this).attr('id');
-    var settings = $(this).data('ariaTabGroup');
-    if(window.location.hash){
-        // && $(this).find('a[href="window.location.hash"][role="tab"]').length > 0
-        // console.log('window.location.hash = '+window.location.hash);
-        if(typeof settings === 'string') settings = {'extend':settings};
-        settings.defaultExpandedId = window.location.hash.substring(1);
-      }
-    new ariaTabGroup(id,settings);
-  });
-}
+// function initializeAriaTabGroups($content){
+// 	console.log('Called initializeAriaTabGroups()');
+//   $('[id][data-aria-tab-group]',$content).each(function(){
+//     var id = $(this).attr('id');
+//     var settings = $(this).data('ariaTabGroup');
+//     if(window.location.hash){
+//         // && $(this).find('a[href="window.location.hash"][role="tab"]').length > 0
+//         // console.log('window.location.hash = '+window.location.hash);
+//         if(typeof settings === 'string') settings = {'extend':settings};
+//         settings.defaultExpandedId = window.location.hash.substring(1);
+//       }
+//     new ariaTabGroup(id,settings);
+//   });
+// }
 
 /**
  * ariaTabGroup() is a class constructor to create a ARIA-enabled tab panel widget. 
@@ -596,6 +598,7 @@ function initializeAriaTabGroups($content){
  * 
  *         2. panels are divs with class 'panel' 
  */ 
+/**
 function ariaTabGroup(id, settings) { 
   // define the class properties 
   this.containerId = id; // store the id of the containing div 
@@ -1152,47 +1155,47 @@ ariaTabGroup.prototype.getNextVerticalTab = function($tab,direction) {
 	return $newTab;
 }
 
-/**
- * initWidget(selector)
- *
- * settings.widgets[key]
- * [key].selector (string) :
- *		jQuery selector or key from this.settings.elements.
- *		if a key from this.settings.elements is used, all other values for this init property will be inherited from that key's init property
- *    "" or NULL will result in "*" (default)
- *		all other strings will be treated as a jQuery selector
- *    the result will be a jQuery selector passed to either find() or filter() methods called on a jQuery object
- * [key].selectorContext (string) :
- *		jQuery selector or key from this.settings.elements.
- *		If there no elements are found using query.relatedby and query.relationship properties below...
- *		if a key from this.settings.elements is used, the associated jQuery object will be referenced
- *    "" or NULL (default) will result in referencing the parent $tabSet jQuery object
- *		all other strings will be treated as selectors, from which a jQuery object will be built
- *		the resulting jQuery object will have filter() or find() called on it to obtain the desired elements
- * [key].selectorDepth (number) :
- *		If there no elements are found using query.relatedby and query.relationship properties below...
- *		0 will attempt to call filter() on the jQuery Object returned by query.selectorContext, using the unmodified query.selector as an argument. 
- * 		all other values will result in find() being called on the jQuery object returned by query.selectorContext
- * 		1 will prepend ">" to query.selector, selecting from the first level children. 
- * 		any other number will prepend "> *" N times to query.selector, selecting from the specified level children. 
- * 		NULL (default) will select from any level children.
- * [key].relationship (string) :
- *		may by the name of any HTML attribute whose allowed value is of the type "ID Reference List"
- *		this includes the following aria relationship attributes:
- *		"aria-describedby" "aria-controls","aria-flowto","aria-labelledby", "aria-owns"
- *		"" or NULL (default) will result in no action taken
- * [key].relatedBy (string) :
- *		jQuery selector or key from this.settings.elements.
- *		If query.relationship property is a valid attribute name, determine which element(s) the attribute will be found in...
- *		if a key from this.settings.elements is used, the associated jQuery object will be referenced
- *    "" or NULL (default) will result in referencing the parent $tabSet jQuery object
- *		All other strings will be treated as selectors, from which a jQuery object will be built.
- *		Each element in this jQuery object will be querried for the attribute indicated by query.relationship
- *		If the attribute and values are found, then a new jQuery object will be made 
- *		by selecting all the element IDs found in the attributes' values
- *		This new jQuery object will then be filtered using the query.selector string above
- *		to determin the final collection of DOM elements
- */
+ // 
+ // initWidget(selector)
+ // 
+ // settings.widgets[key]
+ // [key].selector (string) :
+ //  	jQuery selector or key from this.settings.elements.
+ //  	if a key from this.settings.elements is used, all other values for this init property will be inherited from that key's init property
+ //    "" or NULL will result in "*" (default)
+ //  	all other strings will be treated as a jQuery selector
+ //    the result will be a jQuery selector passed to either find() or filter() methods called on a jQuery object
+ // [key].selectorContext (string) :
+ //  	jQuery selector or key from this.settings.elements.
+ //  	If there no elements are found using query.relatedby and query.relationship properties below...
+ //  	if a key from this.settings.elements is used, the associated jQuery object will be referenced
+ //    "" or NULL (default) will result in referencing the parent $tabSet jQuery object
+ //  	all other strings will be treated as selectors, from which a jQuery object will be built
+ //  	the resulting jQuery object will have filter() or find() called on it to obtain the desired elements
+ // [key].selectorDepth (number) :
+ //  	If there no elements are found using query.relatedby and query.relationship properties below...
+ //  	0 will attempt to call filter() on the jQuery Object returned by query.selectorContext, using the unmodified query.selector as an argument. 
+ // 		all other values will result in find() being called on the jQuery object returned by query.selectorContext
+ // 		1 will prepend ">" to query.selector, selecting from the first level children. 
+ // 		any other number will prepend "> *" N times to query.selector, selecting from the specified level children. 
+ // 		NULL (default) will select from any level children.
+ // [key].relationship (string) :
+ //  	may by the name of any HTML attribute whose allowed value is of the type "ID Reference List"
+ //  	this includes the following aria relationship attributes:
+ //  	"aria-describedby" "aria-controls","aria-flowto","aria-labelledby", "aria-owns"
+ //  	"" or NULL (default) will result in no action taken
+ // [key].relatedBy (string) :
+ //  	jQuery selector or key from this.settings.elements.
+ //  	If query.relationship property is a valid attribute name, determine which element(s) the attribute will be found in...
+ //  	if a key from this.settings.elements is used, the associated jQuery object will be referenced
+ //    "" or NULL (default) will result in referencing the parent $tabSet jQuery object
+ //  	All other strings will be treated as selectors, from which a jQuery object will be built.
+ //  	Each element in this jQuery object will be querried for the attribute indicated by query.relationship
+ //  	If the attribute and values are found, then a new jQuery object will be made 
+ //  	by selecting all the element IDs found in the attributes' values
+ //  	This new jQuery object will then be filtered using the query.selector string above
+ //  	to determin the final collection of DOM elements
+ // 
 ariaTabGroup.prototype.initWidget = function(key){
 	console.log('Calling initWidget('+key+')')
 	if (typeof key !== 'string' || this.settings.widgets[key] === undefined){
@@ -1240,15 +1243,15 @@ ariaTabGroup.prototype.initWidget = function(key){
 	return $elements;
 }
 
-/**
- * getRelatedElements(relatedby,relationship)
- *
- * query the DOM to find 'related' elements from the content's of an element's 'relationship' attribute
- * 
- * @param relatedby (string,jQuery) a widgetKey, jQuery selector, or jQuery object on which a relationship attribute is present.
- * @param relationship (string) the name of the attribute which contains a single or list of element IDs
- * @returns (jQuery) a list of elements found to be 'related'
- */
+ // 
+ // getRelatedElements(relatedby,relationship)
+ // 
+ // query the DOM to find 'related' elements from the content's of an element's 'relationship' attribute
+ // 
+ // @param relatedby (string,jQuery) a widgetKey, jQuery selector, or jQuery object on which a relationship attribute is present.
+ // @param relationship (string) the name of the attribute which contains a single or list of element IDs
+ // @returns (jQuery) a list of elements found to be 'related'
+ // 
 ariaTabGroup.prototype.getRelatedElements = function(relatedby,relationship){
 	console.log('Calling getRelatedElements("'+relatedby+'", "'+relationship+'")');
 	if( relatedby != null && 
@@ -1282,10 +1285,10 @@ ariaTabGroup.prototype.getRelatedElements = function(relatedby,relationship){
 	return $related;
 }
 
-/**
- * getWidget(key,callJQuery)
- *
- */
+// 
+// getWidget(key,callJQuery)
+// 
+// 
 ariaTabGroup.prototype.getWidget = function(key,callJQuery){
 	callJQuery = callJQuery === false ? false : true ;
 	if(key == null || key == "" || typeof key !== 'string'){
@@ -1941,6 +1944,7 @@ ariaTabGroup.prototype.clearLocationHash = function() {
 // focusable is a small jQuery extension to add a :focusable selector. It is used to 
 // get a list of all focusable elements in a panel. Credit to ajpiano on the jQuery forums. 
 // 
+if($.fn.focusable === undefined ){
 $.extend($.expr[':'], { 
   focusable: function(element) { 
     var nodeName = element.nodeName.toLowerCase(); 
@@ -1971,8 +1975,10 @@ $.extend($.expr[':'], {
     // this is some other page element that is not normally focusable. 
     return false; 
   } 
-});  
+});
+}  
 
+/**/
 
 
 
