@@ -1,7 +1,8 @@
 ---
 client: BM
 title: Burning Man Documentary Art Installation
-date: 2005-08-01
+startdate: 
+enddate: 2005-08-01
 website: 
 role: Multimedia Artist
 status: retired

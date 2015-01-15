@@ -9,6 +9,13 @@
   {% assign this_page_assetpath = this_page_basepath | append: this_page.assetpath %}
 {% endif %}
 
+{% if this_page.date %}
+  {% assign this_page_date = this_page.date %}
+{% elsif this_page.startdate %}
+  {% assign this_page_date = this_page.startdate %}
+{% elsif this_page.enddate %}
+  {% assign this_page_date = this_page.enddate %}
+{% endif %}
 
 {% assign this_page_id = "" %}
 {% if this_page.category == 'project' %}

@@ -1,7 +1,8 @@
 ---
 client: TMW
 title: Wire Donkey (Bicycles-As-A-Service for Burning Man)
-date: 2004-08-01
+startdate: 
+enddate: 2004-08-01
 website: 
 role: Service Coordinator
 publish: 

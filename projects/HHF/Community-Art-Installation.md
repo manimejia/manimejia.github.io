@@ -1,7 +1,8 @@
 ---
 title: Community Art Installation
 client: HH
-date: 2003-06-01
+startdate: 
+enddate: 2003-06-01
 website: 
 role: Multimedia Artist
 publish: 

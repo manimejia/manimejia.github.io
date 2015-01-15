@@ -4,17 +4,19 @@ description: |
 list: 
  - name: Experience Architect
    icon: results-demographics
-   summary: 
+   summary: As an **Experience Architect**, I deliver thoughtful designs that keep the navigation focused and lean for a quick journey to the desired destination.
    description: | 
      A people watcher from day one, my awareness of communication and movement keeps me connected to the real world needs of clients and users. From formal meetings to impromptu demonstrations, I am an active listener always focused on finding and evolving the simplest solution. The resulting product is an interactive experience that continually drives and redirects attention to the content that matters.
 
  - name: Web Developer
    icon: html5
+   summary: As a seasoned **Web Developer** on many platforms, I offer intelligent, user focused, standards compliant, object oriented, and modular code contributions to every project.
    description: | 
      As an insufferable tinkerer, I can often be found neck deep in code trying to make software suck less. This 'no fear' and 'can do' attitude has exposed me to a variety of programming tools and methodologies over the years, and allowed me to stay current with the changing landscape. As a self taught and alway curious web professional, I bring a well-rounded skill set and healthy optimism to any development team.
 
  - name: Multimedia Creative
    icon: lightbulb
+   summary: As a **Multimedia Creative**, I reenforce the message delivery with sensible layouts, meaningful colors, targeted language, and engaging multimedia elements.
    description: |
      Thinking out side the box is so last decade. In this evolving digital playground we call "Web 2.0", our task is now to think outside the _page_. The demand for rich media and immersive content is only getting **bigger**. This new breed of interactive presentation must also be smart and context aware, to be accessible by all variety of people and all manner of devices. The future is now. _Carpe Diem_
  

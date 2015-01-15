@@ -1,7 +1,8 @@
 ---
 client: OSU
 title: Graduate Education Toolkit
-date: 2014-08-01
+startdate: 2013-12-01
+enddate: 2014-09-21
 website: 
 role: UX Architect
 publish:

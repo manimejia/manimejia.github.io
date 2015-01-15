@@ -1,0 +1,29 @@
+{% if include.person %}
+{% if include.person.employment %}
+<ul class="row no-bullet show-for-medium-up hide-for-print" aria-hidden="true">
+	<li class="column medium-3"><b>Employer</b></li>
+	<li class="column medium-3"><b>Title</b></li>
+	<li class="column medium-3"><b>Dates</b></li>
+	<li class="column medium-3"><b>Location</b></li>
+</ul>
+	{%for employment in include.person.employment %}
+<ul class="row table-row no-bullet" role="presentational">
+	<li class="column medium-3" role="presentational">
+		<h4>{{employment.employer}}</h4>
+	</li>
+	<li class="column medium-3 {%unless employment.title %}show-for-medium-up{%endunless%}" role="presentational">
+		<span><b class="hide-for-medium-up">Title: </b>&nbsp;
+		{{employment.title}}</span>
+	</li>
+	<li class="column medium-3 {%unless employment.dates %}show-for-medium-up{%endunless%}" role="presentational">
+		<span><b class="hide-for-medium-up">Dates: </b>&nbsp;
+		{{employment.dates}}</span>
+	</li>
+	<li class="column medium-3 {%unless employment.location %}show-for-medium-up{%endunless%}" role="presentational">
+		<span><b class="hide-for-medium-up">Location: </b>&nbsp;
+		{{employment.location}}</span>
+	</li>
+</ul>
+	{% endfor %}
+{% endif %}
+{% endif %}

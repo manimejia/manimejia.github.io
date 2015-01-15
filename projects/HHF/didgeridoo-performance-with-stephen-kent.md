@@ -1,7 +1,8 @@
 ---
 title: Didgeridoo Performance with Stephen Kent
 client: HHF
-date: 2000-06-01
+startdate: 
+enddate: 2000-06-01
 website: 
 role: Musician
 publish: 

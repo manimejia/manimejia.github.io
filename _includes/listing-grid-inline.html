@@ -247,13 +247,13 @@ article.accordion-grid-item .th a.th-link:hover .title{
 </style>
 
 <ul id="portfolio-accordion-grid" class="accordion-grid row" data-accordiongrid='{"getExpandedTabFromLocationHash":true,"setLocationHashToExpandedTab":true}'  data-aria-tab-group="accordion-grid" role="tablist">
-{% assign these_pages = site.pages | where: "category" , "project" | sort: "date"%}
+{% assign these_pages = site.pages | where: "category" , "project" | sort: "date" | sort: "enddate" | sort: "startdate" %}
 {% for this_page in these_pages reversed %}
   {% unless this_page.publish.draft %}
   <!-- publish : {{ this_page.publish }} -->
   {% include _this_page.liquid %}
 
-  {% assign item_year = this_page.date | date: '%Y' %}
+  {% assign item_year = this_page_date | date: '%Y' %}
   {% unless last_item_year %}{% assign last_item_year = 0000 %}{% endunless %}
 
     <li id="{{ this_page_id }}-wrapper" class="accordion-grid-item">

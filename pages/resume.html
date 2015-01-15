@@ -18,13 +18,12 @@ style: |
   .highlight{text-shadow:none;}
 
 ---
-{% assign these_pages = site.pages | where: "category" , "project" | sort: "date" %}
+{% assign these_pages = site.pages | where: "category" , "project" | sort: "date" | sort: "enddate" | sort: "startdate" %}
 {% assign base_url = 'http://manimejia.me/' %}
 
+{% include page-title.html title=site.config.name %}
 
-{% include page-title.html title=site.config.name small=site.config.description %}
-
-{% include aboutme.html %}
+{% include aboutme.html color="alert" %}
 
 {% comment %}
 <!-- <section id="technical-skills" class="row" aria-labelledby="technical-skills-label">
@@ -32,46 +31,39 @@ style: |
 {% include tag-cloud.html category="project" %}
 </section> -->
 {% endcomment %}
-<hr/>
-<div id="technical-experience" class="row" aria-labelledby="technical-experience-label">
-<h2 id="technical-experience-label" class="column">Technical Experience</h2>
-<figure class="column text-center" style="margin:0">
-<img src="https://docs.google.com/spreadsheets/d/1gBdIVCMZN1qdhwwWIwwZjQtkmucS-or_XAKocYftV48/pubchart?oid=1386956387&format=image" alt="Chart showing Manuel Mejia's work experience since 2001">
-<figcaption class="hide-for-print">
-<a href="https://docs.google.com/spreadsheets/d/1gBdIVCMZN1qdhwwWIwwZjQtkmucS-or_XAKocYftV48/pubhtml?gid=0&single=true" title="online spreadsheet from which the chart is made">chart data</a>
-</figcaption>
-</figure>
-</div>
 
-<section id="education" class="row" aria-labelledby="education-label">
-<h2 id="education-label" class="column">Education</h2>
+<hr/>
+<section id="employment" class="row avoid-breaking-page" aria-labelledby="employment-label">
+<h2 id="employment-label" class="column">Employment</h2>
 <div class="column">
-{% include education.html person=site.data.people.manimejia %}
+{% include employment.html person=site.data.people.manimejia %}
 </div>
 </section>
 
-
+<hr/>
 <section id="work-history" class="row" aria-labelledby="work-history-label">
-<h2 id="work-history-label" class="column hide-for-print">Career Highlights</h2>
+<h2 id="work-history-label" class="column small-12 medium-9">Career Highlights</h2>
+<a href="{{base_url}}#portfolio" class="column small-12 medium-3">
+  <i class="fi-link font-larger"></i> See Full Portfolio Listing</a>
+<br/><br/>
 {% for this_page in these_pages reversed %}
 
 
   {% if this_page.publish.print == true %}
 	{% include _this_page.liquid %}
-	{% assign item_year = this_page.date | date: '%Y' %}
+	{% assign item_year = this_page_date | date: '%Y' %}
 	{% unless last_item_year %}{% assign last_item_year = 0000 %}{% endunless %}
 
-	<hr/>
     {% if item_year != last_item_year %}
-    <h3 class="year text-center alert-box warning font-larger hide-for-print" role="heading"><time>{{ item_year }}</time></h3>
+    <!--<h3 class="year text-center alert-box warning font-larger hide-for-print" role="heading"><time>{{ item_year }}</time></h3>-->
     {% endif %}
 
-	 <article class="column" aria-labelledby="{{this_page_id}}-title">
+	 <article class="column avoid-breaking-page" aria-labelledby="{{this_page_id}}-title">
 	 <div class="row">
-	  <aside class="left small-3 text-center" aria-hidden="true">
+	  <!--<aside class="left small-3 text-center" aria-hidden="true">
 	  	<img class="project-thumnail" style="margin-right:1.5rem" src="{{ this_page_assetpath }}{{ this_page.thumbnail }}" alt="">
-	  </aside>
-	  <header class="" role="heading">
+	  </aside>-->
+	  <header class="column" role="heading">
 	      <h3 class="title" id="{{this_page_id}}-title">
             <small class="client-title">
             {% if this_client_page.website %}
@@ -82,17 +74,25 @@ style: |
 	        <span class="page-title">{{ this_page.title }}</span> 
 	      </h3>
 	  </header>
-	  <aside class="" role="contentinfo">
+	  <aside class="column" role="contentinfo">
 	      <ul class="no-bullet inline-list" role="presentational">
-	      {% if this_page.date %}
+	      {% if this_page_date %}
 	      <li role="presentational">
 	      	<div>
-	        <label class="hidden-for-small-only hidden-for-medium-up hide-for-print">Completed:</label> 
-	        <i class="fi-clock font-larger"></i>&nbsp;<time>{{ this_page.date | date: "%b %-d, %Y" }}</time>
-	        </div>
+          <label class="hidden-for-small-only hidden-for-medium-up hide-for-print">Project Date:</label> 
+          <i class="fi-clock font-larger"></i> 
+          {% if this_page.date %}
+          <time>{{ this_page.date | date: "%b %Y" }}</time>
+          {% else %}{% if this_page.startdate %}
+          <span class="hidden-for-small-only hidden-for-medium-up"> start :</span> 
+          <time>{{ this_page.startdate | date: "%b %Y" }}</time>
+          {% if this_page.enddate %} - {% endif %}{% endif %}{% if this_page.enddate %}
+          <span class="hidden-for-small-only hidden-for-medium-up"> end :</span> 
+          <time>{{ this_page.enddate | date: "%b %Y" }}</time>
+          {% endif %}{% endif %}
+          </div>
 	      </li>
 	      {% endif %}
-
 	      {% if this_page.role %}
 	      <li role="presentational">
 	      <div>
@@ -119,13 +119,18 @@ style: |
 	        </div>
 	      </li> -->
 	      {% endif %}
+	      <li role="presentational" class="right">
+	      <a href="{{base_url}}#{{ this_page_id }}" title="project page">
+	        <i class="fi-link font-larger"></i>&nbsp;
+	        See In Portfolio</a>
+	      </li>
 	      </ul>
 	  </aside>
 	  </div>
 	  <br>
 	  <div class="row">
 		{% if this_page.tasks %}
-		<section id="{{this_page_id}}-tasks" class="column medium-9 medium-push-3" aria-hidden="false" ar-labelledby="{{this_page_id}}-tasks-label">
+		<section id="{{this_page_id}}-tasks" class="column" aria-hidden="false" ar-labelledby="{{this_page_id}}-tasks-label">
 	  	  <h4 id="{{this_page_id}}-tasks-label" class="hidden-for-small-only hidden-for-medium-up hide-for-print">
 	  	Responsibilities</h4>
 		  <ul class="icon-list alert">
@@ -138,8 +143,8 @@ style: |
 		  </ul>
 		</section>
 		{% endif %}
-	    {% if this_page.tags %}
-	    <aside id="{{this_page_id}}-tags" role="complementary" class="column medium-3 medium-pull-9" aria-labelledby="{{this_page_id}}-tags-label">
+	    <!--<aside id="{{this_page_id}}-tags" role="complementary" class="column medium-3 medium-pull-9" aria-labelledby="{{this_page_id}}-tags-label">
+  	    {% if this_page.tags %}
 	      <h4 id="{{this_page_id}}-tags-label"  class="hidden-for-small-only hidden-for-medium-up hide-for-print">Skills</h4>
 	      <ul class="taglist">
 	      {% for tag in this_page.tags %}
@@ -148,11 +153,12 @@ style: |
 	      </ul>
 	    {% endif %} 
 	      <a href="{{base_url}}#{{ this_page_id }}" title="project page" class="button info expand"><i class="fi-link"></i> Read More</a>
-	    </aside>
+	    </aside>-->
 	  </div>
 
 	</article>
 
+  <hr/>
 
  {% endif %}
 
@@ -160,3 +166,21 @@ style: |
 
 {% endfor %}
 </section>
+
+<div id="technical-experience" class="row avoid-breaking-page" aria-labelledby="technical-experience-label">
+<h2 id="technical-experience-label" class="column">Technical Experience</h2>
+<figure class="column text-center" style="margin:0">
+<img src="https://docs.google.com/spreadsheets/d/1gBdIVCMZN1qdhwwWIwwZjQtkmucS-or_XAKocYftV48/pubchart?oid=1386956387&format=image" alt="Chart showing Manuel Mejia's work experience since 2001">
+<figcaption class="hide-for-print">
+<a href="https://docs.google.com/spreadsheets/d/1gBdIVCMZN1qdhwwWIwwZjQtkmucS-or_XAKocYftV48/pubhtml?gid=0&single=true" title="online spreadsheet from which the chart is made">chart data</a>
+</figcaption>
+</figure>
+</div>
+
+<section id="education" class="row avoid-breaking-page" aria-labelledby="education-label">
+<h2 id="education-label" class="column">Education</h2>
+<div class="column">
+{% include education.html person=site.data.people.manimejia %}
+</div>
+</section>
+

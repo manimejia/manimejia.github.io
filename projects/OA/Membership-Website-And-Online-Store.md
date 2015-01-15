@@ -4,14 +4,15 @@ client: OA
 
 title: Non-Profit Membership Website & Online Store
 
-date: 2008-11-01
+startdate: 2008-02-01
+enddate: 2008-11-01
 
 website: http://organicathlete.org
 
 role: Website Developer
 
 publish: 
-  print: true
+  print: false
 
 tags:
 - HTML

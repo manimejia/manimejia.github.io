@@ -1,7 +1,8 @@
 ---
 client: PJSC
 title: Transportation Logistics for 2003 San Francisco Peace Rallies
-date: 2003-03-01
+startdate: 
+enddate: 2003-03-01
 website: 
 role: Transportation Coordinator
 status: complete

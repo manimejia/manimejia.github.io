@@ -2,7 +2,8 @@
 redirect_from: "/index.html?_escaped_fragment_=BFAS-vtour"
 client: BFAS  
 title: Best Friends Virtual Tour  
-date: 2002-02-01  
+startdate: 2002-11-01
+enddate: 2002-02-01  
 website: http://manimejia.me/archive/?/projects/BFAS/assets/BFAS-Tour12
 role: Designer / Developer  
 status: archived

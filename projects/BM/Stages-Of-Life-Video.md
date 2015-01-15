@@ -1,7 +1,8 @@
 ---
 client: BM
 title: Stages of Life Documentary Video
-date: 2001-08-01
+startdate: 
+enddate: 2001-08-01
 website: 
 role: Multimedia Artist
 status: archived

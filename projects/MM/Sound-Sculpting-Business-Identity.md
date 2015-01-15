@@ -1,7 +1,8 @@
 ---
 client: MM
 title: Sound Sculpting Business Identity
-date: 2001-12-01
+startdate: 2002-04-01
+enddate: 2001-12-01
 website: 
 role: Graphic Designer
 status: archived

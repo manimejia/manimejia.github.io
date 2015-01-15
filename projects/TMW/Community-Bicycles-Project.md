@@ -1,7 +1,8 @@
 ---
 client: TMW
 title: Community Bicycles (Job Training for Disabled Adults)
-date: 2004-04-01
+startdate: 
+enddate: 2004-04-01
 website: 
 role: Job Trainer
 publish:

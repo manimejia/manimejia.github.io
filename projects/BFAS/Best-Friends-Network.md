@@ -1,7 +1,8 @@
 ---
 client: BFAS
 title: Best Friends Network
-date: 2005-12-01
+startdate: 2005-08-01
+enddate: 2005-12-01
 website: 
 role: UX Consultant
 status: retired

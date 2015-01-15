@@ -1,7 +1,8 @@
 ---
 client: RVR
 title: Podcast Blog & Website
-date: 2007-04-01
+startdate: 
+enddate: 2007-04-01
 website: 
 status: retired
 role: Website Developer

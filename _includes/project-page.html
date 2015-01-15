@@ -13,10 +13,10 @@
   </header>
   <aside class="column medium-2">
     <h4 class="hidden-for-small-only hidden-for-medium-up">Project Meta</h4>
-      {% if this_page.date %}
+      {% if this_page.enddate %}
       <i class="fi-clock"></i> 
       <label class="hidden-for-small-only hidden-for-medium-up">Completed:</label> 
-      <time>{{ this_page.date | date: "%b %-d, %Y" }}</time>
+      <time>{{ this_page.enddate | date: "%b %-d, %Y" }}</time>
       {% endif %}
       {% if this_page.role %}
       <br class="hide-for-small-only"/><span class="hide-for-medium-up" aria-hidden="true"> | </span>

@@ -73,7 +73,7 @@ article.listing-item .thumbnail a.thumbnail-link:hover .title{
 
   {% include _this_page.liquid %}
 
-  {% assign item_year = this_page.date | date: '%Y' %}
+  {% assign item_year = this_page_date | date: '%Y' %}
   {% unless last_item_year %}{% assign last_item_year = 0000 %}{% endunless %}
 
 {% if item_year != last_item_year %}

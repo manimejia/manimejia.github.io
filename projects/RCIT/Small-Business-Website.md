@@ -1,7 +1,8 @@
 ---
 client: RCIT
 title: Small Business Website
-date: 2006-12-01
+startdate: 
+enddate: 2006-12-01
 website: 
 status: retired
 role: Website Developer

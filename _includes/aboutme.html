@@ -4,6 +4,27 @@
 			
     </div>
     <div class="column medium-9">
+      <h3>
+      {% for service in site.data.services.list %}
+        {% if forloop.last == true %} and {% endif %}
+          {{ service.name }}
+        {% if forloop.last != true %} , {% endif %}
+      {% endfor %}
+      </h3>
+    	{% if site.data.services.summary %}
+		  <p class="{%if include.color %}{{include.color}}-text {%endif%}font-large">
+	    {{ site.data.services.summary }}
+	    </p>
+    	{%endif%}
+      <ul class="icon-list {{include.color}}">
+      {% for service in site.data.services.list %}
+      <li class="fi-{{service.icon}}">
+          <p>{{service.summary | markdownify }}</p>
+      </li>	
+      {% endfor %}
+    	</ul>
+    </div>
+<!--  
   <p>I am a communicator. This is the focus of my work in every project and every relationship. </p>
 		<ul class="icon-list secondary">
 			<li class="fi-star">As a <b>UX Architect</b>, I deliver thoughtful designs that keep the experience focused and lean for a quick journey to the desired destination.</li>
@@ -12,5 +33,5 @@
 			<li class="fi-star">As a <b>People Person</b>, I build lasting and honest relationships with clients, users, and colleagues by listening carefully and responding positively.</li>
 		</ul>
 	<p>All this singular focus on clear communication allows me to dive deep in to any project and tackle the biggest challenge of all, delivering the right message at the right time to the right person.</p>
-    </div>
+-->
 </div>

@@ -1,13 +1,14 @@
 ---
 client: EC
 title: Company Website
-date: 2009-08-01
+startdate: 2009-05-01
+enddate: 2009-09-01
 website: 
 role: Website Developer
 status: retired
 
 publish:  
- print: true
+ print: false
 
 tags:
 - Drupal

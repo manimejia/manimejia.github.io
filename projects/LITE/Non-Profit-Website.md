@@ -1,7 +1,8 @@
 ---
 client: LITE
 title: Non-Profit Logo and Website Design
-date: 2006-12-01
+startdate: 
+enddate: 2006-12-01
 website:
 role: Graphic Designer
 status: retired

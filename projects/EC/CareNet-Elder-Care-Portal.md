@@ -1,7 +1,8 @@
 ---
 client: EC
 title: CareNet Elder Care Management Portal
-date: 2010-07-01
+startdate: 2009-08-15
+enddate: 2010-07-01
 website: 
 role: UX Architect
 status: in development

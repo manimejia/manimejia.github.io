@@ -1,11 +1,12 @@
 ---
 client: OSU
 title: Graduate School Document Workflow Solutions
-date: 2014-01-01
+startdate: 2014-01-01
+enddate: 2014-02-18
 website: 
-role: Website Developer
+role: Javascript Developer
 publish:
- print: true
+ print: false
  main: true 
 
 tags:

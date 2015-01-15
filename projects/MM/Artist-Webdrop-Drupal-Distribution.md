@@ -1,12 +1,13 @@
 ---
 client: MM
 title: Artist Webdrop (Drupal Distribution)
-date: 2009-05-01
+startdate: 2009-02-01
+enddate: 2009-05-01
 website: 
 role: Website Developer
 status: retired
 publish: 
- print: true
+ print: false
  featured: true
 
 tags:

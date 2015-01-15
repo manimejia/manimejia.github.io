@@ -37,17 +37,39 @@ manimejia:
 
   education:
     - 
-     school: Art Student's League of Denver
-     study: Fine Art
-     years: 1991 - 1992
-     degree: N/A
-    - 
-     school: Kanab High School
-     study: 
-     years: 1992
-     degree: "yes"
-    - 
      school: University of Northern Colorado
      study: Musical Theater
      years: 1993 - 1994
      degree: "no"
+    - 
+     school: Arvada West HS (Colo)/ Kanab HS (Utah)
+     study: High School Academics
+     years: 1989 - 1992
+     degree: "yes"
+    - 
+     school: Art Student's League of Denver
+     study: Fine Art 
+     years: 1991 - 1992
+     degree: "informal"
+ 
+  employment:
+    - 
+      employer: Oregon State University - Graduate School
+      location: Corvallis, Oregon
+      title: Web Developer / UX Architect
+      dates: 2012 - 2014
+    - 
+      employer: Freelance / Self Employed
+      location: Portland, Oregon
+      title: Web Developer / UX Architect
+      dates: 2006 - 2012
+    - 
+      employer: The Middle Way / Becoming Independent
+      location: Sonoma County, California
+      title: Bike Shop Manager / Trainer
+      dates: 2004 - 2006
+    - 
+      employer: Freelance / Self Employed
+      location: Sonoma County, California
+      title: Flash Designer & Developer
+      dates: 2002 - 2004

@@ -1620,7 +1620,7 @@ $tabs-navigation-font-color: $white;
 //   "foundation/components/pagination",
    "foundation/components/panels",
 //   "foundation/components/pricing-tables",
-//   "foundation/components/progress-bars",
+   "foundation/components/progress-bars",
 //   "foundation/components/reveal",
 //   "foundation/components/side-nav",
    "foundation/components/split-buttons",
@@ -2167,13 +2167,19 @@ padding: 1em;
 		font-size:12px;
 		line-height:1.2em;
 	}
-  hr{
+  hr.page-break{
 	  page-break-before: always;
 	  page-break-after: avoid;
+	  display:none;
 	}
 	.hide-for-print{
 		display:none !important;
 	}
+  .avoid-breaking-page * {
+	  page-break-before: avoid;
+	  page-break-after: avoid;
+	}
+	
 }
 @media only screen {
 	.hide-for-screen{

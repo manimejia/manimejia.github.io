@@ -28,11 +28,19 @@
   <aside class="column small-12 medium-3 medium-pull-1 large-2" role="contentinfo">
     <h4 class="hidden-for-small-only hidden-for-medium-up">Project Meta</h4>
       <ul class="row no-bullet text-left" role="presentational">
-      {% if page.date %}
+      {% if this_page_date %}
       <li class="column small-5 medium-12" role="presentational">
-        <label class="hidden-for-small-only hidden-for-medium-up">Completed:</label> 
+        <label class="hidden-for-small-only hidden-for-medium-up">Project Date:</label> 
         <i class="fi-clock font-larger"></i> 
-        <time>{{ page.date | date: "%b %-d, %Y" }}</time>
+        {% if page.date %}
+        <time>{{ page.date | date: "%b %Y" }}</time>
+        {% else %}{% if page.startdate %}
+        <span class="hidden-for-small-only hidden-for-medium-up"> start :</span> 
+        <time>{{ page.startdate | date: "%b %Y" }}</time>
+        {% if page.enddate %} - {% endif %}{% endif %}{% if page.enddate %}
+        <span class="hidden-for-small-only hidden-for-medium-up"> end :</span> 
+        <time>{{ page.enddate | date: "%b %Y" }}</time>
+        {% endif %}{% endif %}
       </li>
       {% endif %}
 

@@ -1,12 +1,13 @@
 ---
 client: MM
 title: Wedding Website, Invitations, and Ring Design
-date: 2010-04-01
+startdate: 2010-04-01
+enddate: 2010-05-01
 website: 
 role: Multimedia Designer
 status: archived
 publish: 
- print: true
+ print: false
  main: true
 
 

@@ -1,12 +1,13 @@
 ---
 client: ALC
 title: News Website & Online Reference
-date: 2007-07-01
+startdate: 2007-07-01
+enddate: 2007-12-01
 website: https://web.archive.org/web/20111016060516/http://www.animallawcoalition.com/
 role: Website Developer
 status: archived
 publish: 
- print: true
+ print: false
  
 tags:
 - Drupal
