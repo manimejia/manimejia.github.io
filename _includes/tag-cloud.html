@@ -18,7 +18,7 @@
 <!-- tag_count:{{tag_count}}-->
 {% if tag_count > 0 %}
 {% assign tag_size = tag_count | times: .3 %}
-<li class="label radius success tag-count-{{tag_count}}">{{old_tag}}</li>
+<li class="label radius success tag-count-{{tag_count}}">{{old_tag}} ({{tag_count}})</li>
 {% assign tag_count = 1 %}
 {% endif %}
 {% endif %}

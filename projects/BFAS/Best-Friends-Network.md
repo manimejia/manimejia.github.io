@@ -1,6 +1,7 @@
 ---
 client: BFAS
 title: Best Friends Network
+summary: An early "social network" for the 50,000+ membership base of Best Friends Animal Society to exchange information, collaborate on current issues, and make personal connections.
 startdate: 2005-08-01
 enddate: 2005-12-01
 website: 

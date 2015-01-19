@@ -1,12 +1,13 @@
 ---
 client: OSU
-title: Graduate School Document Workflow Solutions
+title: Postdoc Mentor Documentation Solution
+summary: A workflow solution, based on Google Docs, to track the progress of postdoctoral mentorship at OSU.
 startdate: 2014-01-01
 enddate: 2014-02-18
 website: 
 role: Javascript Developer
 publish:
- print: false
+ print: true
  main: true 
 
 tags:
