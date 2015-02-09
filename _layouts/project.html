@@ -71,13 +71,13 @@
       </ul>
   </aside>
   <hr/>
-  <section id="{{this_page_id}}-content" class="column" data-tabsgrid data-aria-tab-group="tabs-grid" aria-labelledby="{{this_page_id}}-content-label">
+  <section id="{{this_page_id}}-content" class="column" data-tabs="tabsGrid" aria-owns="{{this_page_id}}-content-tablist" aria-labelledby="{{this_page_id}}-content-label">
     <h4 id="{{this_page_id}}-content-label" class="hidden-for-small-only hidden-for-medium-up">
     Project Details</h4>
     <div class="column {% if page.assets %}medium-3 large-4{% else %}medium-2 large-3{% endif %}">
       <nav role="navigation">
 	
-        <ul id="" class="row no-bullet " role="tablist">
+        <ul id="{{this_page_id}}-content-tablist" class="row no-bullet " role="tablist">
         {% assign tabbuttonsmall = 18 %}
         {% if page.tasks %}{% assign tabbuttonsmall = tabbuttonsmall - 6 %}{% endif %}
         {% if page.content %}{% assign tabbuttonsmall = tabbuttonsmall - 6 %}{% endif %}
@@ -94,8 +94,15 @@
           <i class="fi-align-justify"></i> Full Story</a>
           </li>
         {% endunless %}
+        {% if page.assets %}
+          <li role="presentational" class="column small-{{tabbuttonsmall}} medium-12">
+          <a id="{{this_page_id}}-assets-tab" href="#{{this_page_id}}-assets" class="button tiny expand alert font-larger" role="tab" aria-expanded="false" aria-controls="{{this_page_id}}-assets">
+          <i class="fi-align-justify"></i> Screen Shots</a>
+          </li>
+        {% endif %}
         </ul>
 
+      {% comment %}
       {% if page.assets %}
         <br/>
         <ul class="small-block-grid-4 medium-block-grid-2 large-block-grid-3 text-center" role="tablist">
@@ -109,6 +116,7 @@
         {% endfor %}
         </ul>
       {% endif %}
+      {% endcomment %}
 
       {% if page.website %}
 			<div class="text-center">
@@ -121,6 +129,7 @@
 	
       </nav>
     </div><!-- tablist -->
+    
     <div class="column {% if page.assets %}medium-9 large-8{% else %}medium-10 large-9{% endif %}" role="presentational">
       {% if page.tasks %}
       <section id="{{this_page_id}}-tasks" class="active" role="tabpanel" aria-labelledby="{{this_page_id}}-tasks-tab">
@@ -138,19 +147,35 @@
         {{ page.content | markdownify }}
       </section>
       {% endunless %}
+      
       {% if page.assets %}
-      {% for asset in page.assets %}
-      {% if asset.filename %}
-      <section id="{{this_page_id}}-asset{{forloop.index}}" role="tabpanel" aria-labelledby="{{this_page_id}}-asset{{forloop.index}}-caption">
-        <figure class="text-center">
-          <figcaption id="{{this_page_id}}-asset{{forloop.index}}-caption">{{asset.caption}}</figcaption><br/>
-          <img src="{{this_page_assetpath}}{{asset.filename}}" alt=""/>
-        </figure>
-      </section>
+      <section id="{{this_page_id}}-assets" role="tabpanel" class="pagination-centered">
+        <ul id="{{this_page_id}}-assets-slider" role="tablist" class="pagination"
+         data-tabs="slider" data-tabs-components-tab-list-selector-depth="0"
+         data-tabs-components-tabs-classes-expanded="current"
+         {%comment%} 
+         data-uixslider='{"components":{"$tabList":{"selectorDepth":0},"$tabs":{"classes":{"expanded":"current"}}}}'
+         {%endcomment%} >
+          <li><button name="previous" tabindex="-1">&laquo;</button></li>
+          {% for asset in page.assets %}
+          <li><button id="{{this_page_id}}-asset{{forloop.index}}-tab" role="tab" 
+            aria-controls="{{this_page_id}}-asset{{forloop.index}}" 
+            {%if forloop.first %}aria-expanded="true" class="current"{% endif %}>o</button></li>
+          {% endfor %}
+          <li><button name="next" tabindex="-1">&raquo;</button></li>
+        </ul>
+        {% for asset in page.assets %}{% if asset.filename %}
+        <div id="{{this_page_id}}-asset{{forloop.index}}" role="tabpanel">
+          <figure class="text-center" aria-labelledby="{{this_page_id}}-asset{{forloop.index}}-caption">
+            <figcaption id="{{this_page_id}}-asset{{forloop.index}}-caption">{{asset.caption}}</figcaption><br/>
+            <img src="{{this_page_assetpath}}{{asset.filename}}" alt="{{asset.caption}}"/>
+          </figure>
+        </div>
+        {% endif %}{% endfor %}
+      </section> 
       {% endif %}
-      {% endfor %}
-      {% endif %}
-    </div>
+    </div><!-- end panels column -->
+    
     {% if page.tags %}
     <aside id="{{this_page_id}}-tags" role="complementary" 
       class="column">
