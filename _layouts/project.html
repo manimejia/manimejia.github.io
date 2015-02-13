@@ -10,8 +10,8 @@
   <nav class="column small-2 small-push-10 medium-1 medium-push-11 text-right" id="{{this_page_id}}-navigation">
     <a title="close this tab" href="#{{this_page_id}}" class="close"><i class="fi-x"></i></a>
   </nav>
-  <header class="column small-10 small-pull-2 medium-8 medium-pull-1 large-9">
-      <h3 class="title left" id="{{this_page_id}}-title">
+  <header class="column small-10 small-pull-2 medium-11 medium-pull-1">
+      <h3 class="title" id="{{this_page_id}}-title">
         <small class="client-title">
         {% if this_client_page.website %}
           <a class="client-title" href="{{ this_client_page.website }}" target="_blank" title="client website">{{ this_client_page.title }}</a>
@@ -20,16 +20,24 @@
         {% endif %}</small><br/>
         <span class="page-title">{{ page.title }}</span>
  				{% if page.website %}
+ 				<!--
 	        <a href="{{page.website}}" target="_blank" title="go to {{ page.status }} website">
 	        <i class="fi-play-circle font-larger"></i></a>
+        -->
 	      {% endif %}
       </h3>
   </header>
-  <aside class="column small-12 medium-3 medium-pull-1 large-2" role="contentinfo">
+  <aside class="column small-12" role="contentinfo">
+    <div class="row>">
+  	{% if page.summary %}
+	  <p class="column small-12 medium-8 warning-text">
+    {{ page.summary }}
+    </p>
+  	{%endif%}    
     <h4 class="hidden-for-small-only hidden-for-medium-up">Project Meta</h4>
-      <ul class="row no-bullet text-left" role="presentational">
+      <ul class="no-bullet text-right" role="presentational">
       {% if this_page_date %}
-      <li class="column small-5 medium-12" role="presentational">
+      <li class="column small-12 medium-4 text-smaller" role="presentational">
         <label class="hidden-for-small-only hidden-for-medium-up">Project Date:</label> 
         <i class="fi-clock font-larger"></i> 
         {% if page.date %}
@@ -45,7 +53,7 @@
       {% endif %}
 
       {% if page.role %}
-      <li class="column small-7 medium-12" role="presentational">
+      <li class="column small-12 medium-4 text-smaller" role="presentational">
         <label class="hidden-for-small-only hidden-for-medium-up">Role:</label> 
         <i class="fi-at-sign font-larger"></i> 
         <b>{{ page.role }}</b>
@@ -53,7 +61,7 @@
       {% endif %}
       <!--
       {% if page.website %}
-      <li class="column small-4 large-12" role="presentational">
+      <li class="column small-12 medium-4 text-smaller" role="presentational">
         <label class="hidden-for-small-only hidden-for-medium-up">Status:</label> 
         <a href="{{page.website}}" target="_blank" title="go to {{ page.status }} website">
         <i class="fi-play-circle font-larger"></i> 
@@ -61,7 +69,7 @@
         </a>
       </li>
       {% elsif page.status %}
-      <li class="column small-4 large-12" role="presentational">
+      <li class="column small-12 medium-4 text-smaller" role="presentational">
         <label class="hidden-for-small-only hidden-for-medium-up">Status:</label> 
         <i class="fi-info font-larger"></i> 
         <b>{{ page.status }}</b>
@@ -69,40 +77,56 @@
       {% endif %}
       -->
       </ul>
+      </div>
   </aside>
   <hr/>
-  <section id="{{this_page_id}}-content" class="column" data-tabs="tabsGrid" aria-owns="{{this_page_id}}-content-tablist" aria-labelledby="{{this_page_id}}-content-label">
+  <section id="{{this_page_id}}-content" class="column" data-tabs="tabsGrid" data-tabs-components-tabs-classes-expanded="warning" aria-owns="{{this_page_id}}-content-tablist" aria-labelledby="{{this_page_id}}-content-label">
     <h4 id="{{this_page_id}}-content-label" class="hidden-for-small-only hidden-for-medium-up">
     Project Details</h4>
     <div class="column {% if page.assets %}medium-3 large-4{% else %}medium-2 large-3{% endif %}">
       <nav role="navigation">
+
+        {% if page.website %}
+        <p class="text-center font-larger alert-text">
+          <a href="{{page.website}}" target="_blank" title="go to {{ page.status }} website">
+          <i class="fi-play-circle"></i> {{ page.status }} website
+          </a>
+        </p>
+        {% elsif page.status %}
+        <p class="text-center font-larger info-text">
+          <a title="project status">
+          <i class="fi-info"></i> {{ page.status }}
+          </a>
+        </p>
+        {% endif %}
 	
         <ul id="{{this_page_id}}-content-tablist" class="row no-bullet " role="tablist">
-        {% assign tabbuttonsmall = 18 %}
-        {% if page.tasks %}{% assign tabbuttonsmall = tabbuttonsmall - 6 %}{% endif %}
-        {% if page.content %}{% assign tabbuttonsmall = tabbuttonsmall - 6 %}{% endif %}
+        {% assign tabbuttonsmall = 16 %}
+        {% if page.tasks %}{% assign tabbuttonsmall = tabbuttonsmall - 4 %}{% endif %}
+        {% unless has_page_content == '' %}{% assign tabbuttonsmall = tabbuttonsmall - 4 %}{% endunless %}
+        {% if page.assets %}{% assign tabbuttonsmall = tabbuttonsmall - 4 %}{% endif %}
          
         {% if page.tasks %}
-          <li role="presentational" class="column small-{{tabbuttonsmall}} medium-12">
-          <a id="{{this_page_id}}-tasks-tab" href="#{{this_page_id}}-tasks" class="button tiny expand active warning font-larger" role="tab" aria-expanded="true" aria-controls="{{this_page_id}}-tasks">
-          <i class="fi-list-thumbnails"></i> Summary</a>
+          <li role="presentational" class="column small-4 medium-12">
+          <a id="{{this_page_id}}-tasks-tab" href="#{{this_page_id}}-tasks" class="button tiny expand alert font-larger" role="tab" aria-expanded="true" aria-controls="{{this_page_id}}-tasks">
+          <i class="fi-list-thumbnails"></i><span class="hidden-for-small-only"> Tasks</span></a>
           </li>
         {% endif %}
         {% unless has_page_content == '' %}
-          <li role="presentational" class="column small-{{tabbuttonsmall}} medium-12">
+          <li role="presentational" class="column small-4 medium-12">
           <a id="{{this_page_id}}-story-tab" href="#{{this_page_id}}-story" class="button tiny expand alert font-larger" role="tab" aria-expanded="false" aria-controls="{{this_page_id}}-story">
-          <i class="fi-align-justify"></i> Full Story</a>
+          <i class="fi-align-justify"></i><span class="hidden-for-small-only"> Details</span></a>
           </li>
         {% endunless %}
         {% if page.assets %}
-          <li role="presentational" class="column small-{{tabbuttonsmall}} medium-12">
+          <li role="presentational" class="column small-4 medium-12">
           <a id="{{this_page_id}}-assets-tab" href="#{{this_page_id}}-assets" class="button tiny expand alert font-larger" role="tab" aria-expanded="false" aria-controls="{{this_page_id}}-assets">
-          <i class="fi-align-justify"></i> Screen Shots</a>
+          <i class="fi-thumbnails"></i><span class="hidden-for-small-only"> Images</span></a>
           </li>
         {% endif %}
         </ul>
 
-      {% comment %}
+        <!--
       {% if page.assets %}
         <br/>
         <ul class="small-block-grid-4 medium-block-grid-2 large-block-grid-3 text-center" role="tablist">
@@ -116,17 +140,8 @@
         {% endfor %}
         </ul>
       {% endif %}
-      {% endcomment %}
-
-      {% if page.website %}
-			<div class="text-center">
-        <a id="{{this_page_id}}-website-button" href="{{page.website}}" target="_blank" title="go to {{ page.status }} website" tabindex="0">
-          <i class="fi-play-circle"></i> 
-          {% if page.status %}{{ page.status | capitalize }}{% endif %} Website
-        </a>
-      {% endif %}
- 			<div>
-	
+      -->
+    
       </nav>
     </div><!-- tablist -->
     
@@ -150,20 +165,27 @@
       
       {% if page.assets %}
       <section id="{{this_page_id}}-assets" role="tabpanel" class="pagination-centered">
-        <ul id="{{this_page_id}}-assets-slider" role="tablist" class="pagination"
-         data-tabs="slider" data-tabs-components-tab-list-selector-depth="0"
-         data-tabs-components-tabs-classes-expanded="current"
-         {%comment%} 
-         data-uixslider='{"components":{"$tabList":{"selectorDepth":0},"$tabs":{"classes":{"expanded":"current"}}}}'
-         {%endcomment%} >
-          <li><button name="previous" tabindex="-1">&laquo;</button></li>
+        <div id="{{this_page_id}}-assets-slider" data-tabs="slider" 
+          data-tabs-components-tab-list-selector-depth="1"
+          data-tabs-components-tabs-classes-expanded="current" >
+        
+        <a role="button" name="previous" class="left font-larger" tabindex="-1">&laquo;</a>
+        <a role="button" name="next" class="right font-larger" tabindex="-1">&raquo;</a>
+
+        <ul role="tablist" class="text-center inline-block-list">
           {% for asset in page.assets %}
-          <li><button id="{{this_page_id}}-asset{{forloop.index}}-tab" role="tab" 
+          <li>
+            <a id="{{this_page_id}}-asset{{forloop.index}}-tab" href="{{this_page_id}}-asset{{forloop.index}}" class="th img-micro" role="tab" aria-expanded="{{forloop.first}}" aria-controls="{{this_page_id}}-asset{{forloop.index}}" style="background-image:url({{this_page_assetpath}}{{asset.filename}})" title="image {{forloop.index}} of {{forloop.length}}"><img src="" alt="{{asset.caption}}"/>
+            </a>
+            <!--
+            <button id="{{this_page_id}}-asset{{forloop.index}}-tab" role="tab" 
             aria-controls="{{this_page_id}}-asset{{forloop.index}}" 
-            {%if forloop.first %}aria-expanded="true" class="current"{% endif %}>o</button></li>
+            {%if forloop.first %}aria-expanded="true" class="current"{% endif %}>o</button>
+            -->
+            </li>
           {% endfor %}
-          <li><button name="next" tabindex="-1">&raquo;</button></li>
         </ul>
+        <hr>
         {% for asset in page.assets %}{% if asset.filename %}
         <div id="{{this_page_id}}-asset{{forloop.index}}" role="tabpanel">
           <figure class="text-center" aria-labelledby="{{this_page_id}}-asset{{forloop.index}}-caption">
@@ -172,6 +194,8 @@
           </figure>
         </div>
         {% endif %}{% endfor %}
+                
+        </div>
       </section> 
       {% endif %}
     </div><!-- end panels column -->

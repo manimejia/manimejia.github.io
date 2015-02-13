@@ -2085,6 +2085,7 @@ $thumb-transition-function: ease-out;
 }
 
 .th.img-micro,
+.th.img-icon,
 .th.img-thumb,
 .th.img-preview{
 	background-size: cover;
@@ -2092,6 +2093,10 @@ $thumb-transition-function: ease-out;
 	background-repeat: no-repeat;
 }
 .th.img-micro{
+	width:32px;
+	height:32px;
+}
+.th.img-icon{
 	width:64px;
 	height:64px;
 }
@@ -2116,6 +2121,13 @@ display: inline-block;
 li > a.button.expand:first-child:last-child{
 margin-bottom: .5rem;
 list-style: none;
+}
+
+
+.inline-block-list > li {
+list-style: none;
+margin-left: 1.375rem;
+display: inline-block;
 }
 
 .top-bar.expanded.fixed{
