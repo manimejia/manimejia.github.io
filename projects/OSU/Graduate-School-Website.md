@@ -32,17 +32,17 @@ thumbnail: gradschool-website-icon.jpg
 
 assets: 
  - filename: gradschool-website-screen-homepage.png
-   caption: 
+   caption: Graduate School home page, showing a novel approach to information architecture. The image carousel (and the "boxed" content bellow it) presents "promoted" content from within the website, driving visitors to important information. The main navigational elements make use of typical "audience based navigation" typically found in academic sites, as well as "topic based navigation" found on most other informative sites. Additionally, this screen shot shows the use of a modern "Contact Us" button that stays within view while scrolling the page.
  - filename: gradschool-website-screen-international.png
-   caption: 
+   caption: Important consideration needs to be given to potential international applicants, making sure they understand the particular requirements. We accomplished this need with a much simplified and improved architecture, making use of a callout box directing visitors to the relevant information. Also, take note of the care given to the side bar navigation, in keeping it simple and visually interesting.
  - filename: gradschool-website-screen-notification.png
-   caption: 
+   caption: This screenshot highlights the "Notifications" tool developed specifically for the Graduate School website. Notifications appear at the top of website pages, informing visitors of contextually important and time sensitive information. They can be created and edited using a custom maintenance page. Each one can have an icon, static or repeating dates, and multiple website sections associated with it; these control how, when, and where it will be displayed. 
  - filename: gradschool-website-screen-program-page.png
-   caption: 
+   caption: This screenshot shows the main page for the "Graduate Programs" section, and highlights the many architectural and design features incorporated in this most popular of all Graduate School website sections. From the faceted search tool, to the expandable details, to the "tag-like" informative labels, this page is focused on helping visitors to find the right graduate major, minor, or certificate.  Each program listed has additional information available on it's own page, as well as important contact and website links available as icons in this list.
  - filename: gradschool-website-screen-programs.png
-   caption: 
+   caption: This screenshot shows the main page for the "Graduate Programs" section, and highlights the many architectural and design features incorporated in this most popular of all Graduate School website sections. From the faceted search tool, to the expandable details, to the "tag-like" informative labels, this page is focused on helping visitors to find the right graduate major, minor, or certificate.  Each program listed has additional information available on it's own page, as well as important contact and website links available as icons in this list.
  - filename: gradschool-website-screen-staff.png
-   caption: 
+   caption: This screenshot highlights the use of the "contact card" design pattern, which is incorporated throughout the site whenever personal contact information is displayed.
 
 tasks: 
 - Developed comprehensive architectural documentation of the legacy Oregon State Graduate School website, in preparation for a complete rebuild.

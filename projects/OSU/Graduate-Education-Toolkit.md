@@ -36,7 +36,7 @@ thumbnail: gradschool-get-icon.jpg
 
 assets: 
  - filename: gradschool-get-screen-DAF-select.png
-   caption: 
+   caption: This wireframe outlines a novel interface used by program administrators to find and review graduate applicants. It makes use of a searchable, sortable, and configurable table whose state can be saved and restored by the user. It also shows that selected applicants in the table are displayed below the table for deeper comparison and review.
 
 tasks: 
   - Designed comprehensive documentation of the legacy database used for managing graduate   student admissions and matriculation.
