@@ -1,4 +1,8 @@
+
 <div class="row">
+	{% if site.data.services.label %}
+  <h2 id="services-heading" class="text-center">{{site.data.services.label}}</h2>
+	{%endif%}
 	{% if site.data.services.summary %}
 	 	<div class="column medium-8 medium-offset-2 end">
 		  <p class="{%if include.color %}{{include.color}}-text {%endif%}font-large">
@@ -7,12 +11,12 @@
 		</div>
 	{%endif%}
 {% for service in site.data.services.list %}
-    <div class="column medium-4">        
+    <div class="column medium-6">        
         <h3 class="text-center">
         <i class="fi-{{service.icon}} icon highlight"></i>
         <br class="hide-for-print"/>
-        {{service.name}}</h3>
-        {{service.description | markdownify }}
+        {{service.label}}</h3>
+        {{service.summary | markdownify }}
     </div>
 {% endfor %}	
 </div>

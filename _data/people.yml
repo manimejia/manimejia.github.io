@@ -14,11 +14,11 @@ manimejia:
   bio: | 
     My career as a web designer/developer started in 2001, when I discovered the multimedia possibilities of Flash. I was quickly engrossed, making simple animations for family and friends. Within a year, I had learned enough and made the right connections to approach the nation's largest animal sanctuary with a novel idea for a virtual tour of their campus. I landed the job, and set out in earnest to realize this [huge accomplishment][P1] over the following ten months. 
     
-    Early in my career I came to see that truly scalable and manageable presentations need to have a smart backend to facilitate editing the content. While continuing my work as a [flash][P2] [designer][P3] and [developer][P4], I started to research CMS solutions on which these presentations could be 'hosted'. This lead me to Drupal, in 2006, and offering my services as a website developer to an even wider client base. I spent the next few years designing [web][P5] [graphics][P6], [small][P7] [business][P8] [websites][P9], and [applications][P10] for a variety of clients ([and brides-to-be][P11]). By this time, my interests had moved away from Flash, and toward HTML5 as a creative platform of choice for dynamic multimedia content. 
+    Early in my career I came to see that truly scalable and manageable presentations need to have a smart backend to facilitate editing the content. While continuing my work as a [flash][P2] [designer][P3] and [developer][P4], I started to research CMS solutions on which these presentations could be 'hosted'. This lead me to Drupal, in 2006, and offering my services as a website developer to an even wider client base. I spent the next few years exploring the boundaries of modern web design, making [web][P5] [graphics][P6], [small][P7] [business][P8] [websites][P9], and [applications][P10] for a variety of clients. By 2010 I had established a reputation as an professional web developer and solutions architect, working in HTML5, CSS2&3, Javascript, and whatever backend technologies necessary address the projects coming my way.
     
     In 2012 I was hired as a web developer by the Graduate School of Oregon State University. This was a great opportunity for me to move beyond self employment, and experience the needs and inner workings of a large organization. I found myself [rebuilding the Graduate School website][P12] from the ground up, designing functional [user experience solutions][P13] for a variety of web systems, and streamlining their [workflow processes][P14]. In September 2014, after moving to Ann Arbor, I worked remotely for a few weeks until they had hired my replacement.
     
-    With more than a decade serving various roles in the web industry, I have collected a wide range of professional experiences. This has allowed me to identify and hone my core strength as a creative digital communicator.
+    With more than a decade serving various roles in the web industry, I have collected a wide range of professional experiences. This has allowed me to identify and hone my core strengths as solutions architect and digital communicator.
     
     [P1]: /#BFAS-Best-Friends-Virtual-Tour "Best Friends Virtual Tour - project details"
     [P2]: /#MBL-Day-Of-The-Dead-VJ-Animations "Day of the Dead VJ Animations - project details"
@@ -53,6 +53,11 @@ manimejia:
      degree: "yes"
  
   employment:
+    - 
+      employer: InfoReady Inc
+      location: Ann Arbor, Mi
+      title: Sr. Front End Developer & Architect
+      dates: 2015
     - 
       employer: Oregon State University - Graduate School
       location: Corvallis, Oregon
