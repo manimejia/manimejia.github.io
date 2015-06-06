@@ -1,5 +1,5 @@
 {% assign clients = site.pages | where: "category" , "client"  | sort : "enddate" %}
-<ul class="medium-block-grid-2 large-block-grid-3">
+<ul class="medium-block-grid-3 large-block-grid-3">
 
 {% for client in clients reversed %}
   {% if client.publish.featured %}
