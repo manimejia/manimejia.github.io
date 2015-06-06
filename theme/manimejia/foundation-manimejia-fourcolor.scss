@@ -1740,6 +1740,12 @@ $alert-font-tone: false !default; // will set the font color to a tonal variant 
   .#{$colorKey}-text { 
 		color: get-color($colorKey,base);
 	}
+  .#{$colorKey}-text-light { 
+		color: get-color($colorKey,lightest);
+	}
+  .#{$colorKey}-text-dark { 
+		color: get-color($colorKey,darkest);
+	}
 }
 
 
@@ -1948,7 +1954,7 @@ main > .row > section {
 
 section.overlay{
 	color: $white;
-  background-color: rgba($body-bg, 1);
+  background-color: rgba($tuatara, .9);
  p{
   	text-shadow: 0 0 2px $body-bg, 0 0 5px $body-bg,0 0 8px $body-bg;
 	}
@@ -1956,9 +1962,13 @@ section.overlay{
 // colored overlays
 @each $colorKey in map-keys($colors) {
 	section.overlay.#{$colorKey}{
-	  background-color: rgba(get-color($colorKey,darker), 1);
+	  background-color: rgba(get-color($colorKey,darker), .9);
 		p{
 	  	text-shadow: 0 0 2px get-color($colorKey,darkest), 0 0 5px get-color($colorKey,darkest);
+      // background-color: rgba(get-color($colorKey,darkest), .9);
+	  	// box-shadow: inset 0 0 .5em .5em rgba(get-color($colorKey,darker), .9);
+	  	// -moz-box-shadow: inset 0 0 .5em .5em rgba(get-color($colorKey,darker), .9);
+	  	// -webkit-box-shadow: inset 0 0 .5em .5em rgba(get-color($colorKey,darker), .9);
 		}
 	}
 }

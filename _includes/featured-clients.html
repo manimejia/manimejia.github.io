@@ -1,0 +1,16 @@
+{% assign clients = site.pages | where: "category" , "client"  | sort : "enddate" %}
+<ul class="medium-block-grid-2 large-block-grid-3">
+
+{% for client in clients reversed %}
+  {% if client.publish.featured %}
+
+  <li class="text-center">
+    <h3 class="font-large"><a href="{{ client.website }}">{{ client.title }}</a></h3>
+    <p class="warning-text-light">{{ client.description }}</p>
+    <p class="font-smaller">{{ client.location }}</p>
+  </li>
+
+  {%endif%}
+{%endfor%}
+
+</ul>
