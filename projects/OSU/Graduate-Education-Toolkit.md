@@ -5,7 +5,7 @@ summary: A web based graduate admissions and matriculation management system.
 startdate: 2014-02-01
 enddate: 2014-09-21
 website: 
-role: UX Architect
+role: Front End Developer & Architect
 publish:
  print: true
  main: true 

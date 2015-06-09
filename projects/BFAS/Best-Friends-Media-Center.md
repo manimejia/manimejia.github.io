@@ -5,7 +5,7 @@ summary: A Flash/Cold-Fusion based web-app for delivering the regular audio and 
 startdate: 2007-04-01
 enddate: 2007-06-01
 website: 
-role: UX Architect & ActionScript Consultant
+role: UX & ActionScript Consultant
 status: retired
 
 publish: 
