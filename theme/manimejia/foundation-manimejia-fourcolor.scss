@@ -1746,6 +1746,17 @@ $alert-font-tone: false !default; // will set the font color to a tonal variant 
   .#{$colorKey}-text-dark { 
 		color: get-color($colorKey,darkest);
 	}
+	
+  .#{$colorKey}-overlay { 
+		background-color: rgba(get-color($colorKey,base), .9);
+	}
+  .#{$colorKey}-overlay-light { 
+		background-color: rgba(get-color($colorKey,lightest), .9);
+	}
+  .#{$colorKey}-overlay-dark { 
+		background-color: rgba(get-color($colorKey,darkest), .9);
+	}
+	
 }
 
 
@@ -1849,10 +1860,10 @@ a:hover, a:focus {
 }
 
 .font-xsmaller{
-	font-size: .5rem !important;
+	font-size: .6rem !important;
 }
 .font-smaller{
-	font-size: .8rem !important;
+	font-size: .9rem !important;
 }
 .font-large{
 	font-size: 1.2rem !important;

@@ -14,5 +14,5 @@ publish:
 tags: 
 - Animal Advocacy
 - Non-Profit
-description: The nations largest no-kill animal sanctuary and a leader in the "no more homeless pets" movement.
+description: The nations largest no-kill animal sanctuary, an internationally recognized animal welfare society and a leader in the "save them all" movement to end the routine killing of homeless animals.
 ---

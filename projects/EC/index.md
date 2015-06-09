@@ -11,5 +11,5 @@ layout: client
 publish:  
  print: true
  featured: true
-description: An elder care management company recognized nationally for it's integrated "family centered care" model.
+description: An internationally recognized residential care company that makes novel use of technology to support a person-centered and relation-based model of care for frail older adults in it's facilities.
 ---

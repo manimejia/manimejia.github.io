@@ -15,5 +15,5 @@ layout: client
 publish:  
  print: true
  featured: true
-description: OSU is a university nationally recognized for it's "very high research activity", and it's graduate school plays a large part in that success.
+description: As Oregon's premier research university, OSU is recognized internationally for it's "very high research activity". The Graduate School, and the programs it manages, are essential in maintaining this status.
 ---
