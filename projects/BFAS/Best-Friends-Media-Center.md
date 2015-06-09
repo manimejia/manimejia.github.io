@@ -10,7 +10,7 @@ status: retired
 
 publish: 
  main: true 
- print: false
+ print: true
 
 tags:
 - Flash
