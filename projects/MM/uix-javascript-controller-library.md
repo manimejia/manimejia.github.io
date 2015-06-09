@@ -8,6 +8,8 @@ website: http://github.com/manimejia/uix
 role: JavaScript Developer
 status: repository
 publish:
+ print: true
+ featured: true
  draft: false 
 
 tags:

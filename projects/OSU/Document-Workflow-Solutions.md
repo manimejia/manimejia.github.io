@@ -7,7 +7,7 @@ enddate: 2014-02-18
 website: 
 role: Javascript Developer
 publish:
- print: true
+ print: false
  main: true 
 
 tags:

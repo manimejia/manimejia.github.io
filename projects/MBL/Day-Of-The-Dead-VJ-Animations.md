@@ -7,7 +7,7 @@ website: http://manimejia.me/archive/?/projects/MBL/archive/DOD-2002-vj-animatio
 role: Designer / Developer
 status: archived
 publish: 
- print: true
+ print: false
  featured: true
 tags:
 - Flash

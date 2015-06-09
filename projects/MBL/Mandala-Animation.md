@@ -7,7 +7,7 @@ website: http://manimejia.me/archive/?//www.youtube.com/embed/uOOMJqwrz9E
 role: Designer / Developer
 status: archived
 publish: 
- print: true
+ print: false
  featured: true
 tags:
 - Flash
