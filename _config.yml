@@ -157,7 +157,7 @@ config:
   favicons:
     - /resources/favicon-152.png
   topbar:
-    toggle: 
+    toggle: "<span class='hidden-for-small-only hidden-for-medium-up'>Toggle Menu</span>"
     right:
       - name: Services
         url: "/#services"
@@ -169,11 +169,11 @@ config:
         url: "/resume.html"
         #class: small button
         #hasform: false
-      - name: "<i class='fi-social-linkedin font-larger'></i>"
+      - name: "<i class='fi-social-linkedin font-larger'></i><span class='hidden-for-small-only hidden-for-medium-up'>LinkedIn</span>"
         url: "http://linkedin.com/in/manimejia"
         title: View my LinkedIn Profile
         target: _blank
-      - name: "<i class='fi-social-github font-larger'></i>"
+      - name: "<i class='fi-social-github font-larger'></i><span class='hidden-for-small-only hidden-for-medium-up'>Github</span>"
         url: "http://github.com/manimejia"
         title: Check out my code on GitHub
         target: _blank
