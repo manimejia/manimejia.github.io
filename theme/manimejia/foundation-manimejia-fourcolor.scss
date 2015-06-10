@@ -105,60 +105,12 @@ $font-weight-normal: normal !default;
 $font-weight-bold: 600 !default;
 
 /************* COLORS **********************
+v0.1
 http://paletton.com/#uid=c3J192+0t1kWhVocCX2mwXgV0zbSgiAk++LJbS+9iw++YAiLZc9zkxYyRczNxknFlwokHGqbakR5u7g7QmpRPeOxl7Tb96
+
+v0.2 - darker dark yellow and lighter light yellow
+http://paletton.com/#uid=c3J192+0t1kWhVocCX2mwXgV0zbSgiAk++LJafZZiLZyYDgKYq7MkxYyRczNxknFlwokHGqbakR5u7g7QmpRPeOxl7Tb96
 *******************************************/
-
-// We use these as default colors throughout
-// $primary-color:             #0453F0;	/* blue */
-// $primary-color-lightest:    #9EBBF4;     
-// $primary-color-lighter:     #5A8EF5;     
-// $primary-color-darker:      #033EB2;     
-// $primary-color-darkest:     #032363;     
-//                                          
-// $secondary-color:           #FFB100;	/* yellow */
-// $secondary-color-lightest:  #FFE2A0;     
-// $secondary-color-lighter:   #FFD26C;     
-// $secondary-color-darker:    #956800;     
-// $secondary-color-darkest:   #4C3500;     
-//                                          
-// $tertiary-color:            #F06B00;	/* orange */
-// $tertiary-color-lightest:   #FFB87F;     
-// $tertiary-color-lighter:    #FF8C31;     
-// $tertiary-color-darker:     #A84B00;     
-// $tertiary-color-darkest:    #482000;     
-//                                          
-// $quaternary-color:          #00BB57;	/* green */
-// $quaternary-color-lightest: #88E0B1;
-// $quaternary-color-lighter:  #4ACC87;
-// $quaternary-color-darker:   #007536;
-// $quaternary-color-darkest:  #003F1D;
-// 
-// /*******************************************/
-// 
-// $info-color:                $primary-color;            	/* blue */
-// $info-color-lightest:       $primary-color-lightest;        
-// $info-color-lighter:        $primary-color-lighter;         
-// $info-color-darker:         $primary-color-darker;          
-// $info-color-darkest:        $primary-color-darkest;         
-//                                                             
-// $warning-color:             $secondary-color;          	/* yellow */
-// $warning-color-lightest:    $secondary-color-lightest;      
-// $warning-color-lighter:     $secondary-color-lighter;       
-// $warning-color-darker:      $secondary-color-darker;        
-// $warning-color-darkest:     $secondary-color-darkest;       
-//                                                             
-// $alert-color:               $tertiary-color;           	/* orange */
-// $alert-color-lightest:      $tertiary-color-lightest;       
-// $alert-color-lighter:       $tertiary-color-lighter;        
-// $alert-color-darker:        $tertiary-color-darker;         
-// $alert-color-darkest:       $tertiary-color-darkest;        
-//                                                                
-// $success-color:             $quaternary-color;         	/* green */
-// $success-color-lightest:    $quaternary-color-lightest;
-// $success-color-lighter:     $quaternary-color-lighter; 
-// $success-color-darker:      $quaternary-color-darker;  
-// $success-color-darkest:     $quaternary-color-darkest; 
-
 
 $colors: (
 	primary: info,
@@ -171,11 +123,11 @@ $colors: (
 			darkest:        #032363,
 		),                        
 	warning:( /* yellow */       
-			base:           #FFB100,
-			lightest:       #FFE2A0,
-			lighter:        #FFD26C,
-			darker:         #956800,
-			darkest:        #4C3500,
+			base:           #FFBC00,
+			lightest:       #FFEAAD,
+			lighter:        #FFD86A,
+			darker:         #856300,
+			darkest:        #3E2E00,
 		),                        
 	alert:( /* orange */         
 			base:           #F06B00,
@@ -2046,6 +1998,10 @@ header {
     color: $small-font-color;
     line-height: 0;
   }
+}
+
+footer{
+  background-color: $body-bg;
 }
 
 
