@@ -1895,4 +1895,15 @@ padding: 1em;
 }
 
 
-
+/*
+ * make content visible nly to screen readers
+ * this version of foundation does not seem to have this
+ */
+ .show-for-sr{
+   position:absolute;
+   left:-10000px;
+   top:auto;
+   width:1px;
+   height:1px;
+   overflow:hidden;
+}
