@@ -103,9 +103,9 @@ style: |
       	{%endif%}    
 	  </header>
 	  <aside class="column" role="contentinfo">
-	      <ul class="no-bullet inline-list" role="presentational">
+	      <ul class="no-bullet inline-list" role="presentation">
 	      {% if this_page.role %}
-	      <li role="presentational">
+	      <li role="presentation">
 	      <div>
 	        <label class="hidden-for-small-only hidden-for-medium-up hide-for-print">Role</label> 
 	        <abbr title="Role"><i class="fi-torso font-larger"></i></abbr>&nbsp;
@@ -114,7 +114,7 @@ style: |
 	      </li>
 	      {% endif %}
 	      {% if this_page_date %}
-	      <li role="presentational">
+	      <li role="presentation">
 	      	<div>
           <label class="hidden-for-small-only hidden-for-medium-up hide-for-print">Date</label> 
 	        <abbr title="Date"><i class="fi-clock font-larger"></i></abbr>&nbsp;
@@ -131,7 +131,7 @@ style: |
 	      </li>
 	      {% endif %}
 	      {% if this_page.website %}
-	      <li role="presentational">
+	      <li role="presentation">
 	      	<div>
 	        <label class="hidden-for-small-only hidden-for-medium-up hide-for-print">Link</label> 
 	        <a href="{{this_page.website}}" target="_blank" title="go to {{ this_page.status }} website">
@@ -141,14 +141,14 @@ style: |
 	        </div>
 	      </li>
 	      {% elsif this_page.status %}
-	      <!-- <li role="presentational">
+	      <!-- <li role="presentation">
 	        <div>
 	        <label class="hidden-for-small-only hidden-for-medium-up hide-for-print-only">Status:</label> 
 	        <i class="fi-info font-larger"></i>&nbsp;<b>{{ this_page.status }}</b>
 	        </div>
 	      </li> -->
 	      {% endif %}
-	      <li role="presentational" class="right">
+	      <li role="presentation" class="right">
 	      <a href="{{base_url}}#{{ this_page_id }}" title="project page">
 	        <i class="fi-link font-larger"></i>&nbsp;
 	        See In Portfolio</a>

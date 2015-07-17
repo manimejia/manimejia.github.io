@@ -8,7 +8,7 @@
 {% assign has_page_content = page.content | strip_html | strip | lstrip | rstrip | strip_newlines %}
 <article class="row" id="{{this_page_id}}-article" aria-labelledby="{{this_page_id}}-title">
   <nav class="column small-2 small-push-10 medium-1 medium-push-11 text-right" id="{{this_page_id}}-navigation">
-    <a title="close this tab" href="#{{this_page_id}}" class="close"><i class="fi-x"></i></a>
+    <a title="close this tab" href="#{{this_page_id}}" class="close"><i class="fi-x"></i><span class="show-for-sr">close close this tab</span></a>
   </nav>
   <header class="column small-10 small-pull-2 medium-11 medium-pull-1">
       <h3 class="title" id="{{this_page_id}}-title">
@@ -35,9 +35,9 @@
     </p>
   	{%endif%}    
     <h4 class="hidden-for-small-only hidden-for-medium-up">Project Meta</h4>
-      <ul class="no-bullet text-right" role="presentational">
+      <ul class="no-bullet text-right" role="presentation">
       {% if this_page_date %}
-      <li class="column small-12 medium-4 text-smaller" role="presentational">
+      <li class="column small-12 medium-4 text-smaller" role="presentation">
         <label class="hidden-for-small-only hidden-for-medium-up">Project Date:</label> 
         <i class="fi-clock font-larger"></i> 
         {% if page.date %}
@@ -53,7 +53,7 @@
       {% endif %}
 
       {% if page.role %}
-      <li class="column small-12 medium-4 text-smaller" role="presentational">
+      <li class="column small-12 medium-4 text-smaller" role="presentation">
         <label class="hidden-for-small-only hidden-for-medium-up">Role:</label> 
         <i class="fi-at-sign font-larger"></i> 
         <b>{{ page.role }}</b>
@@ -61,7 +61,7 @@
       {% endif %}
       <!--
       {% if page.website %}
-      <li class="column small-12 medium-4 text-smaller" role="presentational">
+      <li class="column small-12 medium-4 text-smaller" role="presentation">
         <label class="hidden-for-small-only hidden-for-medium-up">Status:</label> 
         <a href="{{page.website}}" target="_blank" title="go to {{ page.status }} website">
         <i class="fi-play-circle font-larger"></i> 
@@ -69,7 +69,7 @@
         </a>
       </li>
       {% elsif page.status %}
-      <li class="column small-12 medium-4 text-smaller" role="presentational">
+      <li class="column small-12 medium-4 text-smaller" role="presentation">
         <label class="hidden-for-small-only hidden-for-medium-up">Status:</label> 
         <i class="fi-info font-larger"></i> 
         <b>{{ page.status }}</b>
@@ -105,19 +105,19 @@
         {% if page.assets %}{% assign tabbuttonsmall = tabbuttonsmall - 4 %}{% endif %}
          
         {% if page.tasks %}
-          <li role="presentational" class="column small-4 medium-12">
+          <li role="presentation" class="column small-4 medium-12">
           <a id="{{this_page_id}}-tasks-tab" href="#{{this_page_id}}-tasks" class="button tiny expand alert font-larger" role="tab" aria-expanded="true" aria-controls="{{this_page_id}}-tasks">
           <i class="fi-list-thumbnails"></i><span class="hidden-for-small-only"> Tasks</span></a>
           </li>
         {% endif %}
         {% unless has_page_content == '' %}
-          <li role="presentational" class="column small-4 medium-12">
+          <li role="presentation" class="column small-4 medium-12">
           <a id="{{this_page_id}}-story-tab" href="#{{this_page_id}}-story" class="button tiny expand alert font-larger" role="tab" aria-expanded="false" aria-controls="{{this_page_id}}-story">
           <i class="fi-align-justify"></i><span class="hidden-for-small-only"> Details</span></a>
           </li>
         {% endunless %}
         {% if page.assets %}
-          <li role="presentational" class="column small-4 medium-12">
+          <li role="presentation" class="column small-4 medium-12">
           <a id="{{this_page_id}}-assets-tab" href="#{{this_page_id}}-assets" class="button tiny expand alert font-larger" role="tab" aria-expanded="false" aria-controls="{{this_page_id}}-assets">
           <i class="fi-thumbnails"></i><span class="hidden-for-small-only"> Images</span></a>
           </li>
@@ -130,7 +130,7 @@
         <ul class="small-block-grid-4 medium-block-grid-2 large-block-grid-3 text-center" role="tablist">
         {% for asset in page.assets %}
         {% if asset.filename %}
-          <li role="presentational">
+          <li role="presentation">
           <a id="{{this_page_id}}-asset{{forloop.index}}-tab" href="{{this_page_id}}-asset{{forloop.index}}" class="th img-micro" role="tab" aria-expanded="false" aria-controls="{{this_page_id}}-asset{{forloop.index}}" style="background-image:url({{this_page_assetpath}}{{asset.filename}})" title="image {{forloop.index}} of {{forloop.length}}"><img src="" alt="{{asset.caption}}"/>
           </a>
           </li>
@@ -143,7 +143,7 @@
       </nav>
     </div><!-- tablist -->
     
-    <div class="column {% if page.assets %}medium-9 large-8{% else %}medium-10 large-9{% endif %}" role="presentational">
+    <div class="column {% if page.assets %}medium-9 large-8{% else %}medium-10 large-9{% endif %}" role="presentation">
       {% if page.tasks %}
       <section id="{{this_page_id}}-tasks" class="active" role="tabpanel" aria-labelledby="{{this_page_id}}-tasks-tab">
         <ul class="circle">
@@ -212,7 +212,7 @@
     {% endif %} 
   </section>
   <nav class="text-center column">
-      <a title="close this tab" href="#{{this_page_id}}" class="grippy" tabindex="0">&nbsp;</a>
+      <a title="close this tab" href="#{{this_page_id}}" class="grippy" tabindex="0">&nbsp;<span class="show-for-sr">close close this tab</span></a>
   </nav>
 </article>
 

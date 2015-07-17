@@ -7,19 +7,19 @@
 	<li class="column medium-3"><b>Degree</b></li>
 </ul>
 	{%for school in include.person.education %}
-<ul class="row table-row no-bullet" role="presentational">
-	<li class="column medium-3" role="presentational">
+<ul class="row table-row no-bullet" role="presentation">
+	<li class="column medium-3" role="presentation">
 		<h4>{{school.school}}</h4>
 	</li>
-	<li class="column medium-3 {%unless school.study%}show-for-medium-up{%endunless%}" role="presentational">
+	<li class="column medium-3 {%unless school.study%}show-for-medium-up{%endunless%}" role="presentation">
 		<span><b class="hide-for-medium-up">Field of Study: </b>&nbsp;
 		{{school.study}}</span>
 	</li>
-	<li class="column medium-3 {%unless school.years%}show-for-medium-up{%endunless%}" role="presentational">
+	<li class="column medium-3 {%unless school.years%}show-for-medium-up{%endunless%}" role="presentation">
 		<span><b class="hide-for-medium-up">Years: </b>&nbsp;
 		{{school.years}}</span>
 	</li>
-	<li class="column medium-3 {%unless school.degree%}show-for-medium-up{%endunless%}" role="presentational">
+	<li class="column medium-3 {%unless school.degree%}show-for-medium-up{%endunless%}" role="presentation">
 		<span><b class="hide-for-medium-up">Degree: </b>&nbsp;
 		{{school.degree}}</span>
 	</li>
