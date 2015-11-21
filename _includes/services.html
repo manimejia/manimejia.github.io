@@ -6,7 +6,7 @@
 	{% if site.data.services.summary %}
 	 	<div class="column medium-8 medium-offset-2 end">
 		  <p class="{%if include.color %}{{include.color}}-text {%endif%}font-large">
-	    {{ site.data.services.summary }}
+	    {{ site.data.services.summary | markdownify }}
 	    </p>
 		</div>
 	{%endif%}
