@@ -4,10 +4,8 @@
   <h2 id="services-heading" class="text-center">{{site.data.services.label}}</h2>
 	{%endif%}
 	{% if site.data.services.summary %}
-	 	<div class="column medium-8 medium-offset-2 end">
-		  <p class="{%if include.color %}{{include.color}}-text {%endif%}font-large">
+	 	<div class="column medium-8 medium-offset-2 {%if include.color %}{{include.color}}-text {%endif%}font-large">
 	    {{ site.data.services.summary | markdownify }}
-	    </p>
 		</div>
 	{%endif%}
 {% for service in site.data.services.list %}
