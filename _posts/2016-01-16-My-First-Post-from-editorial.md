@@ -4,4 +4,4 @@ layout: post
 date:2016-01-16
 ---
 
-This is my first post from editorial.
+This is my first post from editorial. it's been edited. 
