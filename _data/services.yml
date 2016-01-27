@@ -1,12 +1,30 @@
 label: "Sr. Front End Web Developer & Architect"
-summary: "As an [autodidactic](https://en.wikipedia.org/wiki/Autodidacticism) web professional since 2001, I offer both Front End Development and UX Architecture services in an iterative balance of careful planning, clear communication, and _‘roll up your sleeves’_ good work." 
+summary: "
+  As an [autodidactic](https://en.wikipedia.org/wiki/Autodidacticism) 
+  web professional since 2001, I offer both Front End Development and 
+  Experience Architecture services in an iterative balance of careful planning, 
+  clear communication, and _‘roll up your sleeves’_ good work." 
 
 list: 
-- label: Developer
+- label: Web Development
   icon: html5
-  summary: "As a front end focused Web Developer, I contribute to both the client and server side code using a wide range of frameworks, platforms, libraries, and tools. With intelligent, standards compliant, object oriented, and modular contributions, I work collaboratively in multidisciplinary teams toward the creation of modern web solutions for a wide range of clients."
+  summary: "
+    As a front end focused Web Developer, I contribute 
+    to both the client and server side code using a wide 
+    range of frameworks, platforms, libraries, and tools. 
+    With intelligent, standards compliant, object oriented, 
+    and modular contributions, I work collaboratively in 
+    multidisciplinary teams toward the creation of modern 
+    web solutions for a wide range of clients."
 
-- label: Architect
+- label: Experience Architecture
   icon: layout
-  summary: "As a user centered Experience & Information Architect, my primary expertise is in the R&D of tools that effect clear communication in any medium. From optimized layout and navigational tools, to sensible client-server APIs; from comprehensive user stories, to comprehendible technical specifications; from deeply accessible content, to search engine friendly content; these are the delicate interfaces that present the biggest challenges in designing and developing modern interactive web applications."
+  summary: "
+    As a user centered Experience & Information Architect, 
+    my primary expertise is in the R&D of tools that effect 
+    clear communication in any medium. From comprehensive 
+    user stories, to optimized layout and navigational tools; 
+    from deeply accessible content, to search engine friendly 
+    content; I focus on smoothing the delicate interfaces that 
+    define modern interactive web applications."
 
