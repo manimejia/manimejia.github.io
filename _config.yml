@@ -18,6 +18,7 @@ gems:
   - jekyll-redirect-from
 
 layouts: ./_layouts
+layouts_dir: ./_layouts
 
 # available_libraries 
 # define external JS and CSS files or related HTML snippets to be made available for referencing by pages and posts.
@@ -139,7 +140,7 @@ defaults:
 
 config:
   name: "Manuel Mej&iacute;a"
-  description: "Experience Architect, Web Developer, and Multimedia Creative"
+  description: "Sr. Front End Web Developer and Architect"
   domain: manimejia.me
   author:
     name: Manuel Mej&iacute;a
@@ -149,9 +150,8 @@ config:
     email: hello(at)manimejia.me
     phone: (971) 533 7591
     services:
-     - Experience Architect
      - Web Developer
-     - Multimedia Creative
+     - Architect
 
   lang: en
   favicons:
