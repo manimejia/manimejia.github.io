@@ -1,26 +1,27 @@
-label: "Sr. Front End Web Developer & Architect"
+label: "Sr. Web Developer & Experience Architect"
 summary: "
-  As an [autodidactic](https://en.wikipedia.org/wiki/Autodidacticism) 
-  web professional since 2001, I offer both Front End Development and 
-  Experience Architecture services in an iterative balance of careful planning, 
-  clear communication, and _‘roll up your sleeves’_ good work." 
+  As an autodidactic web professional since 2001, 
+  I offer user experience focused Web Development 
+  and Application Architecture services in an iterative 
+  balance of careful planning, clear communication, and 
+  ‘roll up your sleeves’ good work." 
 
 list: 
-- label: Web Development
+- label: Web Developer
   icon: html5
   summary: "
-    As a front end focused Web Developer, I contribute 
-    to both the client and server side code using a wide 
-    range of frameworks, platforms, libraries, and tools. 
+    As an experience focused Web Developer, I contribute 
+    to both the client and server side code using a variety 
+    of languages, frameworks, libraries, and tools. 
     With intelligent, standards compliant, object oriented, 
     and modular contributions, I work collaboratively in 
     multidisciplinary teams toward the creation of modern 
     web solutions for a wide range of clients."
 
-- label: Experience Architecture
+- label: Experience Architect
   icon: layout
   summary: "
-    As a user centered Experience & Information Architect, 
+    As a technically minded Experience Architect, 
     my primary expertise is in the R&D of tools that effect 
     clear communication in any medium. From comprehensive 
     user stories, to optimized layout and navigational tools; 

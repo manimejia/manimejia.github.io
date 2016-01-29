@@ -140,7 +140,7 @@ defaults:
 
 config:
   name: "Manuel Mej&iacute;a"
-  description: "Sr. Front End Web Developer and Architect"
+  description: "Sr. Web Developer and Experience Architect"
   domain: manimejia.me
   author:
     name: Manuel Mej&iacute;a
@@ -151,7 +151,7 @@ config:
     phone: (971) 533 7591
     services:
      - Web Developer
-     - Architect
+     - Experience Architect
 
   lang: en
   favicons:
