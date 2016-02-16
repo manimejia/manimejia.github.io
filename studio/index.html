@@ -1,0 +1,273 @@
+---
+layout: default
+title: Web Studio
+billing_base_rate : 60
+billing_base_delivery : 2
+billing_ratescales :
+  - 
+    name : "Introductory Rates"
+    description : "For first time clients, I offer a 75% discount on the first three months purchased."
+    colorcode: success
+    ratemod : .75
+    maxhours : 480
+  - 
+    name : "Standard Rates"
+    description : "This is the rate scale used for most projects. "
+    colorcode: primary
+  - 
+    name : "Rush Rates"
+    description : "I offer direct turnaround for time sensetive projects more than 40 hours."
+    colorcode: alert
+    ratemod : 1.25
+    delivery : 1
+    minhours : 40
+
+billing_packages : 
+  -
+    name: "1 Hour"
+    hours: 1
+  -
+    name: "1 day"
+    hours: 8
+  -
+    name: "1 week"
+    hours: 40
+  -
+    name: "1 month"
+    hours: 160
+  -
+    name: "3 months "
+    hours: 480
+  -
+    name: "1 year"
+    hours: 1920
+
+script : |
+  <script>
+    (function($){
+      $(document).ready(function() {
+
+        var billing_base_rate = 60;
+        var billing_base_delivery = 2;
+        // var billing_rush_mod = 1.25;
+        // var billing_discount_mod = .75;
+        
+        function getBillingRatescaleBaseRate(ratescale){
+          ratescale = ratescale || {};
+          var ratemod = ratescale.ratemod || 1;
+          var baserate =  
+            ratescale.baserate ? ratescale.baserate :
+            billing_base_rate * ratemod ;
+          return baserate;
+        }
+
+        function getBillingPackageRate(package,ratescale){
+          package =  package || {};
+          ratescale = ratescale || {};
+          var hours = package.hours || 1;
+          var baserate = getBillingRatescaleBaseRate(ratescale);
+          var packagerate = baserate - Math.round(Math.log10(hours)*(baserate/10))
+          return packagerate;
+        }
+  
+        function getBillingPackageDeliveryDays(package,ratescale){
+          package =  package || {};
+          ratescale = ratescale || {};
+          var hours = package.hours || 1;
+          var delivery = ratescale.delivery || billing_base_delivery;
+          return Math.ceil((hours/8)*delivery);
+        }
+  
+        $(".billingRatescale[data-billing-ratescale]").each(
+          function(index,element){
+            var 
+              $element = $(element),
+              billingRatescale = $element.data("billingRatescale"),
+              baserate = getBillingRatescaleBaseRate(billingRatescale),
+              noop = null;
+            $element.find('[data-print-baserate]').text('$'+baserate+'/hr');
+          }
+        );
+        $(".billingPackageDetails[data-billing-package]").each(
+          function(index,element){
+            var 
+              $element = $(element),
+              billingPackage = $element.data("billingPackage") || {},
+              billingRatescale = $element.parents(".billingRatescale[data-billing-ratescale]")
+                .data("billingRatescale") || {},
+              name = billingPackage.name,
+              hours = billingPackage.hours,
+              maxhours = billingRatescale.maxhours || hours,
+              minhours = billingRatescale.minhours || hours,
+              rate = getBillingPackageRate(billingPackage,billingRatescale),
+              fee = hours*rate,
+              deliveryDays = getBillingPackageDeliveryDays(billingPackage,billingRatescale);
+              deliveryWeeks = deliveryDays / 5,
+              printRate = 
+                maxhours >= hours && minhours <= hours ? '$'+rate+'/hr' : 
+                '--',
+              printFee = 
+                maxhours >= hours && minhours <= hours ? '$'+fee.toLocaleString() :
+                '--',
+              printDelivery = 
+                maxhours >= hours && minhours <= hours ? 
+                deliveryWeeks > 1 ? deliveryWeeks+' weeks' : 
+                deliveryDays > 1 ? deliveryDays+' days' : 
+                deliveryDays+' day' :
+                '--',
+              // rushRate = rate * billing_rush_mod,
+              // rushFee = hours*rushRate,
+              // rushDeliveryDays = getBillingPackageDeliveryDays(billingPackage,billingRatescale);
+              // rushDeliveryWeeks = rushDeliveryDays / 5,
+              // rushDelivery = 
+              //   rushDeliveryWeeks > 1 ? rushDeliveryWeeks+' weeks' : 
+              //   rushDeliveryDays > 1 ? rushDeliveryDays+' days' : 
+              //   rushDeliveryDays+' day',
+              noop = null;
+
+            console.log(billingRatescale, billingPackage);
+
+            // if(minhours <= hours){
+              $element.find('[data-print-rate]').text(printRate);
+              $element.find('[data-print-fee]').text(printFee);
+              $element.find('[data-print-delivery]').text(printDelivery);
+            // }
+            // $element.find('[data-print-rushrate]').text('$'+rushRate+'/hr');
+            // $element.find('[data-print-rushfee]').text('$'+rushFee.toLocaleString());
+            // $element.find('[data-print-rushdelivery]').text(rushDelivery);
+            // $element.append(
+            //   $('<div class="column small-4 overlay info fullheight billingPackageName">'+
+            //       '<span class="left">'+name+'</span>'+
+            //       '<span class="right">('+hours+')</span>'+
+            //     '</div>'),
+            //   $('<div class="column small-4 overlay success fullheight billingPackageRate">'+
+            //       '<span class="left">$'+rate+'/hr</span>'+
+            //       '<span class="right">'+delivery+' days</span>'+
+            //       '<span class="center">$'+fee.toLocaleString()+'</span>'+
+            //     '</div>'),
+            //   $('<div class="column small-4 overlay alert fullheight billingPackageRate">'+
+            //       '<span class="left">$'+rushRate+'/hr</span>'+
+            //       '<span class="right">'+rushDelivery+' days</span>'+
+            //       '<span class="center">$'+rushFee.toLocaleString()+'</span>'+
+            //     '</div>')
+            // );
+          }
+        );
+  
+      });
+    })(jQuery)
+  </script>
+
+---
+<style>
+.billingPackageHeader .overlay{
+  margin-top:1em;
+  min-height:10em;
+}
+.billingPackageHeader .overlay.primary{
+  margin-top:0;
+  min-height:11em;
+}
+</style>
+
+<div class="row">
+<section class="overlay secondary column small-12">
+The <em>Manuel Mejia Web Studio</em> is a creative web development shop offering micro site and multimedia app development. These are limited in duration engagements, tending to focus on the production of interactive content pieces for targeted audiences.
+</section>
+
+
+<section class="billingPackages column small-12">
+<h2>Hourly Packages and Rates</h2>
+
+<p>Web Studio projects are billed by the <em>working hour</em>. Working hours are pre purchased in bulk <em>packages</em> based on a <em>range estimate</em> developed for each project. Hourly rates for each package are determined by a standard formula based on the number of hours being purchased and which (if any) rate adjustments should be applied.</p>
+
+<div class="billingPackageHeader row">
+<div class="column small-10  small-offset-2 ">
+  <div class="row">
+  {% for billing_ratescale in page.billing_ratescales %}
+    <div class="column small-{{12 | divided_by : page.billing_ratescales.size | round}} billingRatescale overlay {{billing_ratescale.colorcode}} fullheight" 
+    data-billing-ratescale='{{billing_ratescale | jsonify}}'>
+      <div class="">
+      <h3 class="billingRateName">
+        {{billing_ratescale.name}} 
+        <!-- <b class="text-right" data-print-baserate></b> -->
+      </h3>
+      <p class="billingRateDescription">
+        {{billing_ratescale.description}}
+      </p>
+      </div>
+    </div>
+  {% endfor %}
+  </div>
+</div>
+</div>
+
+<!-- <p>&nbsp;</p> -->
+
+<div class="row">
+  <div class="column small-2">
+    Packages
+  </div>
+<div class="column small-10"><div class="row">
+{% for billing_ratescale in page.billing_ratescales %}
+  <div class="column small-{{12 | divided_by : page.billing_ratescales.size | round}} overlay {{billing_ratescale.colorcode}}">
+    <div class="row">
+      <span class="column small-3">Rate</span>
+      <span class="column small-4 text-right">Price</span>
+      <span class="column small-5 text-right">Delivery</span>
+    </div>
+  </div>
+{% endfor %}
+</div></div>
+</div>
+
+
+{% for billing_package in page.billing_packages %}
+<div class="row">
+  <span class="billingPackageName column small-2">
+    <hr>
+    <small class="right">{{billing_package.hours}} hrs</small>
+    <span>{{billing_package.name}} </span>
+  </span>
+  <div class="column small-10"><div class="row">
+  {% for billing_ratescale in page.billing_ratescales %}
+  <div class="column small-{{12 | divided_by : page.billing_ratescales.size | round}} overlay {{billing_ratescale.colorcode}} billingRatescale"
+    data-billing-ratescale='{{billing_ratescale | jsonify}}'>
+    <hr>
+    <div class="row billingPackageDetails" data-billing-package='{{billing_package | jsonify}}'>
+      <small class="column small-3 text-left"> <i data-print-rate></i> </small>
+      <big class="column small-4 text-right"> <i data-print-fee></i> </big>
+      <small class="column small-5 text-right"> <i data-print-delivery></i> </small>
+    </div>
+  </div>
+  {% endfor %}
+  </div></div>
+</div>
+{% endfor %}
+
+</section>
+
+</div>
+    {% comment %}
+    <!--
+    <div class="column small-3 overlay alert fullheight billingPackageDetailsRush">
+      <h3 class="billingPackageHeader">Rush Delivery</h3>
+      <div class="billingPackageHeader row">
+        <span class="column small-2 text-left">Rate</span>
+        <span class="column small-5 text-right">Total Price</span>
+        <span class="column small-5 text-left">Delivery</span>
+      </div>
+      {% for billing_package in page.billing_packages %}
+      <div class="billingPackageDetails row"
+        data-billing-package-name="{{billing_package.name}}" 
+        data-billing-package-hours="{{billing_package.hours}}">
+        <span class="column small-2"> <i data-print-rushrate></i> </span>
+        <span class="column small-5 text-right"> <i data-print-rushfee></i> </span>
+        <span class="column small-5"> <i data-print-rushdelivery></i> </span>
+      </div>
+      {% endfor %}
+    </div>
+    -->
+    {% endcomment %}
+
+

@@ -17,7 +17,7 @@ sass:
 gems:
   - jekyll-redirect-from
 
-layouts: ./_layouts
+# layouts: ./_layouts
 layouts_dir: ./_layouts
 
 # available_libraries 

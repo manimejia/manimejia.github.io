@@ -1917,7 +1917,7 @@ main > .row > section {
 }
 
 
-section.overlay{
+.overlay{
 	color: $white;
   background-color: rgba($tuatara, .9);
  p{
@@ -1926,7 +1926,7 @@ section.overlay{
 }
 // colored overlays
 @each $colorKey in map-keys($colors) {
-	section.overlay.#{$colorKey}{
+	.overlay.#{$colorKey}{
 	  background-color: rgba(get-color($colorKey,darker), .9);
 		p{
 	  	text-shadow: 0 0 2px get-color($colorKey,darkest), 0 0 5px get-color($colorKey,darkest);
@@ -1936,6 +1936,22 @@ section.overlay{
 	  	// -webkit-box-shadow: inset 0 0 .5em .5em rgba(get-color($colorKey,darker), .9);
 		}
 	}
+}
+.fullheight{
+	height:100%;
+}
+.text-left{
+	text-align: left;
+}
+.text-center{
+	text-align: center;
+}
+.text-right{
+	text-align: right;
+}
+.center{
+	display:block;
+	text-align: center;
 }
 /*
 section.overlay.alert{
