@@ -1,6 +1,6 @@
 ---
 client: OSU
-title: Graduate Education Toolkit
+title: OSU Graduate Education Toolkit
 summary: A web based graduate admissions and matriculation management system.
 startdate: 2014-02-01
 enddate: 2014-09-21
@@ -9,6 +9,7 @@ role: Front End Developer & Architect
 publish:
  print: true
  main: true 
+ featured: true
 
 tags:
 - Higher Education

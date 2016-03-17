@@ -1,0 +1,18 @@
+---
+layout: default
+title: Web Projects Portfolio
+hide:
+  title: true
+permalink: portfolio
+---
+<section class="row">
+<div class="column large-3 medium-4 small-centered">
+<br/>
+{% include vcard.html person=site.data.people.manimejia compact=true%}
+</div>
+</section>
+
+<section id="portfolio" class="column" role="region" aria-labelledby="portfolio-heading">
+<h2 id="portfolio-heading" class="text-center">{{page.title}}</h2>
+{% include listing-grid-inline.html category="project" %}
+</section> <!-- #portfolio-grid -->

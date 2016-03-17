@@ -53,8 +53,8 @@ tasks:
 
 ---
 
-![animated icon used to represent a panorama on the map](/projects/BFAS/assets/BFAS-vtour-PairTurnSmall.gif){: .left} 
-In 2002 I landed one of my first paid gigs as a multimedia developer. Using Flash 4, I built a [virtual tour][BFVT] for [Best Friends][BFAS], the nation’s largest no-kill animal sanctuary. It was modeled after the [Sydney Opera House virtual tour][SOVT], developed in 2001 by [Tony Cray][TDC]. This use of interactive "QTVR" panoramas to represent the physical world was pretty cutting edge and relatively unheard of in that first decade of web 1.0.
+![animated icon used to represent a panorama on the map](/projects/BFAS/assets/BFAS-vtour-PairTurnSmall.gif){: .left.thumbnail } 
+In 2001 I landed one of my first paid gigs as a multimedia developer. Using Flash 5, I built a [virtual tour][BFVT] for [Best Friends][BFAS], the nation’s largest no-kill animal sanctuary. It was modeled after the [Sydney Opera House virtual tour][SOVT], developed in 2001 by [Tony Cray][TDC]. This use of interactive "QTVR" panoramas to represent the physical world was pretty cutting edge and relatively unheard of in that first decade of web 1.0.
 
 For Best Friends to even consider the job I had to present this novel concept to the board of directors, showing them what a virtual tour was and how it could benefit their online visitors. Although this project was somewhat less ‘polished’ than the Sydney Opera House’s six figure version, I managed to get a number of similar features (and hundreds of media assets) crammed into that little 750 pixel stage.
 

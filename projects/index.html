@@ -1,12 +1,10 @@
 ---
 layout: default
-title: Projects
+title: Portfolio
 category: 
 ---
 
-{% assign timeline_pages = site.pages %}
-{% assign timeline_category = 'project' %}
-{% assign timeline_tag = '' %}
-
-{% include timeline.html %}
-
+<section id="portfolio" class="column overlay" role="region" aria-labelledby="portfolio-heading">
+<h2 id="portfolio-heading" class="text-center">Web Projects Portfolio</h2>
+{% include listing-grid-inline.html category="project" %}
+</section> <!-- #portfolio-grid -->

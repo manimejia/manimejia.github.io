@@ -8,7 +8,6 @@ role: Designer / Developer
 status: archived
 publish: 
  print: false
- featured: true
 tags:
 - Flash
 - Animation

@@ -1,29 +1,158 @@
-label: "Sr. Web Developer & Experience Architect"
+label: "Creative Web Architect"
 summary: "
-  As an autodidactic creative professional, 
-  my unique superpowers are curiosity and optimism. 
-  Without such, I would be little more than a skilled monkey." 
+  Integrating technical, design, and communication
+  challenges into comprehensive web project solutions.
+  "
 
 list: 
-- label: Web Developer
-  icon: html5
+- label: Bridge Builder
+  icon: share
+  color: warning
+  unsplash: 4i__Q9jTe74
   summary: "
-    As an experience focused Web Developer, I contribute 
-    to both the client and server side code using a variety 
-    of languages, frameworks, libraries, and tools. 
-    With intelligent, standards compliant, object oriented, 
-    and modular contributions, I work collaboratively in 
-    multidisciplinary teams toward the creation of modern 
-    web solutions for a wide range of clients."
+    listening to and connecting stakeholder perspectives 
+    to maximize available resources in any context
+    "
+  accomplishments:
+    - project_id: INFR/UA-Portfolio
+      description: "
+      I maintained clear communication 
+      with the designers, developers, clients, and investors, 
+      providing each project with efficient use of precious 
+      meeting time and continuous progress toward its commonly 
+      understood goals.
+      "
+    - project_id: OSU/Graduate-School-Website
+      description: "
+      I met individually with every stakeholder 
+      during the website redesign planning, to collect and integrate 
+      their requirements into a single project definition. 
+      This facilitated the design of a new website that met everyone’s 
+      evolving needs while remaining simply engineered and easy to administrate.
+      "
 
-- label: Experience Architect
-  icon: layout
+- label: Pattern Finder
+  icon: graph-bar
+  color: info
+  unsplash: NkEH30uoe8o
   summary: "
-    As a technically minded Experience Architect, 
-    my primary expertise is in the R&D of tools that effect 
-    clear communication in any medium. From comprehensive 
-    user stories, to optimized layout and navigational tools; 
-    from deeply accessible content, to search engine friendly 
-    content; I focus on smoothing the delicate interfaces that 
-    define modern interactive web applications."
-
+    revealing and exploiting the hidden order 
+    in unknown, unmanaged or unexplored systems
+    "
+  accomplishments:
+    - project_id: OSU/Graduate-School-Website
+      description: "
+      I unearthed a deeply nested and recurrent pattern 
+      of content reiteration in their legacy website, where critical 
+      information was being communicated multiple times in slightly 
+      different ways. It’s resolution contributed to the new website 
+      design having 60% fewer destination pages to cover the same content, 
+      saving hundreds of maintenance hours in its lifespan. 
+      "
+    - project_id: EC/CareNet-Elder-Care-Portal
+      description: "
+      I reverse engineered the recursively 
+      dependant wet spaghetti code base to discover its core processes 
+      and functionality, incorporated these findings into an updated 
+      application architecture, and saved thousands of dollars in what 
+      would have been a “from scratch” code rewrite without the guidance 
+      of the legacy development team. 
+      "
+- label: People Watcher
+  icon: results-demographics
+  color: warning
+  unsplash: 2TlAsvhqiL0
+  summary: "
+    understanding the human element by observing our reactions to 
+    and interactions with the built environment
+    "
+  accomplishments:
+    - project_id: OSU/Graduate-School-Website
+      description: "
+      We iterated through multiple website user interface 
+      designs and observed the interactions of actual users with each version. 
+      This provided real world data, to rapidly narrow the field of potential 
+      UX solutions. 
+      "
+    - project_id: EC/CareNet-Elder-Care-Portal
+      description: "
+      I visited many Elite Care campus homes to observe the residents and staff 
+      in situ, while designing a new front end UX for their care reporting and 
+      monitoring system. This provided insightful contextual information that 
+      would otherwise have been unavailable to the remote development team.
+      "
+- label: Code Explorer
+  icon: wrench
+  color: alert
+  unsplash: xNdPWGJ6UCQ
+  summary: "
+    recursively navigating the coded world with agility and commitment, 
+    making use of what works and commenting out the rest 
+    "
+  accomplishments:
+    - project_id: INFR/UA-Portfolio
+      description: "
+      I dove head on into javascript development using AngularJS. 
+      It was my first of many adventures with this thick-client framework, 
+      yet so far from a beginner’s lesson. With deep understanding of the application’s 
+      growing UI requirements, I was able to re-architect the entire front end to deliver 
+      a more polished and scalable solution in less time than other estimates. 
+      "
+    - project_id: OSU/Graduate-Education-Toolkit
+      description: "
+      I fearlessly integrated the responsive Bootstrap framework and 
+      related libraries into their new student application and matriculation toolset 
+      being built on the SalesForce cloud platform. The resulting Bootstrap based 
+      Visualforce components that came from this integration will be usable for many 
+      projects in the future.
+      "
+- label: Trail Blazer 
+  icon: eye
+  color: success
+  unsplash: o-xzF35Qskc
+  summary: "
+    cutting new paths with visionary confidence and practical
+    respect for the legacy paradigms
+    "
+  accomplishments:
+    - project_id: MM/uix-javascript-controller-library
+      description: "
+      I concieved and developed a novel approach to building 
+      accessible user interface widgets in HTML5. By using WAI-ARIA standard attributes to 
+      identify these elements and their intended interactions, I was able to provide 
+      “out of the box” semantic and keyboard navigable UI widgets, shaving hours of 
+      redundant work for “accessibility compliant” front end developers.
+      "
+    - project_id: BFAS/Best-Friends-Virtual-Tour
+      description: "
+      I conceived, designed, and implemented a unique multimedia online tour of 
+      the Best Friends physical campus. With the RIA capabilities of the new (as of 2001) 
+      Flash 5 and a head full of spinning panoramas, we redefined the landscape of interactive 
+      web presentations, putting BFAS on the map with a dynamic internet presence.
+      "
+- label: Solution Finder 
+  icon: checkbox
+  color: alert
+  unsplash: 3f4sQIums6k
+  summary: "
+    putting it all together, while listening to stakeholders, looking for patterns, 
+    designing for users, contributing to code, and sparking new ideas
+    "
+  accomplishments:
+    - project_id: SHUK/InfoShuk-Business-Analytics-App
+      description: "
+      I led multiple brainstorm sessions to fine tune the direction 
+      and priorities for each week’s development work. This iterative design process led 
+      to rapid and evolving prototypes being put in front of potential clients at a regular 
+      pace. While each version was more complex than the last, we were able to incorporate 
+      every change into a growing and scalable architecture for future application development.
+      "
+    - project_id: OSU/Graduate-School-Website
+      description: "
+      I designed a wholly new navigational experience for students and faculty 
+      to quickly find pertinent information about the Graduate Programs and Graduate Funding 
+      Opportunities available at the university. With the realization that this content 
+      represents 80% of their daily website traffic, I set out to improve this valuable user 
+      experience. What used to take an average of 10 clicks and 8 minutes to obtain the 
+      information needed, now requires a much improved average of 4 clicks and 2 minutes.
+      "

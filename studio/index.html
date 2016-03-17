@@ -6,17 +6,17 @@ billing_base_delivery : 2
 billing_ratescales :
   - 
     name : "Introductory Rates"
-    description : "For first time clients, I offer a 75% discount on the first three months purchased."
+    description : "I offer a 25% discount on the first hourly package purchaced of up to 480 hours."
     colorcode: success
     ratemod : .75
     maxhours : 480
   - 
     name : "Standard Rates"
-    description : "This is the rate scale used for most projects. "
+    description : "This is the rate scale used to determine the price for most hourly packages."
     colorcode: primary
   - 
     name : "Rush Rates"
-    description : "I offer direct turnaround for time sensetive projects more than 40 hours."
+    description : "I offer priority delivery for 125% upcharge on hourly packages of 40 hours or more."
     colorcode: alert
     ratemod : 1.25
     delivery : 1
@@ -179,7 +179,9 @@ The <em>Manuel Mejia Web Studio</em> is a creative web development shop offering
 <section class="billingPackages column small-12">
 <h2>Hourly Packages and Rates</h2>
 
-<p>Web Studio projects are billed by the <em>working hour</em>. Working hours are pre purchased in bulk <em>packages</em> based on a <em>range estimate</em> developed for each project. Hourly rates for each package are determined by a standard formula based on the number of hours being purchased and which (if any) rate adjustments should be applied.</p>
+<p>Web Studio projects are billed by the <em>working hour</em>. Working hours are pre purchased in bulk <em>packages</em> based on a <em>range estimate</em> developed for each project. Hourly rates for any package are determined by a standard formula, <kbd>round(log10(<b>H</b>)*(<b>R</b>/10))</kbd>. Where <kbd>H</kbd> represents the number of hours being purchased and <kbd>R</kbd> represents the rate for a single hour of the standard, introductory, or rush package being purchased.
+
+</p>
 
 <div class="billingPackageHeader row">
 <div class="column small-10  small-offset-2 ">
@@ -206,15 +208,16 @@ The <em>Manuel Mejia Web Studio</em> is a creative web development shop offering
 
 <div class="row">
   <div class="column small-2">
+    Example<br/>
     Packages
   </div>
 <div class="column small-10"><div class="row">
 {% for billing_ratescale in page.billing_ratescales %}
   <div class="column small-{{12 | divided_by : page.billing_ratescales.size | round}} overlay {{billing_ratescale.colorcode}}">
     <div class="row">
-      <span class="column small-3">Rate</span>
-      <span class="column small-4 text-right">Price</span>
-      <span class="column small-5 text-right">Delivery</span>
+      <span class="column small-3"><br/>Rate</span>
+      <span class="column small-4 text-right"><br/>Price</span>
+      <span class="column small-5 text-right"><br/>Delivery</span>
     </div>
   </div>
 {% endfor %}

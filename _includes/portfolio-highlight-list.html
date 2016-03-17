@@ -1,0 +1,33 @@
+{% assign these_pages = site.pages | where: "category" , "project" | sort: "date" | sort: "enddate" | sort: "startdate" %}
+
+
+<ul class="{% if include.compact %}medium-block-grid-2{%else%}unstyled-list{% endif %}">
+
+{% for this_page in these_pages reversed %}
+
+{% if this_page.publish.featured == true %}
+{% include _this_page.liquid %}
+
+
+<li aria-labelledby="{{this_page_id}}-title" 
+class="{%if include.compact %}{%else%}column avoid-breaking-page{%endif%}">
+    {%if include.compact %}
+      <hr/>
+    {%endif%}
+
+{% include portfolio-highlight.html this_page=this_page compact=include.compact asmodal=include.asmodal %}
+
+
+{% unless include.compact == true %}
+<hr/>
+{% endunless %}
+
+</li>
+
+
+{% endif %}
+
+{% endfor %}
+
+</ul>
+

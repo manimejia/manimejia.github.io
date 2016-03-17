@@ -1,20 +1,53 @@
-
-<div class="row">
-	{% if site.data.services.label %}
-  <h2 id="services-heading" class="text-center">{{site.data.services.label}}</h2>
-	{%endif%}
-	{% if site.data.services.summary %}
-	 	<div class="column medium-8 medium-offset-2 {%if include.color %}{{include.color}}-text {%endif%}font-large">
-	    {{ site.data.services.summary | markdownify }}
-		</div>
-	{%endif%}
+{% assign project_ids = "" %}
 {% for service in site.data.services.list %}
-    <div class="column medium-6">        
-        <h3 class="text-center">
-        <i class="fi-{{service.icon}} icon highlight"></i>
-        <br class="hide-for-print"/>
-        {{service.label}}</h3>
-        {{service.summary | markdownify }}
+    <div
+    class="service row"
+    tabindex="0"
+    style="{% if service.unsplash %} 
+    background:url({{site.sources.unsplash}}/{{service.unsplash}}/1280x960) 50% 50%;
+    background-size:cover;
+    height:100%;
+    {% endif %}"> 
+      <div class="service-content-wrapper text-shadow-deep">
+        <div class="service-icon-box">
+          <i class="fi-{{service.icon}} icon {%if service.color %}{{service.color}}-text{%endif%}"></i>
+        </div>       
+        <header class="service-heading text-center row">
+        <h3 class="font-xlarger">
+          {{service.label}}
+        </h3>
+        <p class="font-larger font-bold {%if service.color %}{{service.color}}-text{%endif%} column medium-8 medium-offset-2">
+            {{service.summary}}
+        </p>
+        </header>
+
+
+        <ul class="service-description medium-block-grid-{{service.accomplishments.size}}">
+        {% for accomplishment in service.accomplishments %}
+        <li class="text-center">
+        {% assign project_ids = project_ids | append : "," | append : accomplishment.project_id %}
+        {% include _object-this_project_page-project.liquid project_id=accomplishment.project_id %}
+        {% include _string-this_page_id.liquid this_page=this_project_page %}
+        <a href="#" data-reveal-id="{{this_page_id}}-modal">{{this_project_page.title}}</a>
+        {{accomplishment.description | markdownify}}
+        </li>
+        {% endfor %}
+        </ul>
+
+      </div>
+    
+    
     </div>
 {% endfor %}	
+{% comment %}
+<div>
+<p>{{project_ids}}</p>
+{% include _string-string_of_strings.liquid string_of_strings=project_ids %}
+<p>{{string_of_strings}}</p>
+{% for this_project_id in string_of_strings | split:"," %}
+{% include _object-this_project_page-project.liquid project_id=this_project_id %}
+{% include _this_page.liquid this_page=this_project_page %}
+{% include portfolio-highlight.html compact=true asmodal=true %}
+{% endfor %}
 </div>
+{% endcomment %}

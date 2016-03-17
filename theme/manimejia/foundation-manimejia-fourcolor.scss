@@ -112,38 +112,7 @@ v0.2 - darker dark yellow and lighter light yellow
 http://paletton.com/#uid=c3J192+0t1kWhVocCX2mwXgV0zbSgiAk++LJafZZiLZyYDgKYq7MkxYyRczNxknFlwokHGqbakR5u7g7QmpRPeOxl7Tb96
 *******************************************/
 
-$colors: (
-	primary: info,
-	secondary: warning,
-	info:( /* blue */
-			base:           #0453F0,
-			lightest:       #9EBBF4,
-			lighter:        #5A8EF5,
-			darker:         #033EB2,
-			darkest:        #032363,
-		),                        
-	warning:( /* yellow */       
-			base:           #FFBC00,
-			lightest:       #FFEAAD,
-			lighter:        #FFD86A,
-			darker:         #856300,
-			darkest:        #3E2E00,
-		),                        
-	alert:( /* orange */         
-			base:           #F06B00,
-			lightest:       #FFB87F,
-			lighter:        #FF8C31,
-			darker:         #A84B00,
-			darkest:        #482000,
-		),                        
-	success:( /* green */        
-			base:           #00BB57,
-			lightest:       #88E0B1,
-			lighter:        #4ACC87,
-			darker:         #007536,
-			darkest:        #003F1D,
-		),
-	);
+
 
 @function get-color($color: primary, $tone: base) {
 	$color: if(index(secondary info warning alert success, $color),$color, primary);
@@ -187,13 +156,6 @@ $colors: (
 }
 
 
-$primary-color: 	get-color(primary);
-$secondary-color: 	get-color(secodary);
-$info-color: 			get-color(info, base);
-$warning-color: 	get-color(warning, base);
-$alert-color: 		get-color(alert, base);
-$success-color: 	get-color(success, base);
-
 $white       : #FFFFFF;
 $ghost       : #FAFAFA;
 $snow        : #F9F9F9;
@@ -209,10 +171,62 @@ $jumbo       : #888888;
 $monsoon     : #777777;
 $steel       : #666666;
 $charcoal    : #555555;
-$tuatara     : #444444;
+$tuatara     : #434343;
 $oil         : #333333;
 $jet         : #222222;
 $black       : #000000;
+
+$colors: (
+	primary: ( /* dark */
+			base:           $steel,
+			lightest:       $base,
+			lighter:        $jumbo,
+			darker:         $tuatara,
+			darkest:        $jet,
+		),
+	secondary: ( /* light */
+			base:           $silver,
+			lightest:       $white,
+			lighter:        $snow,
+			darker:         $gainsboro,
+			darkest:        $iron,
+		),
+	info:( /* blue */
+			base:           #0453F0,
+			lightest:       #9EBBF4,
+			lighter:        #5A8EF5,
+			darker:         #033EB2,
+			darkest:        #032363,
+		),                        
+	warning:( /* yellow */       
+			base:           #FFBC00,
+			lightest:       #FFEAAD,
+			lighter:        #FFD86A,
+			darker:         #856300,
+			darkest:        #3E2E00,
+		),                        
+	alert:( /* orange */         
+			base:           #F06B00,
+			lightest:       #FFB87F,
+			lighter:        #FF8C31,
+			darker:         #A84B00,
+			darkest:        #482000,
+		),                        
+	success:( /* green */        
+			base:           #00BB57,
+			lightest:       #88E0B1,
+			lighter:        #4ACC87,
+			darker:         #007536,
+			darkest:        #003F1D,
+		),
+	);
+
+$primary-color: 	get-color(primary);
+$secondary-color: 	get-color(secodary);
+$info-color: 			get-color(info, base);
+$warning-color: 	get-color(warning, base);
+$alert-color: 		get-color(alert, base);
+$success-color: 	get-color(success, base);
 
 
 // We use these to control various global styles
@@ -515,10 +529,10 @@ $alert-font-tone: darkest;
 // $include-html-button-classes: $include-html-classes;
 
 // We use these to build padding for buttons.
-// $button-tny: rem-calc(10);
-// $button-sml: rem-calc(14);
-// $button-med: rem-calc(16);
-// $button-lrg: rem-calc(18);
+$button-tny: rem-calc(2);
+$button-sml: rem-calc(4);
+$button-med: rem-calc(6);
+$button-lrg: rem-calc(8);
 
 // We use this to control the display property.
 // $button-display: inline-block;
@@ -1180,7 +1194,7 @@ $price-title-bg: $jumbo;
 // 25. Reveal
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-reveal-classes: $include-html-classes;
+$include-html-reveal-classes: $include-html-classes;
 
 // We use these to control the style of the reveal overlay.
 // $reveal-overlay-bg: rgba($black, .45);
@@ -1573,7 +1587,7 @@ $tabs-navigation-font-color: $white;
    "foundation/components/panels",
 //   "foundation/components/pricing-tables",
    "foundation/components/progress-bars",
-//   "foundation/components/reveal",
+   "foundation/components/reveal",
 //   "foundation/components/side-nav",
    "foundation/components/split-buttons",
    "foundation/components/sub-nav",
@@ -1689,13 +1703,16 @@ $alert-font-tone: false !default; // will set the font color to a tonal variant 
 
 // colored text
 @each $colorKey in map-keys($colors) {
-  .#{$colorKey}-text { 
+  .#{$colorKey}-text,
+  .#{$colorKey}-text-first-child >*:first-child{ 
 		color: get-color($colorKey,base);
 	}
-  .#{$colorKey}-text-light { 
+  .#{$colorKey}-text-light,
+  .#{$colorKey}-text-light-first-child >*:first-child { 
 		color: get-color($colorKey,lightest);
 	}
-  .#{$colorKey}-text-dark { 
+  .#{$colorKey}-text-dark,
+  .#{$colorKey}-text-dark-first-child >*:first-child { 
 		color: get-color($colorKey,darkest);
 	}
 	
@@ -1806,7 +1823,7 @@ a:hover, a:focus {
 .focusable{
   @include block-glowing-effect(':focus, &:hover', $glowing-effect-fade-time, $glowing-effect-color);
 	//' single quote here because sublime and textmate both mess up syntax coloring on the quoted selector in previous line
-	border-radius: 10px;
+	/*border-radius: 10px;*/
 }
 .focusable:focus{
 }
@@ -1831,9 +1848,31 @@ a:hover, a:focus {
 .font-xxlarger{
 	font-size: 3rem !important;
 }
+.font-bold{
+	font-weight: bold;
+}
+.font-italic{
+	font-style: italic;
+}
 
+.text-shadow{
+	text-shadow: #222 0px 0px .1em;
+}
+.text-shadow-deep{
+	text-shadow: #000 0px 0px .3em;
+}
 .icon{
   font-size: 5rem;
+  line-height: 1.2em;
+}
+img.icon{
+  height: 5rem;
+  width:5rem;
+  border-radius: 50%;
+}
+img.icon.icon-large{
+  height: 8rem;
+  width:8rem;
 }
 
 .tagcloud {
@@ -1858,6 +1897,7 @@ a.close{
   color: $alert-color;
   text-shadow: #222 0px 0px .1em;
 }
+
 
 .inline-block{
 	display:inline-block;
@@ -1904,30 +1944,28 @@ height: .5rem;
 	max-width: 100% !important;
 	top:0 !important;
 }
-
+.close-reveal-modal{
+	text-decoration: none;
+	border:none;
+}
 body.f-topbar-fixed .clearing-blackout {
 padding-top: 45px;
 }
 
 /** section overlays **/
-main > section,
-main > .row > section {
- padding-top: 2rem;
- padding-bottom: 2rem;
+section > h2:first-child{
+ margin-top: 2rem;
 }
 
 
-.overlay{
-	color: $white;
-  background-color: rgba($tuatara, .9);
- p{
-  	text-shadow: 0 0 2px $body-bg, 0 0 5px $body-bg,0 0 8px $body-bg;
-	}
-}
-// colored overlays
+/* colored backgrounds and overlays*/
 @each $colorKey in map-keys($colors) {
-	.overlay.#{$colorKey}{
-	  background-color: rgba(get-color($colorKey,darker), .9);
+	.bg-#{$colorKey}{
+		color: $white;
+	  background-color: get-color($colorKey,darker);
+	  &.overlay{
+	  	background-color: rgba(get-color($colorKey,darker), .9);
+	  }
 		p{
 	  	text-shadow: 0 0 2px get-color($colorKey,darkest), 0 0 5px get-color($colorKey,darkest);
       // background-color: rgba(get-color($colorKey,darkest), .9);
@@ -1936,7 +1974,11 @@ main > .row > section {
 	  	// -webkit-box-shadow: inset 0 0 .5em .5em rgba(get-color($colorKey,darker), .9);
 		}
 	}
+	.border-#{$colorKey}{
+	  border-color: get-color($colorKey,darker);
+	}
 }
+
 .fullheight{
 	height:100%;
 }
@@ -1952,6 +1994,21 @@ main > .row > section {
 .center{
 	display:block;
 	text-align: center;
+}
+.vertical-top{
+  position: relative;
+  top: 0;
+  transform: translateY(-50%);
+}
+.vertical-middle{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.vertical-bottom{
+  position: relative;
+  bottom: 0;
+  transform: translateY(-50%);
 }
 /*
 section.overlay.alert{
@@ -2200,4 +2257,152 @@ padding: 1em;
 	}
 }
 
+/****************
+ Service Blocks
+ http://zurb.com/building-blocks/hover-animated-service-block
+******************/
+.service {
+	width: 100%;
+	height: 320px;
+	/*margin: 80px 0;*/
+	text-align: center;
+	border: 1px solid #222;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	cursor:pointer;
 
+	.service-content-wrapper {
+    background-color: rgba(0,0,0, 0.3);
+    transition: all 0.4s ease-in-out;
+  }
+
+  
+  .service-icon-box {
+    position: relative;
+    top: 100px;
+    display: inline-block;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+    /*background: white;*/
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  
+  .service-heading {
+    position: relative;
+    top: 80px;
+    -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .service-description {
+    width: 80%;
+    margin: 0 auto;
+    opacity: 0;
+    -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+  
+  .service-icon-box > img.service-icon {
+	  width: 40px;
+  }
+
+  &:hover,
+  &:focus {
+	  border-color: #ddd;
+  }
+
+  &:hover .service-content-wrapper,
+  &:focus .service-content-wrapper {
+    background-color: rgba(0,0,0, 0.6);
+  }
+
+  
+  &:hover .service-icon-box,
+  &:focus .service-icon-box {
+	  top: -30px;
+  }
+  
+  &:hover .service-heading,
+  &:focus .service-heading {
+	  top: -30px;
+  }
+  
+  &:hover .service-description,
+  &:focus .service-description {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+/** vcard modifications 
+ * @see /theme/foundation/scss/foundation/components/type.scss
+ **/
+.vcard {
+	border:none;
+	display:block;
+	text-align: center;
+	a{
+		border:none;
+	}
+	figure{
+		margin:0;
+	}
+	.vcard-picture{
+    width: 8rem;
+    margin: 1rem auto;
+    border-radius: 50%;
+    /*box-shadow: 2px 2px 5px #888888;*/
+	}
+}
+.vcard.vcard-compact{
+	position:relative;
+	padding:0;
+	margin-bottom: 3em;
+	border-radius: 50%;
+	background-color: black;
+
+	.vcard-picture{
+		margin: 0;
+	}
+	.vcard-name,
+	.vcard-message{
+		position:absolute;
+		width:100%;
+		text-align: center;
+		margin-top:.5em;
+	}
+	.vcard-info{
+		position:absolute;
+		margin:0;
+		width:100%;
+    padding: .5em 1.5em;
+		color:white;
+		top:25%;
+    opacity: 0;
+    -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+	}
+	&:hover .vcard-picture,
+	&:focus .vcard-picture,
+	&.child-has-focus .vcard-picture{
+		opacity:.5;
+	}
+  &:hover .vcard-info,
+  &:focus .vcard-info,
+  &.child-has-focus .vcard-info{
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}

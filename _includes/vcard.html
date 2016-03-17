@@ -1,35 +1,67 @@
 {% if include.person %}
 {% assign vcard_id = include.person.uid |  default: "person" | append: "-vcard" %}
-<div role="contentinfo" class="vcard" aria-labelledby="{{ vcard_id }}-name">
-	<div class="row">
-  <div class="hide-for-print column small-4 medium-12" aria-hidden="true" >
-		<img src="/assets/manimejia-mexico-sunset-selfie.jpg" style="width:100%" alt="{{ include.person.name }}"/>
-	</div>
-   <ul class="column small-8 medium-12" role="presentation">
-     <li class="fn" class="hide-for-print" role="presentation">
-				<strong id="{{ vcard_id }}-name">{{ include.person.name }}</strong></li>
-     <li class="website" role="presentation">
-				<b class="hidden-for-small-only hidden-for-medium-up">Website: </b>
-				<i class="fi-web"></i>&nbsp;
-				<a href="http://{{ include.person.website }}">{{ include.person.website }}</a></li>
-     <li class="email" role="presentation">
-				<b class="hidden-for-small-only hidden-for-medium-up">Email: </b>
-				<i class="fi-mail"></i>&nbsp;
-				{{ include.person.email }}</li>
-     <li class="phone" role="presentation">
-				<b class="hidden-for-small-only hidden-for-medium-up">Phone: </b>
-				<i class="fi-telephone"></i>&nbsp;
-				{{ include.person.phone }}</li>
-     <li class="locality" role="presentation">
-				<b class="hidden-for-small-only hidden-for-medium-up">Location: </b>
-				<i class="fi-marker"></i>&nbsp;
-				{{ include.person.locality }}, 
-         <span class="state">{{ include.person.state }}</span>
-     </li>
-     {%if include.message %}
-		 <li><b>{{ include.message }}</b></li>
-		 {%endif%}
-   </ul>
-</div>
+<div role="contentinfo" class="vcard {%if include.compact %}vcard-compact{%endif%}" 
+{%if include.compact %}tabindex="0"{%endif%} aria-labelledby="{{ vcard_id }}-name">
+  {% unless include.nopicture %}
+  <figure>
+  <img class="vcard-picture hide-for-print" aria-hidden="true"
+  src="/assets/manimejia-gravatar.jpeg" style="width:100%" alt="{{ include.person.name }}"/>
+  {% unless include.noname %}
+  <figcaption class="vcard-name subtitle text-center" id="{{ vcard_id }}-name">
+    {{ include.person.name }}
+  </figcaption>
+  {% endunless %}
+  </figure>
+  {% endunless %}
+
+  {%if include.nopicture %}
+  {% unless include.noname %}
+  <p class="vcard-name subtitle text-center font-larger" id="{{ vcard_id }}-name">
+    {{ include.person.name }}
+  </p>
+  {% endunless %}
+  {%endif%}
+
+  {%if include.message %}
+  <p class="vcard-message">{{ include.message | markdownify}}</p>
+  {%endif%}
+
+  <ul class="vcard-info font-large" role="presentation">
+    {% for sociallink in include.person.social %}
+    <li class="vcard-social-{{sociallink.icon}}" role="presentation">
+      <b class="hidden-for-small-only hidden-for-medium-up">{{sociallink.icon | capitalize}}: </b>
+      <a href="{{{{sociallink.url}}" title="{{sociallink.icon}}" target="_blank">
+      <i class="fi-social-{{sociallink.icon}}"></i>&nbsp;
+      <small>{{sociallink.url | remove:"http://"}}</small>
+      </a>
+    </li>
+    {%endfor%}
+    <li class="vcard-website hide-for-screen" role="presentation">
+			<b class="hidden-for-small-only hidden-for-medium-up">Website: </b>
+			<a href="http://{{ include.person.website }}">
+      <i class="fi-web"></i>&nbsp;
+      <small>{{ include.person.website }}</small>
+      </a>
+    </li>
+    <li class="vcard-email" role="presentation">
+			<b class="hidden-for-small-only hidden-for-medium-up">Email: </b>
+      <a href="mailto:{{include.person.email}}">
+			<i class="fi-mail"></i>&nbsp;
+			<small>{{ include.person.email }}</small>
+      </a>
+    </li>
+    <li class="vcard-phone" role="presentation">
+			<b class="hidden-for-small-only hidden-for-medium-up">Phone: </b>
+			<i class="fi-telephone"></i>&nbsp;
+			<small>{{ include.person.phone }}</small>
+      </li>
+    <li class="vcard-locality" role="presentation">
+			<b class="hidden-for-small-only hidden-for-medium-up">Location: </b>
+			<i class="fi-marker"></i>&nbsp;
+      <small> {{ include.person.locality }}, 
+      <span class="state">{{ include.person.state }}</span>
+      </small>
+    </li>
+  </ul>
 </div>
 {% endif %}

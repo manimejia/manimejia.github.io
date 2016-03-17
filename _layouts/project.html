@@ -37,9 +37,9 @@
   <aside class="column small-12" role="contentinfo">
     <div class="row>">
   	{% if page.summary %}
-	  <p class="column small-12 medium-8 warning-text">
-    {{ page.summary }}
-    </p>
+	  <div class="column small-12 medium-8 warning-text">
+    {{ page.summary | markdownify }}
+    </div>
   	{%endif%}    
     <h4 class="hidden-for-small-only hidden-for-medium-up">Project Meta</h4>
       <ul class="no-bullet text-right" role="presentation">

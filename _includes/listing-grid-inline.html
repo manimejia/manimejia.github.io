@@ -60,18 +60,20 @@ border: solid .25rem #FFF;
   box-shadow: 0 0 .5rem .25rem #fff;
 }
 
-.accordion-grid[role="tablist"] > * > a[role="tab"][aria-expanded="true"]:after{
+.accordion-grid[role="tablist"] > * > a[role="tab"][aria-expanded="true"] > .caret{
 top: 100%;
-border: solid rgba(0, 0, 0, 0);
 content: " ";
 height: 0;
 width: 0;
 position: absolute;
 pointer-events: none;
-border-bottom-color: #222;
+border-style: solid;
+border-top-color: transparent;
+border-left-color: transparent;
+border-right-color: transparent;
 border-width: 1.5rem;
 left: 50%;
-margin: -1.3rem 0 0 -1.5rem;
+margin: -1.2rem 0 0 -1.5rem;
 z-index: 5;
 }
 
@@ -181,7 +183,7 @@ display: block;
   z-index: 10;
   text-align:left;
   font-size:.8rem;
-  background: #222;
+  /*background: #222;*/
   /*display:block;*/
   /*height:auto;*/
   /*height:0px;*/
@@ -266,7 +268,7 @@ data-aria-tab-group="accordion-grid"
 
     <li id="{{ this_page_id }}-wrapper" class="accordion-grid-item">
     {% if item_year != last_item_year %}
-      <h3 class="year inline-block" role="heading"><time class="label secondary point-right">{{ item_year }}</time></h3>
+      <h3 class="year inline-block primary-text" role="heading"><time class="label warning point-right">{{ item_year }}</time></h3>
     {% endif %}
       <a id="{{ this_page_id }}-th" href="{{ this_page.url }}" class="th skrollr-perspectivezoom-bottom" role="tab" aria-controls="{{this_page_id}}" data-scroll-offset="128" tile="project {{forloop.index}} of {{forloop.length}}">
         <!--<span class="title th-link">{{ this_page.title }}</span>-->
@@ -276,9 +278,10 @@ data-aria-tab-group="accordion-grid"
         {% if this_page.thumbnail %}
         <img class="th-image" src="{{ this_page_assetpath }}{{ this_page.thumbnail }}" alt="" aria-hidden="true">
         {% endif %}
+        <i class="caret border-primary"></i>
       </a>
 
-      <div id="{{ this_page_id }}" class="content column" role="tabpanel"
+      <div id="{{ this_page_id }}" class="content column bg-primary" role="tabpanel"
         data-load="{{ this_page.url }} #{{ this_page_id }}-article" 
 				data-ajax-url="{{ this_page.url }}" 
 				data-ajax-selector="#{{ this_page_id }}-article" 

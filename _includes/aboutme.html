@@ -1,9 +1,9 @@
 <div class="row text-justify">
-    <div class="column medium-3">
-			{% include vcard.html person=site.data.people.manimejia message="References upon request" %}
-			
+    <div class="column medium-4">
+			{% include vcard.html person=site.data.people.manimejia noname=true %}
+			<p class="text-center">References Upon Request</p>
     </div>
-    <div class="column medium-9">
+    <div class="column medium-8">
       {% if site.data.services.label %}
 		  <h3>{{ site.data.services.label }}</h3>
     	{%endif%}

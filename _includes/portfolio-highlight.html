@@ -1,0 +1,117 @@
+<article 
+{% if include.asmodal %} id="{{this_page_id}}-modal" class="reveal-modal" data-reveal aria-labelledby="firstModalTitle" aria-hidden="true" role="dialog"{%endif%}>
+
+    {%if include.compact %}
+    <figure class="text-center">
+    <img class="icon icon-large" src="{{ this_page_assetpath }}{{ this_page.thumbnail }}" alt="">
+    </figure>
+    {%endif%}
+    <header role="heading">
+        <h3 class="title {%if include.compact %}text-center{%endif%}" id="{{this_page_id}}-title">
+          <span class="page-title">{{ this_page.title }}</span> 
+        </h3>
+        {% if this_page.summary %}
+        <div class="{% if include.color %}{{include.color}}-text{% endif %} font-large">
+        {{ this_page.summary | markdownify }}
+        </div>
+        {% endif %}    
+    </header>
+    {% if this_client_page.title %}
+    <header role="presentation">
+      <label class="hidden-for-small-only hidden-for-medium-up hide-for-print">Client</label>
+      {% if this_client_page.website %}
+      <a class="client-title" href="{{ this_client_page.website }}" target="_blank" title="clienwebsite">{% endif %}
+      <abbr title="Client"><i class="fi-torsos-all-female font-larger"></i></abbr>&nbsp;
+      {{ this_client_page.title }} 
+      {% if this_client_page.website %}
+      </a>{% endif %}
+    </header>
+    {% endif %}    
+    <aside role="contentinfo" class="row">
+      <ul class="no-bullet column medium-6" role="presentation">
+        {% if this_page.role %}
+        <li role="presentation">
+          <label class="hidden-for-small-only hidden-for-medium-up hide-for-print">Role</label> 
+          <abbr title="Role"><i class="fi-sheriff-badge font-larger"></i></abbr>&nbsp;
+          <b>{{ this_page.role }}</b>
+        </li>
+        {% endif %}
+        {% if this_page_date %}
+        <li role="presentation">
+          <label class="hidden-for-small-only hidden-for-medium-up hide-for-print">Date</label> 
+          <abbr title="Date"><i class="fi-clock font-larger"></i></abbr>&nbsp;
+          {% if this_page.date %}
+          <time>{{ this_page.date | date: "%b %Y" }}</time>
+          {% else %}
+          {% if this_page.startdate %}
+          <span class="hidden-for-small-only hidden-for-medium-up"> start :</span> 
+          <time>{{ this_page.startdate | date: "%b %Y" }}</time>
+          {% if this_page.enddate %} - {% endif %}
+          {% endif %}
+          {% if this_page.enddate %}
+          <span class="hidden-for-small-only hidden-for-medium-up"> end :</span> 
+          <time>{{ this_page.enddate | date: "%b %Y" }}</time>
+          {% endif %}
+          {% endif %}
+        </li>
+        {% endif %}
+      </ul>
+      <ul class="no-bullet column medium-6 text-right stack button-group">
+        {% if this_page.website %}
+        <li role="presentation">
+          <label class="hidden-for-small-only hidden-for-medium-up hide-for-print">Link</label> 
+          <a class="button" href="{{this_page.website}}" target="_blank" title="go to {{ this_page.status }} website">
+          <i class="fi-play-circle font-larger"></i>&nbsp;
+          Visit Website
+          </a>
+        </li>
+        {% elsif this_page.status %}
+        <!-- <li role="presentation">
+          <div>
+          <label class="hidden-for-small-only hidden-for-medium-up hide-for-print-only">Status:</label> 
+          <i class="fi-info font-larger"></i>&nbsp;<b>{{ this_page.status }}</b>
+          </div>
+        </li> -->
+        {% endif %}
+        <li role="presentation">
+        <a class="button" href="/portfolio#{{ this_page_id }}" title="project page">
+          <i class="fi-link font-larger"></i>&nbsp;
+          See In Portfolio</a>
+        </li>
+      </ul>
+    </aside>
+    {% unless include.compact %}
+    <div class="row">
+    {% if this_page.tasks %}
+    <section id="{{this_page_id}}-tasks" class="column" aria-hidden="false" ar-labelledby="{{this_page_id}}-tasks-label">
+        <h4 id="{{this_page_id}}-tasks-label" class="hidden-for-small-only hidden-for-medium-up hide-for-print">
+      Responsibilities</h4>
+      <ul class="icon-list alert">
+      {% for task in this_page.tasks %}
+        <li class="fi-check">
+          <!-- <i class="fi-check font-xlarger highlight left full-height" style="line-height:1em">&nbsp;</i> -->
+          {{ task | strip_html | strip | markdownify }}
+        </li>
+      {% endfor %}
+      </ul>
+    </section>
+    {% endif %}
+    {% comment %}
+      <!--<aside id="{{this_page_id}}-tags" role="complementary" class="column medium-3 medium-pull-9" aria-labelledby="{{this_page_id}}-tags-label">
+        {% if this_page.tags %}
+        <h4 id="{{this_page_id}}-tags-label"  class="hidden-for-small-only hidden-for-medium-up hide-for-print">Skills</h4>
+        <ul class="taglist">
+        {% for tag in this_page.tags %}
+          <li class="label radius info">{{ tag }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %} 
+        <a href="/portfolio#{{ this_page_id }}" title="project page" class="button info expand"><i class="fi-link"></i> Read More</a>
+      </aside>-->
+    {% endcomment %}
+    </div>
+    {% endunless %}
+    {% if include.asmodal %}
+    <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+    {%endif%}
+</article>

@@ -17,6 +17,7 @@ sass:
 gems:
   - jekyll-redirect-from
 
+base_url: http://manimejia.me/
 # layouts: ./_layouts
 layouts_dir: ./_layouts
 
@@ -38,7 +39,7 @@ available_libraries:
     js: 
       - /theme/foundation/js/vendor/jquery.js
       - /theme/foundation/js/vendor/modernizr.js
-      - /theme/foundation/js/foundation.js
+      - /theme/foundation/js/foundation.min.js
     css: 
       - /theme/foundation/icons/foundation-icons.css
       - /theme/foundation/css/normalize.css
@@ -79,11 +80,13 @@ available_libraries:
       - "http://fonts.googleapis.com/css?family=Josefin+Sans:300,400|Open+Sans:400italic,600,400" 
       - /theme/manimejia/foundation-manimejia-fourcolor.css
 
+sources: 
+  unsplash: https://source.unsplash.com
 
 defaults:
   - 
     scope: # All Posts
-      type: "post"
+      type: "posts"
       path: ""
     values:
       libraries: 
@@ -91,7 +94,7 @@ defaults:
         - manimejia
   -
     scope: # All Pages
-      type: "page"
+      type: "pages"
       path: ""
     values:
       title: 
@@ -120,7 +123,7 @@ defaults:
         footer: false
   -
     scope: # Project Pages
-      type: "page"
+      type: "pages"
       path: "projects"
     values:
       layout: "project" 
@@ -159,21 +162,25 @@ config:
   topbar:
     toggle: "<span class='hidden-for-small-only hidden-for-medium-up'>Toggle Menu</span>"
     right:
-      - name: Services
+      - name: Skills
         url: "/#services"
+      - name: Experience
+        url: "/#experience"
+      - name: Clients
+        url: "/#clients"
       - name: Portfolio
-        url: "/#portfolio"
-      - name: About Me
-        url: "/#aboutme"
+        url: "/portfolio"
       - name: Resum&eacute;
         url: "/resume.html"
+      - name: Contact
+        url: "/#contact"
         #class: small button
         #hasform: false
-      - name: "<i class='fi-social-linkedin font-larger'></i><span class='hidden-for-small-only hidden-for-medium-up'>LinkedIn</span>"
-        url: "http://linkedin.com/in/manimejia"
-        title: View my LinkedIn Profile
-        target: _blank
-      - name: "<i class='fi-social-github font-larger'></i><span class='hidden-for-small-only hidden-for-medium-up'>Github</span>"
-        url: "http://github.com/manimejia"
-        title: Check out my code on GitHub
-        target: _blank
+      # - name: "<i class='fi-social-linkedin font-larger'></i><span class='hidden-for-small-only hidden-for-medium-up'>LinkedIn</span>"
+      #   url: "http://linkedin.com/in/manimejia"
+      #   title: View my LinkedIn Profile
+      #   target: _blank
+      # - name: "<i class='fi-social-github font-larger'></i><span class='hidden-for-small-only hidden-for-medium-up'>Github</span>"
+      #   url: "http://github.com/manimejia"
+      #   title: Check out my code on GitHub
+      #   target: _blank

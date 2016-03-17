@@ -1,3 +1,4 @@
+{% if include.this_page %}{% assign this_page = include.this_page %}{% endif %}
 {% unless this_page %}{% assign this_page = page %}{% endunless %}
 
 {% assign this_page_filename = this_page.name | replace: ".md", ".html" %}
@@ -17,12 +18,7 @@
   {% assign this_page_date = this_page.enddate %}
 {% endif %}
 
-{% assign this_page_id = "" %}
-{% if this_page.category == 'project' %}
-	{% assign this_page_id = this_page.client | append: "-" %}
-{% endif %}
-{% assign this_page_id = this_page_id | append: this_page.name | remove: ".md" %}
-
+{% include _string-this_page_id.liquid %}
 
 {% if this_page.client %}
 	{% for site_page in site.pages %}

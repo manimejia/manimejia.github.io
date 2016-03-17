@@ -1,0 +1,15 @@
+{% comment %}
+https://gist.github.com/pepelsbey/9334494
+{% endcomment %}
+
+{% if include.string_of_strings %}
+{% assign separator_of_strings = include.separator | default : "," %}
+{% assign array_of_strings = include.string_of_strings | split : separator_of_strings %}
+{% assign string_of_strings = "" %}
+
+{% for string in  array_of_strings %}
+    {% unless string_of_strings contains string %}
+        {% assign string_of_strings = string_of_strings | append: separator_of_strings | append: string %}
+    {% endunless %}
+{% endfor %}
+{%endif%}

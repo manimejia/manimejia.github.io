@@ -27,10 +27,13 @@ $(document).ready(function(){
     if($(document.activeElement).is('body') && document.previousActiveElement ){
       $(document.previousActiveElement).focus();
     }
+    $("*").removeClass("child-has-focus");
+    $(document.activeElement).parents().addClass("child-has-focus");
   });
   $(document).focusout(function(e){
     document.previousActiveElement = document.activeElement;
   });
+
 
   // add scrolling animation to internal hash links
   $('a[href]').each(function(e){

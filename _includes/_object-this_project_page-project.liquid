@@ -1,0 +1,7 @@
+{% if include.project_id %}
+  {% assign this_project_page_id = include.project_id | split : "/" %}
+  {% assign this_project_page_client = this_project_page_id.first | capitalize %}
+  {% assign this_project_page_name = this_project_page_id.last | append:".md" %}
+  
+  {% assign  this_project_page = site.pages | where : "name", this_project_page_name | first %}
+{% endif %}

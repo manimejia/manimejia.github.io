@@ -5,34 +5,95 @@ hide:
  title: true
 #topbar: true
 permalink: /index.html
-splash: manicanfly
+splash: false
 
 ---
 
-<section class="row">
-<section id="services" class="text-center column overlay info skrollr-perspectivezoom-bottom" role="region" aria-labelledby="services-heading">
-  {% include services.html color="warning" %}
+{% assign person = site.data.people.manimejia %}
+<section role="region" class="clearfix">
+<div class="row">
+  <div class="column large-3 medium-4 small-centered">
+    <br/>
+    {% include vcard.html person=person compact=true%}
+  </div>
+</div>
+
+<div class="row text-center">
+    {% if person.title %}
+    <h2 class="text-center">{{person.title}}</h2>
+    {%endif%}
+    {% if person.byline %}
+    <p class="secondary-text">
+    {{ person.byline }}
+    </p>
+    {%endif%}
+    {% if person.numbers %}
+    <ul class="small-block-grid-{{person.numbers.size}}">
+    {% for numberinfo in person.numbers %}
+      <li>
+        <div class="icon fi-{{numberinfo.icon}} {%if numberinfo.color %}{{numberinfo.color}}-text{%endif%}"></div>
+        <div><b class="font-larger">{{numberinfo.number}}</b></div>
+        <div class="{%if numberinfo.color %}{{numberinfo.color}}-text{%endif%}">{{numberinfo.label}}</div>
+      </li>
+    {%endfor%}
+    </ul>
+    {%endif%}
+</div>
+</section>
+
+<section id="services" role="region" class="clearfix"
+aria-labelledby="services-heading">
+<h2 id="services-heading" class="text-center">
+Demonstrated Skills
+</h2>
+  {% include services.html %}
 </section><!-- #services -->
 
-<section id="clients" class="column overlay warning" role="region" aria-labelledby="clients-heading">
-<h2 id="clients-heading" class="text-center">Featured Clients</h2><br/>
+<section id="experience" class="clearfix bg-primary avoid-breaking-page"
+aria-labelledby="experience-heading">
+<br/>
+<h2 id="experience-heading" class="text-center">
+Professional Experience <br>
+<small>In 30,000 Hours</small>
+</h2>
+<figure class="text-center">
+<img src="https://docs.google.com/spreadsheets/d/1gBdIVCMZN1qdhwwWIwwZjQtkmucS-or_XAKocYftV48/pubchart?oid=276533176&amp;format=image" 
+alt="Chart showing Manuel Mejia's work experience since 2001">
+</iframe>
+<figcaption class="hide-for-print">
+<a href="https://docs.google.com/spreadsheets/d/1gBdIVCMZN1qdhwwWIwwZjQtkmucS-or_XAKocYftV48/pubhtml?gid=0&single=true" target="_blank" 
+title="online spreadsheet from which the above chart is made">chart data</a>
+</figcaption>
+</figure>
+<br/>
+<br/>
+</section>
+
+<section id="clients" class="bg-warning clearfix" 
+role="region" aria-labelledby="clients-heading">
+<h2 id="clients-heading" class="text-center">
+Featured Clients
+</h2>
 {% include featured-clients.html %}
 </section> <!-- #clients -->
 
-<section id="portfolio" class="column overlay alert" role="region" aria-labelledby="portfolio-heading">
-<h2 id="portfolio-heading" class="text-center">Portfolio Highlights</h2>
-{% include listing-grid-inline.html category="project" %}
+<section id="portfolio" class="bg-info hide clearfix" 
+role="region" aria-labelledby="portfolio-heading">
+<h2 id="portfolio-heading" class="text-center">
+Portfolio Highlights
+</h2>
+{% include portfolio-highlight-list.html color="warning" compact=true asmodal=true%}
 </section> <!-- #portfolio-grid -->
 
-<section id="aboutme" class="text-center column overlay" role="region" aria-labelledby="aboutme-heading">
-<div class="row text-justify">
-  <h2 id="aboutme-heading" class="column small-12">About Manuel</h2>
-   <div class="column medium-3 skrollr-perspectivezoom-bottom">
-		{% include vcard.html person=site.data.people.manimejia %}
+<section id="contact" class="text-center bg-alert clearfix" 
+role="region" aria-labelledby="contact-heading">
+<h2 id="contact-heading" class="text-center">
+{{ person.name }}
+</h2>
+<div class="row">
+   <div class="column medium-6 small-centered">
+		{% include vcard.html person=person nopicture=true noname=true %}
    </div>
-   <div class="column medium-9 skrollr-perspectivezoom-bottom">
-    {{ site.data.people.manimejia.bio | markdownify }}
-	</div>
 </div>
 </section><!-- #aboutme -->
 </div>

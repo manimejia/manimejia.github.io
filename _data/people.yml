@@ -4,21 +4,94 @@ manimejia:
   locality: Ann Arbor
   state: Mi.
   website: manimejia.me
-  email: hello(at)manimejia.me
+  email: hello@manimejia.me
   phone: (971) 533 7591
   social:
-    linkedin: linkedin.com/in/manimejia
-    github: github.com/manimejia
-  summary: | 
-    
+    - icon: linkedin
+      url: http://linkedin.com/in/manimejia
+      username: /manimejia
+    - icon: github
+      url: http://github.com/manimejia
+      username: /manimejia
+  numbers:
+    - 
+      number: 15
+      label: Years Professional Experience
+      icon: lightbulb
+      color: warning
+    - 
+      number: 26
+      label: Web Projects Delivered
+      icon: checkbox
+      color: alert
+    - 
+      number: 20
+      label: Satisfied Clients & Employers
+      icon: torsos-all-female
+      color: success
+    # - 
+    #   number: 12
+    #   label: Business Websites
+    #   icon: monitor
+    #   color: info
+    # - 
+    #   number: 5
+    #   label: Web Applications
+    #   icon: layout
+    #   color: info
+    # - 
+    #   number: 10
+    #   label: Multimedia Presentations
+    #   icon: photo
+    #   color: info
+  title: Creative Web Architect
+  byline: |
+    integrating technical, design, and communication
+    challenges into comprehensive project solutions
+  summary: |
+    As an autodidactic digital professional, my unique superpowers are 
+    curiosity, empathy, and optimism. 
+    Armed as such, I have sought out, engaged with, and overcome 
+    a number of ever increasing architectural and interpersonal challenges. 
+    With many successes and failures to learn from, 
+    my work history reflects the same turbulent trajectory 
+    we all humans must navigate; but these superpowers never fail. 
+    I continuously will ask the tough questions, listen to the 
+    unexpected results, and optimize the path toward progress 
+    through diverse conditions.
+
   bio: | 
-    My career as a web designer/developer started in 2001, when I discovered the multimedia possibilities of Flash. I was quickly engrossed, making simple animations for family and friends. Within a year, I had learned enough and made the right connections to approach the nation's largest animal sanctuary with a novel idea for a virtual tour of their campus. I landed the job, and set out in earnest to realize this [huge accomplishment][P1] over the following ten months. 
+    My career as a web designer/developer started in 2001, when I discovered 
+    the multimedia possibilities of Flash. I was quickly engrossed, making 
+    simple animations for family and friends. Within a year, I had learned 
+    enough and made the right connections to approach the nation's largest 
+    animal sanctuary with a novel idea for a virtual tour of their campus. 
+    I landed the job, and set out in earnest to realize this 
+    [huge accomplishment][P1] over the following ten months. 
     
-    Early in my career I came to see that truly scalable and manageable presentations need to have a smart backend to facilitate editing the content. While continuing my work as a [flash][P2] [designer][P3] and [developer][P4], I started to research CMS solutions on which these presentations could be 'hosted'. This lead me to Drupal, in 2006, and offering my services as a website developer to an even wider client base. I spent the next few years exploring the boundaries of modern web design, making [web][P5] [graphics][P6], [small][P7] [business][P8] [websites][P9], and [applications][P10] for a variety of clients. By 2010 I had established a reputation as an accomplished web developer and solutions architect, working in HTML5, CSS3, Javascript, and whatever backend technologies necessary address the projects coming my way.
+    Early in my career I came to see that truly scalable and manageable 
+    presentations need to have a smart backend to facilitate editing the content. 
+    While continuing my work as a [flash][P2] [designer][P3] and [developer][P4], 
+    I started to research CMS solutions on which these presentations could be 
+    'hosted'. This lead me to Drupal, in 2006, and offering my services as a 
+    website developer to an even wider client base. I spent the next few years 
+    exploring the boundaries of modern web design, making [web][P5] [graphics][P6], 
+    [small][P7] [business][P8] [websites][P9], and [applications][P10] for a variety 
+    of clients. By 2010 I had established a reputation as an accomplished web developer 
+    and solutions architect, working in HTML5, CSS3, Javascript, and whatever backend 
+    technologies necessary address the projects coming my way.
     
-    In 2012 I was hired as a web developer by the Graduate School of Oregon State University. This was a great opportunity for me to move beyond self employment, and experience the needs and inner workings of a large organization. I found myself [rebuilding the Graduate School website][P12] from the ground up, designing functional [user experience solutions][P13] for a variety of web systems, and streamlining their [workflow processes][P14]. In September 2014, after moving to Ann Arbor, I worked remotely for a few weeks until they had hired my replacement.
+    In 2012 I was hired as a web developer by the Graduate School of Oregon State 
+    University. This was a great opportunity for me to move beyond self employment, 
+    and experience the needs and inner workings of a large organization. I found myself 
+    [rebuilding the Graduate School website][P12] from the ground up, designing functional 
+    [user experience solutions][P13] for a variety of web systems, and streamlining their 
+    [workflow processes][P14]. In September 2014, after moving to Ann Arbor, I worked 
+    remotely for a few weeks until they had hired my replacement.
     
-    With more than a decade serving various roles in the web industry, I have collected a wide range of professional experiences. This has allowed me to identify and hone my core strengths as solutions architect and digital communicator.
+    With more than a decade serving various roles in the web industry, I have collected 
+    a wide range of professional experiences. This has allowed me to identify and hone 
+    my core strengths as solutions architect and digital communicator.
     
     [P1]: /#BFAS-Best-Friends-Virtual-Tour "Best Friends Virtual Tour - project details"
     [P2]: /#MBL-Day-Of-The-Dead-VJ-Animations "Day of the Dead VJ Animations - project details"
@@ -40,12 +113,12 @@ manimejia:
      school: University of Northern Colorado
      study: Musical Theater
      years: 1993 - 1994
-     degree: "no"
+     degree: 
     - 
      school: Art Student's League of Denver
      study: Fine Art 
      years: 1991 - 1992
-     degree: "informal"
+     degree: "yes"
     - 
      school: Arvada West HS (Colo)/ Kanab HS (Utah)
      study: High School Academics

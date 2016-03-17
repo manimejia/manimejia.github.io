@@ -19,8 +19,6 @@ style: |
   .highlight{text-shadow:none;}
 
 ---
-{% assign these_pages = site.pages | where: "category" , "project" | sort: "date" | sort: "enddate" | sort: "startdate" %}
-{% assign base_url = 'http://manimejia.me/' %}
 {% assign highlight_color = 'alert' %}
 
 
@@ -34,17 +32,13 @@ style: |
 {% include tag-cloud.html category="project" %}
 </section> -->
 {% endcomment %}
-
 <hr/>
-<section id="employment" class="row avoid-breaking-page" aria-labelledby="employment-label">
-<h2 id="employment-label" class="column">Employment</h2>
-<div class="column">
-{% include employment.html person=site.data.people.manimejia %}
-</div>
-</section>
 
 <section id="technical-experience" class="row avoid-breaking-page" aria-labelledby="technical-experience-label">
-<h2 id="technical-experience-label" class="column">Technical Experience</h2>
+<h2 id="technical-experience-label" class="column">
+Professional Experience <br>
+<small class="primary-text">In 30,000 Hours</small>
+</h2>
 <figure class="column text-center" style="margin:0">
 <img src="https://docs.google.com/spreadsheets/d/1gBdIVCMZN1qdhwwWIwwZjQtkmucS-or_XAKocYftV48/pubchart?oid=1386956387&format=image" alt="Chart showing Manuel Mejia's work experience since 2001">
 <figcaption class="hide-for-print">
@@ -52,148 +46,38 @@ style: |
 </figcaption>
 </figure>
 </section>
+<hr/>
+
+<section id="employment" class="row avoid-breaking-page" aria-labelledby="employment-label">
+<h2 id="employment-label" class="column">Employment</h2>
+<div class="column">
+{% include employment.html person=site.data.people.manimejia %}
+</div>
+</section>
+<hr/>
+
 
 {% comment %}
-<hr/>
+<!-- <hr/>
 <section id="tagcloud" class="row avoid-breaking-page" aria-labelledby="tagcloud-label">
 <h2 id="tagcloud-label" class="column">Experience Tags</h2>
 <div class="column">
 {% include tag-cloud.html %}
 </div>
-</section>
+</section> -->
+
+<!-- <hr/>
+<section id="work-history" class="row" aria-labelledby="work-history-label">
+<h2 id="work-history-label" class="column small-12 medium-9">Portfolio Highlights</h2>
+<a href="{{base_url}}/portfolio" class="column small-12 medium-3">
+  <i class="fi-link font-larger"></i> See Full Portfolio</a>
+<br/><br/>
+<div class="column">
+{% include portfolio-highlight-list.html color=highlight_color compact=true %}
+</div>
+</section> --> <!-- #portfolio-grid -->
 {% endcomment %}
 
-<hr/>
-<section id="work-history" class="row" aria-labelledby="work-history-label">
-<h2 id="work-history-label" class="column small-12 medium-9">Career Highlights</h2>
-<a href="{{base_url}}#portfolio" class="column small-12 medium-3">
-  <i class="fi-link font-larger"></i> See Full Portfolio Listing</a>
-<br/><br/>
-{% for this_page in these_pages reversed %}
-
-
-  {% if this_page.publish.print == true %}
-	{% include _this_page.liquid %}
-	{% assign item_year = this_page_date | date: '%Y' %}
-	{% unless last_item_year %}{% assign last_item_year = 0000 %}{% endunless %}
-
-    {% if item_year != last_item_year %}
-    <!--<h3 class="year text-center alert-box warning font-larger hide-for-print" role="heading"><time>{{ item_year }}</time></h3>-->
-    {% endif %}
-
-	 <article class="column avoid-breaking-page" aria-labelledby="{{this_page_id}}-title">
-	 <div class="row">
-	  <!--<aside class="left small-3 text-center" aria-hidden="true">
-	  	<img class="project-thumnail" style="margin-right:1.5rem" src="{{ this_page_assetpath }}{{ this_page.thumbnail }}" alt="">
-	  </aside>-->
-	  <header class="column" role="heading">
-	      <h3 class="title" id="{{this_page_id}}-title">
-            <small class="client-title">
-            {% if this_client_page.website %}
-              <a class="client-title" href="{{ this_client_page.website }}" target="_blank" title="client   website">{{ this_client_page.title }}</a>
-            {% else %}
-            {{ this_client_page.title }} 
-            {% endif %}</small><br/>
-	        <span class="page-title">{{ this_page.title }}</span> 
-	      </h3>
-      	{% if this_page.summary %}
-    	  <div class="{%if highlight_color %}{{highlight_color}}-text {%endif%}font-large">
-        {{ this_page.summary }}
-        </div>
-      	{%endif%}    
-	  </header>
-	  <aside class="column" role="contentinfo">
-	      <ul class="no-bullet inline-list" role="presentation">
-	      {% if this_page.role %}
-	      <li role="presentation">
-	      <div>
-	        <label class="hidden-for-small-only hidden-for-medium-up hide-for-print">Role</label> 
-	        <abbr title="Role"><i class="fi-torso font-larger"></i></abbr>&nbsp;
-	        <b>{{ this_page.role }}</b>
-	        </div>
-	      </li>
-	      {% endif %}
-	      {% if this_page_date %}
-	      <li role="presentation">
-	      	<div>
-          <label class="hidden-for-small-only hidden-for-medium-up hide-for-print">Date</label> 
-	        <abbr title="Date"><i class="fi-clock font-larger"></i></abbr>&nbsp;
-          {% if this_page.date %}
-          <time>{{ this_page.date | date: "%b %Y" }}</time>
-          {% else %}{% if this_page.startdate %}
-          <span class="hidden-for-small-only hidden-for-medium-up"> start :</span> 
-          <time>{{ this_page.startdate | date: "%b %Y" }}</time>
-          {% if this_page.enddate %} - {% endif %}{% endif %}{% if this_page.enddate %}
-          <span class="hidden-for-small-only hidden-for-medium-up"> end :</span> 
-          <time>{{ this_page.enddate | date: "%b %Y" }}</time>
-          {% endif %}{% endif %}
-          </div>
-	      </li>
-	      {% endif %}
-	      {% if this_page.website %}
-	      <li role="presentation">
-	      	<div>
-	        <label class="hidden-for-small-only hidden-for-medium-up hide-for-print">Link</label> 
-	        <a href="{{this_page.website}}" target="_blank" title="go to {{ this_page.status }} website">
-	        <i class="fi-play-circle font-larger"></i>&nbsp;
-	        {% if this_page.status %}{{ this_page.status }} {% endif %}website
-	        </a>
-	        </div>
-	      </li>
-	      {% elsif this_page.status %}
-	      <!-- <li role="presentation">
-	        <div>
-	        <label class="hidden-for-small-only hidden-for-medium-up hide-for-print-only">Status:</label> 
-	        <i class="fi-info font-larger"></i>&nbsp;<b>{{ this_page.status }}</b>
-	        </div>
-	      </li> -->
-	      {% endif %}
-	      <li role="presentation" class="right">
-	      <a href="{{base_url}}#{{ this_page_id }}" title="project page">
-	        <i class="fi-link font-larger"></i>&nbsp;
-	        See In Portfolio</a>
-	      </li>
-	      </ul>
-	  </aside>
-	  </div>
-	  <div class="row">
-		{% if this_page.tasks %}
-		<section id="{{this_page_id}}-tasks" class="column" aria-hidden="false" ar-labelledby="{{this_page_id}}-tasks-label">
-	  	  <h4 id="{{this_page_id}}-tasks-label" class="hidden-for-small-only hidden-for-medium-up hide-for-print">
-	  	Responsibilities</h4>
-		  <ul class="icon-list alert">
-		  {% for task in this_page.tasks %}
-		    <li class="fi-check">
-			    <!-- <i class="fi-check font-xlarger highlight left full-height" style="line-height:1em">&nbsp;</i> -->
-			    {{ task | strip_html | strip | markdownify }}
-		    </li>
-		  {% endfor %}
-		  </ul>
-		</section>
-		{% endif %}
-	    <!--<aside id="{{this_page_id}}-tags" role="complementary" class="column medium-3 medium-pull-9" aria-labelledby="{{this_page_id}}-tags-label">
-  	    {% if this_page.tags %}
-	      <h4 id="{{this_page_id}}-tags-label"  class="hidden-for-small-only hidden-for-medium-up hide-for-print">Skills</h4>
-	      <ul class="taglist">
-	      {% for tag in this_page.tags %}
-	        <li class="label radius info">{{ tag }}</li>
-	      {% endfor %}
-	      </ul>
-	    {% endif %} 
-	      <a href="{{base_url}}#{{ this_page_id }}" title="project page" class="button info expand"><i class="fi-link"></i> Read More</a>
-	    </aside>-->
-	  </div>
-
-	</article>
-
-  <hr/>
-
- {% endif %}
-
-{% assign last_item_year = item_year %}
-
-{% endfor %}
-</section>
 
 <section id="education" class="row avoid-breaking-page" aria-labelledby="education-label">
 <h2 id="education-label" class="column">Education</h2>

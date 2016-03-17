@@ -1,6 +1,6 @@
 ---
 client: MM
-title: Manuel Mejia
+title: Open Face Studios
 logo: 
 website: http://manimejia.me
 location: 

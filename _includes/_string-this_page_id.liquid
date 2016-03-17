@@ -1,0 +1,8 @@
+{% if include.this_page %}{% assign this_page = include.this_page %}{% endif %}
+{% unless this_page %}{% assign this_page = page %}{% endunless %}
+
+{% assign this_page_id = "" %}
+{% if this_page.category == 'project' %}
+  {% assign this_page_id = this_page.client | append: "-" %}
+{% endif %}
+{% assign this_page_id = this_page_id | append: this_page.name | remove: ".md" %}
