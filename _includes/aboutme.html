@@ -26,7 +26,7 @@
       <ul class="icon-list {{include.color}}">
       {% for service in site.data.services.list %}
       <li class="fi-{{service.icon}}">
-          <p><strong>{{service.label}} : </strong> {{service.summary | markdownify }}</p>
+          <strong class="left">{{service.label}}:&nbsp;</strong> {{service.summary | markdownify }}
       </li>	
       {% endfor %}
     	</ul>
