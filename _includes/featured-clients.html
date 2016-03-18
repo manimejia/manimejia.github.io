@@ -1,3 +1,4 @@
+{%comment%}
 {% assign clients = site.pages | where: "category" , "client"  | sort : "enddate" %}
 <ul class="medium-block-grid-3 large-block-grid-3">
 
@@ -14,3 +15,33 @@
 {%endfor%}
 
 </ul>
+{%endcomment%}
+
+{% if include.person %}
+{% assign person = include.person %}
+{% endif %}
+{% unless person %}
+{% assign person = site.people.manimejia %}
+{% endunless %}
+
+{% if person.employment %}
+<ul class="medium-block-grid-2 large-block-grid-3" role="presentation">
+{%for employment in person.employment %}
+  <li class="text-justify" role="presentation">
+    <h4>
+    {%if employment.website %}
+    <a href="{{employment.website}}" target="_blank" title="company website">
+      {{employment.employer}}
+    </a>
+    {% else %}
+    {{employment.employer}}
+    {% endif %}
+    <small class="right">{{employment.location}}</small>
+    </h4>
+    <div class="font-smaller">
+    {{ employment.description | markdownify }}
+    </div>
+  </li>
+  {% endfor %}
+</ul>
+{%endif%}

@@ -1828,24 +1828,30 @@ a:hover, a:focus {
 .focusable:focus{
 }
 
-.font-xsmaller{
+.font-xsmaller,
+.font-xsmaller p{
 	font-size: .6rem !important;
 	font-weight:bold;
 }
-.font-smaller{
+.font-smaller,
+.font-smaller p{
 	font-size: .9rem !important;
 	font-weight:bold;
 }
-.font-large{
+.font-large,
+.font-large p{
 	font-size: 1.2rem !important;
 }
-.font-larger{
+.font-larger,
+.font-larger p{
 	font-size: 1.5rem !important;
 }
-.font-xlarger{
+.font-xlarger,
+.font-xlarger p{
 	font-size: 2rem !important;
 }
-.font-xxlarger{
+.font-xxlarger,
+.font-xxlarger p{
 	font-size: 3rem !important;
 }
 .font-bold{

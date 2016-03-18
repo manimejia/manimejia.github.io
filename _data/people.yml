@@ -125,30 +125,106 @@ manimejia:
      study: High School Academics
      years: 1989 - 1992
      degree: "yes"
- 
+
   employment:
     - 
-      employer: InfoShuk LLC
+      employer: InfoShuk llc
+      website: infoshuk.com
       location: Ann Arbor, Mi
       title: Sr. Front End Developer & Architect
       dates: 2015 - 2016
+      description: |
+        InfoShuk is an early stage startup building a software platform that enables 
+        small and medium business leaders to equalize the information advantage by 
+        empowering their organization with predictive analytics. 
+
+        As the Sr.Front End Developer for InfoShuk, I was responsible for architecting 
+        and crafting the AngularJS powered user interface in their flagship business 
+        analytics web application. My tasks also include designing the REST APIs, 
+        designing and implementing novel user input solutions, and creating effective 
+        data visualizations to communicate the analytical results.
     - 
-      employer: InfoReady Inc
+      employer: InfoReady inc
+      website: infoready4.com
       location: Ann Arbor, Mi
       title: Sr. Front End Developer & Architect
       dates: 2015
+      description: |
+        InfoReady is a startup in Ann Arbor focused on developing review management 
+        solutions for business and academia. 
+
+        As a Sr. Front End Web Developer & Architect for InfoReady, I was responsible for 
+        architecting and developing the client side codebase and collaborating on the REST 
+        API design for a number of their service oriented web applications. These applications 
+        are built using Angular JS, Bootstrap, Backbone, jQuery, and a number of other 
+        popular open-source libraries and tools.
     - 
-      employer: Oregon State University - Graduate School
+      employer: OSU Graduate School
       location: Corvallis, Oregon
-      title: Web Developer & UX Architect
+      website: gradschool.oregonstate.edu
+      title: Web Developer & Experience Architect
       dates: 2012 - 2014
+      description: |
+        I was hired by the Oregon State University Graduate School to re-architect, rebuild, 
+        and maintain their web presence; assist as needed in the design and development of new 
+        technology; offer technical support to faculty, staff, and students across campus for 
+        the Graduate School's various web applications; and support the various electronic 
+        communications tools used by the Graduate School. 
+
+        In my two and a half years of service I contributed to the design and development of 
+        many successful tools and techniques to support the Graduate School's growing technical
+        efforts. During this time, I was also effective in communicating the value and empowering 
+        others to take advantage of these new and existing technology solutions. 
+    - 
+      employer: Elite Care
+      location: Portland, Oregon
+      website: www.elitecare.com
+      title: Web Developer & Experience Architect
+      dates: 2008 - 2010
+      description: |
+        Elite Care is a leader in the field of building and managing residential elder care 
+        facilities. Their "relationship based" model of care is nationally recognized for it's 
+        inclusion and sustainability. Their use of technology to monitor care and inspire 
+        community has been groundbreaking since 2003. With three campuses in two states, 
+        they are reinventing what it means to stay connected to our elderly relatives. 
+
+        Since 2008 I have offered my consulting services to Elite Care, helping them with 
+        digital communication strategies, application architecture, and user experience design. 
+        working closely with the CEO and founders, I have had the opportunity to design novel and 
+        scalable solutions from the ground up, in this high growth company. Our bigger projects 
+        have included a complete website redesign, and new design concept for their in-house and
+        web-based care management platform.
     - 
       employer: Open Face Studio
       location: Portland, Oregon
+      website: manimejia.me
       title: Website Designer, Developer & Project Lead
       dates: 2006 - 2012
+      description: |
+        As a freelance web developer for Open Face Studio, I focused my services on designing 
+        Drupal based web solutions. Working with a number of small business and nonprofit 
+        clients, I developed functional and attractive websites and applications. With 
+        attention to both the administrative and end user experience, I made a number of 
+        innovations and contributions to the Drupal community. My attention to detail and 
+        eye for simple and practical solutions resulted in a steady stream of satisfied clients.
     - 
-      employer: Freelance / Self Employed
-      location: Sonoma County, California
+      employer: Best Frineds Animal Society
+      location: Kanab, Ut. & Bay Area, Ca.
+      website: bestfriends.org
       title: Flash Designer & Developer
-      dates: 2002 - 2006
+      dates: 2001 - 2006
+      description: |
+        Best Animal Society has been home to the largest no-kill sanctuary in the USA for 
+        almost two decades. This is a forward thinking organization, who is responsible 
+        for reinventing what it means to be a humane animal care facility. Where others 
+        have failed with this difficult message, Best Friends has been a pioneer in nurturing 
+        and inspiring a world-wide cruelty-free movement. 
+
+        As a web professional, I have been involved with the sanctuary since 2001. 
+        This is when I first proposed a novel 
+        [virtual tour](http://manimejia.me/portfolio/BFAS-Best-Friends-Virtual-Tour) concept, 
+        to be built using Flash 5. The project was accepted, and for the next year I focused 
+        on designing and developing this immersive experience. In the following 6 years I 
+        would be called on multiple times as the "flash expert" for new projects.
+
+
