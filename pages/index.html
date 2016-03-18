@@ -19,14 +19,16 @@ splash: false
 </div>
 
 <div class="row text-center">
+    <header>
     {% if person.title %}
-    <h2 class="text-center">{{person.title}}</h2>
+    <h2>{{person.title}}</h2>
     {%endif%}
     {% if person.byline %}
-    <p class="secondary-text">
+    <p class="font-large secondary-text">
     {{ person.byline }}
     </p>
     {%endif%}
+    </header>
     {% if person.numbers %}
     <ul class="small-block-grid-{{person.numbers.size}}">
     {% for numberinfo in person.numbers %}

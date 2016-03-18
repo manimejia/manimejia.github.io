@@ -1,28 +1,20 @@
+{% assign person = site.data.people.manimejia %}
 <div class="row text-justify">
     <div class="column medium-4">
-			{% include vcard.html person=site.data.people.manimejia noname=true %}
+			{% include vcard.html person=person noname=true %}
 			<p class="text-center">References Upon Request</p>
     </div>
     <div class="column medium-8">
-      {% if site.data.services.label %}
-		  <h3>{{ site.data.services.label }}</h3>
-    	{%endif%}
-    	
-      {% comment %}
-      <h3>
-      {% for service in site.data.services.list %}
-        {% if forloop.last == true %} and {% endif %}
-          {{ service.label }}
-        {% if forloop.last != true %} , {% endif %}
-      {% endfor %}
-      </h3>
-      {% endcomment %}
-      
-    	{% if site.data.services.summary %}
+      <header>
+      {% if person.title %}
+		  <h2>{{ person.title }}</h2>
+    	{%endif%}      
+    	{% if person.byline %}
 		  <p class="{%if include.color %}{{include.color}}-text {%endif%}font-large">
-	    {{ site.data.services.summary }}
+	    {{ person.byline }}
 	    </p>
     	{%endif%}
+      </header>
       <ul class="icon-list {{include.color}}">
       {% for service in site.data.services.list %}
       <li class="fi-{{service.icon}}">
