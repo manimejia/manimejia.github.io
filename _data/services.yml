@@ -1,7 +1,7 @@
-label: "Creative Web Architect"
 summary: "
-  Integrating technical, design, and communication
-  challenges into comprehensive web project solutions.
+  As an autodidactic web professional since 2001, I offer user experience focused 
+  architecture, design, and development services in an iterative balance of 
+  careful planning, clear communication, and ‘roll up your sleeves’ good work.
   "
 
 list: 
@@ -52,7 +52,7 @@ list:
     - project_id: EC/CareNet-Elder-Care-Portal
       description: "
       I reverse engineered the recursively 
-      dependant wet spaghetti code base to discover its core processes 
+      dependent wet spaghetti code base to discover its core processes 
       and functionality, incorporated these findings into an updated 
       application architecture, and saved thousands of dollars in what 
       would have been a “from scratch” code rewrite without the guidance 
