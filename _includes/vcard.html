@@ -31,7 +31,12 @@
     <li class="vcard-social-{{sociallink.icon}}" role="presentation">
       <b class="hidden-for-small-only hidden-for-medium-up">{{sociallink.icon | capitalize}}: </b>
       <a href="{{{{sociallink.url}}" title="{{sociallink.icon}}" target="_blank">
-      <i class="fi-social-{{sociallink.icon}}"></i>&nbsp;
+      {% if sociallink.icon %}
+      <i class="fi-social-{{sociallink.icon}}"></i>
+      {% elsif sociallink.logo %}
+      <img src="{{sociallink.logo}}" style="width:1em;height:1em"/>
+      {% endif %}
+      &nbsp;
       <small>{{sociallink.url | remove:"http://"}}</small>
       </a>
     </li>
