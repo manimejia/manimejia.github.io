@@ -10,7 +10,7 @@ splash: false
 ---
 
 {% assign person = site.data.people.manimejia %}
-<section role="region" class="clearfix bg-primary">
+<section role="region" class="clearfix">
 <div class="row">
   <div class="column large-3 medium-4 small-centered">
     <br/>
@@ -43,7 +43,7 @@ splash: false
 </div>
 </section>
 
-<section id="services" role="region" class="clearfix bg-primary"
+<section id="services" role="region" class="clearfix"
 aria-labelledby="services-heading">
 <h2 id="services-heading" class="text-center">
 Demonstrated Skills
@@ -51,7 +51,7 @@ Demonstrated Skills
   {% include services.html %}
 </section><!-- #services -->
 
-<section id="experience" class="clearfix bg-primary avoid-breaking-page"
+<section id="experience" class="row clearfix bg-info overlay avoid-breaking-page"
 aria-labelledby="experience-heading">
 <br/>
 <div class="column">
@@ -60,7 +60,7 @@ Professional Experience <br>
 <small>In 30,000 Hours</small>
 </h2>
 <figure class="text-center">
-  <img src="https://docs.google.com/spreadsheets/d/1gBdIVCMZN1qdhwwWIwwZjQtkmucS-or_XAKocYftV48/pubchart?oid=276533176&format=image"
+  <img src="https://docs.google.com/spreadsheets/d/1gBdIVCMZN1qdhwwWIwwZjQtkmucS-or_XAKocYftV48/pubchart?oid=1967942912&format=image" style="mix-blend-mode:screen;"
 alt="Chart showing Manuel Mejia's work experience since 2001"/>
   <figcaption class="hide-for-print">
     <a href="https://docs.google.com/spreadsheets/d/1gBdIVCMZN1qdhwwWIwwZjQtkmucS-or_XAKocYftV48/pubhtml?gid=0&single=true" target="_blank" 
@@ -72,15 +72,27 @@ alt="Chart showing Manuel Mejia's work experience since 2001"/>
 <br/>
 </section>
 
-<section id="clients" class="clearfix row" 
-role="region" aria-labelledby="clients-heading">
-<h2 id="clients-heading" class="text-center">
-Featured Clients & Employers
-</h2>
-<div class="column">
-{% include featured-clients.html %}
-</div>
+<div class="clearfix row bg-alert">
+
+<section id="clients" class="column medium-7 bg-warning overlay" aria-labelledby="clients-heading">
+  <h2 id="clients-heading" class="text-center">
+    Featured Clients & Employers
+  </h2>
+  {% include featured-clients.html %}
 </section> <!-- #clients -->
+
+<section id="references" class="column medium-5" aria-labelledby="clients-heading">
+  <h2 id="clients-heading" class="text-center">
+    Testimonials and References
+  </h2>
+  {% include references.html %}
+</section> <!-- #clients -->
+
+</div>
+
+<div class="row bg-success overlay">
+<br/><br/>
+</div>
 
 <section id="portfolio" class="bg-primary hide clearfix" 
 role="region" aria-labelledby="portfolio-heading">
@@ -90,7 +102,6 @@ Portfolio Highlights
 {% include portfolio-highlight-list.html color="warning" compact=true asmodal=true%}
 </section> <!-- #portfolio-grid -->
 
-<hr/>
 
 <section id="contact" class="text-center clearfix row" 
 role="region" aria-labelledby="contact-heading">

@@ -1,0 +1,27 @@
+
+{% if include.person %}
+{% assign person = include.person %}
+{% endif %}
+{% unless person %}
+{% assign person = site.people.manimejia %}
+{% endunless %}
+
+{% if person.references %}
+<ul class="row no-bullet" role="presentation">
+{%for reference in person.references %}
+  <li role="presentation" class="column">
+    {% unless forloop.index == 1%}<hr/>{%endunless%}
+    <header>
+    <h4>
+    {{reference.fullname}}
+    - <small class="font-bold">{{reference.title}}</small>
+    <br/><small>{{reference.employer}}</small>
+    </p>
+    </header>
+    <blockquote class="font-smaller font-italic" >
+    {{ reference.quote | markdownify }}
+    </blockquote>
+  </li>
+  {% endfor %}
+</ul>
+{%endif%}
