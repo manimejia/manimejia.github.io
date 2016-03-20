@@ -780,7 +780,8 @@ $input-prefix-border-color: scale-color($jet, $lightness: 20%);
 // We use this to style the glowing effect of inputs when focused
 // $input-include-glowing-effect: true;
 // $glowing-effect-fade-time: 0.45s;
-$glowing-effect-color: $white;
+$glowing-effect-color: get-color(secondary,lightest);
+$glowing-text-color: get-color(primary,darkest);
 
 // Select variables
 $select-bg-color: $oil;
@@ -1782,7 +1783,7 @@ $alert-font-tone: false !default; // will set the font color to a tonal variant 
 // $selector - Used for selector state. Default: focus, Options: hover, active, visited
 // $fade-time - Default: 300ms
 // $glowing-effect-color - Default: fade-out($primary-color, .25)
-@mixin block-glowing-effect($selector:focus, $fade-time:300ms, $glowing-effect-color:fade-out($primary-color, .25)) {
+@mixin block-glowing-effect($selector:focus, $fade-time:300ms, $glowing-effect-color:fade-out($primary-color, .25),$glowing-text-color:$secondary-color) {
   transition: box-shadow $fade-time, border-color $fade-time ease-in-out;
   @if $selector == 'focus' {
     $selector: ':focus';
@@ -1796,6 +1797,7 @@ $alert-font-tone: false !default; // will set the font color to a tonal variant 
   &#{$selector} {
     box-shadow: 0 0 .5rem .25rem $glowing-effect-color;
     border-color: $glowing-effect-color;
+    color: $glowing-text-color;
     outline:none;
     position:relative;
     z-index:10;
@@ -1836,7 +1838,7 @@ a:hover, a:focus {
 .font-smaller,
 .font-smaller p{
 	font-size: .9rem !important;
-	font-weight:bold;
+	//font-weight:bold;
 }
 .font-large,
 .font-large p{

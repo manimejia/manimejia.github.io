@@ -24,7 +24,7 @@
 
         <ul class="service-description medium-block-grid-{{service.accomplishments.size}}">
         {% for accomplishment in service.accomplishments %}
-        <li class="text-center">
+        <li class="text-center secondary-text">
         {% assign project_ids = project_ids | append : "," | append : accomplishment.project_id %}
         {% include _object-this_project_page-project.liquid project_id=accomplishment.project_id %}
         {% include _string-this_page_id.liquid this_page=this_project_page %}

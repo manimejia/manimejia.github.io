@@ -257,8 +257,9 @@ data-tabs="accordionGrid" data-tabs-get-expanded-tab-from-location-hash="true" d
 data-accordiongrid='{"getExpandedTabFromLocationHash":true,"setLocationHashToExpandedTab":true}' 
 data-aria-tab-group="accordion-grid"
 {% endcomment %}>
-{% assign these_pages = site.pages | where: "category" , "project" | sort: "date" | sort: "enddate" | sort: "startdate" %}
+{% assign these_pages = site.pages | where: "category" , "project" | sort: "date" | sort: "startdate"  | sort: "enddate" %}
 {% for this_page in these_pages reversed %}
+  {% if this_page.client %}
   {% unless this_page.publish.draft %}
   <!-- publish : {{ this_page.publish }} -->
   {% include _this_page.liquid %}
@@ -290,6 +291,7 @@ data-aria-tab-group="accordion-grid"
 
   {% assign last_item_year = item_year %}
   {% endunless %}
+  {% endif %}
 {% endfor %}
 </ul>
 

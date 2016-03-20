@@ -3,7 +3,7 @@ client: SHUK
 title: InfoShuk Business Anlytics App 
 summary: A tool to help small and medium businesses make strategic desicions based on descriptive, predictive, and proscriptive analytics.
 startdate: 2015-10-09
-enddate: 
+enddate: 2016-02-29
 website: http://www.infoshuk.com
 role: Front End Developer & Architect
 status: 
@@ -27,9 +27,9 @@ tags:
 
 thumbnail: shuk-logo.png
 
-assets: 
-- filename: 
-  caption: 
+#assets: 
+#- filename: 
+#  caption: 
 
 accomplishments: 
   - |

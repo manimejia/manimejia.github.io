@@ -29,9 +29,9 @@ tags:
 
 thumbnail: ua-logo.jpg
 
-assets: 
-- filename: 
-  caption: 
+#assets: 
+#- filename: 
+#  caption: 
 
 accomplishments: 
   - |
