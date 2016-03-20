@@ -6,7 +6,10 @@
   {% if client.publish.featured %}
 
   <li class="text-center">
-    <h3 class="font-large"><a href="{{ client.website }}">{{ client.title }}</a></h3>
+    <h3 class="font-large">
+    <a href="http://{{ client.website | remove:'http://'}}" target="_blank">
+    {{ client.title }}</a>
+    </h3>
     <p class="font-smaller text-justify"><em>{{ client.description }}</em></p>
     <p class="font-smaller">{{ client.location }}</p>
   </li>
@@ -27,10 +30,11 @@
 {% if person.employment %}
 <ul class="medium-block-grid-2 large-block-grid-3" role="presentation">
 {%for employment in person.employment %}
-  <li class="text-justify" role="presentation">
+  <li role="presentation">
     <h4>
     {%if employment.website %}
-    <a href="{{employment.website}}" target="_blank" title="company website">
+    <a href="http://{{ employment.website | remove:"http://"}}" 
+      target="_blank" title="company website">
       {{employment.employer}}
     </a>
     {% else %}
@@ -39,7 +43,7 @@
     <br/>
     <small>{{employment.location}}</small>
     </h4>
-    <div class="font-smaller">
+    <div class="font-smaller text-justify" >
     {{ employment.description | markdownify }}
     </div>
   </li>
