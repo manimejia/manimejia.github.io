@@ -10,7 +10,7 @@ splash: false
 ---
 
 {% assign person = site.data.people.manimejia %}
-<section role="region" class="clearfix">
+<section role="region" class="clearfix bg-primary">
 <div class="row">
   <div class="column large-3 medium-4 small-centered">
     <br/>
@@ -43,7 +43,7 @@ splash: false
 </div>
 </section>
 
-<section id="services" role="region" class="clearfix"
+<section id="services" role="region" class="clearfix bg-primary"
 aria-labelledby="services-heading">
 <h2 id="services-heading" class="text-center">
 Demonstrated Skills
@@ -54,23 +54,25 @@ Demonstrated Skills
 <section id="experience" class="clearfix bg-primary avoid-breaking-page"
 aria-labelledby="experience-heading">
 <br/>
+<div class="column">
 <h2 id="experience-heading" class="text-center">
 Professional Experience <br>
 <small>In 30,000 Hours</small>
 </h2>
 <figure class="text-center">
-  <img src="https://docs.google.com/spreadsheets/d/1gBdIVCMZN1qdhwwWIwwZjQtkmucS-or_XAKocYftV48/pubchart?oid=276533176&amp;format=image" 
+  <img src="https://docs.google.com/spreadsheets/d/1gBdIVCMZN1qdhwwWIwwZjQtkmucS-or_XAKocYftV48/pubchart?oid=276533176&format=image"
 alt="Chart showing Manuel Mejia's work experience since 2001"/>
   <figcaption class="hide-for-print">
     <a href="https://docs.google.com/spreadsheets/d/1gBdIVCMZN1qdhwwWIwwZjQtkmucS-or_XAKocYftV48/pubhtml?gid=0&single=true" target="_blank" 
     title="online spreadsheet from which the above chart is made">chart data</a>
   </figcaption>
 </figure>
+</div>
 <br/>
 <br/>
 </section>
 
-<section id="clients" class="bg-warning clearfix row" 
+<section id="clients" class="clearfix row" 
 role="region" aria-labelledby="clients-heading">
 <h2 id="clients-heading" class="text-center">
 Featured Clients & Employers
@@ -80,7 +82,7 @@ Featured Clients & Employers
 </div>
 </section> <!-- #clients -->
 
-<section id="portfolio" class="bg-info hide clearfix" 
+<section id="portfolio" class="bg-primary hide clearfix" 
 role="region" aria-labelledby="portfolio-heading">
 <h2 id="portfolio-heading" class="text-center">
 Portfolio Highlights
@@ -88,15 +90,15 @@ Portfolio Highlights
 {% include portfolio-highlight-list.html color="warning" compact=true asmodal=true%}
 </section> <!-- #portfolio-grid -->
 
-<section id="contact" class="text-center bg-alert clearfix" 
+<hr/>
+
+<section id="contact" class="text-center clearfix row" 
 role="region" aria-labelledby="contact-heading">
-<h2 id="contact-heading" class="text-center">
+<h2 id="contact-heading" class="text-center column">
 {{ person.name }}
 </h2>
-<div class="row">
-   <div class="column medium-6 small-centered">
-		{% include vcard.html person=person nopicture=true noname=true %}
-   </div>
+<div class="column medium-6 small-centered">
+	{% include vcard.html person=person nopicture=true noname=true %}
 </div>
 </section><!-- #aboutme -->
 </div>
