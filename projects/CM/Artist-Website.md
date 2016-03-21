@@ -2,7 +2,7 @@
 client: CM
 title: Artist's Portfolio Website
 startdate: 2008-06-01
-enddate: 2008-10-01
+enddate: 2008-11-01
 website: http://cyrusmejia.com
 role: Website Developer
 status: live
