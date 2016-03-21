@@ -5,7 +5,7 @@ client: OA
 title: Non-Profit Membership Website & Online Store
 
 startdate: 2008-02-01
-enddate: 2008-11-01
+enddate: 2008-12-01
 
 website: http://organicathlete.org
 
