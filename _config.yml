@@ -171,7 +171,7 @@ config:
       - name: Portfolio
         url: "/portfolio"
       - name: Resum&eacute;
-        url: "/resume.html"
+        url: "/resume"
       - name: Contact
         url: "/#contact"
         #class: small button
