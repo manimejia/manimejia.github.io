@@ -17,16 +17,15 @@ list:
     - project_id: INFR/UA-Portfolio
       description: "
       I maintained clear communication 
-      with the designers, developers, clients, and investors, 
-      providing each project with efficient use of precious 
-      meeting time and continuous progress toward its commonly 
-      understood goals.
+      with the designers, developers, clients, and investors 
+      providing efficient use of precious of meeting time  
+      and continuous progress toward project goals. 
       "
     - project_id: OSU/Graduate-School-Website
       description: "
       I met individually with every stakeholder 
       during the website redesign planning, to collect and integrate 
-      their requirements into a single project definition. 
+      diverse requirements into a single project definition. 
       This facilitated the design of a new website that met everyone’s 
       evolving needs while remaining simply engineered and easy to administrate.
       "
@@ -37,26 +36,26 @@ list:
   unsplash: NkEH30uoe8o
   summary: "
     revealing and exploiting the hidden order 
-    in unknown, unmanaged or unexplored systems
+    in unknown, unmanaged, or unexplored systems
     "
   accomplishments:
     - project_id: OSU/Graduate-School-Website
       description: "
       I unearthed a deeply nested and recurrent pattern 
       of content reiteration in their legacy website, where critical 
-      information was being communicated multiple times in slightly 
-      different ways. It’s resolution contributed to the new website 
-      design having 60% fewer destination pages to cover the same content, 
-      saving hundreds of maintenance hours in its lifespan. 
+      information was communicated multiple times in various ways. 
+      It’s resolution contributed to a content strategy 
+      covering the same information in 60% fewer destination pages, 
+      thereby saving hundreds of maintenance hours in the website's lifespan. 
       "
     - project_id: EC/CareNet-Elder-Care-Portal
       description: "
-      I reverse engineered the recursively 
+      I reverse engineered a recursively 
       dependent wet spaghetti code base to discover its core processes 
-      and functionality, incorporated these findings into an updated 
-      application architecture, and saved thousands of dollars in what 
-      would have been a “from scratch” code rewrite without the guidance 
-      of the legacy development team. 
+      and functionality. By incorporating these findings into an updated 
+      application architecture, I saved the client thousands of dollars in what 
+      would have otherwise been a “from scratch” code rewrite without 
+      the guidance of the legacy development team. 
       "
 - label: People Watcher
   icon: results-demographics
@@ -71,7 +70,7 @@ list:
       description: "
       We iterated through multiple website user interface 
       designs and observed the interactions of actual users with each version. 
-      This provided real world data, to rapidly narrow the field of potential 
+      This provided real world data, which I used to narrow the field of potential 
       UX solutions. 
       "
     - project_id: EC/CareNet-Elder-Care-Portal
@@ -94,7 +93,7 @@ list:
       description: "
       I dove head on into javascript development using AngularJS. 
       It was my first of many adventures with this thick-client framework, 
-      yet so far from a beginner’s lesson. With deep understanding of the application’s 
+      yet far from a beginner’s lesson. With deep understanding of the application’s 
       growing UI requirements, I was able to re-architect the entire front end to deliver 
       a more polished and scalable solution in less time than other estimates. 
       "
@@ -153,6 +152,6 @@ list:
       to quickly find pertinent information about the Graduate Programs and Graduate Funding 
       Opportunities available at the university. With the realization that this content 
       represents 80% of their daily website traffic, I set out to improve this valuable user 
-      experience. What used to take an average of 10 clicks and 8 minutes to obtain the 
-      information needed, now requires a much improved average of 4 clicks and 2 minutes.
+      experience. What once required about 10 clicks and 3 minutes for each user to find the 
+      desired information, now requires only 4 clicks and 30 seconds.
       "
