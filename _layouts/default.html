@@ -9,7 +9,7 @@
 
   {% for favicon in site.config.favicons %}
     {% assign size = favicon | split: '-' | last | split: '.' | first %}
-    <link rel="icon" sizes="{{ size }}x{{ size }}" href="{{ favicon }}">
+    <link rel="icon" type="image/png" sizes="{{ size }}x{{ size }}" href="{{ favicon }}">
     <link rel="apple-touch-icon" sizes="{{ size }}x{{ size }}" href="{{ favicon }}">
   {% endfor %}
 
