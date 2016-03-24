@@ -132,82 +132,50 @@ manimejia:
       employer: InfoShuk llc
       website: infoshuk.com
       location: Ann Arbor, Mi
-      title: Sr. Front End Developer & Architect
+      title: SaaS Product Designer & Front End Developer
       dates: 2015 - 2016
       description: |
-        InfoShuk is an early stage startup building a software platform that enables 
-        small and medium business leaders to equalize the information advantage by 
-        empowering their organization with predictive analytics. 
+        InfoShuk is an early stage startup building a SaaS web application to offer predictive analytics to small and medium businesses. 
 
-        As the Sr.Front End Developer for InfoShuk, I was responsible for architecting 
-        and crafting the AngularJS powered user interface in their flagship business 
-        analytics web application. My tasks also include designing the REST APIs, 
-        designing and implementing novel user input solutions, and creating effective 
-        data visualizations to communicate the analytical results.
+        At InfoShuk, I lead the product design and front end development efforts for their SaaS product. I was responsible for designing the application's user experience based on collected user research, creating data visualizations to communicate business analytics, collecting and integrating feedback from user tests, developing the AngularJS/Bootstrap based front end codebase, designing the REST APIs, and collaborating with the CEO and cofounders on product strategy and roadmap.
     - 
       employer: InfoReady inc
       website: infoready4.com
       location: Ann Arbor, Mi
-      title: Sr. Front End Developer & Architect
+      title: SaaS UX Architect & Front End Developer
       dates: 2015
       description: |
-        InfoReady is a startup in Ann Arbor focused on developing review management 
-        solutions for business and academia. 
+        InfoReady is a startup in Ann Arbor focused on developing applicant review management solutions for business and academia. 
 
-        As a Sr. Front End Web Developer & Architect for InfoReady, I was responsible for 
-        architecting and developing the client side codebase and collaborating on the REST 
-        API design for a number of their service oriented web applications. These applications 
-        are built using Angular JS, Bootstrap, Backbone, jQuery, and a number of other 
-        popular open-source libraries and tools.
+        At InfoReady, I was responsible for refining the user experiences, developing UI widgets, re-architecting the client side codebase, and streamlining the REST APIs for a number of their service oriented SaaS web applications. 
     - 
       employer: OSU Graduate School
       location: Corvallis, Oregon
       website: gradschool.oregonstate.edu
-      title: Web Developer & Experience Architect
+      title: Website Project Lead & SaaS UX Designer 
       dates: 2012 - 2014
       description: |
-        I was hired by the Oregon State University Graduate School to re-architect, rebuild, 
-        and maintain their web presence; assist as needed in the design and development of new 
-        technology; offer technical support to faculty, staff, and students across campus for 
-        the Graduate School's various web applications; and support the various electronic 
-        communications tools used by the Graduate School. 
-
-        In my two and a half years of service I contributed to the design and development of 
-        many successful tools and techniques to support the Graduate School's growing technical
-        efforts. During this time, I was also effective in communicating the value and empowering 
-        others to take advantage of these new and existing technology solutions. 
+        I was hired by the Oregon State University Graduate School to assist in the design and development of new web products, and to support faculty, staff, and students across campus in the use of their new and legacy web products. 
+        
+        In my two and a half years at the Graduate School, I brought usability to the forefront of importance for this growing academic department. While leading their [website rebuilding project](http://manimejia.me/portfolio#OSU-Graduate-School-Website), I was responsible for designing an effective content strategy, information architecture, and user experience. This required communicating clearly with and incorporating feedback from all content owners and stakeholders. During early development of their [graduate student applicaiton and matriculation system](http://manimejia.me/portfolio#OSU-Graduate-Education-Toolkit), I spearheaded the user experience design efforts, collecting and collating user stories, developing user personas, designing and user testing wireframes, and developing layouts and UI widgets using BootStrap and VisualForce.
     - 
       employer: Elite Care
       location: Portland, Oregon
       website: www.elitecare.com
-      title: Web Developer & Experience Architect
+      title: Website Project Lead & SaaS Product Designer
       dates: 2008 - 2010
-      description: |
-        Elite Care is a leader in the field of building and managing residential elder care 
-        facilities. Their "relationship based" model of care is nationally recognized for it's 
-        inclusion and sustainability. Their use of technology to monitor care and inspire 
-        community has been groundbreaking since 2003. With three campuses in two states, 
-        they are reinventing what it means to stay connected to our elderly relatives. 
+      description: | 
+        Elite Care is a leader in the field of building and managing elder care residential facilities. Their 'relationship based' model of caregiving is nationally recognized for its inclusion and sustainability. Their use of technology to facilitate caregiving and inspire community has been groundbreaking since 2003. With three campuses in two states, they are reinventing what it means to stay connected to our elderly relatives. 
 
-        Since 2008 I have offered my consulting services to Elite Care, helping them with 
-        digital communication strategies, application architecture, and user experience design. 
-        working closely with the CEO and founders, I have had the opportunity to design novel and 
-        scalable solutions from the ground up, in this high growth company. Our bigger projects 
-        have included a complete website redesign, and new design concept for their in-house and
-        web-based care management platform.
+        Since 2008 I have offered my professional services to Elite Care, working closely with the CEO and founders, to design novel and scalable solutions from the ground up. I acted as Product Designer for the rebuilding of their [in-house care management portal](http://manimejia.me/portfolio#EC-CareNet-Elder-Care-Portal). For this, I led the user research, persona development, information architecture, wireframing, and prototyping efforts. I also led the information architecture, prototyping, and developemt efforts during the rebuilding of thier company website.
     - 
       employer: Open Face Studio
       location: Portland, Oregon
       website: manimejia.me
-      title: Website Designer, Developer & Project Lead
+      title: Founder & Website Project Lead
       dates: 2006 - 2012
       description: |
-        As a freelance web developer for Open Face Studio, I focused my services on designing 
-        Drupal based web solutions. Working with a number of small business and nonprofit 
-        clients, I developed functional and attractive websites and applications. With 
-        attention to both the administrative and end user experience, I made a number of 
-        innovations and contributions to the Drupal community. My attention to detail and 
-        eye for simple and practical solutions resulted in a steady stream of satisfied clients.
+        As a freelance web developer for Open Face Studio, I focused my services on designing Drupal based web solutions. Working with a number of small business and nonprofit clients, I developed functional and attractive websites and applications. With attention to both the administrative and end user experience, I made a number of innovations and contributions to the Drupal community. My attention to detail and eye for simple and practical solutions resulted in a steady stream of satisfied clients.
     - 
       employer: Best Frineds Animal Society
       location: Kanab, Ut. & Bay Area, Ca.
@@ -215,67 +183,34 @@ manimejia:
       title: Flash Designer & Developer
       dates: 2001 - 2006
       description: |
-        Best Animal Society has been home to the largest no-kill sanctuary in the USA for 
-        almost two decades. This is a forward thinking organization, who is responsible 
-        for reinventing what it means to be a humane animal care facility. Where others 
-        have failed with this difficult message, Best Friends has been a pioneer in nurturing 
-        and inspiring a world-wide cruelty-free movement. 
+        Best Animal Society has been home to the largest no-kill sanctuary in the USA for almost two decades. This is a forward thinking organization, who is responsible for reinventing what it means to be a humane animal care facility. Where others have failed with this difficult message, Best Friends has been a pioneer in nurturing and inspiring a world-wide cruelty-free movement. 
 
-        As a web professional, I have been involved with the sanctuary since 2001. 
-        This is when I first proposed a novel 
-        [virtual tour](http://manimejia.me/portfolio/BFAS-Best-Friends-Virtual-Tour) concept, 
-        to be built using Flash 5. The project was accepted, and for the next year I focused 
-        on designing and developing this immersive experience. In the following 6 years I 
-        would be called on multiple times as the "flash expert" for new projects.
+        As a web professional, I have been involved with the sanctuary since 2001. This is when I first proposed a novel [virtual tour](http://manimejia.me/portfolio#BFAS-Best-Friends-Virtual-Tour) concept, to be built using Flash 5. The project was accepted, and for the next year I focused on designing and developing this immersive experience. In the following 6 years I would be called on multiple times as the "flash expert" for new projects.
   references:
     -
       fullname: John Henry
       title: Director of Technology 
       employer: Graduate School, Oregon State University
       quote: |
-        During his tenure in the Graduate School Manuel has had many responsibilities 
-        including user support, data mapping (of the existing graduate application), 
-        solutions development and deployment (such as the Post-Doctoral Individual
-        Development Plan and Scholarships application forms / review process) and user 
-        interface refinement. However his most valuable contribution was the website redesign 
-        effort. 
+        During his tenure in the Graduate School Manuel has had many responsibilities including user support, data mapping (of the existing graduate application), solutions development and deployment (such as the Post-Doctoral IndividualDevelopment Plan and Scholarships application forms / review process) and user interface refinement. However his most valuable contribution was the website redesign effort. 
 
-        Manuel took the website redesign effort from mapping the old site architecture, 
-        developing a new architecture, creating mockups and working to incrementally deploy 
-        the new site in Drupal while working with content owners both in and out of the Graduate 
-        School. I was particularly satisfied with his innovative user interface design solutions 
-        demonstrated in the [Graduate Programs](http://gradschool.oregonstate.edu/programs) page. 
+        Manuel took the website redesign effort from mapping the old site architecture, developing a new architecture, creating mockups and working to incrementally deploy the new site in Drupal while working with content owners both in and out of the Graduate School. I was particularly satisfied with his innovative user interface design solutions demonstrated in the [Graduate Programs](http://gradschool.oregonstate.edu/programs) page. 
 
-        I have also been impressed with Manuel's ability to apply his insight to the big 
-        picture and provide recommendations for potential solutions. One such solution was 
-        his implementation of a Graduate Programs feedback mechanism in order to collect up 
-        to date program information (rather than the occasional and disconnected email). 
+        I have also been impressed with Manuel‘s ability to apply his insight to the big picture and provide recommendations for potential solutions. One such solution was his implementation of a Graduate Programs feedback mechanism in order to collect up to date program information (rather than the occasional and disconnected email). 
 
-        I found Manuel to be a strong creative thinker and problem solver, he was consistently 
-        passionate and enthusiastic about his work and his desire to provide the best user 
-        experience possible. Please feel free to contact me should you require further 
-        information.
+        I found Manuel to be a strong creative thinker and problem solver, he was consistently passionate and enthusiastic about his work and his desire to provide the best user experience possible. Please feel free to contact me should you require further information.
     -
       fullname: Dan Vega
       title: Programmer Analyst
       employer: Graduate School, Oregon State University
       quote: |
-        Manuel is a dedicated UI/UX developer who is not only skilled in CSS and JavaScript, 
-        but also has a passion for the client's viewpoint. When a new platform was thrown in 
-        the mix, he rose to the occasion and went from beginner to productive developer in 
-        short order. By thinking of the platform as an architected system, he isn't one of 
-        those guys that suggests 15 million different directions. Instead, Manuel sees how 
-        the integration works in a model view controller architecture and makes suggestions 
-        that make sense, are achievable, and can communicate his ideas not only in mock-ups 
-        but also in conversation. If you are currently unhappy with the user experience being 
-        delivered to your clients, or would like to get it right from the start, bring Manuel 
-        on board and you'll be on your way to a pleasant, effective UI/UX solution.
+        Manuel is a dedicated UI/UX developer who is not only skilled in CSS and JavaScript, but also has a passion for the client's viewpoint. When a new platform was thrown in the mix, he rose to the occasion and went from beginner to productive developer in short order. By thinking of the platform as an architected system, he isn't one of those guys that suggests 15 million different directions. Instead, Manuel sees how the integration works in a model view controller architecture and makes suggestions that make sense, are achievable, and can communicate his ideas not only in mock-ups but also in conversation. 
+
+        If you are currently unhappy with the user experience being delivered to your clients, or would like to get it right from the start, bring Manuel on board and you'll be on your way to a pleasant, effective UI/UX solution.
     -
       fullname: Barbara J. Bond
       title: Director of Postdoctoral Programs
       employer: Office of Postdoctoral Programs, Oregon State University
       quote: |
-        Manuel created an impressive and innovative revision to a website for a program 
-        at Oregon State University for postdoctoral researchers. Many of the concepts he 
-        developed were later used by others in other website development work.
+        Manuel created an impressive and innovative revision to a website for a program at Oregon State University for postdoctoral researchers. Many of the concepts he developed were later used by others in other website development work.
 
