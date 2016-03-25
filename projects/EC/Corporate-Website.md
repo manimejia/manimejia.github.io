@@ -1,11 +1,12 @@
 ---
 client: EC
 title: Company Website
-summary: A brochure website for a medium sized elder care management corporation in the pacific northwest.
+summary: |
+  A brochure website for a medium sized elder care management corporation in the pacific northwest.
 startdate: 2009-05-01
 enddate: 2009-09-01
 website: 
-role: Website Developer
+role: Project Lead
 status: retired
 
 publish:  
@@ -41,3 +42,5 @@ tasks:
   - Developed an integrated contact form solution, to facilitate booking tours at individual communities.
 
 ---
+
+I led the information architecture, prototyping, and development efforts during the rebuilding of this company website.

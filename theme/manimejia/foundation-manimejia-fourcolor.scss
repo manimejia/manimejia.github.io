@@ -1582,7 +1582,7 @@ $tabs-navigation-font-color: $white;
 //   "foundation/components/joyride",
    "foundation/components/keystrokes",
    "foundation/components/labels",
-//   "foundation/components/magellan",
+   "foundation/components/magellan",
 //   "foundation/components/orbit",
    "foundation/components/pagination",
    "foundation/components/panels",
@@ -1920,8 +1920,9 @@ a.close{
 a.grippy{
 width: 3rem;
 display: inline-block;
-border-bottom: .5rem #555 double;
-cursor: row-resize;
+border-bottom: .25rem get-color(secondary) double;
+border-top: .25rem get-color(secondary) double;
+/*cursor: row-resize;*/
 margin-bottom: .5rem;
 height: .5rem;
 }

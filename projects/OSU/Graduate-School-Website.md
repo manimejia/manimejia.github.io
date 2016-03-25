@@ -5,7 +5,7 @@ summary: A 'college' level OSU website, delivering information and online forms 
 startdate: 2012-04-09
 enddate: 2014-09-21
 website: http://gradschool.oregonstate.edu
-role: Website Developer
+role: Website Project Lead
 publish:
  print: true
  main: true 
@@ -35,7 +35,7 @@ assets:
  - filename: gradschool-website-screen-homepage.png
    caption: Graduate School home page, showing a novel approach to information architecture. The image carousel (and the "boxed" content bellow it) presents "promoted" content from within the website, driving visitors to important information. The main navigational elements make use of typical "audience based navigation" typically found in academic sites, as well as "topic based navigation" found on most other informative sites. Additionally, this screen shot shows the use of a modern "Contact Us" button that stays within view while scrolling the page.
  - filename: gradschool-website-screen-international.png
-   caption: Important consideration needs to be given to potential international applicants, making sure they understand the particular requirements. We accomplished this need with a much simplified and improved architecture, making use of a callout box directing visitors to the relevant information. Also, take note of the care given to the side bar navigation, in keeping it simple and visually interesting.
+   caption: Important consideration needs to be given to potential international applicants, making sure they understand the particular requirements. We accomplished this need with a much simplified and improved content layout, making use of a callout box directing visitors to the relevant information. Also, take note of the care given to the side bar navigation, in keeping it simple and visually interesting.
  - filename: gradschool-website-screen-notification.png
    caption: This screenshot highlights the "Notifications" tool developed specifically for the Graduate School website. Notifications appear at the top of website pages, informing visitors of contextually important and time sensitive information. They can be created and edited using a custom maintenance page. Each one can have an icon, static or repeating dates, and multiple website sections associated with it; these control how, when, and where it will be displayed. 
  - filename: gradschool-website-screen-program-page.png
@@ -46,13 +46,13 @@ assets:
    caption: This screenshot highlights the use of the "contact card" design pattern, which is incorporated throughout the site whenever personal contact information is displayed.
 
 tasks: 
-- Developed comprehensive architectural documentation of the legacy Oregon State Graduate School website, in preparation for a complete rebuild.
+- Developed comprehensive documentation of the legacy website.
+- Designed a content strategy to cover the same information with zero redundancy.
 - Worked closely with various OSU entities to establish the requirements and restrictions for the new website, to be built on the Drupal 7 platform.
-- Met regularly with stakeholders to discuss the current interface and architectural designs for the new website.
-- Developed wireframes, diagrams. and questionnaires to communicate these designs and collect feedback from stakeholders.
+- Met regularly with stakeholders to discuss their own needs for the new website.
+- Developed wireframes, diagrams. and questionnaires to communicate with and collect feedback from all stakeholders.
 - | 
-  Developed numerous usability innovations, which allowed this academic website to stand out from others 
-  and receive much recognition. This included, in part:
+  Developed numerous usability innovations, which allowed this academic website to stand out from others and receive much recognition. This included, in part:
 
   - A 'multi-audience' home page layout and 'content agnostic' homepage carousel
   - A searchable and very informative listing of all current Graduate Programs
@@ -61,8 +61,7 @@ tasks:
   - A prominent notifications display, with easy to manage set of notification templates.
   - Many integrated forms and tools for collecting data
   - A simple API for sending website data to Google spreadsheets  
-  
-- Provided continuous development and refinement of features as needs grew.
 
 
 ---
+During this complete website overhaul, I was responsible for designing an effective content strategy, information architecture, and user experience as well as developing Drupal modules and theme modifications as needed. This required communicating clearly with and incorporating feedback from all content owners and stakeholders in this academic environment.

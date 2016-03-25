@@ -87,13 +87,19 @@
       </div>
   </aside>
   <hr/>
-  <section id="{{this_page_id}}-content" class="column" data-tabs="tabsGrid" data-tabs-components-tabs-classes-expanded="warning" aria-owns="{{this_page_id}}-content-tablist" aria-labelledby="{{this_page_id}}-content-label">
+  <section id="{{this_page_id}}-content" class="column" 
+  {%comment%}
+  data-tabs="tabsGrid" data-tabs-components-tabs-classes-expanded="warning"
+  {%endcomment%}
+  aria-owns="{{this_page_id}}-content-tablist" 
+  aria-labelledby="{{this_page_id}}-content-label">
     <h4 id="{{this_page_id}}-content-label" class="hidden-for-small-only hidden-for-medium-up">
     Project Details</h4>
-    <div class="column {% if page.assets %}medium-3 large-4{% else %}medium-2 large-3{% endif %}">
-      <nav role="navigation">
+    {%comment%}
+    <!-- <div class="column {% if page.assets %}medium-3 large-4{% else %}medium-2 large-3{% endif %}">
+      <nav role="navigation"> -->
 
-        {% if page.website %}
+        <!-- {% if page.website %}
         <p class="text-center font-larger alert-text">
           <a href="{{page.website}}" target="_blank" title="go to {{ page.status }} website">
           <i class="fi-play-circle"></i> {{ page.status }} website
@@ -103,9 +109,9 @@
         <p class="text-center font-larger info-text">
           <i class="fi-info" title="project status"></i> {{ page.status }}
         </p>
-        {% endif %}
+        {% endif %} -->
 	
-        <ul id="{{this_page_id}}-content-tablist" class="row no-bullet " role="tablist">
+        <!-- <ul id="{{this_page_id}}-content-tablist" class="row no-bullet " role="tablist">
         {% assign tabbuttonsmall = 16 %}
         {% if page.tasks %}{% assign tabbuttonsmall = tabbuttonsmall - 4 %}{% endif %}
         {% unless has_page_content == '' %}{% assign tabbuttonsmall = tabbuttonsmall - 4 %}{% endunless %}
@@ -129,7 +135,7 @@
           <i class="fi-thumbnails"></i><span class="hidden-for-small-only"> Images</span></a>
           </li>
         {% endif %}
-        </ul>
+        </ul> -->
 
         <!--
       {% if page.assets %}
@@ -147,53 +153,171 @@
       {% endif %}
       -->
     
-      </nav>
-    </div><!-- tablist -->
+      <!-- </nav>
+    </div> --><!-- tablist -->
+    {%endcomment%}
     
-    <div class="column {% if page.assets %}medium-9 large-8{% else %}medium-10 large-9{% endif %}" role="presentation">
-      {% if page.tasks %}
-      <section id="{{this_page_id}}-tasks" class="active" role="tabpanel" aria-labelledby="{{this_page_id}}-tasks-tab">
-        <ul class="circle">
-        {% for task in page.tasks %}
-          <li>{{ task | strip_html | markdownify }}</li>
-        {% endfor %}
-        </ul>
-      </section>
-      {% endif %}
+    <div 
+    {%comment%}
+    class="column {% if page.assets %}medium-9 large-8{% else %}medium-10 large-9{% endif %}"
+    {%endcomment%}
+    class="column" role="presentation">
       {% unless has_page_content == '' %}
-      <section id="{{this_page_id}}-story" role="tabpanel" aria-labelledby="{{this_page_id}}-story-tab">
+      <section id="{{this_page_id}}-story" 
+      class="panel warning"
+      {%comment%}
+      role="tabpanel" 
+      aria-labelledby="{{this_page_id}}-story-tab" 
+      {%endcomment%}>
         <!-- has_page_content : -->
         <!--{{ has_page_content }}-->
         {{ page.content | markdownify }}
       </section>
       {% endunless %}
-      
+
+      {% if page.tasks %}
+      <section id="{{this_page_id}}-tasks" 
+      aria-labelledby="{{this_page_id}}-tasks-tab">
+        <ul class="medium-block-grid-2 no-bullet warning text-justify">
+        {% for task in page.tasks %}
+          <li>
+          <div class="row">
+          <div class="column small-1"><i class="fi-check font-larger success-text"></i></div>
+          <div class="column small-11">{{ task | strip_html | markdownify }}</div>
+          </div>
+          </li>
+        {% endfor %}
+        </ul>
+      </section>
+      {% endif %}
+
       {% if page.assets %}
-      <section id="{{this_page_id}}-assets" role="tabpanel" class="pagination-centered">
-        <div id="{{this_page_id}}-assets-slider" data-tabs="slider" 
+      {%if page.assets.size == 1 %}<hr/>{%endif%}
+      <ul id="{{this_page_id}}-assets"
+      class="
+      no-bullet
+      {%unless page.assets.size == 1 %}
+      small-block-grid-2 
+        {%unless page.assets.size == 2 %}
+        medium-block-grid-3 
+          {%unless page.assets.size == 3 %}
+          large-block-grid-4
+      {%endunless%}{%endunless%}{%endunless%}
+      ">
+      {% for asset in page.assets %}{% if asset.filename %}
+      <li>
+      {%unless page.assets.size == 1 %}
+       <a href=""class="th" role="button" aria-label="Thumbnail"
+       data-reveal-id="{{this_page_id}}-asset{{forloop.index}}"
+       style="max-height: 10rem;overflow: hidden;">
+         <img src="{{this_page_assetpath}}{{asset.filename}}" alt="{{asset.caption}}" />
+       </a>
+      {%endunless%}
+      <div id="{{this_page_id}}-asset{{forloop.index}}" 
+      {%unless page.assets.size == 1 %}
+      class="reveal-modal bg-primary" data-reveal aria-labelledby="modalTitle" 
+      aria-hidden="true" role="dialog"
+      {%endunless%}>
+          <figure class="text-center" 
+          aria-labelledby="{{this_page_id}}-asset{{forloop.index}}-caption">
+            <figcaption id="{{this_page_id}}-asset{{forloop.index}}-caption" 
+            class="{%unless page.assets.size == 1 %}row collapse{%endunless%}">
+            {%unless page.assets.size == 1 %}
+            <div class="column small-1">
+            {%if forloop.index > 1%}
+            <br/>
+            <br/>
+              <button class="btn" 
+              onclick="$('#{{this_page_id}}-asset{{forloop.index | minus : 1}}').foundation('reveal','open')">
+              <i class="fi-arrow-left"></i>
+              </button>
+            {% endif %}
+            </div>
+            {%endunless%}
+            <p class="{%unless page.assets.size == 1 %}column small-10{%endunless%} text-italic">
+            {{asset.caption}}
+            </p>
+            {%unless page.assets.size == 1 %}
+            <div class="column small-1">
+            {%if forloop.index < page.assets.size %}
+            <br/>
+            <br/>
+              <button class="btn" 
+              onclick="$('#{{this_page_id}}-asset{{forloop.index | plus : 1}}').foundation('reveal','open')">
+              <i class="fi-arrow-right"></i>
+              </button>
+            {% endif %}
+            </div>
+            {%endunless%}
+            </figcaption>
+            <img src="{{this_page_assetpath}}{{asset.filename}}" alt="{{asset.caption}}"/>
+          </figure>
+        {%unless page.assets.size == 1 %}
+        <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+        {%endunless%}
+      </div>
+      </li>
+      {% endif %}{% endfor %}
+      </ul> 
+      {% endif %}
+
+      {%comment%}
+      {% if page.assets %}
+      <!-- <section id="{{this_page_id}}-assets" role="tabpanel" class="pagination-centered">
+        <div id="{{this_page_id}}-assets-slider" 
+          data-tabs="slider" 
           data-tabs-components-tab-list-selector-depth="1"
-          data-tabs-components-tabs-classes-expanded="current" >
-        
+          data-tabs-components-tabs-classes-expanded="current" 
+          >
+
         <a role="button" name="previous" class="left font-larger" tabindex="-1">&laquo;</a>
         <a role="button" name="next" class="right font-larger" tabindex="-1">&raquo;</a>
 
-        <ul role="tablist" class="text-center inline-block-list">
+        <ul class="text-center inline-block-list"
+        role="tablist">
+          {% if page.tasks %}
+          <li>
+          <a id="{{this_page_id}}-tasks-tab" href="{{this_page_id}}-tasks"
+          class="th" 
+          role="tab" aria-expanded="{{forloop.first}}"
+          aria-controls="{{this_page_id}}-tasks" 
+          title="Tasks (slide {{forloop.index}} of {{forloop.length}})">
+          <i class="font-larger fi-list"></i>
+          </a>
+          </li>
+          {% endif %}
           {% for asset in page.assets %}
           <li>
-            <a id="{{this_page_id}}-asset{{forloop.index}}-tab" href="{{this_page_id}}-asset{{forloop.index}}" class="th img-micro" role="tab" aria-expanded="{{forloop.first}}" aria-controls="{{this_page_id}}-asset{{forloop.index}}" style="background-image:url({{this_page_assetpath}}{{asset.filename}})" title="image {{forloop.index}} of {{forloop.length}}"><img src="" alt="{{asset.caption}}"/>
+            <a id="{{this_page_id}}-asset{{forloop.index}}-tab" 
+            href="{{this_page_id}}-asset{{forloop.index}}" 
+            class="th img-micro" role="tab" aria-expanded="{{forloop.first}}" 
+            aria-controls="{{this_page_id}}-asset{{forloop.index}}" 
+            style="background-image:url({{this_page_assetpath}}{{asset.filename}})" 
+            title="Screenshot (slide {{forloop.index}} of {{forloop.length}})">
+            <img src="" alt="{{asset.caption}}"/>
             </a>
             <!--
             <button id="{{this_page_id}}-asset{{forloop.index}}-tab" role="tab" 
             aria-controls="{{this_page_id}}-asset{{forloop.index}}" 
             {%if forloop.first %}aria-expanded="true" class="current"{% endif %}>o</button>
-            -->
+            ->
             </li>
           {% endfor %}
         </ul>
-        <hr>
+        {% if page.tasks %}
+        <div id="{{this_page_id}}-tasks" 
+        aria-labelledby="{{this_page_id}}-tasks-tab">
+          <ul class="medium-block-grid-2 no-bullet text-justify">
+          {% for task in page.tasks %}
+            <li class="">{{ task | strip_html | markdownify }}</li>
+          {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
         {% for asset in page.assets %}{% if asset.filename %}
         <div id="{{this_page_id}}-asset{{forloop.index}}" role="tabpanel">
-          <figure class="text-center" aria-labelledby="{{this_page_id}}-asset{{forloop.index}}-caption">
+          <figure class="text-center" 
+          aria-labelledby="{{this_page_id}}-asset{{forloop.index}}-caption">
             <figcaption id="{{this_page_id}}-asset{{forloop.index}}-caption">{{asset.caption}}</figcaption><br/>
             <img src="{{this_page_assetpath}}{{asset.filename}}" alt="{{asset.caption}}"/>
           </figure>
@@ -201,9 +325,12 @@
         {% endif %}{% endfor %}
                 
         </div>
-      </section> 
+      </section>  -->
       {% endif %}
-    </div><!-- end panels column -->
+      {%endcomment%}
+    </div>
+    <!-- end panels column -->
+
     
     {% if page.tags %}
     <aside id="{{this_page_id}}-tags" role="complementary" 
@@ -219,7 +346,9 @@
     {% endif %} 
   </section>
   <nav class="text-center column">
-      <a title="close this tab" href="#{{this_page_id}}" class="grippy" tabindex="0">&nbsp;
+    <br/>
+      <a title="close this tab" href="#{{this_page_id}}" class="grippy" tabindex="0">
+      &nbsp;&nbsp;
         <span style="display:block;
         position:absolute;
         left:-10000px;
@@ -229,6 +358,7 @@
         overflow:hidden;">close this tab</span></a>
   </nav>
 </article>
+
 
 
 	 
