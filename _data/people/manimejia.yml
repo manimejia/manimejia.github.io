@@ -128,7 +128,7 @@
 
   employment:
     - 
-      employer: InfoShuk llc
+      employer: InfoShuk
       website: infoshuk.com
       location: Ann Arbor, Mi
       title:  Lead Front End Developer & UX Designer
@@ -138,7 +138,7 @@
 
         At InfoShuk, I lead design and development of the front end experience for their web based SaaS product. I was responsible for designing the application's user experience based on collected user research, creating data visualizations to communicate business analytics, collecting and integrating feedback from user tests, developing the AngularJS/Bootstrap based front end codebase, designing the REST APIs, and collaborating with the CEO and cofounders on product strategy and roadmap.
     - 
-      employer: InfoReady inc
+      employer: InfoReady
       website: infoready4.com
       location: Ann Arbor, Mi
       title:  Lead Front End Developer & UX Designer
@@ -185,17 +185,20 @@
         Best Animal Society has been home to the largest no-kill sanctuary in the USA for almost two decades. This is a forward thinking organization, who is responsible for reinventing what it means to be a humane animal care facility. Where others have failed with this difficult message, Best Friends has been a pioneer in nurturing and inspiring a world-wide cruelty-free movement. 
 
         As a web professional, I have been involved with the sanctuary since 2001. This is when I first proposed a novel [virtual tour](http://manimejia.me/portfolio#BFAS-Best-Friends-Virtual-Tour) concept, to be built using Flash 5. The project was accepted, and for the next year I focused on designing and developing this immersive experience. In the following 6 years I would be called on multiple times as the "flash expert" for new projects.
+
   references:
+    -
+      fullname: Joshua Sukenic
+      title: CEO, Growth Architect
+      employer: InfoShuk
+      quote: | 
+        Manuel did a great job for InfoShuk as our front-end lead. As an early-stage company, [He] jumped right into action and began developing a solid code base. Along with support in formulating concepts into product realities, Mani's communication, code quality and teamwork were top notch.
     -
       fullname: John Henry
       title: Director of Technology 
       employer: Graduate School, Oregon State University
       quote: |
-        During his tenure in the Graduate School Manuel has had many responsibilities including user support, data mapping (of the existing graduate application), solutions development and deployment (such as the Post-Doctoral IndividualDevelopment Plan and Scholarships application forms / review process) and user interface refinement. However his most valuable contribution was the website redesign effort. 
-
-        Manuel took the website redesign effort from mapping the old site architecture, developing a new architecture, creating mockups and working to incrementally deploy the new site in Drupal while working with content owners both in and out of the Graduate School. I was particularly satisfied with his innovative user interface design solutions demonstrated in the [Graduate Programs](http://gradschool.oregonstate.edu/programs) page. 
-
-        I have also been impressed with Manuel‘s ability to apply his insight to the big picture and provide recommendations for potential solutions. One such solution was his implementation of a Graduate Programs feedback mechanism in order to collect up to date program information (rather than the occasional and disconnected email). 
+        &hellip; Manuel took the website redesign effort from mapping the old site architecture, developing a new architecture, creating mockups and working to incrementally deploy the new site in Drupal while working with content owners both in and out of the Graduate School. I was particularly satisfied with his innovative user interface design solutions demonstrated in the [Graduate Programs](http://gradschool.oregonstate.edu/programs) page. &hellip;
 
         I found Manuel to be a strong creative thinker and problem solver, he was consistently passionate and enthusiastic about his work and his desire to provide the best user experience possible. Please feel free to contact me should you require further information.
     -
