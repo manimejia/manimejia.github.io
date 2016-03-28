@@ -5,7 +5,7 @@ summary: A tool to help small and medium businesses make strategic desicions bas
 startdate: 2015-10-09
 enddate: 2016-02-29
 website: http://www.infoshuk.com
-role: Web Product Designer & Lead Developer
+role: Product Design & Development Lead
 status: 
 
 publish:  

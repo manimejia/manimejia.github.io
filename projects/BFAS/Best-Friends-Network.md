@@ -5,7 +5,7 @@ summary: An early "social network" for the 50,000+ membership base of Best Frien
 startdate: 2005-08-01
 enddate: 2005-12-01
 website: 
-role: Web Product Designer & Lead Developer
+role: Product Design & Development Lead
 status: retired
 
 publish: 
