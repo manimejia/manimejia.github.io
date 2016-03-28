@@ -6,7 +6,7 @@ summary: A cutting edge multimedia tour of the nation's largest "no kill" animal
 startdate: 2002-11-01
 enddate: 2002-02-01  
 website: http://manimejia.me/archive/?/projects/BFAS/assets/BFAS-Tour12
-role: Designer / Developer  
+role: Multimedia Designer 
 status: archived
 
 publish: 

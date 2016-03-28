@@ -9,7 +9,7 @@ enddate: 2008-12-01
 
 website: http://organicathlete.org
 
-role: Website Developer
+role: Web Site Project Lead
 
 publish: 
   print: false

@@ -1592,7 +1592,7 @@ $tabs-navigation-font-color: $white;
 //   "foundation/components/side-nav",
    "foundation/components/split-buttons",
    "foundation/components/sub-nav",
-//   "foundation/components/switches",
+   "foundation/components/switches",
 //   "foundation/components/tables",
 //   "foundation/components/tabs",
    "foundation/components/thumbs",
@@ -1906,6 +1906,9 @@ a.close{
   text-shadow: #222 0px 0px .1em;
 }
 
+.inline{
+	display:inline;
+}
 
 .inline-block{
 	display:inline-block;
@@ -2395,9 +2398,9 @@ padding: 1em;
 		position:absolute;
 		margin:0;
 		width:100%;
-    padding: .5em 1.5em;
+    padding: 0;
 		color:white;
-		top:25%;
+		top:1em;
     opacity: 0;
     -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
     transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -2417,5 +2420,43 @@ padding: 1em;
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1);
+  }
+}
+
+/** Radio Button Groups **/
+input[data-toggle] {
+  display: none;
+}
+input[data-toggle] + label {
+	margin:0;
+}
+
+input[data-toggle]:checked + label,
+input[data-toggle]:checked + label:active {
+  background-color: get-color(secondary);
+  color:get-color(primary);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15) inset, 
+              0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+input[data-toggle] + label.check {
+  padding-left: 1.5em;
+}
+
+input[data-toggle] + label.check:before {
+	font-size:0;
+	width:1em;
+  padding-right:.5em;
+	margin-left:-1em;
+  height:100%;
+}
+
+input[data-toggle]:checked + label.check:before {
+	font-size:1em;
+}
+
+.button-group.toggle {
+  li:not(first-child) {
+    margin: 0 -0.9rem;
   }
 }

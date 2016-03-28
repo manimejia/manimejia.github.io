@@ -1,3 +1,4 @@
+{% assign these_pages = site.pages | where: "category" , "project" | sort: "date"  | sort: "enddate" | sort: "startdate" %}
 <style>
 span.title a {
 color: inherit;
@@ -6,7 +7,7 @@ color: inherit;
 
 .accordion-grid[role="tablist"]{
   position: relative;
-  text-align:center;
+  /*text-align:center;*/
   list-style: none;
 }
 .accordion-grid[role="tablist"] .year{
@@ -19,6 +20,7 @@ margin: -2.2rem 0 0 -2rem;
 
 
 .accordion-grid[role="tablist"] > .accordion-grid-item{
+text-align:center;
 font-size:1rem;
 display: inline-block !important;
 vertical-align: top;
@@ -32,17 +34,14 @@ margin-bottom:0rem;
 position: relative;
 text-align: center;
 display: block;
-width: 8.5rem;
-height: 8.5rem;
-margin: 2.2rem 2.2rem 1.5rem;
 color: #FFF;
 background: none;
-padding: initial;
 font-family: inherit;
 font-size: 0;
 text-shadow: 0 0 0 #FFF;
 border-radius: 50%;
-border: solid .25rem #FFF;
+border-style: solid;
+border-color: #FFF;
 }
 
 [role="tablist"] a.th[role="tab"]{
@@ -247,17 +246,161 @@ article.accordion-grid-item .th a.th-link:hover .title{
   }
 }
 
+/*.accordion-grid[role="tablist"].year{
+position: absolute;
+margin: -2.2rem 0 0 -2rem;
+}
+.accordion-grid[role="tablist"].year time.label{
+  font-size:1rem;
+}*/
 
+
+.accordion-grid > .accordion-grid-item {
+  width:auto;
+}
+.accordion-grid > .accordion-grid-item .year{
+  display:none;
+}
+.accordion-grid > .accordion-grid-item > a[role="tab"]{
+  transition:
+    transform  400ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0ms,
+    opacity 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0ms,
+    width 200ms linear 400ms,
+    height 200ms linear 400ms,
+    margin 200ms linear 400ms,
+    padding 200ms linear 400ms;
+
+  transform: scale(0) ;
+  opacity: 0 ;
+  width: 0 ;
+  height: 0 ;
+  margin: 0 ;
+  padding:0 ;
+  /*border-color:transparent ;*/
+  border-width: 0;
+
+}
+
+.accordion-grid.filter-show-all > .accordion-grid-item > a[role="tab"],
+.accordion-grid > .filter-show.accordion-grid-item > a[role="tab"] {
+  transition:
+    transform  400ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 400ms,
+    opacity 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 400ms,
+    width 200ms linear 0ms,
+    height 200ms linear 0ms,
+    margin 200ms linear 0ms,
+    padding 200ms linear 0ms,
+    font-size 200ms ease-out,
+    box-shadow 200ms ease-out,
+    color 200ms ease-out;
+
+  transform: scale(1) ;
+  opacity: 1 ;
+  width: 8.5rem;
+  height: 8.5rem;
+  margin: 2.2rem 2.2rem 1.5rem;
+  padding: initial;
+  border-width: .25rem;
+}
+.accordion-grid.filter-show-all > .accordion-grid-item .year,
+.accordion-grid > .filter-show.accordion-grid-item .year{
+  display:initial;
+}
+
+
+
+{%for this_page in these_pages %}{% if this_page.client %}{% unless this_page.publish.draft %}
+{% include _this_page.liquid %}
+.filter-show-all > .accordion-grid-item.hasyear-{{this_page_date | date: '%Y' }} ~ 
+.accordion-grid-item.hasyear-{{this_page_date | date: '%Y' }} > .year,
+.filter-show.accordion-grid-item.hasyear-{{this_page_date | date: '%Y' }} ~ 
+.accordion-grid-item.hasyear-{{this_page_date | date: '%Y' }} > .year{
+display:none;
+}
+{% endunless %}{% endif %}{%endfor%}
 
 </style>
 
-<ul id="portfolio-accordion-grid" class="accordion-grid row" role="tablist"
+
+<script>
+function filterPortfolioItems(doShowAll){
+  doShowAll = doShowAll == true ? true : false;
+  var 
+    $portfolioFilters = $('#portfolio-filters'),
+    $portfolioList = $('#portfolio-accordion-grid'),
+    showAllClass = 'filter-show-all',
+    showItemClass = 'filter-show',
+    filterAttr = 'data-filter',
+    doShowSome = false;
+
+    if(doShowAll){
+      $portfolioList.addClass(showAllClass)
+        .find('['+filterAttr+']').removeClass(showItemClass);
+      $portfolioFilters.addClass(showAllClass)
+        .find('['+filterAttr+']').prop('checked',false);
+    }else{
+      $portfolioList.removeClass(showAllClass);
+      $portfolioFilters.removeClass(showAllClass)
+        .find('input').each(function(){
+          var $input = $(this),
+            isChecked = $input.prop('checked'),
+            filterVal = $input.attr(filterAttr),
+            $filteredItems = $portfolioList.find('['+filterAttr+'='+filterVal+']');
+          if(isChecked){
+            doShowSome = true;
+            $filteredItems.addClass(showItemClass)
+          }else{
+            $filteredItems.removeClass(showItemClass)
+          }
+        });
+    }
+    if(!doShowAll && !doShowSome) filterPortfolioItems(true);
+}
+</script>
+
+{% assign unique_roles = ""%}
+{% for this_page in these_pages reversed %}
+{% if this_page.client %}
+{% unless this_page.publish.draft %}
+{% unless unique_roles contains this_page.role %}
+{% assign unique_roles = unique_roles | append : ',' | append : this_page.role%}
+{%endunless%}
+{%endunless%}
+{%endif%}
+
+{%endfor%}
+{%assign unique_roles = unique_roles | split : ',' %}
+<div class="row">
+<nav class="column small-12 medium-10 small-centered">
+<div id="portfolio-filters"
+class="toggle text-center" 
+data-toggle="buttons-radio">
+<button id="filter-show-all" data-toggle="button" 
+class="button info small"
+onclick="filterPortfolioItems(true)">
+Show All</button>
+
+{% for role in unique_roles %}
+{% unless role == "" %}
+  <div class="inline">
+    <input type="checkbox" id="filter-{{role | slugify }}" name="filter-radios" 
+    data-toggle="button" data-filter="{{role | slugify }}"
+    onclick="filterPortfolioItems()">
+    <label class="button check fi-check small" for="filter-{{role | slugify }}">
+    {{role}}
+    </label>
+  </div>
+{%endunless%}
+{%endfor%}
+</div>
+</nav>
+
+<ul id="portfolio-accordion-grid" class="accordion-grid column filter-show-all text-center" role="tablist"
 data-tabs="accordionGrid" data-tabs-get-expanded-tab-from-location-hash="true" data-tabs-set-location-hash-to-expanded-tab="true"
 {% comment %}
 data-accordiongrid='{"getExpandedTabFromLocationHash":true,"setLocationHashToExpandedTab":true}' 
 data-aria-tab-group="accordion-grid"
 {% endcomment %}>
-{% assign these_pages = site.pages | where: "category" , "project" | sort: "date" | sort: "startdate"  | sort: "enddate" %}
 {% for this_page in these_pages reversed %}
   {% if this_page.client %}
   {% unless this_page.publish.draft %}
@@ -267,11 +410,13 @@ data-aria-tab-group="accordion-grid"
   {% assign item_year = this_page_date | date: '%Y' %}
   {% unless last_item_year %}{% assign last_item_year = 0000 %}{% endunless %}
 
-    <li id="{{ this_page_id }}-wrapper" class="accordion-grid-item">
-    {% if item_year != last_item_year %}
+    <li id="{{ this_page_id }}-wrapper" 
+    data-filter="{{this_page.role | slugify }}"
+    class="accordion-grid-item hasyear-{{this_page_date | date: '%Y' }}">
       <h3 class="year inline-block primary-text" role="heading"><time class="label warning point-right">{{ item_year }}</time></h3>
+    {% if item_year != last_item_year %}
     {% endif %}
-      <a id="{{ this_page_id }}-th" href="{{ this_page.url }}" class="th skrollr-perspectivezoom-bottom" role="tab" aria-controls="{{this_page_id}}" data-scroll-offset="128" tile="project {{forloop.index}} of {{forloop.length}}">
+      <a id="{{ this_page_id }}-th" href="{{ this_page.url }}" class="th skrollr-perspectivezoom-bottom transition" role="tab" aria-controls="{{this_page_id}}" data-scroll-offset="128" tile="project {{forloop.index}} of {{forloop.length}}">
         <!--<span class="title th-link">{{ this_page.title }}</span>-->
         <span class="hidden-for-small-only hidden-for-medium-up">{{ this_client_page.title}} - {{ this_page.title }}</span>
         <span class="client caption circular-text" aria-hidden="true" hidden>{% include split_char.html string=this_client_page.title %}</span>
@@ -296,5 +441,5 @@ data-aria-tab-group="accordion-grid"
 </ul>
 
 
-
+</div>
 

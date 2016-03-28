@@ -5,7 +5,7 @@ summary: A course management system to support the [United Association](http://u
 startdate: 2015-03-09
 enddate: 2015-08-15
 website: https://www.uaportfolio.com
-role: Front End Developer & Architect
+role: Web Product Designer & Lead Developer
 status: 
 
 publish:  

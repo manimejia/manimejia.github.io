@@ -4,7 +4,7 @@ title: Stages of Life Documentary Video
 startdate: 
 enddate: 2001-08-01
 website: 
-role: Multimedia Artist
+role: Multimedia Designer
 status: archived
 
 publish: 

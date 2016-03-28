@@ -4,7 +4,7 @@ title: Non-Profit Logo and Website Design
 startdate: 
 enddate: 2006-12-01
 website:
-role: Graphic Designer
+role: Multimedia Designer
 status: retired
 
 publish: 

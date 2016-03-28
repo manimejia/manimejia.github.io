@@ -12,14 +12,14 @@ splash: false
 {% assign person = site.data.people.manimejia %}
 <section role="region" class="clearfix">
 <div class="row">
-  <div class="column large-3 medium-4 small-centered">
+  <div class="column large-3 medium-4 small-7 small-centered">
     <br/>
     {% include vcard.html person=person compact=true%}
   </div>
 </div>
 
 <div class="row text-center">
-    <header>
+    <header class="column medium-10 small-11 small-centered">
     {% if person.title %}
     <h2>{{person.title}}</h2>
     {%endif%}

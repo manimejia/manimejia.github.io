@@ -5,7 +5,7 @@ summary: A next generation elder care management system for the 'smart' campuses
 startdate: 2009-08-15
 enddate: 2010-07-01
 website: 
-role: Product Designer
+role: Web Product Designer & Lead Developer
 status: 
 
 publish:  

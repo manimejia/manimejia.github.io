@@ -5,7 +5,7 @@ summary: A workflow solution, based on Google Docs, to track the progress of pos
 startdate: 2014-01-01
 enddate: 2014-02-18
 website: 
-role: Javascript Developer
+role: Web Product Designer & Lead Developer
 publish:
  print: false
  main: true 

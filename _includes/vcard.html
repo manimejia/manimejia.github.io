@@ -26,7 +26,7 @@
   <p class="vcard-message">{{ include.message | markdownify}}</p>
   {%endif%}
 
-  <ul class="vcard-info font-large" role="presentation">
+  <ul class="vcard-info" role="presentation">
     {% for sociallink in include.person.social %}
     <li class="vcard-social-{{sociallink.icon}}" role="presentation">
       <b class="hidden-for-small-only hidden-for-medium-up">{{sociallink.icon | capitalize}}: </b>

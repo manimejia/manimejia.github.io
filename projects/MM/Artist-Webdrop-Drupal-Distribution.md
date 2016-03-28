@@ -4,7 +4,7 @@ title: Artist Webdrop (Drupal Distribution)
 startdate: 2008-07-01
 enddate: 2008-10-01
 website: 
-role: Website Developer
+role: Web Product Designer & Lead Developer
 status: retired
 publish: 
  print: false

@@ -8,7 +8,7 @@ role: Event Coordinator
 status: complete
 publish: 
  main: true
- draft: false
+ draft: true
 tags:
 - Communication
 - Event Promotion

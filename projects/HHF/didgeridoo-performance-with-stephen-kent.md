@@ -4,7 +4,7 @@ client: HHF
 startdate: 
 enddate: 2000-06-01
 website: 
-role: Musician
+role: Performance Artist
 publish: 
  main: true
 status: complete

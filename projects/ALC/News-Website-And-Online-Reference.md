@@ -4,7 +4,7 @@ title: News Website & Online Reference
 startdate: 2007-07-01
 enddate: 2007-12-01
 website: https://web.archive.org/web/20111016060516/http://www.animallawcoalition.com/
-role: Website Developer
+role: Web Site Project Lead
 status: archived
 publish: 
  print: false

@@ -6,7 +6,7 @@ summary: |
 startdate: 2009-05-01
 enddate: 2009-09-01
 website: 
-role: Project Lead
+role: Web Site Project Lead
 status: retired
 
 publish:  

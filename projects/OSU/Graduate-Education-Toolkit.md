@@ -5,7 +5,7 @@ summary: A web based graduate admissions and matriculation management system.
 startdate: 2014-02-01
 enddate: 2014-09-21
 website: 
-role: UX Designer & Front End Lead
+role: Web Product Designer & Lead Developer
 publish:
  print: true
  main: true 
