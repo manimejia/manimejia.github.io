@@ -43,8 +43,11 @@ accomplishments:
   - |
     I dove head on into javascript development using AngularJS. 
     It was my first of many adventures with this thick-client framework, 
-    yet so far from a beginner’s lesson. With deep understanding of the application’s 
+    yet so far from a beginners lesson. With deep understanding of the application 
     growing UI requirements, I was able to re-architect the entire front end to deliver 
     a more polished and scalable solution in less time than other estimates.
 ---
+
+I was responsible for refining the user experiences, developing UI widgets, re-architecting the client side code base, and streamlining the REST APIs.
+
 

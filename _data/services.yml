@@ -82,7 +82,7 @@ list:
   accomplishments:
     - project_id: SHUK/InfoShuk-Business-Analytics-App
       description: |
-        I led multiple brainstorm sessions to fine tune the direction and priorities for each week’s development work. This iterative design process led to rapid and evolving prototypes being put in front of potential clients at a regular pace. While each version was more complex than the last, we were able to incorporate every change into a growing and scalable architecture for future application development.
+        I led multiple brainstorm sessions to fine tune the direction and priorities for development work each week. This iterative design process led to rapid and evolving prototypes being put in front of potential clients at a regular pace. While each version was more complex than the last, we were able to incorporate every change into a growing and scalable architecture for future application development.
     - project_id: OSU/Graduate-School-Website
       description: |
         I designed a wholly new navigational experience for students and faculty to quickly find pertinent information about the Graduate Programs and Graduate Funding Opportunities available at the university. With the realization that this content represents 80% of their daily website traffic, I set out to improve this valuable user experience. What once required about 10 interactions for each user to find the desired information, now requires about 4 interactions.

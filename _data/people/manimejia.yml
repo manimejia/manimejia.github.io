@@ -136,7 +136,7 @@
       description: |
         InfoShuk is an early stage startup building a SaaS web application to offer predictive analytics to small and medium businesses. 
 
-        At InfoShuk, I lead design and development of the front end experience for their web based SaaS product. I was responsible for designing the application's user experience based on collected user research, creating data visualizations to communicate business analytics, collecting and integrating feedback from user tests, developing the AngularJS/Bootstrap based front end codebase, designing the REST APIs, and collaborating with the CEO and cofounders on product strategy and roadmap.
+        At InfoShuk, I lead design and development of the MVP front end experience for their web based SaaS product. I was responsible for designing the application's user experience based on collected user research, creating data visualizations to communicate business analytics, collecting and integrating feedback from user tests, developing the AngularJS/Bootstrap based front end codebase, designing the REST APIs, and collaborating with the CEO and cofounders on product strategy and roadmap.
     - 
       employer: InfoReady
       website: infoready4.com
@@ -198,9 +198,9 @@
       title: Director of Technology 
       employer: Graduate School, Oregon State University
       quote: |
-        &hellip; Manuel took the website redesign effort from mapping the old site architecture, developing a new architecture, creating mockups and working to incrementally deploy the new site in Drupal while working with content owners both in and out of the Graduate School. I was particularly satisfied with his innovative user interface design solutions demonstrated in the [Graduate Programs](http://gradschool.oregonstate.edu/programs) page. &hellip;
+        &hellip; Manuel took the website redesign effort from mapping the old site architecture, developing a new architecture, creating mockups and working to incrementally deploy the new site in Drupal while working with content owners both in and out of the Graduate School. I was particularly satisfied with his innovative user interface design solutions demonstrated in the [Graduate Programs](http://gradschool.oregonstate.edu/programs) page.
 
-        I found Manuel to be a strong creative thinker and problem solver, he was consistently passionate and enthusiastic about his work and his desire to provide the best user experience possible. Please feel free to contact me should you require further information.
+        &hellip; I found Manuel to be a strong creative thinker and problem solver, he was consistently passionate and enthusiastic about his work and his desire to provide the best user experience possible. Please feel free to contact me should you require further information.
     -
       fullname: Dan Vega
       title: Programmer Analyst

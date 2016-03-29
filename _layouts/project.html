@@ -35,56 +35,67 @@
       </h3>
   </header>
   <aside class="column small-12" role="contentinfo">
-    <div class="row>">
-  	{% if page.summary %}
-	  <div class="column small-12 medium-8 warning-text">
-    {{ page.summary | markdownify }}
-    </div>
-  	{%endif%}    
-    <h4 class="hidden-for-small-only hidden-for-medium-up">Project Meta</h4>
-      <ul class="no-bullet text-right" role="presentation">
-      {% if this_page_date %}
-      <li class="column small-12 medium-4 text-smaller" role="presentation">
-        <label class="hidden-for-small-only hidden-for-medium-up">Project Date:</label> 
-        <i class="fi-clock font-larger"></i> 
-        {% if page.date %}
-        <time>{{ page.date | date: "%b %Y" }}</time>
-        {% else %}{% if page.startdate %}
-        <span class="hidden-for-small-only hidden-for-medium-up"> start :</span> 
-        <time>{{ page.startdate | date: "%b %Y" }}</time>
-        {% if page.enddate %} - {% endif %}{% endif %}{% if page.enddate %}
-        <span class="hidden-for-small-only hidden-for-medium-up"> end :</span> 
-        <time>{{ page.enddate | date: "%b %Y" }}</time>
-        {% endif %}{% endif %}
-      </li>
-      {% endif %}
-
-      {% if page.role %}
-      <li class="column small-12 medium-4 text-smaller" role="presentation">
-        <label class="hidden-for-small-only hidden-for-medium-up">Role:</label> 
-        <i class="fi-at-sign font-larger"></i> 
-        <b>{{ page.role }}</b>
-      </li>
-      {% endif %}
-      <!--
-      {% if page.website %}
-      <li class="column small-12 medium-4 text-smaller" role="presentation">
-        <label class="hidden-for-small-only hidden-for-medium-up">Status:</label> 
-        <a href="{{page.website}}" target="_blank" title="go to {{ page.status }} website">
-        <i class="fi-play-circle font-larger"></i> 
-        go to {% if page.status %}{{ page.status }}{% endif %} website
-        </a>
-      </li>
-      {% elsif page.status %}
-      <li class="column small-12 medium-4 text-smaller" role="presentation">
-        <label class="hidden-for-small-only hidden-for-medium-up">Status:</label> 
-        <i class="fi-info font-larger"></i> 
-        <b>{{ page.status }}</b>
-      </li>
-      {% endif %}
-      -->
-      </ul>
+  	  {% if page.summary %}
+	    <div class="warning-text">
+      {{ page.summary | markdownify }}
       </div>
+  	  {%endif%}   
+      <ul class="row no-bullet text-left font-smaller" role="presentation">
+        {% if page.role %}
+        <li class="column small-12 medium-6 " role="presentation">
+          <label class="hidden-for-small-only hidden-for-medium-up">Role:</label> 
+          <i class="fi-at-sign font-larger"></i> 
+          <b>{{ page.role }}</b>
+        </li>
+        {% endif %}
+  
+        {% if this_page_date %}
+        <li class="column small-12 medium-3 " role="presentation">
+          <label class="hidden-for-small-only hidden-for-medium-up">Project Date:</label> 
+          <i class="fi-clock font-larger"></i> 
+          {% if page.date %}
+          <time>{{ page.date | date: "%b %Y" }}</time>
+          {% else %}{% if page.startdate %}
+          <span class="hidden-for-small-only hidden-for-medium-up"> start :</span> 
+          <time>{{ page.startdate | date: "%b %Y" }}</time>
+          {% if page.enddate %} - {% endif %}{% endif %}{% if page.enddate %}
+          <span class="hidden-for-small-only hidden-for-medium-up"> end :</span> 
+          <time>{{ page.enddate | date: "%b %Y" }}</time>
+          {% endif %}{% endif %}
+        </li>
+        {% endif %}
+  
+        {% if page.website %}
+          <li class="column small-12 medium-3">
+            <a href="{{page.website}}" class="button"
+            target="_blank" title="go to {{ page.status }} website">
+            <i class="fi-play-circle"></i> Visit Website
+            </a>
+          </li>
+        {% elsif page.status %}
+          <li class="column small-12 medium-3">
+            <i class="fi-info" title="project status"></i> {{ page.status }}
+          </li>
+        {% endif %}
+  
+        <!--
+        {% if page.website %}
+        <li class="column small-12 medium-4 text-smaller" role="presentation">
+          <label class="hidden-for-small-only hidden-for-medium-up">Status:</label> 
+          <a href="{{page.website}}" target="_blank" title="go to {{ page.status }} website">
+          <i class="fi-play-circle font-larger"></i> 
+          go to {% if page.status %}{{ page.status }}{% endif %} website
+          </a>
+        </li>
+        {% elsif page.status %}
+        <li class="column small-12 medium-4 text-smaller" role="presentation">
+          <label class="hidden-for-small-only hidden-for-medium-up">Status:</label> 
+          <i class="fi-info font-larger"></i> 
+          <b>{{ page.status }}</b>
+        </li>
+        {% endif %}
+        -->
+      </ul>
   </aside>
   <hr/>
   <section id="{{this_page_id}}-content" class="column" 
@@ -234,7 +245,7 @@
             {% endif %}
             </div>
             {%endunless%}
-            <p class="{%unless page.assets.size == 1 %}column small-10{%endunless%} text-italic">
+            <p class="{%unless page.assets.size == 1 %}column small-10{%endunless%} font-italic font-smaller">
             {{asset.caption}}
             </p>
             {%unless page.assets.size == 1 %}

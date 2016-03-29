@@ -46,21 +46,20 @@ assets:
    caption: This screenshot highlights the use of the "contact card" design pattern, which is incorporated throughout the site whenever personal contact information is displayed.
 
 tasks: 
-- Developed comprehensive documentation of the legacy website.
-- Designed a content strategy to cover the same information with zero redundancy.
-- Worked closely with various OSU entities to establish the requirements and restrictions for the new website, to be built on the Drupal 7 platform.
-- Met regularly with stakeholders to discuss their own needs for the new website.
-- Developed wireframes, diagrams. and questionnaires to communicate with and collect feedback from all stakeholders.
-- | 
-  Developed numerous usability innovations, which allowed this academic website to stand out from others and receive much recognition. This included, in part:
+  - Developed comprehensive documentation of the legacy website.
+  - Designed a content strategy to cover the same information with zero redundancy.
+  - Worked closely with various OSU entities to establish the requirements and restrictions for the new website, to be built on the Drupal 7 platform.
+  - Met regularly with stakeholders to discuss their own needs for the new website.
+  - Developed wireframes, diagrams. and questionnaires to communicate with and collect feedback   from all stakeholders.
+  - Developed numerous usability innovations, which allowed this academic website to stand out from others and receive much recognition.
 
-  - A 'multi-audience' home page layout and 'content agnostic' homepage carousel
-  - A searchable and very informative listing of all current Graduate Programs
-  - An integrated tool for departments to request updates to program information
-  - Customized content management tools for site administrators and content editors.
-  - A prominent notifications display, with easy to manage set of notification templates.
-  - Many integrated forms and tools for collecting data
-  - A simple API for sending website data to Google spreadsheets  
+#  - A 'multi-audience' home page layout and 'content agnostic' homepage carousel
+#  - A searchable and very informative listing of all current Graduate Programs
+#  - An integrated tool for departments to request updates to program information
+#  - Customized content management tools for site administrators and content editors.
+#  - A prominent notifications display, with easy to manage set of notification templates.
+#  - Many integrated forms and tools for collecting data
+#  - A simple API for sending website data to Google spreadsheets  
 
 
 ---
