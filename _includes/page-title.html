@@ -4,8 +4,9 @@
     {% if include.small  %}<br/><small>{{ include.small }}</small>{%endif%}</h1>
   </div>
 	{% if page.printable  %}
-	<div class="column hide-for-small-only medium-2 hide-for-print">
-		<a class="button expand" onclick="window.print()" title="Print this page"><i class="fi-print font-larger"></i>&nbsp;Print</a>
+	<div class="column hide-for-small-only medium-2 hide-for-print"
+  style="position: fixed;right: 0;z-index: 100;">
+		<a class="button expand info" onclick="window.print()" title="Print this page"><i class="fi-print font-larger"></i>&nbsp;&nbsp;Print</a>
 	</div>
 	{%endif%}
 </header>
