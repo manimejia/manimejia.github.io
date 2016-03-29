@@ -1,7 +1,7 @@
 ---
 client: LITE
 title: Non-Profit Logo and Website Design
-startdate: 
+startdate: 2006-10-01
 enddate: 2006-12-01
 website:
 role: Multimedia Designer

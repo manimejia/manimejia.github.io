@@ -1,7 +1,7 @@
 ---
 client: B4S
 title: Non-Profit Identity Design
-startdate: 
+startdate: 2003-07-01
 enddate: 2003-09-01
 website: archive/?/projects/B4S/assets/b4s-WebNav/schoolbus.html
 role: Multimedia Designer

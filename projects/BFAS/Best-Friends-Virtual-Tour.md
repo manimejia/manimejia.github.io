@@ -3,7 +3,7 @@ redirect_from: "/index.html?_escaped_fragment_=BFAS-vtour"
 client: BFAS  
 title: Best Friends Virtual Tour  
 summary: A cutting edge multimedia tour of the nation's largest "no kill" animal sanctuary, making use of 360&deg; panormas and audio/video clips in the 2002 era of Flash 4 and dial-up internet.
-startdate: 2002-11-01
+startdate: 2001-11-01
 enddate: 2002-02-01  
 website: http://manimejia.me/archive/?/projects/BFAS/assets/BFAS-Tour12
 role: Multimedia Designer 

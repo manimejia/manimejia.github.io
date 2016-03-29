@@ -1,7 +1,7 @@
 ---
 client: BM
 title: Stages of Life Documentary Video
-startdate: 
+startdate: 2001-05-01
 enddate: 2001-08-01
 website: 
 role: Multimedia Designer

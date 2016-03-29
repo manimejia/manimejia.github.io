@@ -1,7 +1,7 @@
 ---
 client: MBL
 title: Mandala Animation for Techno Tribal Dance
-startdate: 
+startdate: 2002-05-01
 enddate: 2002-06-01
 website: http://manimejia.me/archive/?//www.youtube.com/embed/uOOMJqwrz9E
 role: Multimedia Designer

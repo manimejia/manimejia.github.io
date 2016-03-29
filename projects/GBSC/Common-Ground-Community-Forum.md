@@ -1,7 +1,7 @@
 ---
 client: GBSC
 title: Common Ground Community Forum
-startdate: 
+startdate: 2003-03-15
 enddate: 2003-04-01
 website: 
 role: Event Coordinator

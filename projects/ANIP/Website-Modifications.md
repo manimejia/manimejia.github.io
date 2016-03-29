@@ -1,7 +1,7 @@
 ---
 client: ANIP
 title: Blog and eCommerce Modifications
-startdate: 
+startdate: 2007-08-01
 enddate: 2007-10-01
 website: 
 role: Website Developer

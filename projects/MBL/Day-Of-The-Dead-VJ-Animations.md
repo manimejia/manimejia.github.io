@@ -1,7 +1,7 @@
 ---
 client: MBL
 title: Day Of The Dead VJ Animations
-startdate: 
+startdate: 2002-10-15
 enddate: 2002-11-01
 website: http://manimejia.me/archive/?/projects/MBL/archive/DOD-2002-vj-animation
 role: Multimedia Designer
