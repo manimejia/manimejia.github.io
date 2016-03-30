@@ -1957,12 +1957,12 @@ height: .5rem;
   left: 0;
   position: fixed;
   bottom: 0;
-  z-index: 1010;
+  z-index: 990;
 }
 
 .fixed-inside-parent{
   position: absolute;
-  z-index: 1010;
+  z-index: 990;
 	top: 0;
   left:0;
   width:100%;
