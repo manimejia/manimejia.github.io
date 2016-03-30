@@ -2335,19 +2335,20 @@ padding: 1em;
   
   .service-icon-box {
     position: relative;
-    top: 100px;
+    // top: 100px;
     display: inline-block;
     margin-top: 40px;
-    margin-bottom: 20px;
-    padding: 10px;
+    // margin-bottom: 20px;
+    // padding: 10px;
     /*background: white;*/
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+    // -webkit-transition: all 0.3s ease;
+    // transition: all 0.3s ease;
   }
   
   .service-heading {
     position: relative;
     top: 80px;
+    margin-top: 20px;
     -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
     transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
@@ -2380,12 +2381,11 @@ padding: 1em;
   
   &:hover .service-icon-box,
   &:focus .service-icon-box {
-	  top: 0px;
+
   }
-  
-  &:hover .service-heading,
+	&:hover .service-heading,
   &:focus .service-heading {
-	  top: -10px;
+	  top: 0px;
   }
   
   &:hover .service-description,

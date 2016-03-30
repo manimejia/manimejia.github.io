@@ -26,10 +26,10 @@ height:100%;margin-top:2em;
 {% endif %}"> 
 
 <div class="service-content-wrapper text-shadow-deep">
-  <div class="service-icon-box">
-    <i class="fi-{{service.icon}} icon {%if service.color %}{{service.color}}-text{%endif%}"></i>
-  </div>       
   <header class="service-heading text-center row">
+    <div class="service-icon-box">
+      <i class="fi-{{service.icon}} icon {%if service.color %}{{service.color}}-text{%endif%}"></i>
+    </div>       
     <h3 class="font-xlarger">
       {{service.label}}
     </h3>
