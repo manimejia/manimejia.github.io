@@ -1,52 +1,72 @@
+
 {% assign project_ids = "" %}
+<div id="services" class="relative">
+<nav class="fixed-inside-parent show-for-medium-up top-bar-section inline text-center">
+<ul class="">
+  {% for service in site.data.services.list %}
+  <li class="inline">
+    <a role="button" class="text-shadow-deep" href="#{{service.label | slugify}}" title="{{service.label}}">
+    <i class="fi-{{service.icon}}"></i> &nbsp; 
+    {{service.label}}
+    </a>
+  </li>
+  {%endfor%}
+</ul>
+</nav>
+<div class="show-for-medium-up"><br/><br/></div>
+
 {% for service in site.data.services.list %}
-    <div
-    class="service row"
-    tabindex="0"
-    style="{% if service.unsplash %} 
-    background:url({{site.sources.unsplash}}/{{service.unsplash}}/1280x960) 50% 50%;
-    background-size:cover;
-    height:100%;
-    {% endif %}"> 
-      <div class="service-content-wrapper text-shadow-deep">
-        <div class="service-icon-box">
-          <i class="fi-{{service.icon}} icon {%if service.color %}{{service.color}}-text{%endif%}"></i>
-        </div>       
-        <header class="service-heading text-center row">
-        <h3 class="font-xlarger">
-          {{service.label}}
-        </h3>
-        <p class="font-larger font-bold {%if service.color %}{{service.color}}-text{%endif%} column medium-8 medium-offset-2">
-            {{service.summary}}
-        </p>
-        </header>
+<div
+id="{{service.label | slugify}}"
+class="service row"
+tabindex="0"
+style="{% if service.unsplash %} 
+background:url({{site.sources.unsplash}}/{{service.unsplash}}/1280x960) 50% 50%;
+background-size:cover;
+height:100%;margin-top:2em;
+{% endif %}"> 
+
+<div class="service-content-wrapper text-shadow-deep">
+  <div class="service-icon-box">
+    <i class="fi-{{service.icon}} icon {%if service.color %}{{service.color}}-text{%endif%}"></i>
+  </div>       
+  <header class="service-heading text-center row">
+    <h3 class="font-xlarger">
+      {{service.label}}
+    </h3>
+    <p class="font-larger font-bold {%if service.color %}{{service.color}}-text{%endif%} column medium-8 medium-offset-2">
+      {{service.summary}}
+    </p>
+  </header>
 
 
-        <ul class="service-description medium-block-grid-{{service.accomplishments.size}}">
-        {% for accomplishment in service.accomplishments %}
-        <li class="text-center secondary-text">
-        {% assign project_ids = project_ids | append : "," | append : accomplishment.project_id %}
-        {% include _object-this_project_page-project.liquid project_id=accomplishment.project_id %}
-        {% include _string-this_page_id.liquid this_page=this_project_page %}
-        <a href="#" data-reveal-id="{{this_page_id}}-modal">{{this_project_page.title}}</a>
-        {{accomplishment.description | markdownify}}
-        </li>
-        {% endfor %}
-        </ul>
+  <ul class="service-description medium-block-grid-{{service.accomplishments.size}}">
+    {% for accomplishment in service.accomplishments %}
+    <li class="text-center secondary-text">
+      {% assign project_ids = project_ids | append : "," | append : accomplishment.project_id %}
+      {% include _object-this_project_page-project.liquid project_id=accomplishment.project_id %}
+      {% include _string-this_page_id.liquid this_page=this_project_page %}
+      <a href="#" data-reveal-id="{{this_page_id}}-modal">{{this_project_page.title}}</a>
+      {{accomplishment.description | markdownify}}
+    </li>
+    {% endfor %}
+  </ul>
 
-      </div>    
-    </div>
-    <br/>
-{% endfor %}	
+</div>    
+</div>
+{% endfor %}    
+
 {% comment %}
 <div>
-<p>{{project_ids}}</p>
-{% include _string-string_of_strings.liquid string_of_strings=project_ids %}
-<p>{{string_of_strings}}</p>
-{% for this_project_id in string_of_strings | split:"," %}
-{% include _object-this_project_page-project.liquid project_id=this_project_id %}
-{% include _this_page.liquid this_page=this_project_page %}
-{% include portfolio-highlight.html compact=true asmodal=true %}
-{% endfor %}
+  <p>{{project_ids}}</p>
+  {% include _string-string_of_strings.liquid string_of_strings=project_ids %}
+  <p>{{string_of_strings}}</p>
+  {% for this_project_id in string_of_strings | split:"," %}
+  {% include _object-this_project_page-project.liquid project_id=this_project_id %}
+  {% include _this_page.liquid this_page=this_project_page %}
+  {% include portfolio-highlight.html compact=true asmodal=true %}
+  {% endfor %}
 </div>
 {% endcomment %}
+</div>
+<br/><br/><br/>

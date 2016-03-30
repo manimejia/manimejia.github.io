@@ -64,6 +64,26 @@ $(document).ready(function(){
       }
     }
   });
+
+$(".fixed-inside-parent").each(function(){
+  var $this = $(this),
+      $parent = $this.parent();
+      fixedTop = $parent.offset().top;
+      fixedBottom = fixedTop + $parent.height() - (2*$this.height());
+
+  $(window).on("scroll", function(e) {
+    var scrollTop = $(window).scrollTop();
+
+    // console.log("#" + $parent.attr('id') + " : " + $parent.offset().top +" : " + $(window).scrollTop());
+    if ( scrollTop >  fixedTop && scrollTop < fixedBottom) {
+      $this.addClass("fixed");
+    } else {
+      $this.removeClass("fixed");
+    }
+  });
+});
+
+
   // $(':target').each(function(e){
   //   $this = $(this);
   //   $.uix.scrollToElement($this,true);

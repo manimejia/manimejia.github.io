@@ -1815,9 +1815,13 @@ a:hover, a:focus {
 	background-color: rgba(255, 255, 255, 0.8);
 	text-shadow: none;
 }
-.top-bar a,
-.top-bar a:hover,
-.top-bar a:focus {
+
+.top-bar-section{
+	/*background-color:$oil;*/
+}
+.top-bar-section a,
+.top-bar-section a:hover,
+.top-bar-section a:focus {
 	border-color: rgba(0, 0, 0, 0);
 	background: none;
 }
@@ -1943,6 +1947,11 @@ height: .5rem;
 	width:150px;
 }
 
+.relative{
+  position: relative;
+}
+
+
 .fixed-bottom{
   width: 100%;
   left: 0;
@@ -1951,6 +1960,22 @@ height: .5rem;
   z-index: 1010;
 }
 
+.fixed-inside-parent{
+  position: absolute;
+  z-index: 1010;
+	top: 0;
+  left:0;
+  width:100%;
+}
+.fixed-inside-parent.fixed{
+  position: fixed;
+	top: 50px;
+}
+
+.top-bar-section.inline ul li{
+ float:none;
+ display:inline-block;
+}
 .reveal-modal.full{
 	position:fixed;
 	max-width: 100% !important;
@@ -2340,12 +2365,12 @@ padding: 1em;
   
   &:hover .service-icon-box,
   &:focus .service-icon-box {
-	  top: -30px;
+	  top: 0px;
   }
   
   &:hover .service-heading,
   &:focus .service-heading {
-	  top: -30px;
+	  top: -10px;
   }
   
   &:hover .service-description,

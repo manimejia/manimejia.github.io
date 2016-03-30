@@ -23,9 +23,9 @@
       icon: lightbulb
       color: warning
     - 
-      number: 26
-      label: Web Projects Delivered
-      icon: checkbox
+      number: 32
+      label: Digital Products Delivered
+      icon: monitor
       color: alert
     - 
       number: 20
@@ -47,10 +47,10 @@
     #   label: Multimedia Presentations
     #   icon: photo
     #   color: info
-  title: Creative Web Architect
+  title: Digital Product Designer
   byline: |
-    integrating technical, design, and communication
-    challenges into comprehensive product solutions
+    integrating technical, creative, and communication
+    challenges into comprehensive software solutions
   summary: |
     As an autodidactic digital professional, my unique superpowers are 
     curiosity, empathy, and optimism. Armed as such, I have sought out, 

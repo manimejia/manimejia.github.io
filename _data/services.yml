@@ -3,20 +3,6 @@ summary: |
 
 list: 
 
-- label: Bridge Builder
-  icon: share
-  color: warning
-  unsplash: 4i__Q9jTe74
-  summary: |
-    listening to and connecting stakeholder perspectives to maximize available resources in any context
-  accomplishments:
-    - project_id: INFR/UA-Portfolio
-      description: |
-        I maintained clear communication with the designers, developers, clients, and investors providing efficient use of precious of meeting time  and continuous progress toward project goals. 
-    - project_id: OSU/Graduate-School-Website
-      description: |
-        I met individually with every stakeholder during the website redesign planning, to collect and integrate diverse requirements into a single project definition. This facilitated the design of a new website that met everyone’s evolving needs while remaining simply engineered and easy to administrate.
-
 - label: Pattern Finder
   icon: graph-bar
   color: info
@@ -26,21 +12,21 @@ list:
   accomplishments:
     - project_id: OSU/Graduate-School-Website
       description: |
-        I unearthed a deeply nested and recurrent pattern of content reiteration in their legacy website, where critical information was communicated multiple times in various ways. It’s resolution led to a content strategy covering the same information in 60% fewer destination pages, thereby saving hundreds of maintenance hours in the website's lifespan. 
+        I unearthed a deeply nested and recurrent pattern of content reiteration in the Graduate School's legacy website, where critical information was communicated multiple times in various ways. It’s resolution led to a content strategy covering the same information in 60% fewer destination pages, thereby saving hundreds of maintenance hours in the website's lifespan. 
     - project_id: EC/CareNet-Elder-Care-Portal
       description: |
-        I reverse engineered a recursively dependent wet spaghetti code base to discover its core processes and functionality. By incorporating these findings into an updated application architecture, I saved the client thousands of dollars in what would have otherwise been a “from scratch” code rewrite without the guidance of the legacy development team. 
+        In preparing for this project, I reverse engineered thier recursively dependent wet spaghetti legacy code base to discover its core processes and functionality. By incorporating these findings into the new application architecture, I saved Elite Care thousands of dollars in what would have otherwise been a “from scratch” code rewrite without the guidance of the legacy development team. 
 
 - label: People Watcher
   icon: results-demographics
   color: warning
   unsplash: 2TlAsvhqiL0
   summary: |
-    understanding the human element by observing our reactions to and interactions with the built environment
+    understanding the human experience by observing our reactions to and interactions with the created environment
   accomplishments:
     - project_id: OSU/Graduate-School-Website
       description: |
-        We iterated through multiple website user interface designs and observed the interactions of actual users with each version. This provided real world data, which I used to narrow the field of potential UX solutions. 
+        For this website redesign, I iterated through multiple user interface designs and observed the interactions of actual users with each version. This provided real world data, which I used to narrow the field of potential UX solutions. 
     - project_id: EC/CareNet-Elder-Care-Portal
       description: |
         I visited many Elite Care campus homes to observe the residents and staff in situ, while designing a new front end UX for their care reporting and monitoring system. This provided insightful contextual information that would otherwise have been unavailable to the remote development team.
@@ -54,10 +40,24 @@ list:
   accomplishments:
     - project_id: INFR/UA-Portfolio
       description: |
-        I dove head on into javascript development using AngularJS. It was my first of many adventures with this thick-client framework, yet far from a beginner’s lesson. With deep understanding of the application’s growing UI requirements, I was able to re-architect the entire front end to deliver a more polished and scalable solution in less time than other estimates. 
+        On being hired at InfoReady, I dove head on into javascript development using AngularJS. It was my first of many adventures with this thick-client framework, yet far from a beginner’s lesson. With deep understanding of the application’s growing UI requirements, I was able to re-architect the entire front end to deliver a more polished and scalable solution in less time than other estimates. 
     - project_id: OSU/Graduate-Education-Toolkit
       description: | 
-        I fearlessly integrated the responsive Bootstrap framework and related libraries into their new student application and matriculation toolset being built on the SalesForce cloud platform. The resulting Bootstrap based Visualforce components that came from this integration will be usable for many projects in the future.
+        During development of this Graduate School applicaiton, I fearlessly integrated the responsive Bootstrap framework and related libraries into their VisualForce front end built on the SalesForce cloud platform. The resulting hybrid Bootstrap/ Visualforce components that came from this integration will be usable for many projects in the future.
+
+- label: Bridge Builder
+  icon: share
+  color: warning
+  unsplash: 4i__Q9jTe74
+  summary: |
+    listening to and connecting stakeholder perspectives to maximize available resources in any context
+  accomplishments:
+    - project_id: INFR/UA-Portfolio
+      description: |
+        During a tumultuous development cycle, I maintained clear communication with the designers, developers, project team, and investors providing a cross-discipline understanding of requirements and continuous progress toward a timely release. 
+    - project_id: OSU/Graduate-School-Website
+      description: |
+        I met individually with every stakeholder during this website redesign process, to collect and integrate diverse requirements into a single project definition. This facilitated creation of a new design that met everyone’s evolving needs while remaining simply architected and easy to administer.
 
 - label: Trail Blazer 
   icon: eye
@@ -68,12 +68,12 @@ list:
   accomplishments:
     - project_id: MM/uix-javascript-controller-library
       description: | 
-        I concieved and developed a novel approach to building accessible user interface widgets in HTML5. By using WAI-ARIA standard attributes to identify these elements and their intended interactions, I was able to provide “out of the box” semantic and keyboard navigable UI widgets, shaving hours of redundant work for “accessibility compliant” front end developers.
+        For this project, I concieved and developed a novel approach to building accessible user interface widgets in HTML5. By using WAI-ARIA standard attributes to identify these elements and their intended interactions, I was able to provide “out of the box” semantic and keyboard navigable UI widgets, shaving hours of redundant work for “accessibility compliant” front end developers.
     - project_id: BFAS/Best-Friends-Virtual-Tour
       description: |
-        I conceived, designed, and implemented a unique multimedia online tour of the Best Friends physical campus. With the RIA capabilities of the new (as of 2001) Flash 5 and a head full of spinning panoramas, we redefined the landscape of interactive web presentations, putting BFAS on the map with a dynamic internet presence.
+        In 2001, I pitched, designed, and implemented a unique multimedia online tour of the Best Friends physical campus. With the RIA capabilities of the new Flash 5 and a head full of spinning panoramas, we redefined the landscape of interactive web presentations, putting BFAS on the map with a dynamic internet presence.
 
-- label: Solution Finder 
+- label: Problem Solver 
   icon: checkbox
   color: alert
   unsplash: 3f4sQIums6k
@@ -82,7 +82,7 @@ list:
   accomplishments:
     - project_id: SHUK/InfoShuk-Business-Analytics-App
       description: |
-        I led multiple brainstorm sessions to fine tune the direction and priorities for development work each week. This iterative design process led to rapid and evolving prototypes being put in front of potential clients at a regular pace. While each version was more complex than the last, we were able to incorporate every change into a growing and scalable architecture for future application development.
+        While working for this early startup, I led multiple brainstorm sessions to fine tune the direction and priorities for development work each week. This iterative design process led to rapid and evolving prototypes being put in front of potential clients at a regular pace. While each version was more complex than the last, we were able to incorporate every change into a growing and scalable architecture for future application development.
     - project_id: OSU/Graduate-School-Website
       description: |
-        I designed a wholly new navigational experience for students and faculty to quickly find pertinent information about the Graduate Programs and Graduate Funding Opportunities available at the university. With the realization that this content represents 80% of their daily website traffic, I set out to improve this valuable user experience. What once required about 10 interactions for each user to find the desired information, now requires about 4 interactions.
+        As a novel solution to a legacy problem at OSU, I designed a navigational experience for students and faculty to quickly find pertinent information about the Graduate Programs and available Graduate Funding Opportunities. With the realization that this content represents 80% of their daily website traffic, I set out to improve this valuable user experience. What once required about 10 interactions for each user to find the desired information, now requires about 4 interactions.
