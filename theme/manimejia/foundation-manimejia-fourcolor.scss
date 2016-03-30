@@ -1309,16 +1309,16 @@ $reveal-position-top: rem-calc(0);
 // $include-html-nav-classes: $include-html-classes;
 
 // We use these to control margin and padding
-// $sub-nav-list-margin: rem-calc(-4 0 18);
-// $sub-nav-list-padding-top: rem-calc(4);
+// $sub-nav-list-margin: rem-calc(0 18 0);
+$sub-nav-list-padding-top: rem-calc(0);
 
 // We use this to control the definition
 // $sub-nav-font-family: $body-font-family;
 // $sub-nav-font-size: rem-calc(14);
-// $sub-nav-font-color: $aluminum;
+$sub-nav-font-color: $white;
 // $sub-nav-font-weight: $font-weight-normal;
 // $sub-nav-text-decoration: none;
-// $sub-nav-padding: rem-calc(3 16);
+$sub-nav-padding: rem-calc(8 8);
 // $sub-nav-border-radius: 3px;
 // $sub-nav-font-color-hover: scale-color($sub-nav-font-color, $lightness: -25%);
 
@@ -1816,14 +1816,27 @@ a:hover, a:focus {
 	text-shadow: none;
 }
 
-.top-bar-section{
-	/*background-color:$oil;*/
-}
-.top-bar-section a,
-.top-bar-section a:hover,
-.top-bar-section a:focus {
+.sub-nav  a,
+.sub-nav  a:hover,
+.sub-nav a:focus,
+.top-bar a,
+.top-bar a:hover,
+.top-bar a:focus {
+ 	display:block;
 	border-color: rgba(0, 0, 0, 0);
 	background: none;
+}
+
+.sub-nav.block{
+ display:block;
+ // margin:0 1.25rem 0;
+}
+.sub-nav.block dd,
+.top-bar-section.block ul li{
+ float:none;
+ display:inline-block;
+ margin-bottom: 0;
+ padding:.25rem;
 }
 
 .focusable{
@@ -1972,10 +1985,6 @@ height: .5rem;
 	top: 50px;
 }
 
-.top-bar-section.inline ul li{
- float:none;
- display:inline-block;
-}
 .reveal-modal.full{
 	position:fixed;
 	max-width: 100% !important;
@@ -2002,6 +2011,12 @@ section > h2:first-child{
 	  background-color: get-color($colorKey,darker);
 	  &.overlay{
 	  	background-color: rgba(get-color($colorKey,darker), .9);
+	  }
+	  &.bg-darkest{
+	  	background-color: get-color($colorKey,darkest);
+	  	&.overlay{
+	  		background-color: rgba(get-color($colorKey,darkest), .9);
+	  	}
 	  }
 		p{
 	  	text-shadow: 0 0 2px get-color($colorKey,darkest), 0 0 5px get-color($colorKey,darkest);

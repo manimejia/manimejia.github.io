@@ -68,8 +68,8 @@ $(document).ready(function(){
 $(".fixed-inside-parent").each(function(){
   var $this = $(this),
       $parent = $this.parent();
-      fixedTop = $parent.offset().top;
-      fixedBottom = fixedTop + $parent.height() - (2*$this.height());
+      fixedTop = $parent.offset().top - 50;
+      fixedBottom = fixedTop + $parent.height() - 50;
 
   $(window).on("scroll", function(e) {
     var scrollTop = $(window).scrollTop();

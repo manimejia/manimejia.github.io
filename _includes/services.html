@@ -1,19 +1,18 @@
 
 {% assign project_ids = "" %}
 <div id="services" class="relative">
-<nav class="fixed-inside-parent show-for-medium-up top-bar-section inline text-center">
-<ul class="">
+<nav class="fixed-inside-parent show-for-medium-up">
+<dl class="sub-nav block text-center bg-primary bg-darkest">
   {% for service in site.data.services.list %}
-  <li class="inline">
+  <dd class="">
     <a role="button" class="text-shadow-deep" href="#{{service.label | slugify}}" title="{{service.label}}">
     <i class="fi-{{service.icon}}"></i> &nbsp; 
     {{service.label}}
     </a>
-  </li>
+  </dd>
   {%endfor%}
-</ul>
+</dl>
 </nav>
-<div class="show-for-medium-up"><br/><br/></div>
 
 {% for service in site.data.services.list %}
 <div
