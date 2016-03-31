@@ -24,7 +24,10 @@ style: |
 
 {% include page-title.html title=site.config.name %}
 
-{% include aboutme.html color=highlight_color %}
+<section id="contact" class="text-center" role="region" 
+  aria-labelledby="contact-heading">
+  {% include aboutme.html color=highlight_color %}
+</section>
 
 {% comment %}
 <!-- <section id="technical-skills" class="row" aria-labelledby="technical-skills-label">

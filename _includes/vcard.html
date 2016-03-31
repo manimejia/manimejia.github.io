@@ -35,10 +35,10 @@
       {% if sociallink.logo %}
       <img src="{{sociallink.logo}}" style="width:1em;height:1em"/>
       {% elsif sociallink.icon %}
-      <i class="fi-social-{{sociallink.icon}}"></i>
+      <i class="fi-social-{{sociallink.icon}} font-large"></i>
       {% endif %}
       &nbsp;
-      <small>{{sociallink.url | remove:"http://"}}</small>
+      <span>{{sociallink.url | remove:"http://"}}</span>
       </a>
     </li>
     {%endfor%}
@@ -46,27 +46,27 @@
 			<b class="hidden-for-small-only hidden-for-medium-up">Website: </b>
 			<a href="http://{{ include.person.website }}" class="hide-href-for-print">
       <i class="fi-web"></i>&nbsp;
-      <small>{{ include.person.website }}</small>
+      <span>{{ include.person.website }}</span>
       </a>
     </li>
     <li class="vcard-email" role="presentation">
 			<b class="hidden-for-small-only hidden-for-medium-up">Email: </b>
       <a href="mailto:{{include.person.email}}"  class="hide-href-for-print">
 			<i class="fi-mail"></i>&nbsp;
-			<small>{{ include.person.email }}</small>
+			<span>{{ include.person.email }}</span>
       </a>
     </li>
     <li class="vcard-phone" role="presentation">
 			<b class="hidden-for-small-only hidden-for-medium-up">Phone: </b>
 			<i class="fi-telephone"></i>&nbsp;
-			<small>{{ include.person.phone }}</small>
+			<span>{{ include.person.phone }}</span>
       </li>
     <li class="vcard-locality" role="presentation">
 			<b class="hidden-for-small-only hidden-for-medium-up">Location: </b>
 			<i class="fi-marker"></i>&nbsp;
-      <small> {{ include.person.locality }}, 
+      <span> {{ include.person.locality }}, 
       <span class="state">{{ include.person.state }}</span>
-      </small>
+      </span>
     </li>
   </ul>
 </div>

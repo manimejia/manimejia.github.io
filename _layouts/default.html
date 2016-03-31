@@ -57,11 +57,19 @@
 {% endunless %}
 
 {% unless page.hide.footer %}
+  {% assign person = site.data.people.manimejia %}
   <footer id="page-footer-row" class="row">
-    <div id="page-footer-column" class="column">
-      <hr>
-    </div>
+    <section id="contact" class="text-center" role="region" 
+    aria-labelledby="contact-heading">
+      <h2 id="contact-heading" class="text-center column">
+      {{ person.name }}
+      </h2>
+      <div class="column medium-6 small-centered">
+        {% include vcard.html person=person nopicture=true noname=true %}
+      </div>
+    </section><!-- #aboutme -->
     <div class="small-8 columns small-centered text-center">
+    <hr class="clearfix">
       <p><small>© 2016 <a href="http://manimejia.me/">Manuel Mejia</a>. Licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons License</a> and the <a href="http://opensource.org/licenses/MIT">MIT License</a>.</small></p>
     </div>
 
