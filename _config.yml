@@ -162,10 +162,10 @@ config:
   topbar:
     toggle: "<span class='hidden-for-small-only hidden-for-medium-up'>Toggle Menu</span>"
     right:
-      - name: Skills
-        url: "/#services"
       - name: Experience
         url: "/#experience"
+      - name: Capacity
+        url: "/#services"
       - name: Clients
         url: "/#clients"
       - name: Portfolio

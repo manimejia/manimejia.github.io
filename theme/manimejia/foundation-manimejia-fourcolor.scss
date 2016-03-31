@@ -1835,7 +1835,7 @@ a:hover, a:focus {
 .top-bar-section.block ul li{
  float:none;
  display:inline-block;
- margin-bottom: 0;
+ margin: 0;
  padding:.25rem;
 }
 
@@ -2319,8 +2319,9 @@ padding: 1em;
 ******************/
 .service {
 	width: 100%;
-	height: 320px;
+	height: 100%;
 	/*margin: 80px 0;*/
+	margin-bottom:2em;
 	text-align: center;
 	border: 1px solid #222;
 	-webkit-transition: all 0.3s ease;
@@ -2384,12 +2385,15 @@ padding: 1em;
 
   }
 	&:hover .service-heading,
-  &:focus .service-heading {
-	  top: 0px;
+  &:focus .service-heading,
+  &.child-has-focus .service-heading {
+	  top: -10px;
   }
   
+
   &:hover .service-description,
-  &:focus .service-description {
+  &:focus .service-description,
+  &.child-has-focus .service-description {
     opacity: 1;
     -webkit-transform: scale(1);
     -ms-transform: scale(1);

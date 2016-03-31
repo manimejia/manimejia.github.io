@@ -11,7 +11,7 @@
 $(document).foundation();
 
 $(document).load(function(){
-  
+  console.log("DOCUMENT READY")
 });
 
 
@@ -68,14 +68,19 @@ $(document).ready(function(){
 $(".fixed-inside-parent").each(function(){
   var $this = $(this),
       $parent = $this.parent();
-      fixedTop = $parent.offset().top - 50;
-      fixedBottom = fixedTop + $parent.height() - 50;
 
   $(window).on("scroll", function(e) {
     var scrollTop = $(window).scrollTop();
+        fixedTop = $parent.offset().top - $this.height();
+        fixedBottom = fixedTop + $parent.height() - $this.height();
 
-    // console.log("#" + $parent.attr('id') + " : " + $parent.offset().top +" : " + $(window).scrollTop());
     if ( scrollTop >  fixedTop && scrollTop < fixedBottom) {
+      // console.log(
+      //   "FIXED TO #" 
+      //   + $parent.attr('id') + " : " 
+      //   + "\n\t(" + scrollTop + "=" + $(window).scrollTop() +") > " 
+      //   + "\n\t(" + fixedTop + "=" + $parent.offset().top + "+" + $this.height()+")"
+      //   );
       $this.addClass("fixed");
     } else {
       $this.removeClass("fixed");

@@ -5,24 +5,27 @@
 <dl class="sub-nav block text-center bg-primary bg-darkest">
   {% for service in site.data.services.list %}
   <dd class="">
-    <a role="button" class="text-shadow-deep" href="#{{service.label | slugify}}" title="{{service.label}}">
-    <i class="fi-{{service.icon}}"></i> &nbsp; 
+    <a role="button" tabindex="-1" class="text-shadow-deep" href="#{{service.label | slugify}}" title="{{service.label}}">
+    <!-- <i class="fi-{{service.icon}} hide-for-medium-only">&nbsp;</i>  -->
     {{service.label}}
     </a>
   </dd>
   {%endfor%}
 </dl>
 </nav>
-<br/>
+
+<br class="show-for-medium-up"/>
+<br class="show-for-medium-up"/>
+
 {% for service in site.data.services.list %}
 <div
 id="{{service.label | slugify}}"
 class="service row"
 tabindex="0"
+data-scroll-offset="-50"
 style="{% if service.unsplash %} 
 background:url({{site.sources.unsplash}}/{{service.unsplash}}/1280x960) 50% 50%;
 background-size:cover;
-height:100%;margin-top:2em;
 {% endif %}"> 
 
 <div class="service-content-wrapper text-shadow-deep">
@@ -68,4 +71,4 @@ height:100%;margin-top:2em;
 </div>
 {% endcomment %}
 </div>
-<br/><br/><br/>
+
