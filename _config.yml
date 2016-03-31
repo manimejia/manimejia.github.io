@@ -173,7 +173,7 @@ config:
       - name: Resum&eacute;
         url: "/resume"
       - name: Contact
-        url: "/#contact"
+        url: "#contact"
         #class: small button
         #hasform: false
       # - name: "<i class='fi-social-linkedin font-larger'></i><span class='hidden-for-small-only hidden-for-medium-up'>LinkedIn</span>"
