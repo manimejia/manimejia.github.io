@@ -43,7 +43,7 @@ list:
         On being hired at InfoReady, I dove head on into javascript development using AngularJS. It was my first of many adventures with this thick-client framework, yet far from a beginner’s lesson. With deep understanding of the application’s growing UI requirements, I was able to re-architect the entire front end to deliver a more polished and scalable solution in less time than other estimates. 
     - project_id: OSU/Graduate-Education-Toolkit
       description: | 
-        During development of this Graduate School applicaiton, I fearlessly integrated the responsive Bootstrap framework and related libraries into their VisualForce front end built on the SalesForce cloud platform. The resulting hybrid Bootstrap/ Visualforce components that came from this integration will be usable for many projects in the future.
+        During development of this Graduate School application, I fearlessly integrated the responsive Bootstrap framework and related libraries into their VisualForce front end built on the SalesForce cloud platform. The resulting hybrid Bootstrap/ Visualforce components that came from this integration will be usable for many projects in the future.
 
 - label: Bridge Builder
   icon: share
