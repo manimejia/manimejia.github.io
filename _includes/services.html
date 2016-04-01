@@ -36,7 +36,7 @@ background-size:cover;
     <h3 class="font-xlarger">
       {{service.label}}
     </h3>
-    <p class="font-larger font-bold {%if service.color %}{{service.color}}-text{%endif%} column medium-8 medium-offset-2">
+    <p class="font-larger font-bold {%if service.color %}{{service.color}}-text{%endif%} column medium-9 medium-centered">
       {{service.summary}}
     </p>
   </header>
@@ -49,7 +49,9 @@ background-size:cover;
       {% include _object-this_project_page-project.liquid project_id=accomplishment.project_id %}
       {% include _string-this_page_id.liquid this_page=this_project_page %}
       <a href="#" data-reveal-id="{{this_page_id}}-modal">{{this_project_page.title}}</a>
+      <div class="text-justify">
       {{accomplishment.description | markdownify}}
+      </div>
     </li>
     {% endfor %}
   </ul>

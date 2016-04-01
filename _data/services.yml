@@ -3,19 +3,19 @@ summary: |
 
 list: 
 
-- label: Pattern Finder
-  icon: graph-bar
+- label: Way Finder
+  icon: eye
   color: info
   unsplash: NkEH30uoe8o
   summary: |
-    revealing and exploiting the hidden order in unknown, unmanaged, or unexplored systems
-  accomplishments:
+    plotting effective courses to intuitively navigate complex and unknown systems
+  accomplishments: 
     - project_id: OSU/Graduate-School-Website
       description: |
-        I unearthed a deeply nested and recurrent pattern of content reiteration in the Graduate School's legacy website, where critical information was communicated multiple times in various ways. It’s resolution led to a content strategy covering the same information in 60% fewer destination pages, thereby saving hundreds of maintenance hours in the website's lifespan. 
-    - project_id: EC/CareNet-Elder-Care-Portal
+        In 2012, I unearthed a deeply nested and recurrent pattern of content reiteration in the OSU Graduate School's legacy website, where critical information was communicated multiple times in various ways. Its resolution led to a content strategy covering the same information in 60% fewer destination pages, thereby freeing thousands of users from a frustrated and confusing journey. These efforts also saved the Graduate School hundreds of hours of redundant content maintenance and phone support.
+    - project_id: OSU/Graduate-School-Website
       description: |
-        In preparing for this project, I reverse engineered thier recursively dependent wet spaghetti legacy code base to discover its core processes and functionality. By incorporating these findings into the new application architecture, I saved Elite Care thousands of dollars in what would have otherwise been a “from scratch” code rewrite without the guidance of the legacy development team. 
+        In 2013, I implemented a needed solution to the long standing problem of navigating the many available graduate programs and funding opportunities on the OSU Graduate School website. With the realization that this content represents 80% of their daily website traffic, I designed an efficient [search tool](http://gradschool.oregonstate.edu/programs) to improve this valuable user experience. What once required about 10 interactions for each user to find the desired information, now requires about 4 interactions on mobile and desktop devices.
 
 - label: People Watcher
   icon: results-demographics
@@ -24,65 +24,73 @@ list:
   summary: |
     understanding the human experience by observing our reactions to and interactions with the created environment
   accomplishments:
-    - project_id: OSU/Graduate-School-Website
-      description: |
-        For this website redesign, I iterated through multiple user interface designs and observed the interactions of actual users with each version. This provided real world data, which I used to narrow the field of potential UX solutions. 
     - project_id: EC/CareNet-Elder-Care-Portal
       description: |
-        I visited many Elite Care campus homes to observe the residents and staff in situ, while designing a new front end UX for their care reporting and monitoring system. This provided insightful contextual information that would otherwise have been unavailable to the remote development team.
+        In 2009, during the requirements gathering phase for the CareNet applications, I visited many campus homes to observe the residents and staff in situ, I interviewed the staff to dive deeper into workflow specifics, and I worked closely with the CEO and founders to distill the product vision.  After a few weeks of such researching, brainstorming, and documenting, we came up with a comprehensive collection of wireframes, interactive prototypes, architectural diagrams, user stories, personas, and random sticky notes that defined the early product requirements.
+    - project_id: OSU/Graduate-Education-Toolkit
+      description: |
+        In 2013, I participated in the collection and collation of user stories for the OSU Graduate School's new application system. This involved synthesizing information gathered from hundreds of interviews with potential users. We reviewed each interview to extract the common and uncommon patterns. We simplified these findings into concise, categorized, and prioritized story cards. We then used these stories to refine a clear, confident, and prioritized list of product features, with use-case examples for each one.
+
+- label: Bridge Builder
+  icon: share
+  color: alert
+  unsplash: 4i__Q9jTe74
+  summary: |
+    listening to and connecting stakeholder perspectives to ensure product efficacy
+  accomplishments:
+    - project_id: INFR/UA-Portfolio
+      description: |
+        In 2015, during a tumultuous product development cycle, I maintained clear communication with the designers, developers, project team, and investors. I facilitated a cross-discipline understanding of the undocumented requirements and unanimous agreement for their proposed solutions. This resulted in an improved working environment and a better product for the end users.
+    - project_id: INFR/UA-Portfolio
+      description: |
+        During this time I also participated in the prioritizing of customer feedback and developer roadblocks that followed every weekly product release. If the documentation was unclear, we met with the development or customer support teams in person to get the skinny. My participation in this process was especially sought after, due to my experience and accuracy in translating customer feedback and designing around product constraints.
 
 - label: Code Explorer
   icon: wrench
-  color: alert
+  color: warning
   unsplash: xNdPWGJ6UCQ
   summary: |
     recursively navigating the coded world with agility and commitment, making use of what works and commenting out the rest 
   accomplishments:
+    - project_id: MM/uix-javascript-controller-library
+      description: |
+        In 2015, I started an open source javascript library called UIX. This represents a novel approach to building accessible user interface widgets in HTML5. By using WAI-ARIA standard attributes to identify these elements and their intended interactions, I was able to provide “out of the box” semantic and keyboard navigable UI widgets, shaving hours of redundant work for “accessibility compliant” front end developers.
     - project_id: INFR/UA-Portfolio
       description: |
-        On being hired at InfoReady, I dove head on into javascript development using AngularJS. It was my first of many adventures with this thick-client framework, yet far from a beginner’s lesson. With deep understanding of the application’s growing UI requirements, I was able to re-architect the entire front end to deliver a more polished and scalable solution in less time than other estimates. 
-    - project_id: OSU/Graduate-Education-Toolkit
-      description: | 
-        During development of this Graduate School application, I fearlessly integrated the responsive Bootstrap framework and related libraries into their VisualForce front end built on the SalesForce cloud platform. The resulting hybrid Bootstrap/ Visualforce components that came from this integration will be usable for many projects in the future.
+        Upon being hired at InfoReady in 2015, I dove head on into javascript development using AngularJS. It was my first of many adventures with this thick-client framework, yet far from a beginners lesson. With deep understanding of the application growing UI requirements, I was able to re-architect the entire front end to deliver a more polished and scalable solution in less time than other estimates. 
 
-- label: Bridge Builder
-  icon: share
-  color: warning
-  unsplash: 4i__Q9jTe74
-  summary: |
-    listening to and connecting stakeholder perspectives to maximize available resources in any context
-  accomplishments:
-    - project_id: INFR/UA-Portfolio
-      description: |
-        During a tumultuous development cycle, I maintained clear communication with the designers, developers, project team, and investors providing a cross-discipline understanding of requirements and continuous progress toward a timely release. 
-    - project_id: OSU/Graduate-School-Website
-      description: |
-        I met individually with every stakeholder during this website redesign process, to collect and integrate diverse requirements into a single project definition. This facilitated creation of a new design that met everyone’s evolving needs while remaining simply architected and easy to administer.
-
-- label: Trail Blazer 
-  icon: eye
+- label: Trail Blazer
+  icon: flag
   color: success
   unsplash: o-xzF35Qskc
   summary: |
-    cutting new paths with visionary confidence and practical respect for the legacy paradigms
+    always imagining the possible futures while remaining focused on the current tasks
   accomplishments:
-    - project_id: MM/uix-javascript-controller-library
-      description: | 
-        For this project, I concieved and developed a novel approach to building accessible user interface widgets in HTML5. By using WAI-ARIA standard attributes to identify these elements and their intended interactions, I was able to provide “out of the box” semantic and keyboard navigable UI widgets, shaving hours of redundant work for “accessibility compliant” front end developers.
     - project_id: BFAS/Best-Friends-Virtual-Tour
       description: |
-        In 2001, I pitched, designed, and implemented a unique multimedia online tour of the Best Friends physical campus. With the RIA capabilities of the new Flash 5 and a head full of spinning panoramas, we redefined the landscape of interactive web presentations, putting BFAS on the map with a dynamic internet presence.
-
-- label: Problem Solver 
-  icon: checkbox
-  color: alert
-  unsplash: 3f4sQIums6k
-  summary: |
-    putting it all together, while listening to stakeholders, looking for patterns, designing for users, contributing to code, and sparking new ideas
-  accomplishments:
+        In 2001, I pitched, designed, and implemented a unique multimedia online tour of the Best Friends physical campus. While such a product was ahead of it's time, and typically out of budget for a growing non-profit, the roadmap I presented was practical and achievable, with clear benefits for all. Utilizing the RIA capabilities of Flash 5, we redefined the landscape of interactive web presentations, putting BFAS on the map with a dynamic Internet presence, and a handful of spinning furry friends.
     - project_id: SHUK/InfoShuk-Business-Analytics-App
       description: |
-        While working for this early startup, I led multiple brainstorm sessions to fine tune the direction and priorities for development work each week. This iterative design process led to rapid and evolving prototypes being put in front of potential clients at a regular pace. While each version was more complex than the last, we were able to incorporate every change into a growing and scalable architecture for future application development.
-    - project_id: OSU/Graduate-School-Website
-      description: |
-        As a needed solution to an historic problem with the Oregon State University Graduate School website, I designed a novel navigational experience for students and faculty to quickly find pertinent information about the hundreds of [graduate programs](http://gradschool.oregonstate.edu/programs) and available [funding opportunities](http://gradschool.oregonstate.edu/awards). With the realization that this content represents 80% of their daily website traffic, I set out to improve this valuable user experience. What once required about 10 interactions for each user to find the desired information, now requires about 4 interactions.
+        In 2016, while working for an early stage startup, I led multiple brainstorm sessions to fine tune the direction and priorities for development work each week. This iterative design process led to rapid and evolving prototypes being put in front of potential clients at a regular pace. While each version was more complex than the last, we were able to incorporate every change into a growing and scalable product definition for future development.
+
+
+#- label: Problem Solver 
+#  icon: check
+#  color: success
+#  unsplash: 3f4sQIums6k
+#  summary: |
+#    staying focused on the bigger picture as requirements evolve through each iteration
+
+
+
+
+#    - project_id: EC/CareNet-Elder-Care-Portal
+#      description: |
+#        In 2009, while researching the requirements of the CareNet system, I reverse engineered their undocumented legacy code base to discover its core processes and functionality. By incorporating these findings into the new application architecture, I saved Elite Care thousands of dollars in what would have otherwise been a “from scratch” code rewrite without the guidance of the legacy development team. 
+
+
+#    - project_id: OSU/Graduate-School-Website
+#      description: |
+#        In 2012, during the Graduate School's website redesign process, I met individually with every stakeholder, to collect and integrate diverse requirements into a single project definition. This resulted in the creation of a new design that met everyone’s evolving needs while remaining simply architected and easy to administer.
+
+
