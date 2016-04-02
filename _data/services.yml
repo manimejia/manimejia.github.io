@@ -12,10 +12,10 @@ list:
   accomplishments: 
     - project_id: OSU/Graduate-School-Website
       description: |
-        In 2012, I unearthed a deeply nested and recurrent pattern of content reiteration in the OSU Graduate School's legacy website, where critical information was communicated multiple times in various ways. Its resolution led to a content strategy covering the same information in 60% fewer destination pages, thereby freeing thousands of users from a frustrated and confusing journey. These efforts also saved the Graduate School hundreds of hours of redundant content maintenance and phone support.
+        In 2012, I revealed an overwhelming pattern of content reiteration in the OSU Graduate School's legacy website, where critical information was being communicated multiple times in different ways. Its resolution led to a content strategy covering the same information more concisely and with no redundancy. These efforts saved thousands of users from a frustrated and confusing journey, and also saved the Graduate School hundreds of hours in content maintenance and phone support.
     - project_id: OSU/Graduate-School-Website
       description: |
-        In 2013, I implemented a needed solution to the long standing problem of navigating the many available graduate programs and funding opportunities on the OSU Graduate School website. With the realization that this content represents 80% of their daily website traffic, I designed an efficient [search tool](http://gradschool.oregonstate.edu/programs) to improve this valuable user experience. What once required about 10 interactions for each user to find the desired information, now requires about 4 interactions on mobile and desktop devices.
+        In 2013, I implemented a needed solution to the long standing struggle of finding graduate programs on the OSU Graduate School website. With the realization that this content represents 80% of their daily website traffic, designed an efficient and highly praised browsing interface to improve this valuable user experience. What once took a user about 10 interactions to find program information, now requires about 4 interactions on mobile and desktop devices.
 
 - label: People Watcher
   icon: results-demographics
@@ -26,10 +26,10 @@ list:
   accomplishments:
     - project_id: EC/CareNet-Elder-Care-Portal
       description: |
-        In 2009, during the requirements gathering phase for the CareNet applications, I visited many campus homes to observe the residents and staff in situ, I interviewed the staff to dive deeper into workflow specifics, and I worked closely with the CEO and founders to distill the product vision.  After a few weeks of such researching, brainstorming, and documenting, we came up with a comprehensive collection of wireframes, interactive prototypes, architectural diagrams, user stories, personas, and random sticky notes that defined the early product requirements.
+        In 2009, during the requirements gathering phase for the CareNet system, I visited many Elite Care campus homes to observe the residents and staff in situ. I interviewed the staff to dive deeper into workflow specifics, and worked closely with the CEO and founders to distill the product vision. After a few weeks of research, brainstorming, and documenting, we came up with a comprehensive collection of wireframes, interactive prototypes, architectural diagrams, user stories, personas, and sticky notes to define the early product requirements.
     - project_id: OSU/Graduate-Education-Toolkit
       description: |
-        In 2013, I participated in the collection and collation of user stories for the OSU Graduate School's new application system. This involved synthesizing information gathered from hundreds of interviews with potential users. We reviewed each interview to extract the common and uncommon patterns. We simplified these findings into concise, categorized, and prioritized story cards. We then used these stories to refine a clear, confident, and prioritized list of product features, with use-case examples for each one.
+        In 2013, I participated in the collection and collation of user stories for the OSU Graduate School's new application system. This involved synthesizing information gathered from hundreds of interviews with potential users. We extracted the common and uncommon patterns. We simplified these findings into concise, categorized, and prioritized story cards. We then used these stories to refine a clear, confident, and prioritized list of product features, with use-case scenarios for each one.
 
 - label: Bridge Builder
   icon: share
@@ -40,10 +40,10 @@ list:
   accomplishments:
     - project_id: INFR/UA-Portfolio
       description: |
-        In 2015, during a tumultuous product development cycle, I maintained clear communication with the designers, developers, project team, and investors. I facilitated a cross-discipline understanding of the undocumented requirements and unanimous agreement for their proposed solutions. This resulted in an improved working environment and a better product for the end users.
+        In 2015, during a tumultuous product development cycle, I maintained clear communication with the designers, developers, project team, and investors. I facilitated a cross-discipline understanding of the undocumented requirements and proposed solutions that were agreed on by all. This resulted in an improved working environment and a better product for the end users.
     - project_id: INFR/UA-Portfolio
       description: |
-        During this time I also participated in the prioritizing of customer feedback and developer roadblocks that followed every weekly product release. If the documentation was unclear, we met with the development or customer support teams in person to get the skinny. My participation in this process was especially sought after, due to my experience and accuracy in translating customer feedback and designing around product constraints.
+        Also at InfoReady, in preparation for our weekly sprints, I participated in the prioritization of customer feedback and development efforts. If the documentation for an issue was unclear, we met with the development or customer support teams in person to get the skinny. My participation in this process was especially sought after, due to my experience and accuracy in translating customer feedback and understanding product constraints.
 
 - label: Code Explorer
   icon: wrench
@@ -68,7 +68,7 @@ list:
   accomplishments:
     - project_id: BFAS/Best-Friends-Virtual-Tour
       description: |
-        In 2001, I pitched, designed, and implemented a unique multimedia online tour of the Best Friends physical campus. While such a product was ahead of it's time, and typically out of budget for a growing non-profit, the roadmap I presented was practical and achievable, with clear benefits for all. Utilizing the RIA capabilities of Flash 5, we redefined the landscape of interactive web presentations, putting BFAS on the map with a dynamic Internet presence, and a handful of spinning furry friends.
+        In 2001, I proposed, designed, and built a unique multimedia virtual tour of the Best Friends Animal Sanctuary campus. While such a product was ahead of it's time and typically out of budget for a growing non-profit, the roadmap I presented was practical and achievable, with clear benefits for all. Utilizing the RIA capabilities of Flash 5, we redefined the landscape of interactive web presentations, putting Best Friends on the map with a dynamic Internet presence and a handful of spinning furry friends.
     - project_id: SHUK/InfoShuk-Business-Analytics-App
       description: |
         In 2016, while working for an early stage startup, I led multiple brainstorm sessions to fine tune the direction and priorities for development work each week. This iterative design process led to rapid and evolving prototypes being put in front of potential clients at a regular pace. While each version was more complex than the last, we were able to incorporate every change into a growing and scalable product definition for future development.
