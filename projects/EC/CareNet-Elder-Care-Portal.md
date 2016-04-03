@@ -1,7 +1,7 @@
 ---
 client: EC
 title: CareNet Elder Care Management Portal
-summary: A next generation elder care management system for the 'smart' campuses developed and managed by Elite Care in the pacific northwest.
+summary: A next generation elder care management system for the 'smart' residential campuses developed and managed by Elite Care in the pacific northwest.
 startdate: 2009-08-15
 enddate: 2010-07-01
 website: 
@@ -68,4 +68,5 @@ tasks:
  
 ---
 
-I led the user research, persona development, information architecture, wire framing, and prototyping efforts for this next generation web-enabled and socially-integrated elder care management system.
+I led the early product design for their second generation “CareNet” elder care management system. One touchpoint to be designed was a tablet based “Point Of Service” app by which caregivers could receive alerts from sensors around the “smart facility” and document “in the field” the care given to each resident. A primary requirement for this POS experience was that documentation interactions should require 30 seconds or less to complete. Another touchpoint to be designed was a web portal by which family members and administrators could track and update resident care plans and monitor care given. An early requirement for this portal was that reports from structured dats, would be generated in a natural language format. These, and other unique requirements, made this CareNet system an exciting and challenging product to design. 
+

@@ -8,7 +8,7 @@ list:
   color: info
   unsplash: NkEH30uoe8o
   summary: |
-    plotting effective courses to intuitively navigate complex and unknown systems
+    designing efficient and clear journeys through complex and unfamiliar systems
   accomplishments: 
     - project_id: OSU/Graduate-School-Website
       description: |
@@ -22,7 +22,7 @@ list:
   color: warning
   unsplash: 2TlAsvhqiL0
   summary: |
-    understanding the human experience by observing our reactions to and interactions with the created environment
+    using research and observations to understand users and design more effective interactions
   accomplishments:
     - project_id: EC/CareNet-Elder-Care-Portal
       description: |
@@ -36,7 +36,7 @@ list:
   color: alert
   unsplash: 4i__Q9jTe74
   summary: |
-    listening to and connecting stakeholder perspectives to ensure product efficacy
+    listening to and connecting diverse perspectives to ensure stakeholder satisfaction
   accomplishments:
     - project_id: INFR/UA-Portfolio
       description: |

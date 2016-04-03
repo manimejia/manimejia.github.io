@@ -63,4 +63,4 @@ tasks:
 
 
 ---
-During this complete website overhaul, I was responsible for designing an effective content strategy, information architecture, and user experience as well as developing Drupal modules and theme modifications as needed. This required communicating clearly with and incorporating feedback from all content owners and stakeholders in this academic environment.
+I led the website redesign efforts for this core academic department. This non-trivial task involved documenting and redesigning the legacy information architecture and content strategy, meeting regularly with content owners and stakeholders to assure their needs were being met, designing experiential solutions to meet the needs of a diverse group of stakeholders and users, and re-inventing the entire web presence of this institutionalized academic department to more efficiently serve its modern web-savvy audience.
