@@ -50,7 +50,7 @@ list:
   color: warning
   unsplash: xNdPWGJ6UCQ
   summary: |
-    developing scalable prototypes to realize and rapidly iterate though product designs
+    developing scalable prototypes to realize and rapidly iterate through product designs
   accomplishments:
     - project_id: MM/uix-javascript-controller-library
       description: |
