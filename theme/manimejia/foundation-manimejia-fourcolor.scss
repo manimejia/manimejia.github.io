@@ -191,10 +191,11 @@ $colors: (
 			darker:         $gainsboro,
 			darkest:        $iron,
 		),
-	info:( /* blue */
-			base:           #0453F0,
+	info:( /* blue */		
+			// base:           #0453F0,
 			lightest:       #9EBBF4,
 			lighter:        #5A8EF5,
+			base:						#1B64F5,
 			darker:         #033EB2,
 			darkest:        #032363,
 		),                        
