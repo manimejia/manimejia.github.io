@@ -2420,9 +2420,20 @@ padding: 1em;
     border-radius: 50%;
     /*box-shadow: 2px 2px 5px #888888;*/
 	}
-	.vcard-info{
+	.vcard-info ul{
     line-height: 2em;
 		font-size: .8em;
+		margin:0;
+	}
+}
+@media only print {
+	.vcard{
+		text-align:left;
+	}
+	.vcard-info ul{
+		font-size: 1em;
+		float:left;
+		width:49%;
 	}
 }
 .vcard.vcard-compact{

@@ -25,8 +25,8 @@
   {%if include.message %}
   <p class="vcard-message">{{ include.message | markdownify}}</p>
   {%endif%}
-
-  <ul class="vcard-info" role="presentation">
+  <div class="vcard-info clearfix">
+  <ul class="vcard-social-info" role="presentation">
     {% for sociallink in include.person.social %}
     <li class="vcard-social-{{sociallink.icon}}" role="presentation">
       <b class="hidden-for-small-only hidden-for-medium-up">{{sociallink.icon | capitalize}}: </b>
@@ -42,6 +42,8 @@
       </a>
     </li>
     {%endfor%}
+  </ul>
+  <ul class="vcard-contact-info" role="presentation">
     <li class="vcard-website hide-for-screen" role="presentation">
 			<b class="hidden-for-small-only hidden-for-medium-up">Website: </b>
 			<a href="http://{{ include.person.website }}" class="hide-href-for-print">
@@ -69,5 +71,6 @@
       </span>
     </li>
   </ul>
+  </div>
 </div>
 {% endif %}
