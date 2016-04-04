@@ -5,73 +5,82 @@ list:
 
 - label: Way Finder
   icon: eye
-  color: info
+  color: warning
   unsplash: NkEH30uoe8o
   summary: |
-    designing efficient and clear journeys through complex and unfamiliar systems
+    designing clear and efficient journeys through complex and unfamiliar systems
   accomplishments: 
+    - project_id: EC/CareNet-Elder-Care-Portal
+      description: |
+        In 2009, I led the early product design for Elite Care’s second generation elder care management system. I produced a comprehensive collection of UX deliverables to define a unified product experience with functionality across multiple platforms. 
     - project_id: OSU/Graduate-School-Website
       description: |
-        In 2012, I revealed an overwhelming pattern of content reiteration in the OSU Graduate School's legacy website, where critical information was being communicated multiple times in different ways. Its resolution led to a content strategy covering the same information more concisely and with no redundancy. These efforts saved thousands of users from a frustrated and confusing journey, and also saved the Graduate School hundreds of hours in content maintenance and phone support.
+        In 2012, while documenting the OSU Graduate School's legacy website, I found that critical information was being communicated multiple times in different ways. In streamlining this content, I greatly improved the readability of the new website.
     - project_id: OSU/Graduate-School-Website
       description: |
-        In 2013, I implemented a needed solution to the long standing struggle of finding graduate programs on the OSU Graduate School website. With the realization that this content represents 80% of their daily website traffic, designed an efficient and highly praised browsing interface to improve this valuable user experience. What once took a user about 10 interactions to find program information, now requires about 4 interactions on mobile and desktop devices.
+        In 2013, I led the website redesign efforts for the OSU Graduate School. During this time, I designed an efficient and highly praised browsing interface to address the long standing challenge of finding information about current graduate programs.
 
 - label: People Watcher
   icon: results-demographics
-  color: warning
+  color: alert
   unsplash: 2TlAsvhqiL0
   summary: |
     using research and observations to understand users and design more effective interactions
   accomplishments:
+    - project_id: MM/Artist-Webdrop-Drupal-Distribution
+      description: |
+        In 2008, one of my early entrepreneurial ventures was to develop a “plug and play” website solution for visual artists. To research, I asked a hundred artists how they typically market their works and how they use the web to support their business.
     - project_id: EC/CareNet-Elder-Care-Portal
       description: |
-        In 2009, during the requirements gathering phase for the CareNet system, I visited many Elite Care campus homes to observe the residents and staff in situ. I interviewed the staff to dive deeper into workflow specifics, and worked closely with the CEO and founders to distill the product vision. After a few weeks of research, brainstorming, and documenting, we came up with a comprehensive collection of wireframes, interactive prototypes, architectural diagrams, user stories, personas, and sticky notes to define the early product requirements.
+        In 2009, while designing Elite Care’s elder care management system, I visited many campus homes to observe the residents and staff in situ. This provided insightful contextual data that would otherwise have been unavailable to the product team.  
     - project_id: OSU/Graduate-Education-Toolkit
       description: |
-        In 2013, I participated in the collection and collation of user stories for the OSU Graduate School's new application system. This involved synthesizing information gathered from hundreds of interviews with potential users. We extracted the common and uncommon patterns. We simplified these findings into concise, categorized, and prioritized story cards. We then used these stories to refine a clear, confident, and prioritized list of product features, with use-case scenarios for each one.
+        In 2014, I spearheaded the user experience design efforts for this graduate student application system. Through regular interviews with students and faculty, I gained insights about their typical workflow and periodically tested wireframe designs.
 
 - label: Bridge Builder
   icon: share
-  color: alert
+  color: success
   unsplash: 4i__Q9jTe74
   summary: |
-    listening to and connecting diverse perspectives to ensure stakeholder satisfaction
+    listening to and connecting diverse perspectives to facilitate clear communication
   accomplishments:
     - project_id: INFR/UA-Portfolio
       description: |
-        In 2015, during a tumultuous product development cycle, I maintained clear communication with the designers, developers, project team, and investors. I facilitated a cross-discipline understanding of the undocumented requirements and proposed solutions that were agreed on by all. This resulted in an improved working environment and a better product for the end users.
+        In 2015, at InfoReady in Ann Arbor, I participated in the weekly prioritization of customer feedback. My participation in this process was especially sought after, due to my experience and accuracy in understanding user input and product constraints. 
     - project_id: INFR/UA-Portfolio
       description: |
-        Also at InfoReady, in preparation for our weekly sprints, I participated in the prioritization of customer feedback and development efforts. If the documentation for an issue was unclear, we met with the development or customer support teams in person to get the skinny. My participation in this process was especially sought after, due to my experience and accuracy in translating customer feedback and understanding product constraints.
+        In 2015, during a tumultuous product development cycle at InfoReady, I maintained clear communication with the designers, developers, and product team. I facilitated a cross-discipline understanding of un-documented requirements and proposed solutions. 
+    - project_id: SHUK/InfoShuk-Business-Analytics-App
+      description: |
+        In 2016, at an early stage startup in Ann Arbor, I led multiple brainstorm sessions to fine tune the direction of development work each week. This iterative process led to an efficient working environment with rapid prototypes being produced at a regular pace.
 
 - label: Code Explorer
   icon: wrench
-  color: warning
+  color: info
   unsplash: xNdPWGJ6UCQ
   summary: |
     developing scalable prototypes to realize and rapidly iterate through product designs
   accomplishments:
-    - project_id: MM/uix-javascript-controller-library
-      description: |
-        In 2015, I started an open source javascript library called UIX. This represents a novel approach to building accessible user interface widgets in HTML5. By using WAI-ARIA standard attributes to identify these elements and their intended interactions, I was able to provide “out of the box” semantic and keyboard navigable UI widgets, shaving hours of redundant work for “accessibility compliant” front end developers.
+    - project_id: OSU/Graduate-Education-Toolkit
+      description: | 
+        In 2014, during development of this graduate admissions management system, I  integrated the responsive Bootstrap framework and related libraries into their VisualForce front end built on the SalesForce cloud platform. The resulting hybrid Bootstrap/ Visualforce components that came from this integration were usable for many projects in the future.
     - project_id: INFR/UA-Portfolio
       description: |
         Upon being hired at InfoReady in 2015, I dove head on into javascript development using AngularJS. It was my first of many adventures with this thick-client framework, yet far from a beginners lesson. With deep understanding of the application growing UI requirements, I was able to re-architect the entire front end to deliver a more polished and scalable solution in less time than other estimates. 
 
 - label: Trail Blazer
   icon: flag
-  color: success
+  color: warning
   unsplash: o-xzF35Qskc
   summary: |
-    always imagining the possible futures while remaining focused on the current tasks
+    steering boldly toward the possible future while making the most of the present reality
   accomplishments:
     - project_id: BFAS/Best-Friends-Virtual-Tour
       description: |
         In 2001, I proposed, designed, and built a unique multimedia virtual tour of the Best Friends Animal Sanctuary campus. While such a product was ahead of it's time and typically out of budget for a growing non-profit, the roadmap I presented was practical and achievable, with clear benefits for all. Utilizing the RIA capabilities of Flash 5, we redefined the landscape of interactive web presentations, putting Best Friends on the map with a dynamic Internet presence and a handful of spinning furry friends.
-    - project_id: SHUK/InfoShuk-Business-Analytics-App
+    - project_id: MM/uix-javascript-controller-library
       description: |
-        In 2016, while working for an early stage startup, I led multiple brainstorm sessions to fine tune the direction and priorities for development work each week. This iterative design process led to rapid and evolving prototypes being put in front of potential clients at a regular pace. While each version was more complex than the last, we were able to incorporate every change into a growing and scalable product definition for future development.
+        In 2015, I started an open source javascript library called UIX. This represents a novel approach to building accessible user interface widgets in HTML5. By using WAI-ARIA standard attributes to identify these elements and their intended interactions, I was able to provide “out of the box” semantic and keyboard navigable UI widgets, shaving hours of redundant work for “accessibility compliant” front end developers.
 
 
 #- label: Problem Solver 

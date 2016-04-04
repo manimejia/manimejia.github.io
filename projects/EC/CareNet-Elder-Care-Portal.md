@@ -1,7 +1,7 @@
 ---
 client: EC
-title: CareNet Elder Care Management Portal
-summary: A next generation elder care management system for the 'smart' residential campuses developed and managed by Elite Care in the pacific northwest.
+title: CareNet Care Management System
+summary: A second generation suite of web and mobile applications to interface with the 'smart' campuses of Elite Care's residential elder care communities in the pacific northwest.
 startdate: 2009-08-15
 enddate: 2010-07-01
 website: 

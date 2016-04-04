@@ -41,20 +41,24 @@ background-size:cover;
     </p>
   </header>
 
-
-  <ul class="service-description medium-block-grid-{{service.accomplishments.size}}">
+  <div class="service-description">
+  {% if service.description %}
+      {{service.description | markdownify}}
+  {%endif%}
+  <ul class="large-block-grid-{{service.accomplishments.size}}">
     {% for accomplishment in service.accomplishments %}
-    <li class="text-center secondary-text">
+    <li class="secondary-text">
       {% assign project_ids = project_ids | append : "," | append : accomplishment.project_id %}
       {% include _object-this_project_page-project.liquid project_id=accomplishment.project_id %}
       {% include _string-this_page_id.liquid this_page=this_project_page %}
-      <a href="#" data-reveal-id="{{this_page_id}}-modal">{{this_project_page.title}}</a>
-      <div class="text-justify">
+      <p>
+        <a href="#" data-reveal-id="{{this_page_id}}-modal">{{this_project_page.title}}</a>
+      </p>
       {{accomplishment.description | markdownify}}
-      </div>
     </li>
     {% endfor %}
   </ul>
+  </div>
 
 </div>    
 </div>

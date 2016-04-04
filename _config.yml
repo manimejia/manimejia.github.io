@@ -165,7 +165,7 @@ config:
       - name: Experience
         url: "/#experience"
       - name: Capacity
-        url: "/#services"
+        url: "/#capacity"
       - name: Clients
         url: "/#clients"
       - name: Portfolio
