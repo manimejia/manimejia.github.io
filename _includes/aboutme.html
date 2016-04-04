@@ -1,8 +1,8 @@
 {% assign person = site.data.people.manimejia %}
-<div class="row text-justify">
-    <div class="column medium-4">
-			{% include vcard.html person=person noname=true id=include.id%}
-			<p class="text-center">References Upon Request</p>
+<div class="row text-left">
+    <div class="column medium-3">
+			{% include vcard.html person=person noname=true nopicture=ture id=include.id%}
+			<!-- <p class="text-center">References Upon Request</p> -->
     </div>
     <div class="column medium-8">
       <header>
@@ -15,10 +15,18 @@
 	    </p>
     	{%endif%}
       </header>
-      <ul class="icon-list {{include.color}}">
+
+      {% if person.summary %}
+      <div class="">
+      {{person.summary | markdownify}}
+      </div>
+      {%endif%}
+
+      <ul class="{include.color}} medium-block-grid-{{site.data.services.list.size}}">
       {% for service in site.data.services.list %}
-      <li class="fi-{{service.icon}}">
-          <strong class="left">{{service.label}}:&nbsp;</strong> {{service.summary | markdownify }}
+      <li class="text-center">
+        <i class="fi-{{service.icon}} font-larger"></i><br/>
+        <strong>{{service.label}}</strong> 
       </li>	
       {% endfor %}
     	</ul>
