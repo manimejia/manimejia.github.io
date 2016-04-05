@@ -181,44 +181,44 @@ employment:
     dates: 2005 - 2010
     description: |
       As a freelance web developer for Open Face Studio, I focused my services on designing Drupal based web solutions. Working with a number of small business and nonprofit clients, I developed functional and attractive websites and applications. With attention to both the administrative and end user experience, I made a number of innovations and contributions to the Drupal community. My attention to detail and eye for simple and practical solutions resulted in a steady stream of satisfied clients.
-    - 
-      employer: Best Frineds Animal Society
-      location: Kanab, Ut. & Bay Area, Ca.
-      website: bestfriends.org
-      title: Flash Designer & Developer
-      dates: 2001 - 2006
-      description: |
-        Best Animal Society has been home to the largest no-kill sanctuary in the USA for almost two decades. This is a forward thinking organization, who is responsible for reinventing what it means to be a humane animal care facility. Where others have failed with this difficult mission, Best Friends has been a pioneer in nurturing and inspiring a world-wide cruelty-free movement. 
+  - 
+    employer: Best Frineds Animal Society
+    location: Kanab, Ut. & Bay Area, Ca.
+    website: bestfriends.org
+    title: Flash Designer & Developer
+    dates: 2001 - 2006
+    description: |
+      Best Animal Society has been home to the largest no-kill sanctuary in the USA for almost two decades. This is a forward thinking organization, who is responsible for reinventing what it means to be a humane animal care facility. Where others have failed with this difficult mission, Best Friends has been a pioneer in nurturing and inspiring a world-wide cruelty-free movement. 
 
-        As a web professional, I have been involved with the sanctuary since 2001. This is when I first proposed a novel [virtual tour](http://manimejia.me/portfolio#BFAS-Best-Friends-Virtual-Tour) concept, to be built using Flash 5. The project was accepted, and for the next year I focused on designing and developing this immersive experience. In the following 6 years I would be called on multiple times as the "flash expert" for new projects.
+      As a web professional, I have been involved with the sanctuary since 2001. This is when I first proposed a novel [virtual tour](http://manimejia.me/portfolio#BFAS-Best-Friends-Virtual-Tour) concept, to be built using Flash 5. The project was accepted, and for the next year I focused on designing and developing this immersive experience. In the following 6 years I would be called on multiple times as the "flash expert" for new projects.
 
-  references:
-    -
-      fullname: Joshua Sukenic
-      title: CEO, Growth Architect
-      employer: InfoShuk
-      quote: | 
-        Manuel did a great job for InfoShuk as our front-end lead. As an early-stage company, [He] jumped right into action and began developing a solid code base. Along with support in formulating concepts into product realities, Mani's communication, code quality and teamwork were top notch.
-    -
-      fullname: John Henry
-      title: Director of Technology 
-      employer: Graduate School, Oregon State University
-      quote: |
-        &hellip; Manuel took the website redesign effort from mapping the old site architecture, developing a new architecture, creating mockups and working to incrementally deploy the new site in Drupal while working with content owners both in and out of the Graduate School. I was particularly satisfied with his innovative user interface design solutions demonstrated in the [Graduate Programs](http://gradschool.oregonstate.edu/programs) page.
+references:
+  -
+    fullname: Joshua Sukenic
+    title: CEO, Growth Architect
+    employer: InfoShuk
+    quote: | 
+      Manuel did a great job for InfoShuk as our front-end lead. As an early-stage company, [He] jumped right into action and began developing a solid code base. Along with support in formulating concepts into product realities, Mani's communication, code quality and teamwork were top notch.
+  -
+    fullname: John Henry
+    title: Director of Technology 
+    employer: Graduate School, Oregon State University
+    quote: |
+      &hellip; Manuel took the website redesign effort from mapping the old site architecture, developing a new architecture, creating mockups and working to incrementally deploy the new site in Drupal while working with content owners both in and out of the Graduate School. I was particularly satisfied with his innovative user interface design solutions demonstrated in the [Graduate Programs](http://gradschool.oregonstate.edu/programs) page.
 
-        &hellip; I found Manuel to be a strong creative thinker and problem solver, he was consistently passionate and enthusiastic about his work and his desire to provide the best user experience possible. Please feel free to contact me should you require further information.
-    -
-      fullname: Dan Vega
-      title: Programmer Analyst
-      employer: Graduate School, Oregon State University
-      quote: |
-        Manuel is a dedicated UI/UX developer who is not only skilled in CSS and JavaScript, but also has a passion for the client's viewpoint. When a new platform was thrown in the mix, he rose to the occasion and went from beginner to productive developer in short order. By thinking of the platform as an architected system, he isn't one of those guys that suggests 15 million different directions. Instead, Manuel sees how the integration works in a model view controller architecture and makes suggestions that make sense, are achievable, and can communicate his ideas not only in mock-ups but also in conversation. 
+      &hellip; I found Manuel to be a strong creative thinker and problem solver, he was consistently passionate and enthusiastic about his work and his desire to provide the best user experience possible. Please feel free to contact me should you require further information.
+  -
+    fullname: Dan Vega
+    title: Programmer Analyst
+    employer: Graduate School, Oregon State University
+    quote: |
+      Manuel is a dedicated UI/UX developer who is not only skilled in CSS and JavaScript, but also has a passion for the client's viewpoint. When a new platform was thrown in the mix, he rose to the occasion and went from beginner to productive developer in short order. By thinking of the platform as an architected system, he isn't one of those guys that suggests 15 million different directions. Instead, Manuel sees how the integration works in a model view controller architecture and makes suggestions that make sense, are achievable, and can communicate his ideas not only in mock-ups but also in conversation. 
 
-        If you are currently unhappy with the user experience being delivered to your clients, or would like to get it right from the start, bring Manuel on board and you'll be on your way to a pleasant, effective UI/UX solution.
-    -
-      fullname: Barbara J. Bond
-      title: Director of Postdoctoral Programs
-      employer: Office of Postdoctoral Programs, Oregon State University
-      quote: |
-        Manuel created an impressive and innovative revision to a website for a program at Oregon State University for postdoctoral researchers. Many of the concepts he developed were later used by others in other website development work.
+      If you are currently unhappy with the user experience being delivered to your clients, or would like to get it right from the start, bring Manuel on board and you'll be on your way to a pleasant, effective UI/UX solution.
+  -
+    fullname: Barbara J. Bond
+    title: Director of Postdoctoral Programs
+    employer: Office of Postdoctoral Programs, Oregon State University
+    quote: |
+      Manuel created an impressive and innovative revision to a website for a program at Oregon State University for postdoctoral researchers. Many of the concepts he developed were later used by others in other website development work.
 
