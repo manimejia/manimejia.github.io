@@ -1,186 +1,186 @@
-  uid: manimejia
-  name: Manuel Mej&iacute;a
-  locality: Ann Arbor
-  state: Mi.
-  website: manimejia.me
-  email: hello@manimejia.me
-  phone: (971) 533 7591
-  social:
-    - icon: angellist
-      logo: data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDE1MCAxNTAiIGhlaWdodD0iMTUwcHgiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxNTAgMTUwIiB3aWR0aD0iMTUwcHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxnPjxjaXJjbGUgY3g9Ijc0Ljk4MyIgY3k9Ijc1LjA0MiIgZmlsbD0iIzQxNDA0MiIgb3BhY2l0eT0iMC4xIiByPSI3NSIvPjxwYXRoIGQ9Ik03NC45ODMsMC4wNDJ2MTUwYzQxLjQyMiwwLDc1LTMzLjU3OSw3NS03NS4wMDFDMTQ5Ljk4MywzMy42MjEsMTE2LjQwNSwwLjA0Miw3NC45ODMsMC4wNDJ6ICAgIiBmaWxsPSIjNDE0MDQyIiBvcGFjaXR5PSIwLjEiLz48Y2lyY2xlIGN4PSI3NC45ODMiIGN5PSI3NS4wNDIiIGZpbGw9IiMzRDNEM0UiIHI9IjY1LjQ4NyIvPjxwYXRoIGQ9Ik03NC45ODMsOS41NTV2MTMwLjk3NWMzNi4xNjgsMCw2NS40ODgtMjkuMzE5LDY1LjQ4OC02NS40ODhDMTQwLjQ3MiwzOC44NzQsMTExLjE1MSw5LjU1NSw3NC45ODMsOS41NTV6IiBmaWxsPSIjMjgyODI5Ii8+PGc+PHBhdGggZD0iTTkuNTY5LDcyLjExNWMtMC4wNDMsMC45NzEtMC4wNzQsMS45NDUtMC4wNzQsMi45MjZjMCwzNi4xNjksMjkuMzIsNjUuNDg4LDY1LjQ4OCw2NS40ODh2LTUuODUyICAgIEMzOS43OTYsMTM0LjY3OCwxMS4xMDMsMTA2LjkyNCw5LjU2OSw3Mi4xMTV6IiBmaWxsPSIjMjgyODI5Ii8+PHBhdGggZD0iTTE0MC4zOTcsNzIuMTE1Yy0xLjUzMSwzNC44MDktMzAuMjI3LDYyLjU2Mi02NS40MTQsNjIuNTYydjUuODUyYzM2LjE2OCwwLDY1LjQ4OC0yOS4zMTksNjUuNDg4LTY1LjQ4OCAgICBDMTQwLjQ3Miw3NC4wNjEsMTQwLjQ0LDczLjA4NiwxNDAuMzk3LDcyLjExNXoiLz48L2c+PC9nPjxnPjxnPjxwYXRoIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTY4LjIyOSw0MC43ODljLTAuODc1LTIuMjU3LTEuOTY3LTYuMDAzLTQuMDItNy4wMDggICAgYy0xLjYxOC0wLjc5MS0zLjE4OS0wLjA1Ny0zLjc5MiwxLjAzNGMtMS41NzksMi44NiwwLjA0Miw3LjYwNywwLjkyLDEwLjQ1MmMyLjE0OSw2Ljk3Nyw0Ljk5OSwxNC4zNDQsNy4yMzcsMjAuNTYxICAgIGMxLjU4NC0xLjI3Miw1LjQ3NC0wLjgyNyw4LjI2OS0wLjU3NEM3NC4yMjcsNTcuNDQ0LDcxLjMwMiw0OC42OTgsNjguMjI5LDQwLjc4OXogTTk5LjcwMiw0Ni4zMDIgICAgYzAuODExLTIuNTc1LDIuMTI0LTQuNzM4LDEuODM2LTcuNjk1Yy0wLjE3NC0xLjgyOS0xLjI2Ny0zLjMyNy0zLjA5OS0zLjIxN2MtMi43OTgsMC4xNjgtNC4zNjUsNC40MjktNS4yODMsNi42NjIgICAgYy0zLjIyNiw3Ljg0Mi01Ljk2OCwxNi4yNjctOC4zODUsMjQuMTIyYzIuNzQ2LDAuMjc4LDUuMTQ4LDAuODk5LDcuODExLDEuMjYzQzk0Ljk2MSw2MS4yMDcsOTcuNDgzLDUzLjM1NCw5OS43MDIsNDYuMzAyeiAgICAgTTYwLjA3NCwxMDIuODE0YzEuOTc4LDAuNjYxLDQuNjExLDAuMTQ2LDQuOTM5LTEuNzI0YzAuMzI1LTEuODU3LTEuMjk2LTMuNjEyLTEuODM5LTQuNDc5Yy0yLjA1MS0zLjI4Ni0zLjIwMS00Ljc1NS01Ljc0Mi03LjM1MiAgICBjLTEuMDA4LTEuMDMtMi40MTktMi42MjYtMy45MDUtMi43NTdjLTIuNDI4LTAuMjE0LTQuMzczLDIuMzYyLTUuMTcsMy43OTFjLTIuMjg5LDQuMTEzLTAuMTUsOS43NDksMS44MzcsMTIuOTc5ICAgIGM0LjcwMiw3LjYzNywxMi4yNSwxMy44NTUsMjQuMjM3LDEzLjc4M2MxMC4xNTUtMC4wNjMsMTcuMDktNS4xNzYsMjEuNDgtMTAuNTY3YzQuODYzLTUuOTczLDcuNzY3LTE0LjU1MSw3LjEyLTI0LjkyNiAgICBjLTAuMTIxLTEuOTU1LTAuNDAyLTQuMTA3LTEuNDk0LTUuODU4Yy0xLjg0Mi0yLjk2LTcuMjM5LTQuMjQyLTExLjk0My01LjI4M2MtMi4yMzYtMC40OTQtNC43NzMtMC44NjYtNy40NjYtMS4xNDggICAgYy0zLjU2NS0wLjM3MS05LjY0LTEuMzc5LTExLjI1OCwwLjY4OWMtMS40MDQsMS43OTUtMC4yMzgsNC42NDgsMC40Niw1Ljc0MmMyLjU3LDQuMDMxLDEwLjE2MSw0LjU5NSwxNi42NTQsNC41OTUgICAgYzMuMzYyLDAsOC4wMDgtMC43Niw3LjQ2OCwyLjUyOGMtMC4yNDcsMS40OTctMy45OSwyLjM1NC01Ljg1OCwzLjFjLTIuMTE3LDAuODQ3LTQuMTQ0LDIuMjI1LTUuNTE0LDMuNDQ2ICAgIGMtMi42MzEsMi4zNDgtNi4xOTcsNi40OTEtNi41NDcsMTEuMzcxYy0wLjMzLDQuNTk0LDIuMDY5LDUuODY5LDEuNjA2LDEwLjU2NmMtNC45MS0wLjkwNS01LjU1Mi02LjA4My01Ljg1Ni0xMS41OTkgICAgYy0xLjEyNywwLjUwNi0yLjc1MSwwLjU1OS00LjEzNSwwLjIyOWMxLjg5Niw2LjkxNS01LjEwNCw5LjQ2LTEwLjIyNSw3LjAwOGMtMi4wMDctMC45NjItNC4wODUtMi44ODUtNS42MjctNC45MzkgICAgYy0xLjYzMi0yLjE3My0zLjI2OC01LjE1OC0xLjYwOS03LjY5NUM1NC4zMDcsOTYuNTczLDU2LjA4MiwxMDEuNDc5LDYwLjA3NCwxMDIuODE0eiBNNTUuNzEsNzYuNjI2ICAgIGMtMC4xNzcsMi4yMSwxLjU4OSw0Ljc3NywyLjQxMiw2LjIwM2MyLjE5NywzLjgwNyw0LjU0LDYuODM2LDcuNDY2LDkuNzYzYzEuMzEzLDEuMzEzLDMuNDEzLDMuNDY5LDUuNTE1LDMuMjE3ICAgIGMxLjAyNy0wLjEyNCwyLjMzMy0xLjM5NiwyLjUyNS0yLjUyN2MwLjM0OC0yLjAzLTEuMTEyLTQuNTczLTEuODM4LTYuMzE4Yy0xLjU3My0zLjc4Mi0zLjY0NS03LjY2Ni01Ljc0Mi0xMC41NjcgICAgYy0xLjQxOS0xLjk2MS0zLjE1Ni00LjM3My01Ljg1Ny00LjEzNUM1OC40Nyw3Mi40MTIsNTUuODgsNzQuNDg5LDU1LjcxLDc2LjYyNnogTTc3LjQxOSw5MC40MSAgICBjMS45MjEtMi4yMTUsNC4xMjctNC4xNDQsNi40MzItNS45NzNjLTMuNTE0LTAuMDg2LTYuNzg2LTEuMDIzLTkuNDE5LTEuNjA4Qzc1LjYwOCw4NS4xNzUsNzYuNTgxLDg3LjcyNiw3Ny40MTksOTAuNDF6IiBmaWxsPSIjRkZGRkZGIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L2c+PC9nPjwvc3ZnPg==
-      url: http://angel.co/manimejia
-      username: manimejia
-    - icon: linkedin
-      url: http://linkedin.com/in/manimejia
-      username: /manimejia
-    - icon: github
-      url: http://github.com/manimejia
-      username: /manimejia
-    - icon: skype
-      url: skype:mani.mejia?chat
-      username: mani.mejia
-  numbers:
-    - 
-      number: 15
-      label: Years Professional Experience
-      icon: lightbulb
-      color: warning
-    - 
-      number: 32
-      label: Digital Products Delivered
-      icon: monitor
-      color: alert
-    - 
-      number: 20
-      label: Satisfied Clients & Employers
-      icon: torsos-all-female
-      color: success
-    # - 
-    #   number: 12
-    #   label: Business Websites
-    #   icon: monitor
-    #   color: info
-    # - 
-    #   number: 5
-    #   label: Web Applications
-    #   icon: layout
-    #   color: info
-    # - 
-    #   number: 10
-    #   label: Multimedia Presentations
-    #   icon: photo
-    #   color: info
-  title: Digital Product Designer
-  byline: |
-    integrating technical, creative, and communication
-    challenges into comprehensive software solutions
-  summary: |
-    Having 15 years of professional experience in the production of web and mobile software solutions, I am a holistic thinker and a creative problem solver with a deep understanding of the technical, communication and design challenges inherent to these projects. My experience involves work in all phases of digital product development: from understanding concept and vision to marketing a release; from collecting user stories to designing wireframes and UX deliverables; from crafting effective information architectures to contributing scalable front and back end code. My practice as a product leader, is to always steer boldly toward the possible future while making the most of the present reality. It is from this multi-level and can-do perspective that I offer practical insights to iteratively address every design, technical, and communication challenge. 
+uid: manimejia
+name: Manuel Mej&iacute;a
+locality: Ann Arbor
+state: Mi.
+website: manimejia.me
+email: hello@manimejia.me
+phone: (971) 533 7591
+social:
+  - icon: angellist
+    logo: data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDE1MCAxNTAiIGhlaWdodD0iMTUwcHgiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxNTAgMTUwIiB3aWR0aD0iMTUwcHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxnPjxjaXJjbGUgY3g9Ijc0Ljk4MyIgY3k9Ijc1LjA0MiIgZmlsbD0iIzQxNDA0MiIgb3BhY2l0eT0iMC4xIiByPSI3NSIvPjxwYXRoIGQ9Ik03NC45ODMsMC4wNDJ2MTUwYzQxLjQyMiwwLDc1LTMzLjU3OSw3NS03NS4wMDFDMTQ5Ljk4MywzMy42MjEsMTE2LjQwNSwwLjA0Miw3NC45ODMsMC4wNDJ6ICAgIiBmaWxsPSIjNDE0MDQyIiBvcGFjaXR5PSIwLjEiLz48Y2lyY2xlIGN4PSI3NC45ODMiIGN5PSI3NS4wNDIiIGZpbGw9IiMzRDNEM0UiIHI9IjY1LjQ4NyIvPjxwYXRoIGQ9Ik03NC45ODMsOS41NTV2MTMwLjk3NWMzNi4xNjgsMCw2NS40ODgtMjkuMzE5LDY1LjQ4OC02NS40ODhDMTQwLjQ3MiwzOC44NzQsMTExLjE1MSw5LjU1NSw3NC45ODMsOS41NTV6IiBmaWxsPSIjMjgyODI5Ii8+PGc+PHBhdGggZD0iTTkuNTY5LDcyLjExNWMtMC4wNDMsMC45NzEtMC4wNzQsMS45NDUtMC4wNzQsMi45MjZjMCwzNi4xNjksMjkuMzIsNjUuNDg4LDY1LjQ4OCw2NS40ODh2LTUuODUyICAgIEMzOS43OTYsMTM0LjY3OCwxMS4xMDMsMTA2LjkyNCw5LjU2OSw3Mi4xMTV6IiBmaWxsPSIjMjgyODI5Ii8+PHBhdGggZD0iTTE0MC4zOTcsNzIuMTE1Yy0xLjUzMSwzNC44MDktMzAuMjI3LDYyLjU2Mi02NS40MTQsNjIuNTYydjUuODUyYzM2LjE2OCwwLDY1LjQ4OC0yOS4zMTksNjUuNDg4LTY1LjQ4OCAgICBDMTQwLjQ3Miw3NC4wNjEsMTQwLjQ0LDczLjA4NiwxNDAuMzk3LDcyLjExNXoiLz48L2c+PC9nPjxnPjxnPjxwYXRoIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTY4LjIyOSw0MC43ODljLTAuODc1LTIuMjU3LTEuOTY3LTYuMDAzLTQuMDItNy4wMDggICAgYy0xLjYxOC0wLjc5MS0zLjE4OS0wLjA1Ny0zLjc5MiwxLjAzNGMtMS41NzksMi44NiwwLjA0Miw3LjYwNywwLjkyLDEwLjQ1MmMyLjE0OSw2Ljk3Nyw0Ljk5OSwxNC4zNDQsNy4yMzcsMjAuNTYxICAgIGMxLjU4NC0xLjI3Miw1LjQ3NC0wLjgyNyw4LjI2OS0wLjU3NEM3NC4yMjcsNTcuNDQ0LDcxLjMwMiw0OC42OTgsNjguMjI5LDQwLjc4OXogTTk5LjcwMiw0Ni4zMDIgICAgYzAuODExLTIuNTc1LDIuMTI0LTQuNzM4LDEuODM2LTcuNjk1Yy0wLjE3NC0xLjgyOS0xLjI2Ny0zLjMyNy0zLjA5OS0zLjIxN2MtMi43OTgsMC4xNjgtNC4zNjUsNC40MjktNS4yODMsNi42NjIgICAgYy0zLjIyNiw3Ljg0Mi01Ljk2OCwxNi4yNjctOC4zODUsMjQuMTIyYzIuNzQ2LDAuMjc4LDUuMTQ4LDAuODk5LDcuODExLDEuMjYzQzk0Ljk2MSw2MS4yMDcsOTcuNDgzLDUzLjM1NCw5OS43MDIsNDYuMzAyeiAgICAgTTYwLjA3NCwxMDIuODE0YzEuOTc4LDAuNjYxLDQuNjExLDAuMTQ2LDQuOTM5LTEuNzI0YzAuMzI1LTEuODU3LTEuMjk2LTMuNjEyLTEuODM5LTQuNDc5Yy0yLjA1MS0zLjI4Ni0zLjIwMS00Ljc1NS01Ljc0Mi03LjM1MiAgICBjLTEuMDA4LTEuMDMtMi40MTktMi42MjYtMy45MDUtMi43NTdjLTIuNDI4LTAuMjE0LTQuMzczLDIuMzYyLTUuMTcsMy43OTFjLTIuMjg5LDQuMTEzLTAuMTUsOS43NDksMS44MzcsMTIuOTc5ICAgIGM0LjcwMiw3LjYzNywxMi4yNSwxMy44NTUsMjQuMjM3LDEzLjc4M2MxMC4xNTUtMC4wNjMsMTcuMDktNS4xNzYsMjEuNDgtMTAuNTY3YzQuODYzLTUuOTczLDcuNzY3LTE0LjU1MSw3LjEyLTI0LjkyNiAgICBjLTAuMTIxLTEuOTU1LTAuNDAyLTQuMTA3LTEuNDk0LTUuODU4Yy0xLjg0Mi0yLjk2LTcuMjM5LTQuMjQyLTExLjk0My01LjI4M2MtMi4yMzYtMC40OTQtNC43NzMtMC44NjYtNy40NjYtMS4xNDggICAgYy0zLjU2NS0wLjM3MS05LjY0LTEuMzc5LTExLjI1OCwwLjY4OWMtMS40MDQsMS43OTUtMC4yMzgsNC42NDgsMC40Niw1Ljc0MmMyLjU3LDQuMDMxLDEwLjE2MSw0LjU5NSwxNi42NTQsNC41OTUgICAgYzMuMzYyLDAsOC4wMDgtMC43Niw3LjQ2OCwyLjUyOGMtMC4yNDcsMS40OTctMy45OSwyLjM1NC01Ljg1OCwzLjFjLTIuMTE3LDAuODQ3LTQuMTQ0LDIuMjI1LTUuNTE0LDMuNDQ2ICAgIGMtMi42MzEsMi4zNDgtNi4xOTcsNi40OTEtNi41NDcsMTEuMzcxYy0wLjMzLDQuNTk0LDIuMDY5LDUuODY5LDEuNjA2LDEwLjU2NmMtNC45MS0wLjkwNS01LjU1Mi02LjA4My01Ljg1Ni0xMS41OTkgICAgYy0xLjEyNywwLjUwNi0yLjc1MSwwLjU1OS00LjEzNSwwLjIyOWMxLjg5Niw2LjkxNS01LjEwNCw5LjQ2LTEwLjIyNSw3LjAwOGMtMi4wMDctMC45NjItNC4wODUtMi44ODUtNS42MjctNC45MzkgICAgYy0xLjYzMi0yLjE3My0zLjI2OC01LjE1OC0xLjYwOS03LjY5NUM1NC4zMDcsOTYuNTczLDU2LjA4MiwxMDEuNDc5LDYwLjA3NCwxMDIuODE0eiBNNTUuNzEsNzYuNjI2ICAgIGMtMC4xNzcsMi4yMSwxLjU4OSw0Ljc3NywyLjQxMiw2LjIwM2MyLjE5NywzLjgwNyw0LjU0LDYuODM2LDcuNDY2LDkuNzYzYzEuMzEzLDEuMzEzLDMuNDEzLDMuNDY5LDUuNTE1LDMuMjE3ICAgIGMxLjAyNy0wLjEyNCwyLjMzMy0xLjM5NiwyLjUyNS0yLjUyN2MwLjM0OC0yLjAzLTEuMTEyLTQuNTczLTEuODM4LTYuMzE4Yy0xLjU3My0zLjc4Mi0zLjY0NS03LjY2Ni01Ljc0Mi0xMC41NjcgICAgYy0xLjQxOS0xLjk2MS0zLjE1Ni00LjM3My01Ljg1Ny00LjEzNUM1OC40Nyw3Mi40MTIsNTUuODgsNzQuNDg5LDU1LjcxLDc2LjYyNnogTTc3LjQxOSw5MC40MSAgICBjMS45MjEtMi4yMTUsNC4xMjctNC4xNDQsNi40MzItNS45NzNjLTMuNTE0LTAuMDg2LTYuNzg2LTEuMDIzLTkuNDE5LTEuNjA4Qzc1LjYwOCw4NS4xNzUsNzYuNTgxLDg3LjcyNiw3Ny40MTksOTAuNDF6IiBmaWxsPSIjRkZGRkZGIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L2c+PC9nPjwvc3ZnPg==
+    url: http://angel.co/manimejia
+    username: manimejia
+  - icon: linkedin
+    url: http://linkedin.com/in/manimejia
+    username: /manimejia
+  - icon: github
+    url: http://github.com/manimejia
+    username: /manimejia
+  - icon: skype
+    url: skype:mani.mejia?chat
+    username: mani.mejia
+numbers:
+  - 
+    number: 15
+    label: Years Professional Experience
+    icon: lightbulb
+    color: warning
+  - 
+    number: 32
+    label: Digital Products Delivered
+    icon: monitor
+    color: alert
+  - 
+    number: 20
+    label: Satisfied Clients & Employers
+    icon: torsos-all-female
+    color: success
+# - 
+#   number: 12
+#   label: Business Websites
+#   icon: monitor
+#   color: info
+# - 
+#   number: 5
+#   label: Web Applications
+#   icon: layout
+#   color: info
+# - 
+#   number: 10
+#   label: Multimedia Presentations
+#   icon: photo
+#   color: info
+title: Digital Product Designer
+byline: |
+  integrating technical, creative, and communication
+  challenges into comprehensive software solutions
+summary: |
+  Having 15 years of professional experience in the production of web and mobile software solutions, I am a holistic thinker and a creative problem solver with a deep understanding of the technical, communication and design challenges inherent to these projects. My experience involves work in all phases of digital product development: from understanding concept and vision to marketing a release; from collecting user stories to designing wireframes and UX deliverables; from crafting effective information architectures to contributing scalable front and back end code. My practice as a product leader, is to always steer boldly toward the possible future while making the most of the present reality. It is from this multi-level and can-do perspective that I offer practical insights to iteratively address every design, technical, and communication challenge. 
 
-#  summary: |
-#    As an autodidactic digital professional, my unique superpowers are 
-#    curiosity, empathy, and optimism. Armed as such, I have sought out, 
-#    engaged with, and overcome a number of ever increasing architectural 
-#    and interpersonal challenges. With many successes and failures to learn 
-#    from, my work history reflects the same turbulent trajectory we all 
-#    humans must navigate; but these superpowers never fail. I continuously 
-#    will ask the tough questions, listen to the unexpected results, 
-#    and optimize the path toward progress through diverse conditions.
+#summary: |
+#  As an autodidactic digital professional, my unique superpowers are 
+#  curiosity, empathy, and optimism. Armed as such, I have sought out, 
+#  engaged with, and overcome a number of ever increasing architectural 
+#  and interpersonal challenges. With many successes and failures to learn 
+#  from, my work history reflects the same turbulent trajectory we all 
+#  humans must navigate; but these superpowers never fail. I continuously 
+#  will ask the tough questions, listen to the unexpected results, 
+#  and optimize the path toward progress through diverse conditions.
 
-  bio: | 
-    My career as a web designer/developer started in 2001, when I discovered 
-    the multimedia possibilities of Flash. I was quickly engrossed, making 
-    simple animations for family and friends. Within a year, I had learned 
-    enough and made the right connections to approach the nation's largest 
-    animal sanctuary with a novel idea for a virtual tour of their campus. 
-    I landed the job, and set out in earnest to realize this 
-    [huge accomplishment][P1] over the following ten months. 
-    
-    Early in my career I came to see that truly scalable and manageable 
-    presentations need to have a smart backend to facilitate editing the content. 
-    While continuing my work as a [flash][P2] [designer][P3] and [developer][P4], 
-    I started to research CMS solutions on which these presentations could be 
-    'hosted'. This lead me to Drupal, in 2006, and offering my services as a 
-    website developer to an even wider client base. I spent the next few years 
-    exploring the boundaries of modern web design, making [web][P5] [graphics][P6], 
-    [small][P7] [business][P8] [websites][P9], and [applications][P10] for a variety 
-    of clients. By 2010 I had established a reputation as an accomplished web developer 
-    and solutions architect, working in HTML5, CSS3, Javascript, and whatever backend 
-    technologies necessary address the projects coming my way.
-    
-    In 2012 I was hired as a web developer by the Graduate School of Oregon State 
-    University. This was a great opportunity for me to move beyond self employment, 
-    and experience the needs and inner workings of a large organization. I found myself 
-    [rebuilding the Graduate School website][P12] from the ground up, designing functional 
-    [user experience solutions][P13] for a variety of web systems, and streamlining their 
-    [workflow processes][P14]. In September 2014, after moving to Ann Arbor, I worked 
-    remotely for a few weeks until they had hired my replacement.
-    
-    With more than a decade serving various roles in the web industry, I have collected 
-    a wide range of professional experiences. This has allowed me to identify and hone 
-    my core strengths as solutions architect and digital communicator.
-    
-    [P1]: /#BFAS-Best-Friends-Virtual-Tour "Best Friends Virtual Tour - project details"
-    [P2]: /#MBL-Day-Of-The-Dead-VJ-Animations "Day of the Dead VJ Animations - project details"
-    [P3]: /#MBL-Mandala-Animation " Mandala Animation - project details"
-    [P4]: /#BFAS-Best-Friends-Media-Center "Best Friends Media Center - project details"
-    [P5]: /#B4S-Website-and-Identity-Design "Biofuels for Schools - project details"
-    [P6]: /#LITE-Non-Profit-Website "L.I.T.E. Non Profit Website - project details"
-    [P7]: /#CM-Artist-Website "Artists Website - project details"
-    [P8]: /#OA-Membership-Website-And-Online-Store "Organic Athlete Website - project details"
-    [P9]: /#EC-Corporate-Website "Elite Care Website - project details"
-    [P10]: /#EC-CareNet-Elder-Care-Portal "Elite Care Carenet Elder Care Portal - project details"
-    [P11]: /#MM-Wedding-Website-And-Invitations "Mejia Wedding Website and Invitations - project details"
-    [P12]: /#OSU-Graduate-School-Website "Graduate School Website - project details"
-    [P13]: /#OSU-Graduate-Education-Toolkit "Graduate Education Tolkit - project details"
-    [P14]: /#OSU-Document-Workflow-Solutions "University Document Workflow Solutions - project details"
+bio: | 
+  My career as a web designer/developer started in 2001, when I discovered 
+  the multimedia possibilities of Flash. I was quickly engrossed, making 
+  simple animations for family and friends. Within a year, I had learned 
+  enough and made the right connections to approach the nation's largest 
+  animal sanctuary with a novel idea for a virtual tour of their campus. 
+  I landed the job, and set out in earnest to realize this 
+  [huge accomplishment][P1] over the following ten months. 
+  
+  Early in my career I came to see that truly scalable and manageable 
+  presentations need to have a smart backend to facilitate editing the content. 
+  While continuing my work as a [flash][P2] [designer][P3] and [developer][P4], 
+  I started to research CMS solutions on which these presentations could be 
+  'hosted'. This lead me to Drupal, in 2006, and offering my services as a 
+  website developer to an even wider client base. I spent the next few years 
+  exploring the boundaries of modern web design, making [web][P5] [graphics][P6], 
+  [small][P7] [business][P8] [websites][P9], and [applications][P10] for a variety 
+  of clients. By 2010 I had established a reputation as an accomplished web developer 
+  and solutions architect, working in HTML5, CSS3, Javascript, and whatever backend 
+  technologies necessary address the projects coming my way.
+  
+  In 2012 I was hired as a web developer by the Graduate School of Oregon State 
+  University. This was a great opportunity for me to move beyond self employment, 
+  and experience the needs and inner workings of a large organization. I found myself 
+  [rebuilding the Graduate School website][P12] from the ground up, designing functional 
+  [user experience solutions][P13] for a variety of web systems, and streamlining their 
+  [workflow processes][P14]. In September 2014, after moving to Ann Arbor, I worked 
+  remotely for a few weeks until they had hired my replacement.
+  
+  With more than a decade serving various roles in the web industry, I have collected 
+  a wide range of professional experiences. This has allowed me to identify and hone 
+  my core strengths as solutions architect and digital communicator.
+  
+  [P1]: /#BFAS-Best-Friends-Virtual-Tour "Best Friends Virtual Tour - project details"
+  [P2]: /#MBL-Day-Of-The-Dead-VJ-Animations "Day of the Dead VJ Animations - project details"
+  [P3]: /#MBL-Mandala-Animation " Mandala Animation - project details"
+  [P4]: /#BFAS-Best-Friends-Media-Center "Best Friends Media Center - project details"
+  [P5]: /#B4S-Website-and-Identity-Design "Biofuels for Schools - project details"
+  [P6]: /#LITE-Non-Profit-Website "L.I.T.E. Non Profit Website - project details"
+  [P7]: /#CM-Artist-Website "Artists Website - project details"
+  [P8]: /#OA-Membership-Website-And-Online-Store "Organic Athlete Website - project details"
+  [P9]: /#EC-Corporate-Website "Elite Care Website - project details"
+  [P10]: /#EC-CareNet-Elder-Care-Portal "Elite Care Carenet Elder Care Portal - project details"
+  [P11]: /#MM-Wedding-Website-And-Invitations "Mejia Wedding Website and Invitations - project details"
+  [P12]: /#OSU-Graduate-School-Website "Graduate School Website - project details"
+  [P13]: /#OSU-Graduate-Education-Toolkit "Graduate Education Tolkit - project details"
+  [P14]: /#OSU-Document-Workflow-Solutions "University Document Workflow Solutions - project details"
 
-  education:
-    - 
-     school: University of Northern Colorado
-     study: Musical Theater
-     years: 1993 - 1994
-     degree: 
-    - 
-     school: Art Student's League of Denver
-     study: Fine Art 
-     years: 1991 - 1992
-     degree: "yes"
-    - 
-     school: Arvada West HS (Colo)/ Kanab HS (Utah)
-     study: High School Academics
-     years: 1989 - 1992
-     degree: "yes"
+education:
+  - 
+   school: University of Northern Colorado
+   study: Musical Theater
+   years: 1993 - 1994
+   degree: 
+  - 
+   school: Art Student's League of Denver
+   study: Fine Art 
+   years: 1991 - 1992
+   degree: "yes"
+  - 
+   school: Arvada West HS (Colo)/ Kanab HS (Utah)
+   study: High School Academics
+   years: 1989 - 1992
+   degree: "yes"
 
-  employment:
-    - 
-      employer: InfoShuk
-      website: infoshuk.com
-      location: Ann Arbor, Mi
-      title:  Lead Front End Developer & UX Designer
-      dates: 2015 - 2016
-      description: |
-        InfoShuk is an early stage startup building a SaaS web application to offer predictive analytics to small and medium businesses. 
+employment:
+  - 
+    employer: InfoShuk
+    website: infoshuk.com
+    location: Ann Arbor, Mi
+    title:  Lead Front End Developer & UX Designer
+    dates: 2015 - 2016
+    description: |
+      InfoShuk is an early stage startup building a SaaS web application to offer predictive analytics to small and medium businesses. 
 
-        At InfoShuk, I lead design and development of the MVP front end experience for their web based SaaS product. I was responsible for designing the application's user experience based on collected user research, creating data visualizations to communicate business analytics, collecting and integrating feedback from user tests, developing the AngularJS/Bootstrap based front end codebase, designing the REST APIs, and collaborating with the CEO and cofounders on product strategy and roadmap.
-    - 
-      employer: InfoReady
-      website: infoready4.com
-      location: Ann Arbor, Mi
-      title:  Lead Front End Developer & UX Designer
-      dates: 2015
-      description: |
-        InfoReady is a startup in Ann Arbor focused on developing applicant review management solutions for business and academia. 
+      At InfoShuk, I lead design and development of the MVP front end experience for their web based SaaS product. I was responsible for designing the application's user experience based on collected user research, creating data visualizations to communicate business analytics, collecting and integrating feedback from user tests, developing the AngularJS/Bootstrap based front end codebase, designing the REST APIs, and collaborating with the CEO and cofounders on product strategy and roadmap.
+  - 
+    employer: InfoReady
+    website: infoready4.com
+    location: Ann Arbor, Mi
+    title:  Lead Front End Developer & UX Designer
+    dates: 2015
+    description: |
+      InfoReady is a startup in Ann Arbor focused on developing applicant review management solutions for business and academia. 
 
-        At InfoReady, I was responsible for refining the user experiences, developing UI widgets, re-architecting the client side codebase, and streamlining the REST APIs for a number of their service oriented SaaS web applications. 
-    - 
-      employer: OSU Graduate School
-      location: Corvallis, Oregon
-      website: gradschool.oregonstate.edu
-      title: Website Project Lead & UX Designer 
-      dates: 2012 - 2014
-      description: |
-        I was hired by the Oregon State University Graduate School to assist in the design and development of new web products, and to support faculty, staff, and students across campus in the use of their new and legacy web products. 
-        
-        In my two and a half years at the Graduate School, I brought usability to the forefront of importance for this growing academic department. While leading their [website rebuilding project](http://manimejia.me/portfolio#OSU-Graduate-School-Website), I was responsible for designing an effective content strategy, information architecture, and user experience. This required communicating clearly with and incorporating feedback from all content owners and stakeholders. During early development of their [graduate student application and matriculation system](http://manimejia.me/portfolio#OSU-Graduate-Education-Toolkit), I spearheaded the user experience design efforts, collecting and collating user stories, developing user personas, designing and user testing wireframes, and developing layouts and UI widgets using BootStrap and VisualForce.
-    - 
-      employer: Elite Care
-      location: Portland, Oregon
-      website: www.elitecare.com
-      title: Website Project Lead & Product Designer
-      dates: 2008 - 2011
-      description: | 
-        Elite Care is a leader in the field of building and managing elder care residential facilities. Their 'relationship based' model of caregiving is nationally recognized for its inclusion and sustainability. Their use of technology to facilitate caregiving and inspire community has been groundbreaking since 2003. With three campuses in two states, they are reinventing what it means to stay connected to our elderly population.
+      At InfoReady, I was responsible for refining the user experiences, developing UI widgets, re-architecting the client side codebase, and streamlining the REST APIs for a number of their service oriented SaaS web applications. 
+  - 
+    employer: OSU Graduate School
+    location: Corvallis, Oregon
+    website: gradschool.oregonstate.edu
+    title: Website Project Lead & UX Designer 
+    dates: 2012 - 2014
+    description: |
+      I was hired by the Oregon State University Graduate School to assist in the design and development of new web products, and to support faculty, staff, and students across campus in the use of their new and legacy web products. 
+      
+      In my two and a half years at the Graduate School, I brought usability to the forefront of importance for this growing academic department. While leading their [website rebuilding project](http://manimejia.me/portfolio#OSU-Graduate-School-Website), I was responsible for designing an effective content strategy, information architecture, and user experience. This required communicating clearly with and incorporating feedback from all content owners and stakeholders. During early development of their [graduate student application and matriculation system](http://manimejia.me/portfolio#OSU-Graduate-Education-Toolkit), I spearheaded the user experience design efforts, collecting and collating user stories, developing user personas, designing and user testing wireframes, and developing layouts and UI widgets using BootStrap and VisualForce.
+  - 
+    employer: Elite Care
+    location: Portland, Oregon
+    website: www.elitecare.com
+    title: Website Project Lead & Product Designer
+    dates: 2008 - 2011
+    description: | 
+      Elite Care is a leader in the field of building and managing elder care residential facilities. Their 'relationship based' model of caregiving is nationally recognized for its inclusion and sustainability. Their use of technology to facilitate caregiving and inspire community has been groundbreaking since 2003. With three campuses in two states, they are reinventing what it means to stay connected to our elderly population.
 
-        Since 2008 I have offered my professional services to Elite Care, working closely with the CEO and founders, to design novel and scalable solutions from the ground up. I acted as Product Designer for the rebuilding of their [in-house care management portal](http://manimejia.me/portfolio#EC-CareNet-Elder-Care-Portal). For this, I led the user research, persona development, information architecture, wire framing, and prototyping efforts. I also led the information architecture, prototyping, and development efforts during the rebuilding of their company website.
-    - 
-      employer: Open Face Studio
-      location: Portland, Oregon
-      website: manimejia.me
-      title: Founder & Website Project Lead
-      dates: 2005 - 2010
-      description: |
-        As a freelance web developer for Open Face Studio, I focused my services on designing Drupal based web solutions. Working with a number of small business and nonprofit clients, I developed functional and attractive websites and applications. With attention to both the administrative and end user experience, I made a number of innovations and contributions to the Drupal community. My attention to detail and eye for simple and practical solutions resulted in a steady stream of satisfied clients.
+      Since 2008 I have offered my professional services to Elite Care, working closely with the CEO and founders, to design novel and scalable solutions from the ground up. I acted as Product Designer for the rebuilding of their [in-house care management portal](http://manimejia.me/portfolio#EC-CareNet-Elder-Care-Portal). For this, I led the user research, persona development, information architecture, wire framing, and prototyping efforts. I also led the information architecture, prototyping, and development efforts during the rebuilding of their company website.
+  - 
+    employer: Open Face Studio
+    location: Portland, Oregon
+    website: manimejia.me
+    title: Founder & Website Project Lead
+    dates: 2005 - 2010
+    description: |
+      As a freelance web developer for Open Face Studio, I focused my services on designing Drupal based web solutions. Working with a number of small business and nonprofit clients, I developed functional and attractive websites and applications. With attention to both the administrative and end user experience, I made a number of innovations and contributions to the Drupal community. My attention to detail and eye for simple and practical solutions resulted in a steady stream of satisfied clients.
     - 
       employer: Best Frineds Animal Society
       location: Kanab, Ut. & Bay Area, Ca.
