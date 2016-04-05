@@ -1,29 +1,18 @@
 {% if include.person %}
 {% if include.person.education %}
-<ul class="row no-bullet show-for-medium-up hide-for-print" aria-hidden="true">
-	<li class="column medium-4"><b>School</b></li>
-	<li class="column medium-3"><b>Field of Study</b></li>
-	<li class="column medium-3"><b>Years</b></li>
-	<li class="column medium-2"><b>Degree</b></li>
-</ul>
+<ul class="medium-block-grid-{{include.person.education.size}}">
 	{%for school in include.person.education %}
-<ul class="row table-row no-bullet" role="presentation">
-	<li class="column medium-4" role="presentation">
-		<h4>{{school.school}}</h4>
-	</li>
-	<li class="column medium-3 {%unless school.study%}show-for-medium-up{%endunless%}" role="presentation">
-		<span><b class="hide-for-medium-up">Field of Study: </b>&nbsp;
-		{{school.study}}</span>
-	</li>
-	<li class="column medium-3 {%unless school.years%}show-for-medium-up{%endunless%}" role="presentation">
-		<span><b class="hide-for-medium-up">Years: </b>&nbsp;
-		{{school.years}}</span>
-	</li>
-	<li class="column medium-2 {%unless school.degree%}show-for-medium-up{%endunless%}" role="presentation">
-		<span><b class="hide-for-medium-up">Degree: </b>&nbsp;
-		{{school.degree}}</span>
-	</li>
+<li role="presentation" style="width:{{100 | divided_by : include.person.education.size}}%">
+	<div class="left" style="height:100%">
+		<img src="/assets/{{school.logo}}" class="icon"/>
+	</div>
+	<p>
+		<span class="font-large">{{school.school}}</span><br/>
+		{{school.study}}<br/>
+		{{school.start}} - {{school.end}}
+	</p>
+</li>
+{% endfor %}
 </ul>
-	{% endfor %}
 {% endif %}
 {% endif %}

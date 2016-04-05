@@ -67,6 +67,17 @@ summary: |
 #  will ask the tough questions, listen to the unexpected results, 
 #  and optimize the path toward progress through diverse conditions.
 
+personal: |
+  Here are a few bits from my non-worky life:
+
+  - An example of my goofy humor can be found in this [interactive animation](http://manimejia.me/fly) I made for a recent birthday party.
+  - My wife and I co-designed our [wedding invitations and rings](http://manimejia.me/portfolio#MM-Wedding-Website-And-Invitations), because why not use the opportunity to find and express yourself creatively as a couple.
+  - My portfolio website is all hand coded and hosted on [github pages](https://github.com/manimejia/manimejia.github.io). For free!
+  - As a young man, I dedicated my life to master the art of [Didjeridu](http://manimejia.me/portfolio#HHF-didgeridoo-performance-with-stephen-kent). I played for hours a day, every day for ten years. I taught myself to be the best.
+  - I’m an avid adventure cyclist and veg*n athlete.
+  - I have two adventure doggies.
+
+
 bio: | 
   My career as a web designer/developer started in 2001, when I discovered 
   the multimedia possibilities of Flash. I was quickly engrossed, making 
@@ -119,18 +130,22 @@ education:
   - 
    school: University of Northern Colorado
    study: Musical Theater
-   years: 1993 - 1994
+   start: 1992
+   end: 1994
+   logo: unc-school-logo.png
    degree: 
   - 
    school: Art Student's League of Denver
    study: Fine Art 
-   years: 1991 - 1992
+   start: 1990
+   end: 1992
+   logo: asl-school-logo.png
    degree: "yes"
-  - 
-   school: Arvada West HS (Colo)/ Kanab HS (Utah)
-   study: High School Academics
-   years: 1989 - 1992
-   degree: "yes"
+  # - 
+  #  school: Arvada West HS (Colo)/ Kanab HS (Utah)
+  #  study: High School Academics
+  #  years: 1989 - 1992
+  #  degree: "yes"
 
 employment:
   - 
@@ -195,12 +210,14 @@ employment:
 references:
   -
     fullname: Joshua Sukenic
+    date: 2016
     title: CEO, Growth Architect
     employer: InfoShuk
     quote: | 
       Manuel did a great job for InfoShuk as our front-end lead. As an early-stage company, [He] jumped right into action and began developing a solid code base. Along with support in formulating concepts into product realities, Mani's communication, code quality and teamwork were top notch.
   -
     fullname: John Henry
+    date: 2014
     title: Director of Technology 
     employer: Graduate School, Oregon State University
     quote: |
@@ -209,14 +226,16 @@ references:
       &hellip; I found Manuel to be a strong creative thinker and problem solver, he was consistently passionate and enthusiastic about his work and his desire to provide the best user experience possible. Please feel free to contact me should you require further information.
   -
     fullname: Dan Vega
+    date: 2014
     title: Programmer Analyst
     employer: Graduate School, Oregon State University
     quote: |
-      Manuel is a dedicated UI/UX developer who is not only skilled in CSS and JavaScript, but also has a passion for the client's viewpoint. When a new platform was thrown in the mix, he rose to the occasion and went from beginner to productive developer in short order. By thinking of the platform as an architected system, he isn't one of those guys that suggests 15 million different directions. Instead, Manuel sees how the integration works in a model view controller architecture and makes suggestions that make sense, are achievable, and can communicate his ideas not only in mock-ups but also in conversation. 
+      Manuel is a dedicated UI/UX developer who is not only skilled in CSS and JavaScript, but also has a passion for the client's viewpoint. When a new platform was thrown in the mix, he rose to the occasion and went from beginner to productive developer in short order. By thinking of the [product] as an architected system, he isn't one of those guys that suggests 15 million different directions. Instead, Manuel sees how the integration works in a [holistic] architecture and makes suggestions that make sense, are achievable, and can communicate his ideas not only in mock-ups but also in conversation. 
 
-      If you are currently unhappy with the user experience being delivered to your clients, or would like to get it right from the start, bring Manuel on board and you'll be on your way to a pleasant, effective UI/UX solution.
+#      If you are currently unhappy with the user experience being delivered to your clients, or would like to get it right from the start, bring Manuel on board and you'll be on your way to a pleasant, effective UI/UX solution.
   -
     fullname: Barbara J. Bond
+    date: 2013
     title: Director of Postdoctoral Programs
     employer: Office of Postdoctoral Programs, Oregon State University
     quote: |
