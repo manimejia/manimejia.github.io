@@ -2448,6 +2448,7 @@ padding: 1em;
 	background-color: black;
 
 	.vcard-picture{
+		width:100%;
 		margin: 0;
 	}
 	.vcard-name,
@@ -2459,7 +2460,7 @@ padding: 1em;
 	}
 	.vcard-info{
 		position:absolute;
-		margin: 2em 0 0;
+		margin: .5em 0 0;
 		width:100%;
     padding: 0;
 		color:white;

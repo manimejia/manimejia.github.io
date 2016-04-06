@@ -3,8 +3,8 @@
 <div {%if include.id %}id="{{include.id}}"{%endif%} role="contentinfo" class="vcard {%if include.compact %}vcard-compact{%endif%}" 
 {%if include.compact %}tabindex="0"{%endif%} aria-labelledby="{{ vcard_id }}-name">
   {% unless include.nopicture %}
-  <figure class="row">
-  <img class="icon icon-large vcard-picture hide-for-print" aria-hidden="true"
+  <figure class="">
+  <img class="vcard-picture hide-for-print" aria-hidden="true"
   src="/assets/manimejia-gravatar.jpeg" alt="{{ include.person.name }}"/>
   {% unless include.noname %}
   <figcaption class="vcard-name subtitle text-center" id="{{ vcard_id }}-name">
