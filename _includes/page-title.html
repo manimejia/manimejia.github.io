@@ -1,16 +1,25 @@
 <header id="page-title-row" class="row">
   <div id="page-title-column" class="column {% if page.printable  %}small-12 medium-10{%endif%}">
     <h1 id="page-title">{% if include.title  %}{{ include.title }}{% else %}{{page.title}}{%endif%}
-    {% if include.small  %} <small>{{ include.small }}</small>{%endif%}</h1>
+    {% if include.small  %}
+    <br class="hide-for-medium-up"/>
+    <small>{{ include.small }}</small>
+    {%endif%}</h1>
   </div>
 	{% if page.printable  %}
-	<div class="column hide-for-small-only medium-2 hide-for-print"
+	<p class="column medium-4 small-2 hide-for-print"
   style="position: fixed;right: 0;z-index: 100;">
 		<!-- <a class="button expand info" onclick="window.print()" title="Print this page"><i class="fi-print font-larger"></i>&nbsp;&nbsp;Print</a> -->
     <a href="//pdfcrowd.com/url_to_pdf/?use_print_media=1"
-    class="button expand info" title="Save this page as a PDF document">
-    <i class="fi-download font-larger"></i>
-    &nbsp;&nbsp;Save as PDF</a>
-	</div>
+    class="button info right row" title="Save this page as a PDF document">
+      <i class="fi-download font-xxlarger relative">
+        <b class="absolute primary-text font-xsmaller" style="bottom: 1.5em;left:1em">
+        PDF</b>
+      </i>  
+      <span class="hide-for-medium-only hide-for-small-only right column medium-8">
+        <span class="font-larger">Download</span><br/>this page as a PDF
+      </span>
+    </a>
+	</p>
 	{%endif%}
 </header>

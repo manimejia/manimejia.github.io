@@ -1,35 +1,36 @@
 {% assign person = site.data.people.manimejia %}
 <div class="row text-left">
-    <div class="column medium-3">
+    <div class="column medium-4">
 			{% include vcard.html person=person noname=true nopicture=ture id=include.id%}
 			<!-- <p class="text-center">References Upon Request</p> -->
     </div>
     <div class="column medium-8">
       <header>
       {% if person.title %}
-		  <h2>{{ person.title }}</h2>
+		    <h2>{{ person.title }}</h2>
     	{%endif%}      
     	{% if person.byline %}
-		  <p class="{%if include.color %}{{include.color}}-text {%endif%}font-large">
-	    {{ person.byline }}
-	    </p>
+		    <p class="{%if include.color %}{{include.color}}-text {%endif%}font-large">
+	      {{ person.byline }}
+	      </p>
     	{%endif%}
       </header>
-
       {% if person.summary %}
-      <div class="">
-      {{person.summary | markdownify}}
-      </div>
+        <div class="">
+        {{person.summary | markdownify}}
+        </div>
       {%endif%}
+    </div>
 
+    <div class="column">
       <ul class="{include.color}} medium-block-grid-{{site.data.services.list.size}}">
       {% for service in site.data.services.list %}
       <li class="text-center">
         <i class="fi-{{service.icon}} font-larger"></i><br/>
         <strong>{{service.label}}</strong> 
-      </li>	
+      </li>  
       {% endfor %}
-    	</ul>
+      </ul>
     </div>
 <!--  
   <p>I am a communicator. This is the focus of my work in every project and every relationship. </p>
