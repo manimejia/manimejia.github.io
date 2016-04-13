@@ -15,14 +15,14 @@
 	      </p>
     	{%endif%}
       </header>
-      {% if person.summary %}
-        <div class="">
-        {{person.summary | markdownify}}
-        </div>
-      {%endif%}
-    </div>
 
-    <div class="column">
+      {% if person.summary %}
+      <div class="">
+      {{person.summary | markdownify}}
+      </div>
+      {%endif%}
+
+      {% if site.data.services.list %}
       <ul class="{include.color}} medium-block-grid-{{site.data.services.list.size}}">
       {% for service in site.data.services.list %}
       <li class="text-center">
@@ -31,7 +31,10 @@
       </li>  
       {% endfor %}
       </ul>
-    </div>
+      {%endif%}
+
+      </div>
+
 <!--  
   <p>I am a communicator. This is the focus of my work in every project and every relationship. </p>
 		<ul class="icon-list secondary">

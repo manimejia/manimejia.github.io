@@ -52,10 +52,12 @@ numbers:
 #   color: info
 title: Digital Product Designer
 byline: |
-  integrating technical, creative, and communication
-  challenges into comprehensive software solutions
+  integrating technical, design, and communication
+  challenges to create durable product solutions
 summary: |
-  Having 15 years of professional experience in the production of web and mobile software solutions, I am a holistic thinker and a creative problem solver with a deep understanding of the technical, communication and design challenges inherent to these projects. My experience involves work in all phases of digital product development: from understanding concept and vision to marketing a release; from collecting user stories to designing wireframes and UX deliverables; from crafting effective information architectures to contributing scalable front and back end code. My practice as a product leader, is to always steer boldly toward the possible future while making the most of the present reality. It is from this multi-level and can-do perspective that I offer practical insights to iteratively address every design, technical, and communication challenge. 
+  I am a holistic thinker and a creative problem solver with 15 years in the production of web and mobile software. As a digital product designer, I leverage this body of knowledge to collaborate across disciplines, creating scalable user-centered solutions for the entire product experience.
+# summary: |
+#   Having 15 years of professional experience in the production of web and mobile software solutions, I am a holistic thinker and a creative problem solver with a deep understanding of the technical, communication and design challenges inherent to these projects. My experience involves work in all phases of digital product development: from understanding concept and vision to marketing a release; from collecting user stories to designing wireframes and UX deliverables; from crafting effective information architectures to contributing scalable front and back end code. My practice as a product leader, is to always steer boldly toward the possible future while making the most of the present reality. It is from this multi-level and can-do perspective that I offer practical insights to iteratively address every design, technical, and communication challenge. 
 
 #summary: |
 #  As an autodidactic digital professional, my unique superpowers are 
@@ -88,7 +90,7 @@ bio: |
   [huge accomplishment][P1] over the following ten months. 
   
   Early in my career I came to see that truly scalable and manageable 
-  presentations need to have a smart backend to facilitate editing the content. 
+  presentations need to have a smart back end to facilitate editing the content. 
   While continuing my work as a [flash][P2] [designer][P3] and [developer][P4], 
   I started to research CMS solutions on which these presentations could be 
   'hosted'. This lead me to Drupal, in 2006, and offering my services as a 
@@ -123,17 +125,10 @@ bio: |
   [P10]: /#EC-CareNet-Elder-Care-Portal "Elite Care Carenet Elder Care Portal - project details"
   [P11]: /#MM-Wedding-Website-And-Invitations "Mejia Wedding Website and Invitations - project details"
   [P12]: /#OSU-Graduate-School-Website "Graduate School Website - project details"
-  [P13]: /#OSU-Graduate-Education-Toolkit "Graduate Education Tolkit - project details"
+  [P13]: /#OSU-Graduate-Education-Toolkit "Graduate Education Toolkit - project details"
   [P14]: /#OSU-Document-Workflow-Solutions "University Document Workflow Solutions - project details"
 
 education:
-  - 
-   school: University of Northern Colorado
-   study: Musical Theater
-   start: 1992
-   end: 1994
-   logo: unc-school-logo.png
-   degree: 
   - 
    school: Art Student's League of Denver
    study: Fine Art 
@@ -141,6 +136,13 @@ education:
    end: 1992
    logo: asl-school-logo.png
    degree: "yes"
+  - 
+   school: University of Northern Colorado
+   study: Musical Theater
+   start: 1992
+   end: 1994
+   logo: unc-school-logo.png
+   degree: 
   # - 
   #  school: Arvada West HS (Colo)/ Kanab HS (Utah)
   #  study: High School Academics
@@ -152,42 +154,41 @@ employment:
     employer: InfoShuk
     website: infoshuk.com
     location: Ann Arbor, Mi
-    title:  Lead Front End Developer & UX Designer
+    title:  SaaS Front End Lead
     dates: 2015 - 2016
-    description: |
+    company: |
       InfoShuk is an early stage startup building a SaaS web application to offer predictive analytics to small and medium businesses. 
-
-      At InfoShuk, I lead design and development of the MVP front end experience for their web based SaaS product. I was responsible for designing the application's user experience based on collected user research, creating data visualizations to communicate business analytics, collecting and integrating feedback from user tests, developing the AngularJS/Bootstrap based front end codebase, designing the REST APIs, and collaborating with the CEO and cofounders on product strategy and roadmap.
+    description: |
+      At InfoShuk, I lead the design and development of the MVP front end experience for their web based SaaS product. I collaborated with the CEO and co-founders on product strategy and roadmap. I designed a product experience to address these requirements. I collected and integrated feedback from user tests. I created data visualizations to communicate business analytics. I also developed the front end code base, using AngularJS and Bootstrap, and designed the REST APIs to communicate with the back end.
   - 
     employer: InfoReady
     website: infoready4.com
     location: Ann Arbor, Mi
-    title:  Lead Front End Developer & UX Designer
+    title:  SaaS Front End Lead
     dates: 2015
-    description: |
+    company: |
       InfoReady is a startup in Ann Arbor focused on developing applicant review management solutions for business and academia. 
-
-      At InfoReady, I was responsible for refining the user experiences, developing UI widgets, re-architecting the client side codebase, and streamlining the REST APIs for a number of their service oriented SaaS web applications. 
+    description: |
+      At InfoReady, I lead the refinement and development of the front end experience for their web based SaaS products. I collaborated with the product, design, and development teams to create realistic solutions to address their rapidly evolving product definition. I developed custom UI solutions in AngularJS, realizing each known requirement in less time than estimated. I re-architected the REST APIs and the client side code base to better scale with their changing product needs. 
   - 
     employer: OSU Graduate School
     location: Corvallis, Oregon
     website: gradschool.oregonstate.edu
     title: Website Project Lead & UX Designer 
-    dates: 2012 - 2014
-    description: |
-      I was hired by the Oregon State University Graduate School to assist in the design and development of new web products, and to support faculty, staff, and students across campus in the use of their new and legacy web products. 
-      
-      In my two and a half years at the Graduate School, I brought usability to the forefront of importance for this growing academic department. While leading their [website rebuilding project](http://manimejia.me/portfolio#OSU-Graduate-School-Website), I was responsible for designing an effective content strategy, information architecture, and user experience. This required communicating clearly with and incorporating feedback from all content owners and stakeholders. During early development of their [graduate student application and matriculation system](http://manimejia.me/portfolio#OSU-Graduate-Education-Toolkit), I spearheaded the user experience design efforts, collecting and collating user stories, developing user personas, designing and user testing wireframes, and developing layouts and UI widgets using BootStrap and VisualForce.
+    dates: 2012 - 2014      
+    description: |      
+      In my two and a half years at the Graduate School, I brought usability to the forefront of importance for this growing academic department. While leading their [website redesign](http://manimejia.me/portfolio#OSU-Graduate-School-Website), I communicated clearly with and incorporated feedback from users, content owners, and other stakeholders. I incorporated these findings into an effective content strategy, information architecture, and user experience for this highly visible university website. During early development of their [graduate student application and matriculation system](http://manimejia.me/portfolio#OSU-Graduate-Education-Toolkit), I spearheaded the user experience design efforts. I collected and collated user stories, developed user personas, designed and user tested wireframes, and even developed the initial front end codebase using BootStrap and VisualForce.
+    # I was hired by the Oregon State University Graduate School to assist in the design and development of new web products, and to support faculty, staff, and students across campus in the use of their new and legacy web products. 
   - 
     employer: Elite Care
     location: Portland, Oregon
     website: www.elitecare.com
     title: Website Project Lead & Product Designer
     dates: 2008 - 2011
-    description: | 
+    company: |
       Elite Care is a leader in the field of building and managing elder care residential facilities. Their 'relationship based' model of caregiving is nationally recognized for its inclusion and sustainability. Their use of technology to facilitate caregiving and inspire community has been groundbreaking since 2003. With three campuses in two states, they are reinventing what it means to stay connected to our elderly population.
-
-      Since 2008 I have offered my professional services to Elite Care, working closely with the CEO and founders, to design novel and scalable solutions from the ground up. I acted as Product Designer for the rebuilding of their [in-house care management portal](http://manimejia.me/portfolio#EC-CareNet-Elder-Care-Portal). For this, I led the user research, persona development, information architecture, wire framing, and prototyping efforts. I also led the information architecture, prototyping, and development efforts during the rebuilding of their company website.
+    description: | 
+      Since 2008 I have worked with the founders and CEO of Elite Care to design novel and scalable solutions for their diverse technology needs. As Product Designer during the rebuilding of their [in-house care management portal](http://manimejia.me/portfolio#EC-CareNet-Elder-Care-Portal), I led the user research, persona development, information architecture, wire framing, and prototyping efforts. I then used these documents to develop an MVP product to demonstrate viability in the field. Additionally, while leading their website redesign efforts, I researched their content needs, designed an improved information architecture, and developed the entire website from scratch using the Drupal CMS.
   - 
     employer: Open Face Studio
     location: Portland, Oregon
@@ -197,15 +198,15 @@ employment:
     description: |
       As a freelance web developer for Open Face Studio, I focused my services on designing Drupal based web solutions. Working with a number of small business and nonprofit clients, I developed functional and attractive websites and applications. With attention to both the administrative and end user experience, I made a number of innovations and contributions to the Drupal community. My attention to detail and eye for simple and practical solutions resulted in a steady stream of satisfied clients.
   - 
-    employer: Best Frineds Animal Society
+    employer: Best Friends Animal Society
     location: Kanab, Ut. & Bay Area, Ca.
     website: bestfriends.org
     title: Flash Designer & Developer
     dates: 2001 - 2006
-    description: |
+    company: |
       Best Animal Society has been home to the largest no-kill sanctuary in the USA for almost two decades. This is a forward thinking organization, who is responsible for reinventing what it means to be a humane animal care facility. Where others have failed with this difficult mission, Best Friends has been a pioneer in nurturing and inspiring a world-wide cruelty-free movement. 
-
-      As a web professional, I have been involved with the sanctuary since 2001. This is when I first proposed a novel [virtual tour](http://manimejia.me/portfolio#BFAS-Best-Friends-Virtual-Tour) concept, to be built using Flash 5. The project was accepted, and for the next year I focused on designing and developing this immersive experience. In the following 6 years I would be called on multiple times as the "flash expert" for new projects.
+    description: |
+      As a web professional, I have been involved with Best Friends since 2001 designing and developing Flash based interactive solutions. I first proposed, designed, and developed an immersive [virtual tour](http://manimejia.me/portfolio#BFAS-Best-Friends-Virtual-Tour) of their campus that was ahead of it's time in it's use of multimedia content. Following that project, I assisted in the design and development of an interactive video gallery for presenting their growing body of multimedia content. I also assisted in the wireframing and design of an early social network for animal activists. 
 
 references:
   -

@@ -37,6 +37,26 @@ style: |
 {% endcomment %}
 <hr/>
 
+<section id="education" class="row avoid-breaking-page" aria-labelledby="education-label">
+<h2 id="education-label" class="column">Education</h2>
+<div class="column">
+{% include education.html person=site.data.people.manimejia %}
+</div>
+</section>
+<hr/>
+
+<section id="employment" class="row avoid-breaking-page" aria-labelledby="employment-label">
+<h2 id="employment-label" class="column">Employment</h2>
+<div class="column">
+{% include employment.html person=site.data.people.manimejia %}
+</div>
+</section>
+<hr/>
+
+<br class="hide-for-screen"/>
+<br class="hide-for-screen"/>
+<br class="hide-for-screen"/>
+
 <section id="technical-experience" class="row avoid-breaking-page" aria-labelledby="technical-experience-label">
 <h2 id="technical-experience-label" class="column">
 Professional Experience <br>
@@ -49,16 +69,6 @@ Professional Experience <br>
 </figcaption>
 </figure>
 </section>
-<hr/>
-
-<section id="employment" class="row avoid-breaking-page" aria-labelledby="employment-label">
-<h2 id="employment-label" class="column">Employment</h2>
-<div class="column">
-{% include employment.html person=site.data.people.manimejia %}
-</div>
-</section>
-<hr/>
-
 
 {% comment %}
 <!-- <hr/>
@@ -79,19 +89,13 @@ Professional Experience <br>
 {% include portfolio-highlight-list.html color=highlight_color compact=true %}
 </div>
 </section> --> <!-- #portfolio-grid -->
-{% endcomment %}
 
 
-<section id="education" class="row avoid-breaking-page" aria-labelledby="education-label">
-<h2 id="education-label" class="column">Education</h2>
-<div class="column">
-{% include education.html person=site.data.people.manimejia %}
-</div>
-</section>
-
-<section id="personal" class="row avoid-breaking-page" aria-labelledby="personal-label">
+<!-- <section id="personal" class="row avoid-breaking-page" aria-labelledby="personal-label">
 <h2 id="personal-label" class="column">And One More Thing</h2>
 <div class="column">
 {{ site.data.people.manimejia.personal | markdownify }}
 </div>
 </section>
+ -->
+ {% endcomment %}
