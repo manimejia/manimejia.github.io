@@ -37,22 +37,6 @@ style: |
 {% endcomment %}
 <hr class="hide-for-print"/>
 
-<section id="education" class="row avoid-breaking-page" aria-labelledby="education-label">
-<h2 id="education-label" class="column">Education</h2>
-<div class="column">
-{% include education.html person=site.data.people.manimejia %}
-</div>
-</section>
-<hr class="hide-for-print"/>
-
-<section id="employment" class="row avoid-breaking-page" aria-labelledby="employment-label">
-<h2 id="employment-label" class="column">Employment</h2>
-<div class="column">
-{% include employment.html person=site.data.people.manimejia %}
-</div>
-</section>
-<hr class="hide-for-print"/>
-
 <section id="technical-experience" class="row avoid-breaking-page" aria-labelledby="technical-experience-label">
 <h2 id="technical-experience-label" class="column">
 Professional Experience <br>
@@ -64,6 +48,26 @@ Professional Experience <br>
 <a href="https://docs.google.com/spreadsheets/d/1gBdIVCMZN1qdhwwWIwwZjQtkmucS-or_XAKocYftV48/pubhtml?gid=0&single=true" title="online spreadsheet from which the chart is made">chart data</a>
 </figcaption>
 </figure>
+</section>
+
+<hr class="hide-for-print"/>
+<br class="hide-for-screen"/>
+<br class="hide-for-screen"/>
+
+<section id="employment" class="row avoid-breaking-page" aria-labelledby="employment-label">
+<h2 id="employment-label" class="column">Employment</h2>
+<div class="column">
+{% include employment.html person=site.data.people.manimejia %}
+</div>
+</section>
+
+<hr class="hide-for-print"/>
+
+<section id="education" class="row avoid-breaking-page" aria-labelledby="education-label">
+<h2 id="education-label" class="column">Education</h2>
+<div class="column">
+{% include education.html person=site.data.people.manimejia %}
+</div>
 </section>
 
 {% comment %}

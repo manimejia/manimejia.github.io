@@ -3,7 +3,7 @@
 <ul class="medium-block-grid-{{include.person.education.size}}">
 	{%for school in include.person.education %}
 <li role="presentation" style="width:{{100 | divided_by : include.person.education.size}}%">
-	<div class="left" style="height:100%">
+	<div class="left hide-for-print" style="height:100%">
 		<img src="/assets/{{school.logo}}" class="icon"/>
 	</div>
 	<p>
