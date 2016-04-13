@@ -24,22 +24,28 @@ splash: false
     <h2>{{person.title}}</h2>
     {%endif%}
     {% if person.byline %}
-    <p class="font-large secondary-text">
+    <p class="font-large">
     {{ person.byline }}
     </p>
     {%endif%}
     </header>
+    {% if person.summary %}
+    <header class="column medium-8 small-10 small-centered secondary-text">
+    {{person.summary | markdownify}}
+    </header>
+    {%endif%}
     {% if person.numbers %}
-    <ul class="small-block-grid-{{person.numbers.size}}">
+    <ul class="small-block-grid-{{person.numbers.size}} clearfix">
     {% for numberinfo in person.numbers %}
       <li>
-        <div class="icon fi-{{numberinfo.icon}} {%if numberinfo.color %}{{numberinfo.color}}-text{%endif%}"></div>
-        <div><b class="font-larger">{{numberinfo.number}}</b></div>
+        <i class="font-xlarger fi-{{numberinfo.icon}} {%if numberinfo.color %}{{numberinfo.color}}-text{%endif%}">&nbsp;</i>
+        <b class="font-xxlarger">{{numberinfo.number}}</b>
         <div class="{%if numberinfo.color %}{{numberinfo.color}}-text{%endif%}">{{numberinfo.label}}</div>
       </li>
     {%endfor%}
     </ul>
     {%endif%}
+
 </div>
 </section>
 
