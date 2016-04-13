@@ -1,29 +1,27 @@
 {% assign person = site.data.people.manimejia %}
 <div class="row text-left">
-    <div class="column medium-4">
-			{% include vcard.html person=person noname=true id=include.id%}
-			<!-- <p class="text-center">References Upon Request</p> -->
-    </div>
-    <div class="column medium-8">
+    <div class="column medium-8 medium-push-4">
       <header>
-      {% if person.title %}
-		    <h2>{{ person.title }}</h2>
-    	{%endif%}      
-    	{% if person.byline %}
+        <h2>{{ person.name }}
+        {% if person.title %}
+          <br/><small>{{ person.title }}</small>
+    	  {%endif%}
+        </h2>    
+    	  {% if person.byline %}
 		    <p class="{%if include.color %}{{include.color}}-text {%endif%}font-large">
 	      {{ person.byline }}
 	      </p>
-    	{%endif%}
+    	  {%endif%}
       </header>
 
       {% if person.summary %}
-      <div class="">
+      <div class="hide-for-print">
       {{person.summary | markdownify}}
       </div>
       {%endif%}
 
       {% if site.data.services.list %}
-      <ul class="{include.color}} medium-block-grid-{{site.data.services.list.size}}">
+      <ul class="{include.color}} medium-block-grid-{{site.data.services.list.size}} hide-for-print">
       {% for service in site.data.services.list %}
       <li class="text-center">
         <i class="fi-{{service.icon}} font-larger"></i><br/>
@@ -33,7 +31,12 @@
       </ul>
       {%endif%}
 
-      </div>
+  </div>
+
+  <div class="column medium-4 medium-pull-8">
+    {% include vcard.html person=person noname=true id=include.id%}
+    <!-- <p class="text-center">References Upon Request</p> -->
+  </div>
 
 <!--  
   <p>I am a communicator. This is the focus of my work in every project and every relationship. </p>

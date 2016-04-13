@@ -22,7 +22,7 @@ style: |
 {% assign highlight_color = 'alert' %}
 
 
-{% include page-title.html title=site.config.name small=page.title%}
+{% include page-title.html%}
 
 <section id="contact" class="text-center" role="region" 
   aria-labelledby="contact-heading">
@@ -35,7 +35,7 @@ style: |
 {% include tag-cloud.html category="project" %}
 </section> -->
 {% endcomment %}
-<hr/>
+<hr class="hide-for-print"/>
 
 <section id="education" class="row avoid-breaking-page" aria-labelledby="education-label">
 <h2 id="education-label" class="column">Education</h2>
@@ -43,7 +43,7 @@ style: |
 {% include education.html person=site.data.people.manimejia %}
 </div>
 </section>
-<hr/>
+<hr class="hide-for-print"/>
 
 <section id="employment" class="row avoid-breaking-page" aria-labelledby="employment-label">
 <h2 id="employment-label" class="column">Employment</h2>
@@ -51,11 +51,7 @@ style: |
 {% include employment.html person=site.data.people.manimejia %}
 </div>
 </section>
-<hr/>
-
-<br class="hide-for-screen"/>
-<br class="hide-for-screen"/>
-<br class="hide-for-screen"/>
+<hr class="hide-for-print"/>
 
 <section id="technical-experience" class="row avoid-breaking-page" aria-labelledby="technical-experience-label">
 <h2 id="technical-experience-label" class="column">
