@@ -1,7 +1,7 @@
 ---
 client: OSU
 title: OSU Graduate School Website
-summary: A 'college' level OSU website, delivering information and online forms related to admissions, financial aid, and student matriculation to an average of 1000 unique visitors every day.
+summary: A 'college' level website for Oregon State University. It delivers information and online forms to serve the needs of admissions, financial aid, and student matriculation. It serves this content to an average of 1000 unique visitors every day.
 startdate: 2012-04-09
 enddate: 2014-09-21
 website: http://gradschool.oregonstate.edu
