@@ -1,10 +1,13 @@
 ---
 client: OSU
 title: OSU Graduate Education Toolkit
-summary: A web based graduate admissions and matriculation management system.
+summary: A graduate student application and matriculation management system built on the Force.com platform for Oregon State University.
 startdate: 2014-02-01
 enddate: 2014-09-21
-website: https://oregonstate.force.com/GradAppLogin
+website: https://oregonstate.force.com
+login: 
+  email: manimejia.me@gmail.com
+  pass: test4OSUapp
 role: Product Design & Development Lead
 publish:
  print: true
@@ -51,4 +54,4 @@ tasks:
 
 ---
 
-During early development, I spearheaded the user experience design efforts, collecting and collating user stories, developing user personas, designing and user testing wireframes, and developing layouts and UI widgets using BootStrap and VisualForce.
+I developed the applicant and reviewer expereinces for this campus wide applicant management system, spearheading the UX design efforts. I collected and collated user stories and developed user personas. I designed wireframes and user tests. I developed layouts and UI widgets using BootStrap and VisualForce.

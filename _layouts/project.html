@@ -67,10 +67,32 @@
   
         {% if page.website %}
           <li class="column small-12 medium-3">
-            <a href="{{page.website}}" class="button"
+            <a class="button info"
+            {% if page.login%}data-reveal-id="{{this_page_id}}-login-modal"
+            {%else%}href="{{page.website}}"{%endif%}
             target="_blank" title="go to {{ page.status }} website">
-            <i class="fi-play-circle"></i> Visit Website
+            <i class="fi-play-circle"></i>
+            {% if page.login%}Demo Login{%else%}Visit Website{%endif%}
             </a>
+            {% if page.login%}
+            <div id="{{this_page_id}}-login-modal"
+              class="reveal-modal bg-primary" data-reveal aria-labelledby="modalTitle" 
+              aria-hidden="true" role="dialog">
+              <h3>{{ page.title }}</h3>
+              <form class="row">
+                <p class="medium-4 columns">
+                  <a href="{{page.website}}" target="_blank">{{page.website}}</a>
+                </p>
+                <label class="medium-4 columns secondary-text">email:</b>
+                  <input class="primary-text" disabled value="{{page.login.email}}"/>
+                </label>
+                <label class="medium-4 columns secondary-text">password:
+                  <input class="primary-text" disabled value="{{page.login.pass}}"/>
+                </label>
+              </form>
+              <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+            </div>
+            {%endif%}
           </li>
         {% elsif page.status %}
           <li class="column small-12 medium-3">
