@@ -1842,7 +1842,10 @@ a:hover, a:focus {
 
 .focusable{
   @include block-glowing-effect(':focus, &:hover', $glowing-effect-fade-time, $glowing-effect-color);
-	//' single quote here because sublime and textmate both mess up syntax coloring on the quoted selector in previous line
+  &.copied{
+  @include block-glowing-effect(':focus', $glowing-effect-fade-time, darken($glowing-effect-color,50%));
+  }
+	// ' single quote here because sublime and textmate both mess up syntax coloring on the quoted selector in previous line
 	/*border-radius: 10px;*/
 }
 .focusable:focus{

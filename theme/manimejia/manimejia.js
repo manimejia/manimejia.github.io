@@ -16,6 +16,7 @@ $(document).load(function(){
 
 
 $(document).ready(function(){
+  console.log("DOCUMENT READY");
   //skrollr.menu.init();
   // 
   // var locationhash = window.location.hash;
@@ -34,8 +35,43 @@ $(document).ready(function(){
     document.previousActiveElement = document.activeElement;
   });
 
+  // $(':target').each(function(e){
+  //   $this = $(this);
+  //   $.uix.scrollToElement($this,true);
+  //   if($this.attr('tabindex') > -1){
+  //     $this.attr('tabindex',0);
+  //   }
+  //   this.focus();
+  //   e.preventDefault();
+  // })
+  
+  //$('.top-bar .toggle-topbar a').attr('href','');
+  $('.top-bar .top-bar-section a').click(function(e){
+    $(this).closest('.top-bar').find('.toggle-topbar:visible a').click();
+  });
+  
 
-  // add scrolling animation to internal hash links
+  $('#topbar-homepage').focus();
+  $(':focusable').toggleClass('focusable',true)
+
+
+  // $.uix.init();
+  
+  // initialize skrollr library
+  if(typeof skrollr === 'object' && typeof skrollr.init === 'function') skrollr.init();
+
+  init();
+
+});
+
+function init($content){
+  $content = $content || $(document);
+
+  // add .focusable class to all focusable elements
+  $(':focusable').toggleClass('focusable',true);
+
+  // initialize click callback for internal hash links 
+  // to triger scrolling animation 
   $('a[href]').each(function(e){
     if(this.hash){
       var $target = $(this.hash);
@@ -65,65 +101,101 @@ $(document).ready(function(){
     }
   });
 
-$(".fixed-inside-parent").each(function(){
-  var $this = $(this),
-      $parent = $this.parent();
-
-  $(window).on("scroll", function(e) {
-    var scrollTop = $(window).scrollTop();
-        fixedTop = $parent.offset().top - $this.height();
-        fixedBottom = fixedTop + $parent.height() - $this.height();
-
-    if ( scrollTop >  fixedTop && scrollTop < fixedBottom) {
-      // console.log(
-      //   "FIXED TO #" 
-      //   + $parent.attr('id') + " : " 
-      //   + "\n\t(" + scrollTop + "=" + $(window).scrollTop() +") > " 
-      //   + "\n\t(" + fixedTop + "=" + $parent.offset().top + "+" + $this.height()+")"
-      //   );
-      $this.addClass("fixed");
-    } else {
-      $this.removeClass("fixed");
-    }
+  // initialize scroll callback for 
+  // .fixed-inside-parent elements
+  $(".fixed-inside-parent").each(function(){
+    var $this = $(this),
+        $parent = $this.parent();
+  
+    $(window).on("scroll", function(e) {
+      var scrollTop = $(window).scrollTop();
+          fixedTop = $parent.offset().top - $this.height();
+          fixedBottom = fixedTop + $parent.height() - $this.height();
+  
+      if ( scrollTop >  fixedTop && scrollTop < fixedBottom) {
+        // console.log(
+        //   "FIXED TO #" 
+        //   + $parent.attr('id') + " : " 
+        //   + "\n\t(" + scrollTop + "=" + $(window).scrollTop() +") > " 
+        //   + "\n\t(" + fixedTop + "=" + $parent.offset().top + "+" + $this.height()+")"
+        //   );
+        $this.addClass("fixed");
+      } else {
+        $this.removeClass("fixed");
+      }
+    });
   });
-});
 
-
-  // $(':target').each(function(e){
-  //   $this = $(this);
-  //   $.uix.scrollToElement($this,true);
-  //   if($this.attr('tabindex') > -1){
-  //     $this.attr('tabindex',0);
-  //   }
-  //   this.focus();
-  //   e.preventDefault();
-  // })
-  
-  //$('.top-bar .toggle-topbar a').attr('href','');
-  $('.top-bar .top-bar-section a').click(function(e){
-    $(this).closest('.top-bar').find('.toggle-topbar:visible a').click();
+  // initialize click callback callback for 
+  // [copy-on-click] elements
+  $("[data-copy-on-click]").click(function(e){
+      // console.log("clicked",this);
+      var targetId = $(this).attr("data-copy-on-click");
+      copyContents(this,targetId,true);
   });
-  
 
-  $('#topbar-homepage').focus();
-  $(':focusable').toggleClass('focusable',true)
-
-
-  $.uix.init();
-  
-  // initialize skrollr library
-  if(typeof skrollr === 'object' && typeof skrollr.init === 'function') skrollr.init();
-
-
-});
-
-
-function initAjaxContent($content){
-  $(':focusable').toggleClass('focusable',true);
   // initialize foundation
   $content.foundation();
+  // initialize UIX
   $.uix.init($content);
+
 };
+
+/**
+* http://stackoverflow.com/questions/22581345/click-button-copy-to-clipboard-using-jquery
+*/
+function copyContents(elem,targetId,restoreFocus,restoreSelection) {
+    // create hidden text element, if it doesn't already exist
+    targetId = targetId || "_hiddenCopyText_";
+    var isInput = elem.tagName === "INPUT" || elem.tagName === "TEXTAREA";
+    var origSelectionStart, origSelectionEnd;
+    if (isInput) {
+        // can just use the original source element for the selection and copy
+        target = elem;
+        origSelectionStart = elem.selectionStart;
+        origSelectionEnd = elem.selectionEnd;
+    } else {
+        // must use a temporary form element for the selection and copy
+        target = document.getElementById(targetId);
+        if (!target) {
+            var target = document.createElement("textarea");
+            target.style.position = "absolute";
+            target.style.left = "-9999px";
+            target.style.top = "0";
+            target.id = targetId;
+            document.body.appendChild(target);
+        }
+        target.textContent = elem.textContent;
+    }
+    // select the content
+    var currentFocus = document.activeElement;
+    target.focus();
+    target.setSelectionRange(0, target.value.length);
+    
+    // copy the selection
+    var succeed;
+    try {
+        succeed = document.execCommand("copy");
+    } catch(e) {
+        succeed = false;
+    }
+    // restore original focus
+    if (currentFocus && typeof currentFocus.focus === "function" && restoreFocus) {
+        currentFocus.focus();
+    }
+    
+    if (isInput && restoreSelection) {
+        // restore prior selection
+        elem.setSelectionRange(origSelectionStart, origSelectionEnd);
+    } else {
+        // clear temporary content
+        target.textContent = "";
+    }
+    if(succeed){
+      $(elem).addClass("copied");
+    }
+    return succeed;
+}
 
 function loadClearingThumbs($content){
   $('.clearing-thumbs img',$content).load(function(){

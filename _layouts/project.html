@@ -68,7 +68,7 @@
         {% if page.website %}
           <li class="column small-12 medium-3">
             <a class="button info"
-            {% if page.login%}data-reveal-id="{{this_page_id}}-login-modal"
+            {% if page.login%}data-reveal-id="{{this_page_id}}-login-modal" href=""
             {%else%}href="{{page.website}}"{%endif%}
             target="_blank" title="go to {{ page.status }} website">
             <i class="fi-play-circle"></i>
@@ -77,19 +77,23 @@
             {% if page.login%}
             <div id="{{this_page_id}}-login-modal"
               class="reveal-modal bg-primary" data-reveal aria-labelledby="modalTitle" 
-              aria-hidden="true" role="dialog">
+              role="dialog">
               <h3>{{ page.title }}</h3>
-              <form class="row">
-                <p class="medium-4 columns">
+              <div class="row">
+                <div class="large-4 medium-12 columns">
                   <a href="{{page.website}}" target="_blank">{{page.website}}</a>
-                </p>
-                <label class="medium-4 columns secondary-text">email:</b>
-                  <input class="primary-text" disabled value="{{page.login.email}}"/>
-                </label>
-                <label class="medium-4 columns secondary-text">password:
-                  <input class="primary-text" disabled value="{{page.login.pass}}"/>
-                </label>
-              </form>
+                </div>
+                <div class="large-4 medium-6 columns secondary-text">
+                  <b>email:</b><br/>
+                  <kbd class="primary-text">
+                  {{page.login.email}}</kbd>
+                </div>
+                <div class="large-4 medium-6 columns secondary-text">
+                  <b>password:</b> <br/>
+                  <kbd class="primary-text">
+                  {{page.login.pass}}</kbd>
+                </div>
+              </div>
               <a class="close-reveal-modal" aria-label="Close">&#215;</a>
             </div>
             {%endif%}
@@ -249,7 +253,7 @@
       <div id="{{this_page_id}}-asset{{forloop.index}}" 
       {%unless page.assets.size == 1 %}
       class="reveal-modal bg-primary" data-reveal aria-labelledby="modalTitle" 
-      aria-hidden="true" role="dialog"
+      role="dialog"
       {%endunless%}>
           <figure class="text-center" 
           aria-labelledby="{{this_page_id}}-asset{{forloop.index}}-caption">

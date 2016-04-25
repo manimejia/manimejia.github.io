@@ -268,9 +268,12 @@ $.extend( $.uix, {
           // console.log('Calling ajaxPanelContentLoaded(event,uix)');
           // console.log('event : %O',event);
           // console.log('uix : %O',uix);
-          uix.$panel.find(':focusable').toggleClass('focusable',true);
-          uix.$panel.foundation();
-          $.uix.init(uix.$panel);
+          if(typeof init === "function"){
+            init(uix.$panel);
+          }
+          // uix.$panel.find(':focusable').toggleClass('focusable',true);
+          // uix.$panel.foundation();
+          // $.uix.init(uix.$panel);
         }
         $(this)[widgetName](options);
         $initialized.add(this);
