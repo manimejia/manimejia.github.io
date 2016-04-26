@@ -6,8 +6,10 @@ startdate: 2014-02-01
 enddate: 2014-09-21
 website: https://oregonstate.force.com
 login: 
-  email: manimejia.me@gmail.com
-  pass: test4OSUapp
+  - 
+    role: Applicant
+    email: manimejia.me@gmail.com
+    pass: test4OSUapp
 role: Product Design & Development Lead
 publish:
  print: true
