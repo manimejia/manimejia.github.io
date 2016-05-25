@@ -2302,6 +2302,18 @@ padding: 1em;
 	  page-break-before: avoid;
 	  page-break-after: avoid;
 	}
+	a,
+  a:visited {
+    text-decoration: none; 
+  }
+  a[href]:before {
+    content: "["; 
+  }
+  a[href]:after {
+    content: "](" attr(href) ")"; 
+    text-decoration: underline; 
+  }
+	a[href].hide-href-for-print:before,
 	a[href].hide-href-for-print:after {
 		content:"";
     /*display:none;*/

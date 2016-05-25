@@ -21,8 +21,11 @@ style: |
 ---
 {% assign highlight_color = 'alert' %}
 
+{%capture pagetitle%}
+<small class="left" style="margin-top:1em">{{page.title}}</small>
+{%endcapture%}
 
-{% include page-title.html%}
+{% include page-title.html title=pagetitle%}
 
 <section id="contact" class="text-center" role="region" 
   aria-labelledby="contact-heading">
@@ -40,7 +43,7 @@ style: |
 <section id="technical-experience" class="row avoid-breaking-page" aria-labelledby="technical-experience-label">
 <h2 id="technical-experience-label" class="column">
 Professional Experience <br>
-<small class="primary-text">In 30,000 Hours</small>
+<small class="primary-text">In 30,000 Hours since 2001</small>
 </h2>
 <figure class="column text-center" style="margin:0">
 <img src="https://docs.google.com/spreadsheets/d/1gBdIVCMZN1qdhwwWIwwZjQtkmucS-or_XAKocYftV48/pubchart?oid=1524502507&format=image" alt="Chart showing Manuel Mejia's work experience since 2001">
