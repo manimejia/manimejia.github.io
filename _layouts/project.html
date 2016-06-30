@@ -260,11 +260,13 @@
       {% for asset in page.assets %}{% if asset.filename %}
       <li>
       {%unless page.assets.size == 1 %}
-       <a href=""class="th" role="button" aria-label="Thumbnail"
-       data-reveal-id="{{this_page_id}}-asset{{forloop.index}}"
-       style="max-height: 10rem;overflow: hidden;">
-         <img src="{{this_page_assetpath}}{{asset.filename}}" alt="{{asset.caption}}" />
-       </a>
+      <div style="height: 10rem;">
+        <a href=""class="th" role="button" aria-label="Thumbnail"
+        data-reveal-id="{{this_page_id}}-asset{{forloop.index}}"
+        style="max-height: 10rem;overflow: hidden;">
+          <img src="{{this_page_assetpath}}{{asset.filename}}" alt="{{asset.caption}}" />
+        </a>
+      </div>
       {%endunless%}
       <div id="{{this_page_id}}-asset{{forloop.index}}" 
       {%unless page.assets.size == 1 %}
