@@ -218,13 +218,25 @@ references:
     date: 2016
     title: CEO, Growth Architect
     employer: InfoShuk
+    project: /SHUK/InfoShuk-Business-Analytics-App.html
     quote: | 
       Manuel did a great job for InfoShuk as our front-end lead. As an early-stage company, [He] jumped right into action and began developing a solid code base. Along with support in formulating concepts into product realities, Mani's communication, code quality and teamwork were top notch.
+  -
+    fullname: Donna Walker
+    date: 2016
+    title: UA Portfolio Manager
+    employer: United Association of Plumbers, Pipefitters, and Sprinklerfitters
+    project: /INFR/UA-Portfolio.html
+    quote: | 
+      Manuel did design work on [an online training app] for the United Association. [This app] is very complicated, with many users and much to manage in my role as the site admin. The [app] caters to three distinct user roles that need to interact with each other seamlessly. In addition, many of the users of the system are challenged by a lack of computer skills overall. Manuel's ideas were very intuitive and continue to help me to save time. 
+
+      … Manuel came into the project mid-design, yet was able to implement elegant solutions to areas of the website that were challenging. I was very pleased with the work he did …
   -
     fullname: John Henry
     date: 2014
     title: Director of Technology 
     employer: Graduate School, Oregon State University
+    project: /OSU/Graduate-School-Website.html
     quote: |
       &hellip; Manuel took the website redesign effort from mapping the old site architecture, developing a new architecture, creating mockups and working to incrementally deploy the new site in Drupal while working with content owners both in and out of the Graduate School. I was particularly satisfied with his innovative user interface design solutions demonstrated in the [Graduate Programs](http://gradschool.oregonstate.edu/programs) page.
 
@@ -234,6 +246,7 @@ references:
     date: 2014
     title: Programmer Analyst
     employer: Graduate School, Oregon State University
+    project: /OSU/Graduate-Education-Toolkit.html
     quote: |
       Manuel is a dedicated UI/UX developer who is not only skilled in CSS and JavaScript, but also has a passion for the client's viewpoint. When a new platform was thrown in the mix, he rose to the occasion and went from beginner to productive developer in short order. By thinking of the [product] as an architected system, he isn't one of those guys that suggests 15 million different directions. Instead, Manuel sees how the integration works in a [holistic] architecture and makes suggestions that make sense, are achievable, and can communicate his ideas not only in mock-ups but also in conversation. 
 

@@ -13,8 +13,13 @@
     {% unless forloop.index == 1%}<hr/>{%endunless%}
     <header>
     <h4>
-    {{reference.fullname}}
-    - <small class="font-bold">{{reference.title}}</small>
+    {{reference.fullname}} - 
+    <small class="font-bold">
+    {%if reference.project %}
+    {%include _string-this_page_id-url.liquid url=reference.project%}
+    <a href="#" data-reveal-id="{{this_page_id}}-modal">{{reference.title}}</a>
+    {%else%} {{reference.title}} {%endif%}
+    </small>
     <br/><small>{{reference.employer}}</small>
     </p>
     </header>
