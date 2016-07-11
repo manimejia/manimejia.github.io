@@ -2455,6 +2455,14 @@ padding: 1em;
 		width:49%;
 	}
 }
+.vcard.vcard-horizontal{
+	text-align: inherit;
+	.vcard-picture{
+			width:auto;
+			height:auto;
+	    margin: 0;
+		}
+}
 .vcard.vcard-compact{
 	position:relative;
 	padding:0;

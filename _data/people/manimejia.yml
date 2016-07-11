@@ -50,7 +50,7 @@ numbers:
 #   label: Multimedia Presentations
 #   icon: photo
 #   color: info
-title: Full Stack Product Designer
+title: Full Stack Experience Designer
 # byline: |
 #   integrating technical, design, and communication
 #   challenges to create durable product solutions
@@ -215,6 +215,8 @@ employment:
 references:
   -
     fullname: Joshua Sukenic
+    profileUrl: https://www.linkedin.com/in/joshuasukenic
+    profileImg: /assets/joshua-sukenic.jpg
     date: 2016
     title: CEO, Growth Architect
     employer: InfoShuk
@@ -223,6 +225,8 @@ references:
       Manuel did a great job for InfoShuk as our front-end lead. As an early-stage company, [He] jumped right into action and began developing a solid code base. Along with support in formulating concepts into product realities, Mani's communication, code quality and teamwork were top notch.
   -
     fullname: Donna Walker
+    profileUrl: https://www.linkedin.com/in/donna-walter-0b070752
+    profileImg: /assets/donna-walker.jpg
     date: 2016
     title: UA Portfolio Manager
     employer: United Association of Plumbers, Pipefitters, and Sprinklerfitters
@@ -233,6 +237,8 @@ references:
       … Manuel came into the project mid-design, yet was able to implement elegant solutions to areas of the website that were challenging. I was very pleased with the work he did …
   -
     fullname: John Henry
+    profileUrl: https://www.linkedin.com/in/john-henry-9a12169
+    profileImg: /assets/john-henry.jpg
     date: 2014
     title: Director of Technology 
     employer: Graduate School, Oregon State University
@@ -243,6 +249,8 @@ references:
       &hellip; I found Manuel to be a strong creative thinker and problem solver, he was consistently passionate and enthusiastic about his work and his desire to provide the best user experience possible. Please feel free to contact me should you require further information.
   -
     fullname: Dan Vega
+    profileUrl: https://www.linkedin.com/in/vegad
+    profileImg: /assets/dan-vega.jpg
     date: 2014
     title: Programmer Analyst
     employer: Graduate School, Oregon State University
@@ -253,6 +261,8 @@ references:
 #      If you are currently unhappy with the user experience being delivered to your clients, or would like to get it right from the start, bring Manuel on board and you'll be on your way to a pleasant, effective UI/UX solution.
   -
     fullname: Barbara J. Bond
+    profileUrl: https://www.linkedin.com/in/barbara-j-bond-b675084a
+    profileImg: /assets/barb-bond.jpg
     date: 2013
     title: Director of Postdoctoral Programs
     employer: Office of Postdoctoral Programs, Oregon State University

@@ -10,19 +10,26 @@
 <ul class="row no-bullet" role="presentation">
 {%for reference in person.references %}
   <li role="presentation" class="column">
+    <div class="vcard vcard-horizontal row">
     {% unless forloop.index == 1%}<hr/>{%endunless%}
-    <header>
-    <h4>
-    {{reference.fullname}} - 
-    <small class="font-bold">
-    {%if reference.project %}
-    {%include _string-this_page_id-url.liquid url=reference.project%}
-    <a href="#" data-reveal-id="{{this_page_id}}-modal">{{reference.title}}</a>
-    {%else%} {{reference.title}} {%endif%}
-    </small>
-    <br/><small>{{reference.employer}}</small>
-    </p>
-    </header>
+      <figure class="column small-3">
+        {%if reference.profileUrl %}
+        {%include _string-this_page_id-url.liquid url=reference.project%}
+        <a href="{{reference.profileUrl}}" class="thumb" target="_blank">
+        {%endif%}
+        {%if reference.profileImg%}
+        <img class="left icon vcard-picture focusable" aria-hidden="true" src="{{reference.profileImg}}"   alt=  "{{reference.fullname}}">
+        {%endif%}
+        {%if reference.profileUrl %}
+        </a>
+        {%endif%}
+      </figure>
+      <header class="column small-9">
+        <h4> {{reference.fullname}}  </h4>
+        <b>{{reference.title}}</b><br/>
+        <small>{{reference.employer}}</small>
+      </header>
+    </div>
     <blockquote class="font-smaller font-italic" >
     {{ reference.quote | markdownify }}
     </blockquote>
