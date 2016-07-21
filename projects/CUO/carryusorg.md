@@ -1,6 +1,6 @@
 ---
 client: CUO
-title: Carry.Us.Org (Do Good. Go Further.)
+title: Carry.Us.Org Web/Mobile App
 summary: Carry.Us.Org is a charitable fundraising platform for inspired athletes.
 startdate: 2016-05-05
 enddate: 2016-05-20
