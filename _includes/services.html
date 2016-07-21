@@ -28,7 +28,7 @@ background:url({{site.sources.unsplash}}/{{service.unsplash}}/1280x960) 50% 50%;
 background-size:cover;
 {% endif %}"> 
 
-<div class="service-content-wrapper text-shadow-deep">
+<div class="service-content-wrapper text-shadow-deep {%if service.color %}{{service.color}}-text{%endif%}">
   <header class="service-heading text-center row">
     <div class="service-icon-box">
       <i class="fi-{{service.icon}} icon {%if service.color %}{{service.color}}-text{%endif%}"></i>
@@ -36,12 +36,15 @@ background-size:cover;
     <h3 class="font-xlarger">
       {{service.label}}
     </h3>
-    <p class="font-larger font-bold {%if service.color %}{{service.color}}-text{%endif%} column medium-9 medium-centered">
-      {{service.summary}}
-    </p>
+    
   </header>
 
   <div class="service-description">
+  {% if service.summary %}
+    <p class="font-bold">
+      {{service.summary}}
+    </p>
+  {%endif%}
   {% if service.description %}
       {{service.description | markdownify}}
   {%endif%}

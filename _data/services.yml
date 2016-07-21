@@ -8,7 +8,7 @@ list:
   color: warning
   unsplash: NkEH30uoe8o
   summary: |
-    designing clear and efficient journeys through complex and unfamiliar systems
+    I have designed clear and efficient user journeys through complex and unfamiliar systems.
   accomplishments: 
     - project_id: EC/CareNet-Elder-Care-Portal
       description: |
@@ -25,7 +25,7 @@ list:
   color: alert
   unsplash: 2TlAsvhqiL0
   summary: |
-    using research and observations to understand users and design more effective interactions
+    I have used research and observations to better  understand a projects target audiences.
   accomplishments:
     - project_id: MM/Artist-Webdrop-Drupal-Distribution
       description: |
@@ -42,7 +42,7 @@ list:
   color: success
   unsplash: JibIPPrvITE
   summary: |
-    listening to and connecting diverse perspectives to facilitate clear communication
+    I have listened to diverse stakeholder perspectives and facilitated clear communication.
   accomplishments:
     - project_id: INFR/UA-Portfolio
       description: |
@@ -59,7 +59,7 @@ list:
   color: info
   unsplash: xNdPWGJ6UCQ
   summary: |
-    developing scalable prototypes to realize and rapidly iterate through product designs
+    I have developed scalable prototypes to iterate through product designs in agile environments.
   accomplishments:
     - project_id: OSU/Graduate-Education-Toolkit
       description: | 
@@ -73,7 +73,7 @@ list:
   color: warning
   unsplash: o-xzF35Qskc
   summary: |
-    steering boldly toward the possible future while making the most of the present reality
+    I have chosen bold paths toward possible futures while making the most of situational resources.
   accomplishments:
     - project_id: BFAS/Best-Friends-Virtual-Tour
       description: |

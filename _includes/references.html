@@ -9,7 +9,7 @@
 {% if person.references %}
 <ul class="no-bullet medium-block-grid-1 large-block-grid-{{include.grid | default : '1'}}" role="presentation">
 {%for reference in person.references %}
-  <li role="presentation" class="column">
+  <li role="presentation" class="">
     <div class="vcard vcard-horizontal row">
     {% unless forloop.index == 0%}<hr/>{%endunless%}
       <figure class="column small-3">
