@@ -18,7 +18,7 @@
     </header>
     {% if this_client_page.title %}
     <header role="presentation">
-      <label class="hidden-for-small-only hidden-for-medium-up hide-for-print">Client</label>
+      <span class="hidden-for-small-only hidden-for-medium-up hide-for-print">Client</span>
       {% if this_client_page.website %}
       <a class="client-title" href="{{ this_client_page.website }}" target="_blank" title="clienwebsite">{% endif %}
       <abbr title="Client"><i class="fi-torsos-all-female font-larger"></i></abbr>&nbsp;
@@ -31,14 +31,14 @@
       <ul class="no-bullet column medium-6" role="presentation">
         {% if this_page.role %}
         <li role="presentation">
-          <label class="hidden-for-small-only hidden-for-medium-up hide-for-print">Role</label> 
+          <span class="hidden-for-small-only hidden-for-medium-up hide-for-print">Role</span> 
           <abbr title="Role"><i class="fi-sheriff-badge font-larger"></i></abbr>&nbsp;
           <b>{{ this_page.role }}</b>
         </li>
         {% endif %}
         {% if this_page_date %}
         <li role="presentation">
-          <label class="hidden-for-small-only hidden-for-medium-up hide-for-print">Date</label> 
+          <span class="hidden-for-small-only hidden-for-medium-up hide-for-print">Date</span> 
           <abbr title="Date"><i class="fi-clock font-larger"></i></abbr>&nbsp;
           {% if this_page.date %}
           <time>{{ this_page.date | date: "%b %Y" }}</time>
@@ -59,7 +59,7 @@
       <ul class="no-bullet column medium-6 text-right stack button-group">
         {% if this_page.website %}
         <li role="presentation">
-          <label class="hidden-for-small-only hidden-for-medium-up hide-for-print">Link</label> 
+          <span class="hidden-for-small-only hidden-for-medium-up hide-for-print">Link</span> 
           <a class="button" href="{{this_page.website}}" target="_blank" title="go to {{ this_page.status }} website">
           <i class="fi-play-circle font-larger"></i>&nbsp;
           Visit Website
