@@ -1,6 +1,7 @@
 {% if include.person %}
 {% assign vcard_id = include.person.uid |  default: "person" | append: "-vcard" %}
-<div {%if include.id %}id="{{include.id}}"{%endif%} role="contentinfo" class="vcard {%if include.compact %}vcard-compact{%endif%}" 
+<div {%if include.id %}id="{{include.id}}"{%endif%} role="contentinfo" 
+{%if include.flowto%}aria-flowto="{{include.flowto}}"{%endif%} class="vcard {%if include.compact %}vcard-compact{%endif%}" 
 {%if include.compact %}tabindex="0"{%endif%} aria-labelledby="{{ vcard_id }}-name">
   {% unless include.nopicture %}
   <figure class="">
