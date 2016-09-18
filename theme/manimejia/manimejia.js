@@ -16,7 +16,7 @@ $(document).load(function(){
 
 
 $(document).ready(function(){
-  console.log("DOCUMENT READY");
+  // console.log("DOCUMENT READY");
   //skrollr.menu.init();
   // 
   // var locationhash = window.location.hash;
@@ -74,29 +74,31 @@ function init($content){
   // to triger scrolling animation 
   $('a[href]').each(function(e){
     if(this.hash){
-      var $target = $(this.hash);
       var sameHostname = this.hostname == window.location.hostname;
       var samePathname = this.pathname == window.location.pathname;
-      var tabindex;
-      if($target.length > 0 && sameHostname && samePathname){
-        tabindex = $target.attr('tabindex');
-        $(this).aria('flowto',this.hash.substring(1),'add');
-        $(this).click(function(e){
-          $.uix.scrollToElement($target,true);
-          if(!(tabindex > -1)){
-            $target.attr('tabindex',0);
-          }
-          $target.focus();
-          e.preventDefault();
-          return true;
-        });
-        $target.blur(function(){
-          if(tabindex !== null){
-            $(this).attr('tabindex',tabindex);
-          }else{
-            $(this).removeAttr('tabindex');
-          }
-        });
+      var target,tabindex;
+      if(sameHostname && samePathname){
+        $target = $(this.hash);
+        if($target.length > 0){
+          tabindex = $target.attr('tabindex');
+          $(this).aria('flowto',this.hash.substring(1),'add');
+          $(this).click(function(e){
+            $.uix.scrollToElement($target,true);
+            if(!(tabindex > -1)){
+              $target.attr('tabindex',0);
+            }
+            $target.focus();
+            e.preventDefault();
+            return true;
+          });
+          $target.blur(function(){
+            if(tabindex !== null){
+              $(this).attr('tabindex',tabindex);
+            }else{
+              $(this).removeAttr('tabindex');
+            }
+          });
+        }
       }
     }
   });
