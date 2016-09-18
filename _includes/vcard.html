@@ -5,7 +5,7 @@
   {% unless include.nopicture %}
   <figure class="">
   <img class="vcard-picture hide-for-print" aria-hidden="true"
-  src="/assets/manimejia-gravatar.jpeg" {% if include.noname %}alt="{{ include.person.name }}{%endif%}"/>
+  src="/assets/manimejia-gravatar.jpeg" alt="profile photo"/>
   {% unless include.noname %}
   <figcaption class="vcard-name subtitle text-center" id="{{ vcard_id }}-name">
     {{ include.person.name }}
