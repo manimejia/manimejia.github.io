@@ -76,7 +76,7 @@ function init($content){
     if(this.hash){
       var sameHostname = this.hostname == window.location.hostname;
       var samePathname = this.pathname == window.location.pathname;
-      var target,tabindex;
+      var $target,tabindex;
       if(sameHostname && samePathname){
         $target = $(this.hash);
         if($target.length > 0){
