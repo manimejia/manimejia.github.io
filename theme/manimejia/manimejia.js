@@ -35,6 +35,20 @@ $(document).ready(function(){
     document.previousActiveElement = document.activeElement;
   });
 
+  // make sure modal links transfer focus 
+  // to newly opened modal when clicked
+  $(document).on('opened.fndtn.reveal', '[data-reveal]', function (e) {
+    var $modal = $(this);
+    var $trigger = $(e.delegateTarget.activeElement);
+    $modal.data('revealTrigger', $trigger);
+    $modal.focus();
+  });
+  // TODO releasing focus to modal trigger does not work yet
+  $(document).on('closed.fndtn.reveal', '[data-reveal]', function () {
+    var $modal = $(this);
+    $modal.data('revealTrigger').focus();
+  });
+
   // $(':target').each(function(e){
   //   $this = $(this);
   //   $.uix.scrollToElement($this,true);
@@ -102,6 +116,7 @@ function init($content){
       }
     }
   });
+
 
   // initialize scroll callback for 
   // .fixed-inside-parent elements
