@@ -42,7 +42,7 @@ list:
   color: success
   unsplash: JibIPPrvITE
   summary: |
-    I listen to diverse stakeholder perspectives and facilitated clear communication.
+    I listen to diverse stakeholder perspectives and facilitate clear communication.
   accomplishments:
     - project_id: INFR/UA-Portfolio
       description: |
@@ -59,7 +59,7 @@ list:
   color: info
   unsplash: xNdPWGJ6UCQ
   summary: |
-    I develop functional and scalable code at every stage of the product lifecycle.
+    I contribute functional and scalable code at every stage of the product lifecycle.
   accomplishments:
     - project_id: OSU/Graduate-Education-Toolkit
       description: | 
