@@ -2377,8 +2377,8 @@ padding: 1em;
   .service-description {
     width: 80%;
     margin: 0 auto;
-    opacity: 0;
-    height: 0px;
+    opacity: .5;
+    // height: 340px;
     overflow:hidden;
     -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
     transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -2412,10 +2412,11 @@ padding: 1em;
   }
   
 
+  &:hover .service-description,
   &:focus .service-description,
   &.child-has-focus .service-description {
     opacity: 1;
-    height:340px;
+    // height:340px;
     // -webkit-transform: scale(1);
     // -ms-transform: scale(1);
     // transform: scale(1);
