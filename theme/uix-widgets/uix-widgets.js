@@ -373,8 +373,10 @@ $.extend( $.uix, {
       $('html, body').stop().animate({
           'scrollTop': targetOffset
       }, 900, 'swing', function () {
-          if(updateLocation) 
-            window.location.hash = updateLocation === true ? $target.attr('id') : updateLocation;
+            window.location.hash = 
+            updateLocation === true ? $target.attr('id') : 
+            updateLocation === false ? '' :
+            window.location.hash;
       });
     }
   },
@@ -1252,7 +1254,7 @@ $.uix.tabs.prototype.showPanel = function($panel){
   console.log('widget : %O',widget);
   console.log('tabClass : ',tabClass);
   effectOptions.complete = function(){
-     if(widget.options.scrollOnOpen) $.uix.scrollToElement($panel,false);
+     if(widget.options.scrollOnOpen) $.uix.scrollToElement($panel);
      if(widget.options.updateLocationHash) window.location.hash = $panel.attr('id');
      $panel.attr('aria-hidden', 'false').toggleClass(panelClass,true);
      $tab.attr('aria-expanded', 'true').attr('aria-selected', 'true').toggleClass(tabClass,true);//.attr('tabindex', '0'); 

@@ -200,7 +200,7 @@ function filterPortfolioItems(filterIds,doCloseAll){
         });
     }
     // if(!doShowAll && !doShowSome) filterPortfolioItems(false);
-    $.uix.scrollToElement('#portfolio',true);
+    $.uix.scrollToElement('#portfolio',false);
 }
 
 /**
