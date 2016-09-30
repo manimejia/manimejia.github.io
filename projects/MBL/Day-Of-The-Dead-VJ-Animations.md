@@ -4,7 +4,14 @@ title: Day Of The Dead VJ Animations
 startdate: 2002-10-15
 enddate: 2002-11-01
 website: http://manimejia.me/archive/?/projects/MBL/archive/DOD-2002-vj-animation
-role: Multimedia Designer
+# role: Multimedia Designer
+services:
+  -  
+  - Graphic Design
+  - Multimedia Production
+  - Front End Development
+  - Performance Art
+
 status: archived
 publish: 
  print: false

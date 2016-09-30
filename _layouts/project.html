@@ -8,7 +8,7 @@
 {% assign has_page_content = page.content | strip_html | strip | lstrip | rstrip | strip_newlines %}
 <article class="row" id="{{this_page_id}}-article" aria-labelledby="{{this_page_id}}-title">
   <nav class="column small-2 small-push-10 medium-1 medium-push-11 text-right" id="{{this_page_id}}-navigation">
-    <a title="close this tab" href="#{{this_page_id}}" class="close"><i class="fi-x"></i>
+    <a title="close this tab" href="#portfolio" class="close" data-tabs-toggle="{{this_page_id}}"><i class="fi-x"></i>
       <span style="display:block;
       position:absolute;
       left:-10000px;
@@ -39,7 +39,17 @@
 	    <div class="warning-text">
       {{ page.summary | markdownify }}
       </div>
-  	  {%endif%}   
+  	  {%endif%} 
+      {% for service in page.services %}
+      {% unless service == "" %}
+        <div class="inline">
+          <button class="button small" 
+          onclick="filterPortfolioItems('filter-{{service | slugify}}')" data-tabs-close>
+          {{service}}
+          </label>
+        </div>
+      {%endunless%}
+      {%endfor%}  
       <ul class="row no-bullet text-left font-smaller" role="presentation">
         {% if page.role %}
         <li class="column small-12 medium-6 " role="presentation">
@@ -261,7 +271,7 @@
       <li>
       {%unless page.assets.size == 1 %}
       <div style="height: 10rem;">
-        <a href=""class="th" role="button" aria-label="Thumbnail"
+        <a href="" class="th" role="button" aria-label="Thumbnail"
         data-reveal-id="{{this_page_id}}-asset{{forloop.index}}"
         style="max-height: 10rem;overflow: hidden;">
           <img src="{{this_page_assetpath}}{{asset.filename}}" alt="{{asset.caption}}" />
@@ -402,7 +412,7 @@
   </section>
   <nav class="text-center column">
     <br/>
-      <a title="close this tab" href="#{{this_page_id}}" class="grippy" tabindex="0">
+      <a title="close this tab" href="#portfolio" class="grippy" tabindex="0" data-tabs-toggle="{{this_page_id}}">
       &nbsp;&nbsp;
         <span style="display:block;
         position:absolute;

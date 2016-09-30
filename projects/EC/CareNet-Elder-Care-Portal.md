@@ -5,7 +5,15 @@ summary: A second generation suite of web and mobile applications to interface w
 startdate: 2009-08-15
 enddate: 2010-07-01
 website: 
-role: Product Design & Development Lead
+#role:  & Development Lead
+services:
+  - User Experience Design
+  - Graphic Design
+  - Rapid Prototyping
+  - Application Architecture
+  - Front End Development
+  - Back End Development
+
 status: 
 
 publish:  

@@ -5,7 +5,15 @@ summary: A 'college' level website for Oregon State University. It delivers info
 startdate: 2012-04-09
 enddate: 2014-09-21
 website: http://gradschool.oregonstate.edu
-role: Web Site Project Lead
+#role: Web Site Project Lead
+services:
+  - Website Design
+  - Information Architecture
+  - Content Strategy
+  - Front End Development
+  - Back End Development
+  - Cloud Services Integration
+
 publish:
  print: true
  main: true 

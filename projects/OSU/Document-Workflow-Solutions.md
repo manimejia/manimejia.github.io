@@ -5,7 +5,12 @@ summary: A workflow solution, based on Google Docs, to track the progress of pos
 startdate: 2014-01-01
 enddate: 2014-02-18
 website: 
-role: Product Design & Development Lead
+# role:  & Development Lead
+services:
+  - Front End Development
+  - Back End Development
+  - Cloud Services Integration
+
 publish:
  print: false
  main: true 

@@ -4,7 +4,16 @@ title: Wedding Website, Invitations, and Ring Design
 startdate: 2009-04-01
 enddate: 2010-05-01
 website: 
-role: Multimedia Designer
+# role: Multimedia Designer
+services:
+  - Website Design
+  -  
+  - Graphic Design
+  - Multimedia Production
+  - Front End Development
+  - Back End Development
+  - Marketing & Outreach
+
 status: archived
 publish: 
  print: false

@@ -356,24 +356,25 @@ $.extend( $.uix, {
       return $.uix[key] && $.uix[key].prototype ? $.uix[key].prototype instanceof $.Widget : false;
     });
   },
-  scrollToElement : function(elementId,updateLocation){
+  scrollToElement : function(elementId,updateLocation,useScrollOffset){
     var $target = $(elementId);
     if($target.length >0 ){
       var scrollOffset = Number($target.attr('data-scroll-offset')) || 0;
-      var targetOffset = 0;
+      var targetOffset = useScrollOffset === false ? 0 : scrollOffset;
       if($target.offset()){
-        targetOffset = $target.offset()['top'];
+        targetOffset += $target.offset()['top'];
       }else{
-       targetOffset = $target.offsetParent().offset()['top'];
-       targetOffset = targetOffset + $target.position()['top'];
+       targetOffset += $target.offsetParent().offset()['top'];
+       targetOffset += $target.position()['top'];
       }
       if($('body').hasClass('f-topbar-fixed')) targetOffset -= 45;
       // console.log('scrollTo : '+elementId+' ('+targetOffset+')');
       // console.log($target.offset());
       $('html, body').stop().animate({
-          'scrollTop': targetOffset + scrollOffset
+          'scrollTop': targetOffset
       }, 900, 'swing', function () {
-          if(updateLocation) window.location.hash = $target.attr('id');
+          if(updateLocation) 
+            window.location.hash = updateLocation === true ? $target.attr('id') : updateLocation;
       });
     }
   },
@@ -646,6 +647,10 @@ $.uix.tabs.prototype.configurations = {
           selectorAttributeName:'data-ajax-selector', // where to find the selector which will extract content from the documant returned by ajax()
         },
       },
+      // close:{ // the $close component identifies the button element that will close the current tab, if "tabsSelfClosable" = true.
+      //   selector:"button[name='close'],[role~='button'][name='close']",
+      //   selectorContext: "$panels",
+      // },
       next:{ // the $next component identifies the button element that will activate the "next" tab in the $tablist.
         selector:"button[name='next'],[role~='button'][name='next']",
       },
@@ -885,6 +890,7 @@ $.uix.tabs.prototype._create = function() {
   this.$tabListItems = this._createComponent('tabListItems');
   this.$tabs = this._createComponent('tabs');
   this.$panels = this._createComponent('panels');
+  this.$close = this._createComponent('close');
   this.$next = this._createComponent('next');
   this.$previous = this._createComponent('previous');
   this.$helpRegion = this._createComponent('helpRegion');
@@ -901,7 +907,7 @@ $.uix.tabs.prototype._create = function() {
 
   // console.log('New $.uix.tabs :'); 
   // console.log(this); 
-
+  // add method to access widget functions from element
 }
 
 /**
@@ -1053,7 +1059,15 @@ $.uix.tabs.prototype._processComponents = function() {
         widget.setTabIndex($tab);
       }
     });
- 
+  // process close buttons within each panel
+  // if(widget.$close.length){
+  //   widget.$close.each(function(){
+  //     var $currentPanel = widget.$panels.has(this);
+  //     $(this).click(function(event){
+  //       widget.hidePanels($currentPanel);
+  //       });
+  //     });
+  // }
   // process next and previous buttons, if they exist
   if(widget.$next.length){
     widget.$next.click(function(event){
@@ -1107,15 +1121,28 @@ $.uix.tabs.prototype._processComponents = function() {
 $.uix.tabs.prototype.initRemoteTabLinks = function($element){
   if(!$element || $element.length > 0) var $element = $('body');
   var widget = this;
-  $element.find($('a[role~="link"],a:not([role])')).each(function(){
-    var $targetTab = widget.$tabs.filter('[aria-controls~="'+this.hash.substring(1)+'"]');
-    if($targetTab.length){
+  var tabActions = ["close","open","toggle"];
+  var tabLinkAttr,tabExpand;
+  for(i in tabActions){
+    tabLinkAttr = "data-tabs-"+tabActions[i];
+    tabExpand = i == 0 ? false : i == 1 ? true : null ;
+    $element.find('['+tabLinkAttr+']').each(function(){
+      var targetIds = $(this).attr(tabLinkAttr).split(' ');
+      var $targetTabs = $();
+      for (i in targetIds){
+        $targetTabs = $targetTabs.add(widget.$tabs.filter('[aria-controls~="'+targetIds[i]+'"]'));
+      }
+      // $targetTabs = $targetTabs.length ? $targetTabs : null;
       $(this).click(function(e){
-        $targetTab.click()
-        e.preventDefault();
+        if(!$targetTabs.length){
+          widget.hidePanels();
+        }else{
+          widget.togglePanel($targetTabs,tabExpand);
+        }
+        // e.preventDefault();
       });
-    }
-  });
+    });
+  }
 }
 
 
@@ -1159,52 +1186,56 @@ $.uix.tabs.prototype.switchTabs = function($curTab, $newTab, expand) {
 // 
 $.uix.tabs.prototype.togglePanel = function($tab,expand) { 
   //console.group('Calling togglePanel($tab,expand):');
-  if(this.$tabs.index($tab) === -1) return false;
+  $tab = $tab || this.$tabs;
   expand = expand == null ? null : expand ? true : false;
-  //console.log('$tab : %O',$tab);
-  //console.log('expand : ',expand);
   var widget = this;
-  var $tabWrapper = this.$tabListItems.has($tab);
-  var $panel = this.getTabPanel($tab); 
-  var panelHidden = this.isPanelHidden($panel);
-  var panelId = $panel.id;
-  // var panelLoadUri = $panel.attr('data-load');
-  // var effectOptions = $.extend(true, {}, this.options.effectOptions);
-  // var openingDelay = 0;
-  var panelsToClose = [];
-  // console.log('$tabWrapper : %O',$tabWrapper);
-  // console.log('$panel : %O',$panel);
-  // console.log('panelHidden : ',panelHidden);
-  // console.log('tabsSelfClosable : ',this.options.tabsSelfClosable);
 
-  if(panelHidden == false && this.options.tabsSelfClosable == true && !expand){
-     $panelsToClose = $panel;
-     if(window.location.hash == '#'+panelId) this._clearLocationHash();
-  }else if(panelHidden == true && this.options.tabsMultiSelectable == false){
-     $panelsToClose = this.getExpandedPanels();
-  }
-  //console.log('$panelsToClose : %O',$panelsToClose);
-
-  if($panelsToClose.length > 0){ 
-    if($panelsToClose.is($panel) && widget.options.scrollOnOpen){ 
-      $.uix.scrollToElement($tabWrapper,false);
-      $tab.focus(); //$panel.attr('aria-hidden', 'true').removeClass('active'); 
+  if(widget.$tabs.index($tab) === -1) return false;
+  $tab.each(function(){
+    //console.log('$tab : %O',$tab);
+    //console.log('expand : ',expand);
+    var $tabWrapper = widget.$tabListItems.has($tab);
+    var $panel = widget.getTabPanel($tab); 
+    var panelHidden = widget.isPanelHidden($panel);
+    var panelId = $panel.id;
+    // var panelLoadUri = $panel.attr('data-load');
+    // var effectOptions = $.extend(true, {}, this.options.effectOptions);
+    // var openingDelay = 0;
+    var panelsToClose = [];
+    // console.log('$tabWrapper : %O',$tabWrapper);
+    // console.log('$panel : %O',$panel);
+    // console.log('panelHidden : ',panelHidden);
+    // console.log('tabsSelfClosable : ',this.options.tabsSelfClosable);
+  
+    if(panelHidden == false && widget.options.tabsSelfClosable == true && expand !== true){
+       $panelsToClose = $panel;
+       if(window.location.hash == '#'+panelId) widget._clearLocationHash();
+    }else if(panelHidden == true && widget.options.tabsMultiSelectable == false && expand !== false){
+       $panelsToClose = widget.getExpandedPanels();
     }
-    this.hidePanels($panelsToClose);
-  }
-
-  if(panelHidden == true || expand===true) { 
-
-    if(this.isTabPanelLoaded($tab)) {
-      this.showPanel($panel);
-      // this.effectShow($panel,effectOptions,openingDelay);
-    }else{
-      this.loadAjaxPanelContent($panel);
+    //console.log('$panelsToClose : %O',$panelsToClose);
+  
+    if($panelsToClose.length > 0){ 
+      if($panelsToClose.is($panel) && widget.options.scrollOnOpen){ 
+        // $.uix.scrollToElement($tabWrapper,false,false);
+        $tab.focus(); //$panel.attr('aria-hidden', 'true').removeClass('active'); 
+      }
+      widget.hidePanels($panelsToClose);
     }
-    //$panel.attr('aria-hidden', 'false').addClass('active'); 
-    //$panel.slideDown(100); 
-  }
-  //console.groupEnd();
+  
+    if(panelHidden == true || expand===true) { 
+  
+      if(widget.isTabPanelLoaded($tab)) {
+        widget.showPanel($panel);
+        // this.effectShow($panel,effectOptions,openingDelay);
+      }else{
+        widget.loadAjaxPanelContent($panel);
+      }
+      //$panel.attr('aria-hidden', 'false').addClass('active'); 
+      //$panel.slideDown(100); 
+    }
+    //console.groupEnd();
+  });
 } // end togglePanel() 
 
 $.uix.tabs.prototype.showPanel = function($panel){
@@ -1236,6 +1267,7 @@ $.uix.tabs.prototype.showPanel = function($panel){
 }
 
 $.uix.tabs.prototype.hidePanels = function($panels){
+  $panels = $panels || this.getExpandedPanels();
   var widget = this;
       tabClass = widget.options.components.tabs.classes.expanded || 'expanded',
       panelClass = widget.options.components.panels.classes.expanded || 'expanded',

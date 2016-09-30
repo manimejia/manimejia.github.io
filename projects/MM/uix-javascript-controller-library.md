@@ -5,7 +5,11 @@ summary: A JavaScript library for implementing ARIA standard widget interactions
 startdate: 2015-01-01
 enddate: 2015-06-01
 website: http://github.com/manimejia/uix
-role: Product Design & Development Lead
+# role:  & Development Lead
+services:
+  - Product Design 
+  - Front End Development
+
 status: repository
 publish:
  print: true

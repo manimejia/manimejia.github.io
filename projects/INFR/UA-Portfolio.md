@@ -5,7 +5,13 @@ summary: A course management system to support the [United Association](http://u
 startdate: 2015-03-09
 enddate: 2015-08-15
 #website: https://www.uaportfolio.com
-role: Product Design & Development Lead
+#role:  & Development Lead
+services:
+  - User Experience Design
+  - Application Architecture
+  - Front End Development
+
+
 status: 
 
 publish:  

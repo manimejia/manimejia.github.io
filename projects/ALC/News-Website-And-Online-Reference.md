@@ -4,7 +4,14 @@ title: News Website & Online Reference
 startdate: 2007-07-01
 enddate: 2007-12-01
 website: https://web.archive.org/web/20111016060516/http://www.animallawcoalition.com/
-role: Web Site Project Lead
+# role: Web Site Project Lead
+services:
+  - Website Design 
+  - Graphic Design
+  - Information Architecture
+  - Front End Development
+  - Back End Development
+
 status: archived
 publish: 
  print: false

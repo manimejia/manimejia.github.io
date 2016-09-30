@@ -4,7 +4,14 @@ title: Mandala Animation for Techno Tribal Dance
 startdate: 2002-05-01
 enddate: 2002-06-01
 website: http://manimejia.me/archive/?//www.youtube.com/embed/uOOMJqwrz9E
-role: Multimedia Designer
+# role: Multimedia Designer
+services:
+  -  
+  - Graphic Design
+  - Multimedia Production
+  - Front End Development
+  - Performance Art
+
 status: archived
 publish: 
  print: false

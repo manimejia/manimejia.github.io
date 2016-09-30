@@ -6,7 +6,15 @@ summary: |
 startdate: 2009-05-01
 enddate: 2009-09-01
 website: 
-role: Web Site Project Lead
+# role: Web Site Project Lead
+services:
+  - Website Design
+  - User Experience Design
+  - Information Architecture
+  - Content Strategy
+  - Front End Development
+  - Back End Development
+
 status: retired
 
 publish:  

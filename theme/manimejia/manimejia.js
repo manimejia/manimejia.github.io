@@ -158,6 +158,51 @@ function init($content){
 
 };
 
+function filterPortfolioItems(filterIds,doCloseAll){
+  filterIds = 
+    typeof filterIds === "string" ? [filterIds] :
+    filterIds instanceof Array ? filterIds :
+    filterIds === false ? false :
+    null;
+  doCloseAll = doCloseAll == false ? false : true;
+  var 
+    $portfolioFilters = $('#portfolio-filters'),
+    $portfolioList = $('#portfolio-accordion-grid'),
+    showAllClass = 'filter-show-all',
+    showItemClass = 'filter-show',
+    filterAttr = 'data-filter',
+    doShowSome = false;
+
+    if(filterIds === false){
+      $portfolioList.addClass(showAllClass)
+        .find('['+filterAttr+']').removeClass(showItemClass);
+      $portfolioFilters.addClass(showAllClass)
+        .find('['+filterAttr+']').prop('checked',false);
+    }else{
+      if(filterIds instanceof Array){
+        for(i in filterIds){
+          if(typeof filterIds[i] === "string")
+          $("#"+filterIds[i], $portfolioFilters).prop('checked',true);
+        }
+      }
+      $portfolioList.removeClass(showAllClass)
+        .find('.'+showItemClass).removeClass(showItemClass);
+      $portfolioFilters.removeClass(showAllClass)
+        .find('input').each(function(){
+          var $input = $(this),
+            isChecked = $input.prop('checked'),
+            filterVal = $input.attr(filterAttr),
+            $filteredItems = $portfolioList.find('['+filterAttr+'~='+filterVal+']');
+          if(isChecked){
+            doShowSome = true;
+            $filteredItems.addClass(showItemClass)
+          }
+        });
+    }
+    // if(!doShowAll && !doShowSome) filterPortfolioItems(false);
+    $.uix.scrollToElement('#portfolio',true);
+}
+
 /**
 * http://stackoverflow.com/questions/22581345/click-button-copy-to-clipboard-using-jquery
 */

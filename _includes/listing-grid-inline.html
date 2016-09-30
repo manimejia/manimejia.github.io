@@ -323,53 +323,23 @@ display:none;
 
 
 <script>
-function filterPortfolioItems(doShowAll){
-  doShowAll = doShowAll == true ? true : false;
-  var 
-    $portfolioFilters = $('#portfolio-filters'),
-    $portfolioList = $('#portfolio-accordion-grid'),
-    showAllClass = 'filter-show-all',
-    showItemClass = 'filter-show',
-    filterAttr = 'data-filter',
-    doShowSome = false;
 
-    if(doShowAll){
-      $portfolioList.addClass(showAllClass)
-        .find('['+filterAttr+']').removeClass(showItemClass);
-      $portfolioFilters.addClass(showAllClass)
-        .find('['+filterAttr+']').prop('checked',false);
-    }else{
-      $portfolioList.removeClass(showAllClass);
-      $portfolioFilters.removeClass(showAllClass)
-        .find('input').each(function(){
-          var $input = $(this),
-            isChecked = $input.prop('checked'),
-            filterVal = $input.attr(filterAttr),
-            $filteredItems = $portfolioList.find('['+filterAttr+'='+filterVal+']');
-          if(isChecked){
-            doShowSome = true;
-            $filteredItems.addClass(showItemClass)
-          }else{
-            $filteredItems.removeClass(showItemClass)
-          }
-        });
-    }
-    if(!doShowAll && !doShowSome) filterPortfolioItems(true);
-}
 </script>
 
-{% assign unique_roles = ""%}
+{% assign unique_services = ""%}
 {% for this_page in these_pages reversed %}
-{% if this_page.client %}
-{% unless this_page.publish.draft %}
-{% unless unique_roles contains this_page.role %}
-{% assign unique_roles = unique_roles | append : ',' | append : this_page.role%}
-{%endunless%}
-{%endunless%}
-{%endif%}
-
+  {% if this_page.client %}
+    {% unless this_page.publish.draft %}
+      {% for this_service in this_page.services %}
+        {% unless unique_services contains this_service %}
+          {% assign unique_services = unique_services | append : ',' | append : this_service%}
+        {%endunless%}
+      {%endfor%}
+    {%endunless%}
+  {%endif%}
 {%endfor%}
-{%assign unique_roles = unique_roles | split : ',' %}
+
+{%assign unique_services = unique_services | split : ',' | sort %}
 <div class="row">
 <nav class="column small-12 medium-10 small-centered">
 <div id="portfolio-filters"
@@ -377,17 +347,17 @@ class="toggle text-center"
 data-toggle="buttons-radio">
 <button id="filter-show-all" data-toggle="button" 
 class="button info small"
-onclick="filterPortfolioItems(true)">
-Show All</button>
+onclick="filterPortfolioItems(false)">
+Show All Projects</button>
 
-{% for role in unique_roles %}
-{% unless role == "" %}
+{% for service in unique_services %}
+{% unless service == "" %}
   <div class="inline">
-    <input type="checkbox" id="filter-{{role | slugify }}" name="filter-radios" 
-    data-toggle="button" data-filter="{{role | slugify }}"
+    <input type="radio" id="filter-{{service | slugify }}" name="filter-radios" 
+    data-toggle="button" data-filter="{{service | slugify }}"
     onclick="filterPortfolioItems()">
-    <label class="button check fi-check small" for="filter-{{role | slugify }}">
-    {{role}}
+    <label class="button check fi-check small" for="filter-{{service | slugify }}" data-tabs-close>
+    {{service}}
     </label>
   </div>
 {%endunless%}
@@ -410,8 +380,10 @@ data-aria-tab-group="accordion-grid"
   {% assign item_year = this_page_date | date: '%Y' %}
   {% unless last_item_year %}{% assign last_item_year = 0000 %}{% endunless %}
 
+  {%capture this_page_services%}{%for this_service in this_page.services%} {{this_service | slugify }}{%endfor%}{%endcapture%}
+
     <li id="{{ this_page_id }}-wrapper" 
-    data-filter="{{this_page.role | slugify }}"
+    data-filter="{{this_page_services}}"
     class="accordion-grid-item hasyear-{{this_page_date | date: '%Y' }}">
       <h3 class="year inline-block primary-text" role="heading"><time class="label warning point-right">{{ item_year }}</time></h3>
     {% if item_year != last_item_year %}

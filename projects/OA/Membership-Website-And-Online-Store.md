@@ -9,7 +9,14 @@ enddate: 2008-12-01
 
 website: http://organicathlete.org
 
-role: Web Site Project Lead
+# role: Web Site Project Lead
+services:
+  - Website Design
+  - Graphic Design
+  - Information Architecture
+  - Front End Development
+  - Back End Development
+
 
 publish: 
   print: false

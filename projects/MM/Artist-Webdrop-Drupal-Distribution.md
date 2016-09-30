@@ -4,7 +4,14 @@ title: Artist Webdrop (Drupal Distribution)
 startdate: 2008-07-01
 enddate: 2008-10-01
 website: 
-role: Product Design & Development Lead
+# role:  & Development Lead
+services:
+  - Product Design 
+  - Graphic Design
+  - Front End Development
+  - Back End Development
+  - Marketing & Outreach
+
 status: retired
 publish: 
  print: false

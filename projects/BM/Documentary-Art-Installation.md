@@ -4,7 +4,12 @@ title: Burning Man Documentary Art Installation
 startdate: 2005-07-01
 enddate: 2005-08-01
 website: 
-role: Multimedia Designer
+# role: Multimedia Designer
+services:
+  - Graphic Design
+  - Multimedia Production
+  - Performance Art
+
 status: retired
 
 publish: 

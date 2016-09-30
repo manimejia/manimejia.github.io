@@ -10,7 +10,14 @@ login:
     role: Applicant
     email: manimejia.me@gmail.com
     pass: test4OSUapp
-role: Product Design & Development Lead
+# role:  & Development Lead
+services:
+  - Application Architecture
+  - User Experience Design
+  - Rapid Prototyping
+  - Front End Development
+  - Cloud Services Integration
+
 publish:
  print: true
  main: true 

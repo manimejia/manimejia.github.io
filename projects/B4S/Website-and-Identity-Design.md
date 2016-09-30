@@ -4,7 +4,13 @@ title: Non-Profit Identity Design
 startdate: 2003-07-01
 enddate: 2003-09-01
 website: archive/?/projects/B4S/assets/b4s-WebNav/schoolbus.html
-role: Multimedia Designer
+# role: Multimedia Designer
+services:
+  - Graphic Design
+  - Multimedia Production
+  - Marketing & Outreach
+
+
 status: archived
 publish: 
  print: false

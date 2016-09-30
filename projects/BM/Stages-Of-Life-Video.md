@@ -4,7 +4,10 @@ title: Stages of Life Documentary Video
 startdate: 2001-05-01
 enddate: 2001-08-01
 website: 
-role: Multimedia Designer
+# role: Multimedia Designer
+services:
+  - Multimedia Production
+  - Performance Art
 status: archived
 
 publish: 
@@ -25,4 +28,4 @@ tasks:
  - Edited the many hours of "green screen" interview footage into a final 5 minute short movie.
  - Presented this video to an audience of thousands, on a 50 foot video screen at the Burning Man arts festival.
 ---
-
+ 

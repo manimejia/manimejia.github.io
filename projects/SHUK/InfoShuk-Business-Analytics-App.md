@@ -5,7 +5,15 @@ summary: A SaaS web application to help small and medium businesses make strateg
 startdate: 2015-10-09
 enddate: 2016-02-29
 website: http://www.infoshuk.com
-role: Product Design & Development Lead
+# role:  & Development Lead
+services:
+  - Product Design 
+  - User Experience Design
+  - Rapid Prototyping
+  - Application Architecture
+  - Front End Development
+  - Cloud Services Integration
+
 status: 
 
 publish:  

@@ -5,7 +5,19 @@ summary: A mobile first web app to facilitate rich story telling and charitable 
 startdate: 2016-05-05
 enddate: 2016-05-20
 website: http://carry.us.org
-role: Product Design & Development Lead
+services: 
+  - Product Design
+  - Website Design
+  - Graphic Design
+  - Content Strategy
+  - Multimedia Production
+  - User Experience Design
+  - Application Architecture
+  - Rapid Prototyping
+  - Front End Development
+  - Back End Development
+  - Cloud Services Integration
+  - Marketing & Outreach
 status: 
 
 publish:

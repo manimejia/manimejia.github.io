@@ -4,7 +4,14 @@ title: Artist's Portfolio Website
 startdate: 2008-06-01
 enddate: 2008-11-01
 website: http://cyrusmejia.com
-role: Web Site Project Lead
+# role: Web Site Project Lead
+services:
+  - Website Design
+  - Graphic Design
+  - Information Architecture
+  - Front End Development
+  - Back End Development
+
 status: live
 
 publish:  

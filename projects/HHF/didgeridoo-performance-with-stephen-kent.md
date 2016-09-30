@@ -4,7 +4,10 @@ client: HHF
 startdate: 2000-06-01
 enddate: 2000-06-01
 website: 
-role: Performance Artist
+# role: Performance Artist
+services:
+  - Performance Art
+
 publish: 
  main: true
 status: complete
