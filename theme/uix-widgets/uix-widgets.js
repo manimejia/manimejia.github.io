@@ -1131,11 +1131,12 @@ $.uix.tabs.prototype.initRemoteTabLinks = function($element){
     $element.find('['+tabLinkAttr+']').each(function(){
       var targetIds = $(this).attr(tabLinkAttr).split(' ');
       var $targetTabs = $();
+      var targetEvent = $(this).is('select') ? 'change' : 'click';
       for (i in targetIds){
         $targetTabs = $targetTabs.add(widget.$tabs.filter('[aria-controls~="'+targetIds[i]+'"]'));
       }
       // $targetTabs = $targetTabs.length ? $targetTabs : null;
-      $(this).click(function(e){
+      $(this)[targetEvent](function(e){
         if(!$targetTabs.length){
           widget.hidePanels();
         }else{

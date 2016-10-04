@@ -341,26 +341,33 @@ display:none;
 
 {%assign unique_services = unique_services | split : ',' | sort %}
 <div class="row">
-<nav class="column small-12 medium-10 small-centered">
-<div id="portfolio-filters"
-class="toggle text-center" 
-data-toggle="buttons-radio">
-<button id="filter-show-all" data-toggle="button" data-tabs-close class="button info small" onclick="filterPortfolioItems(false)">
-Show All Projects</button>
-
-{% for service in unique_services %}
-{% unless service == "" %}
-  <div class="inline">
-    <input type="radio" id="filter-{{service | slugify }}" name="filter-radios" 
-    data-toggle="button" data-filter="{{service | slugify }}"
-    onclick="filterPortfolioItems()">
-    <label class="button check fi-check small" for="filter-{{service | slugify }}" data-tabs-close>
-    {{service}}
-    </label>
-  </div>
-{%endunless%}
-{%endfor%}
+<nav id="portfolio-filters" class="column small-12 medium-10 small-centered">
+<div id="portfolio-filters-buttons" class="toggle text-center show-for-medium-up" data-toggle="buttons-radio">
+  <button id="filter-show-all" data-toggle="button" data-tabs-close class="button info   small" onclick="filterPortfolioItems(false)">
+  Show All Projects</button>
+  
+  {% for service in unique_services %}
+  {% unless service == "" %}
+    <div class="inline">
+      <input type="radio" id="filter-{{service | slugify }}" name="filter-radios" 
+      data-toggle="button" data-filter="{{service | slugify }}"
+      onclick="filterPortfolioItems()">
+      <label class="button check fi-check small" for="filter-{{service | slugify }}"   data-tabs-close>
+      {{service}}
+      </label>
+    </div>
+  {%endunless%}
+  {%endfor%}
 </div>
+<select id="portfolio-filters-select" class="show-for-small-only"
+onchange="filterPortfolioItems($(this).val())" data-tabs-close>
+  <option value="showall">Show All Projects</option>
+  {% for service in unique_services %}
+  {% unless service == "" %}
+  <option value="{{service | slugify }}">{{service}}</option>
+  {%endunless%}
+  {%endfor%} 
+</select>
 </nav>
 
 <ul id="portfolio-accordion-grid" class="accordion-grid column filter-show-all text-center" role="tablist"

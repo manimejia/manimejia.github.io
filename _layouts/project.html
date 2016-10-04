@@ -44,9 +44,9 @@
       {% unless service == "" %}
         <div class="inline">
           <button class="button small" 
-          onclick="filterPortfolioItems('filter-{{service | slugify}}')" data-tabs-close>
+          onclick="filterPortfolioItems('{{service | slugify}}')" data-tabs-close>
           {{service}}
-          </label>
+          </button>
         </div>
       {%endunless%}
       {%endfor%}  

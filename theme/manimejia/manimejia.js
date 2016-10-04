@@ -158,11 +158,11 @@ function init($content){
 
 };
 
-function filterPortfolioItems(filterIds,doCloseAll){
-  filterIds = 
-    typeof filterIds === "string" ? [filterIds] :
-    filterIds instanceof Array ? filterIds :
-    filterIds === false ? false :
+function filterPortfolioItems(newVals,doCloseAll){
+  newVals = 
+    typeof newVals === "string" ? [newVals] :
+    newVals instanceof Array ? newVals :
+    newVals === false ? false :
     null;
   doCloseAll = doCloseAll == false ? false : true;
   var 
@@ -171,34 +171,35 @@ function filterPortfolioItems(filterIds,doCloseAll){
     showAllClass = 'filter-show-all',
     showItemClass = 'filter-show',
     filterAttr = 'data-filter',
+    filterVal = 'showall',
     doShowSome = false;
 
-    if(filterIds === false){
+    if(newVals === false || (newVals && newVals.toString() === filterVal)){
       $portfolioList.addClass(showAllClass)
         .find('['+filterAttr+']').removeClass(showItemClass);
       $portfolioFilters.addClass(showAllClass)
         .find('['+filterAttr+']').prop('checked',false);
     }else{
-      if(filterIds instanceof Array){
-        for(i in filterIds){
-          if(typeof filterIds[i] === "string")
-          $("#"+filterIds[i], $portfolioFilters).prop('checked',true);
+      if(newVals instanceof Array){
+        for(i in newVals){
+          if(typeof newVals[i] === "string")
+          $("input["+filterAttr+"="+newVals[i]+"]", $portfolioFilters).prop('checked',true);
         }
       }
       $portfolioList.removeClass(showAllClass)
         .find('.'+showItemClass).removeClass(showItemClass);
       $portfolioFilters.removeClass(showAllClass)
         .find('input').each(function(){
-          var $input = $(this),
-            isChecked = $input.prop('checked'),
-            filterVal = $input.attr(filterAttr),
-            $filteredItems = $portfolioList.find('['+filterAttr+'~='+filterVal+']');
-          if(isChecked){
+          var $input = $(this);
+          if($input.prop('checked')){
+            filterVal = $input.attr(filterAttr);
             doShowSome = true;
-            $filteredItems.addClass(showItemClass)
+            $portfolioList.find('['+filterAttr+'~='+filterVal+']').addClass(showItemClass);
           }
         });
     }
+    $portfolioFilters.find('select').val(filterVal);
+    $filterDisplaySelected.content('All Projects');
     // if(!doShowAll && !doShowSome) filterPortfolioItems(false);
     $.uix.scrollToElement('#portfolio',false);
 }
