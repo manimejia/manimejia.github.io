@@ -7,7 +7,7 @@
 {% endunless %}
 
 {% if person.references %}
-<ul class="no-bullet medium-block-grid-1 large-block-grid-{{include.grid | default : '1'}}" role="presentation">
+<ul class="no-bullet small-block-grid-1 medium-block-grid-{{include.grid | default : '1'}}" role="presentation">
 {%for reference in person.references %}
   <li role="presentation" class="">
     <div class="vcard vcard-horizontal row">
