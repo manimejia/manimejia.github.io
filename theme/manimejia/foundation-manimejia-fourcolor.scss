@@ -2459,8 +2459,20 @@ padding: 1em;
 		width:49%;
 	}
 }
+.vcard.print-layout{
+	text-align:left;
+
+	> figure,
+	.vcard-info ul{
+		font-size: 1em;
+		float:left;
+		width:33%;
+	}
+}
+
 .vcard.vcard-horizontal{
-	text-align: inherit;
+text-align: inherit;
+
 	.vcard-picture{
 			width:auto;
 			height:auto;

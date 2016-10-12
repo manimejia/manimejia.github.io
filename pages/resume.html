@@ -20,16 +20,17 @@ style: |
 
 ---
 {% assign highlight_color = 'alert' %}
+{% assign person = site.data.people.manimejia %}
 
 {%capture pagetitle%}
-<small class="left" style="margin-top:1em">{{page.title}}</small>
+{{ person.name }} - {{page.title}}
 {%endcapture%}
 
 {% include page-title.html title=pagetitle%}
 
-<section id="contact" class="text-center" role="region" 
+<section id="contact" class="text-left" role="region" 
   aria-labelledby="contact-heading">
-  {% include aboutme.html color=highlight_color id="contact" %}
+  {% include vcard.html person=person noname=true id=include.id print=true%}
 </section>
 
 {% comment %}
@@ -53,7 +54,12 @@ Professional Experience <br>
 </figure>
 </section>
 
+
 <hr class="hide-for-print"/>
+<br class="hide-for-screen"/>
+<br class="hide-for-screen"/>
+<br class="hide-for-screen"/>
+<br class="hide-for-screen"/>
 <br class="hide-for-screen"/>
 <br class="hide-for-screen"/>
 <br class="hide-for-screen"/>
@@ -70,11 +76,7 @@ Professional Experience <br>
 </div>
 </section>
 
-<br class="hide-for-screen"/>
-<br class="hide-for-screen"/>
-<br class="hide-for-screen"/>
 <hr class="hide-for-print"/>
-
 <section id="education" class="row avoid-breaking-page" aria-labelledby="education-label">
 <h2 id="education-label" class="column">Education</h2>
 <div class="column">
