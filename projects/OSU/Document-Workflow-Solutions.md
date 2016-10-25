@@ -7,6 +7,7 @@ enddate: 2014-02-18
 website: 
 # role:  & Development Lead
 services:
+  - Project Management 
   - Front End Development
   - Back End Development
   - Cloud Services Integration

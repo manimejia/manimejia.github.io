@@ -6,7 +6,8 @@ enddate: 2006-12-01
 website:
 # role: Multimedia Designer
 services:
-  - Website Design
+  - Website Design 
+  - Project Management 
   - Graphic Design
   - Marketing & Outreach
 

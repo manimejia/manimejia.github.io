@@ -8,6 +8,7 @@ website: http://github.com/manimejia/uix
 # role:  & Development Lead
 services:
   - Product Design 
+  - Project Management 
   - Front End Development
 
 status: repository

@@ -7,6 +7,8 @@ enddate: 2010-07-01
 website: 
 #role:  & Development Lead
 services:
+  - Product Design
+  - Project Management 
   - User Experience Design
   - Graphic Design
   - Rapid Prototyping

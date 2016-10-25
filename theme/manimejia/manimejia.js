@@ -76,6 +76,13 @@ $(document).ready(function(){
 
   init();
 
+  // take action on URL params
+  var filterParam = getUrlParameter('filter');
+  if(filterParam){
+    filterPortfolioItems(decodeURIComponent(filterParam));
+  }
+
+
 });
 
 function init($content){
@@ -199,7 +206,7 @@ function filterPortfolioItems(newVals,doCloseAll){
         });
     }
     $portfolioFilters.find('select').val(filterVal);
-    $filterDisplaySelected.content('All Projects');
+    // $filterDisplaySelected.content('All Projects');
     // if(!doShowAll && !doShowSome) filterPortfolioItems(false);
     $.uix.scrollToElement('#portfolio',false);
 }

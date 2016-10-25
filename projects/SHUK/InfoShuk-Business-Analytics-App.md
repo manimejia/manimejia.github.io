@@ -8,6 +8,7 @@ website: http://www.infoshuk.com
 # role:  & Development Lead
 services:
   - Product Design 
+  - Project Management 
   - User Experience Design
   - Rapid Prototyping
   - Application Architecture

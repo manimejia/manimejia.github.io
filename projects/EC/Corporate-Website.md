@@ -8,7 +8,8 @@ enddate: 2009-09-01
 website: 
 # role: Web Site Project Lead
 services:
-  - Website Design
+  - Website Design 
+  - Project Management 
   - User Experience Design
   - Information Architecture
   - Content Strategy

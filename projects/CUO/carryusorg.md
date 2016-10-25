@@ -7,7 +7,8 @@ enddate: 2016-05-20
 website: http://carry.us.org
 services: 
   - Product Design
-  - Website Design
+  - Website Design 
+  - Project Management 
   - Graphic Design
   - Content Strategy
   - Multimedia Production

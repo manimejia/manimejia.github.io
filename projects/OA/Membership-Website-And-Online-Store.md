@@ -11,7 +11,8 @@ website: http://organicathlete.org
 
 # role: Web Site Project Lead
 services:
-  - Website Design
+  - Website Design 
+  - Project Management 
   - Graphic Design
   - Information Architecture
   - Front End Development

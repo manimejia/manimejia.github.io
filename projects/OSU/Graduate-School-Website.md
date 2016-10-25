@@ -7,7 +7,8 @@ enddate: 2014-09-21
 website: http://gradschool.oregonstate.edu
 #role: Web Site Project Lead
 services:
-  - Website Design
+  - Website Design 
+  - Project Management 
   - Information Architecture
   - Content Strategy
   - Front End Development

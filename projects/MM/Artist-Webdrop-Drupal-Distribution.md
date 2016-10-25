@@ -7,6 +7,7 @@ website:
 # role:  & Development Lead
 services:
   - Product Design 
+  - Project Management 
   - Graphic Design
   - Front End Development
   - Back End Development

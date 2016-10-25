@@ -7,6 +7,7 @@ website: https://web.archive.org/web/20111016060516/http://www.animallawcoalitio
 # role: Web Site Project Lead
 services:
   - Website Design 
+  - Project Management  
   - Graphic Design
   - Information Architecture
   - Front End Development

@@ -9,6 +9,7 @@ website: http://manimejia.me/archive/?/projects/BFAS/assets/BFAS-Tour12
 # role: Multimedia Designer 
 services:
   - Product Design 
+  - Project Management 
   - User Experience Design
   - Graphic Design
   - Multimedia Production
