@@ -7,6 +7,7 @@ enddate: 2015-08-15
 #website: https://www.uaportfolio.com
 #role:  & Development Lead
 services:
+  - Project Management
   - User Experience Design
   - Application Architecture
   - Front End Development
