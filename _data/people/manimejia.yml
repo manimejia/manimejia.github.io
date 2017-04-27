@@ -158,15 +158,25 @@ education:
 
 employment:
   - 
+    employer: Various Clients
+    website: manimejia.me
+    location: Ann Arbor, Mi
+    title:  Freelance Web Designer / Developer 
+    dates: November 2016 – Current
+    company: |
+      
+    description: |
+      In these last few months I have focussed on catching up with smaller projects and strenthening relations with previous clients. While these projects are not featured in my porfolio, this time is none the less just as important as any other. While updating simple bochure websites, developing APIs for legacy systems, and co-designing potential business ventures,  I have been leveraging this transition time to tie up loose ends and spark new connections in preparation for changes to come …
+  - 
     employer: Carry.Us.Org
     website: carry.us.org
     location: Ann Arbor, Mi
     title:  Founder / Product Designer
-    dates: April 2016 – Current
+    dates: April 2016 – November 2016
     company: |
       Carry.Us.Org is a pre-funding technology-for-good startup focused on supporting charitable athletes to do good and go further.
     description: |
-      As the founder and product lead for this pre-funding technology-for-good startup, I am creating a mobile-first storytelling and charitable fundraising platform for inspired athletes (Carry.Us.Org). This SaaS platform will enable individuals and teams to promote and raise money for the charitable causes they care about, while sharing multimedia stories of their own athletic and fitness journey. Since spring of 2016, I have been focused on identifying the core audience and thier problems, designing a product and suite of services to address these problems, and creating a business plan and a marketing campaign around this solution.
+      As the founder and product lead for this pre-funding technology-for-good startup, I designed a mobile-first storytelling and charitable fundraising platform for inspired athletes (Carry.Us.Org). This SaaS platform will enable individuals and teams to promote and raise money for the charitable causes they care about, while sharing multimedia stories of their own athletic and fitness journey. Since spring of 2016, I have been focused on identifying the core audience and thier problems, designing a product and suite of services to address these problems, and creating a business plan and a marketing campaign around this solution.
   - 
     employer: InfoShuk
     website: infoshuk.com
