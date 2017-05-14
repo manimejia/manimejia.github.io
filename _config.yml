@@ -2,6 +2,7 @@ markdown: kramdown
 permalink: none
 include: 
   - blog 
+  - resume
 exclude:
   - CNAME
   - Gemfile
@@ -130,6 +131,10 @@ defaults:
       category: "project"
       hide: 
         title: true
+  - scope:
+      path: "resume/manimejia.pdf"
+    values:
+      redirect_from: "/resume"
   # -
   #   scope:
   #     type: "page"
@@ -171,7 +176,7 @@ config:
       - name: Portfolio
         url: "/portfolio"
       - name: Resum&eacute;
-        url: "/resume"
+        url: "/resume/manimejia.pdf"
       - name: Contact
         url: "#contact"
         #class: small button
