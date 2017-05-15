@@ -177,6 +177,7 @@ config:
         url: "/portfolio"
       - name: Resum&eacute;
         url: "/resume/manimejia.pdf"
+        class: "button alert"
       - name: Contact
         url: "#contact"
         #class: small button
