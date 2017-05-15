@@ -178,6 +178,7 @@ config:
       - name: Resum&eacute;
         url: "/resume/manimejia.pdf"
         class: "button alert"
+        target: "_blank"
       - name: Contact
         url: "#contact"
         #class: small button
