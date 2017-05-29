@@ -1,9 +1,10 @@
 ---
-client: BM
 title: Burning Man Arts Festival
+client: BM
 logo: 
-website:
+website: 
 location: 
 category: client
 layout: client
 ---
+

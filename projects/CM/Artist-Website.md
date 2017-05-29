@@ -1,24 +1,20 @@
 ---
-client: CM
 title: Artist's Portfolio Website
-startdate: 2008-06-01
-enddate: 2008-11-01
+client: CM
+startdate: 2008-06-01 00:00:00 Z
+enddate: 2008-11-01 00:00:00 Z
 website: http://cyrusmejia.com
-# role: Web Site Project Lead
 services:
-  - Website Design 
-  - Project Management 
-  - Graphic Design
-  - Information Architecture
-  - Front End Development
-  - Back End Development
-
+- Website Design
+- Project Management
+- Graphic Design
+- Information Architecture
+- Front End Development
+- Back End Development
 status: live
-
-publish:  
- print: false
- main: true 
-
+publish:
+  print: false
+  main: true
 tags:
 - Drupal
 - User Experience
@@ -33,27 +29,31 @@ tags:
 - Mockups and Wireframes
 - Drupal Modules
 - Drupal Theme
-
-thumbnail: "icon-cyrus-lg_thumb128.jpg"
-
+thumbnail: icon-cyrus-lg_thumb128.jpg
 assets:
 - filename: CyrusMejia-HomePage.jpg
-  caption: Screenshot from the home page featuring a carousel of promoted images from the galleries.
+  caption: Screenshot from the home page featuring a carousel of promoted images from
+    the galleries.
 - filename: CyrusMejia-Galleries.jpg
-  caption: A Screenshot of the gallery listing page, showing the mini carousels to preview the gallery contents. 
+  caption: A Screenshot of the gallery listing page, showing the mini carousels to
+    preview the gallery contents.
 - filename: CyrusMejia-PitsGallery.jpg
-  caption: A screenshot from a gallery page, showing the sidebar of links to related events and items available in the online store.
+  caption: A screenshot from a gallery page, showing the sidebar of links to related
+    events and items available in the online store.
 - filename: CyrusMejia-blog-post.jpg
   caption: A screenshot from the blog post listing page, showing the tag cloud.
-
-tasks: 
-- Designed and developed a new Drupal 6 website with a custom module, theme, and graphics   to meets the client's requirements for an "artist's portfolio" website.
-- Designed a full suite of custom graphics to support the "rich ui" requirements of this   project.
+tasks:
+- Designed and developed a new Drupal 6 website with a custom module, theme, and graphics   to
+  meets the client's requirements for an "artist's portfolio" website.
+- Designed a full suite of custom graphics to support the "rich ui" requirements of
+  this   project.
 - Fit all required functionality into an app-like "fixed width" and "fixed height"   layout.
-- Customized all user interface elements (even overriding core styles) in a scalable   manner, to match the desired app-like look and feel.
-- Developed a "thumbnail slider" display to preview the content of each gallery from a   gallery listing page.
-- Developed lightweight solutions to seamlessly integrate third party web services, including a PayPal based e-commerce solution and MailChimp based newsletter subscriptions. 
-
+- Customized all user interface elements (even overriding core styles) in a scalable   manner,
+  to match the desired app-like look and feel.
+- Developed a "thumbnail slider" display to preview the content of each gallery from
+  a   gallery listing page.
+- Developed lightweight solutions to seamlessly integrate third party web services,
+  including a PayPal based e-commerce solution and MailChimp based newsletter subscriptions.
 ---
 
 When Cyrus Mejia asked me to rebuild his website in 2008, it had been 7 years since we built his first website in 2004. Time for an upgrade (for both of us). By  this time I'd built a few sites on Drupal, and saw much potential for it as a dynamic platform, able to support a wide variety of client needs as well as my own creative solutions. Armed with this new powerful tool, and eager to work magic for my dear old dad, we dove in deep to come up with a unique take on the artist's portfolio website.

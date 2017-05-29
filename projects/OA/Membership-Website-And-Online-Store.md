@@ -1,27 +1,18 @@
 ---
-
-client: OA
-
 title: Non-Profit Membership Website & Online Store
-
-startdate: 2008-02-01
-enddate: 2008-12-01
-
+client: OA
+startdate: 2008-02-01 00:00:00 Z
+enddate: 2008-12-01 00:00:00 Z
 website: http://organicathlete.org
-
-# role: Web Site Project Lead
 services:
-  - Website Design 
-  - Project Management 
-  - Graphic Design
-  - Information Architecture
-  - Front End Development
-  - Back End Development
-
-
-publish: 
+- Website Design
+- Project Management
+- Graphic Design
+- Information Architecture
+- Front End Development
+- Back End Development
+publish:
   print: false
-
 tags:
 - HTML
 - CSS
@@ -33,22 +24,22 @@ tags:
 - User Experience
 - Architecture
 - Communication
-
 thumbnail: organiathlete-logo.jpg
-
 assets:
- - filename: organiathlete-newlook-1.png
-   caption: 
- - filename: organicathlete-lewlook-2.png
-   caption: 
-
-tasks: 
-  - Collected the requirements and collaborated with stakeholders to build a membership   management and social network website for a non-profit sports-club.
-  - Researched existing platforms for development of the required functionality, and chose   a Drupal 5/CiviCRM solution.
-  - Contributed code to facilitate the deeper integration of CiviCRM data into the Drupal   presentation layer.
-  - Designed a number of UX innovations to improve the presentation and navigation of the   website content.
-  - Developed a custom Drupal theme and site module for the project.
-
+- filename: organiathlete-newlook-1.png
+  caption: 
+- filename: organicathlete-lewlook-2.png
+  caption: 
+tasks:
+- Collected the requirements and collaborated with stakeholders to build a membership   management
+  and social network website for a non-profit sports-club.
+- Researched existing platforms for development of the required functionality, and
+  chose   a Drupal 5/CiviCRM solution.
+- Contributed code to facilitate the deeper integration of CiviCRM data into the Drupal   presentation
+  layer.
+- Designed a number of UX innovations to improve the presentation and navigation of
+  the   website content.
+- Developed a custom Drupal theme and site module for the project.
 ---
 
 Bradley Saul, the founder of Organic Athlete, is a good friend and inspiration. He has a long lived passion for cycling and a healthy 'alkaline' diet. In 2003, when we first met at a raw food festival, he was dreaming of a starting a vegan cycling club. Of course, as an elite level athlete and dedicated raw vegan, he set his goals firm on this dream; by 2007, he had fielded the nations first vegan pro-cycling team. It was during this time, many years after we met, that our paths crossed again when I joined up with a local "Organic Athlete" chapter in Portland Oregon.

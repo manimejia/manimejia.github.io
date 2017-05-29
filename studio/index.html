@@ -1,164 +1,94 @@
 ---
-layout: default
 title: Web Studio
-billing_base_rate : 60
-billing_base_delivery : 2
-billing_ratescales :
-  - 
-    name : "Introductory Rates"
-    description : "I offer a 25% discount on the first hourly package purchaced of up to 480 hours."
-    colorcode: success
-    ratemod : .75
-    maxhours : 480
-  - 
-    name : "Standard Rates"
-    description : "This is the rate scale used to determine the price for most hourly packages."
-    colorcode: primary
-  - 
-    name : "Rush Rates"
-    description : "I offer priority delivery for 125% upcharge on hourly packages of 40 hours or more."
-    colorcode: alert
-    ratemod : 1.25
-    delivery : 1
-    minhours : 40
-
-billing_packages : 
-  -
-    name: "1 Hour"
-    hours: 1
-  -
-    name: "1 day"
-    hours: 8
-  -
-    name: "1 week"
-    hours: 40
-  -
-    name: "1 month"
-    hours: 160
-  -
-    name: "3 months "
-    hours: 480
-  -
-    name: "1 year"
-    hours: 1920
-
-script : |
-  <script>
-    (function($){
-      $(document).ready(function() {
-
-        var billing_base_rate = 60;
-        var billing_base_delivery = 2;
-        // var billing_rush_mod = 1.25;
-        // var billing_discount_mod = .75;
-        
-        function getBillingRatescaleBaseRate(ratescale){
-          ratescale = ratescale || {};
-          var ratemod = ratescale.ratemod || 1;
-          var baserate =  
-            ratescale.baserate ? ratescale.baserate :
-            billing_base_rate * ratemod ;
-          return baserate;
-        }
-
-        function getBillingPackageRate(package,ratescale){
-          package =  package || {};
-          ratescale = ratescale || {};
-          var hours = package.hours || 1;
-          var baserate = getBillingRatescaleBaseRate(ratescale);
-          var packagerate = baserate - Math.round(Math.log10(hours)*(baserate/10))
-          return packagerate;
-        }
-  
-        function getBillingPackageDeliveryDays(package,ratescale){
-          package =  package || {};
-          ratescale = ratescale || {};
-          var hours = package.hours || 1;
-          var delivery = ratescale.delivery || billing_base_delivery;
-          return Math.ceil((hours/8)*delivery);
-        }
-  
-        $(".billingRatescale[data-billing-ratescale]").each(
-          function(index,element){
-            var 
-              $element = $(element),
-              billingRatescale = $element.data("billingRatescale"),
-              baserate = getBillingRatescaleBaseRate(billingRatescale),
-              noop = null;
-            $element.find('[data-print-baserate]').text('$'+baserate+'/hr');
-          }
-        );
-        $(".billingPackageDetails[data-billing-package]").each(
-          function(index,element){
-            var 
-              $element = $(element),
-              billingPackage = $element.data("billingPackage") || {},
-              billingRatescale = $element.parents(".billingRatescale[data-billing-ratescale]")
-                .data("billingRatescale") || {},
-              name = billingPackage.name,
-              hours = billingPackage.hours,
-              maxhours = billingRatescale.maxhours || hours,
-              minhours = billingRatescale.minhours || hours,
-              rate = getBillingPackageRate(billingPackage,billingRatescale),
-              fee = hours*rate,
-              deliveryDays = getBillingPackageDeliveryDays(billingPackage,billingRatescale);
-              deliveryWeeks = deliveryDays / 5,
-              printRate = 
-                maxhours >= hours && minhours <= hours ? '$'+rate+'/hr' : 
-                '--',
-              printFee = 
-                maxhours >= hours && minhours <= hours ? '$'+fee.toLocaleString() :
-                '--',
-              printDelivery = 
-                maxhours >= hours && minhours <= hours ? 
-                deliveryWeeks > 1 ? deliveryWeeks+' weeks' : 
-                deliveryDays > 1 ? deliveryDays+' days' : 
-                deliveryDays+' day' :
-                '--',
-              // rushRate = rate * billing_rush_mod,
-              // rushFee = hours*rushRate,
-              // rushDeliveryDays = getBillingPackageDeliveryDays(billingPackage,billingRatescale);
-              // rushDeliveryWeeks = rushDeliveryDays / 5,
-              // rushDelivery = 
-              //   rushDeliveryWeeks > 1 ? rushDeliveryWeeks+' weeks' : 
-              //   rushDeliveryDays > 1 ? rushDeliveryDays+' days' : 
-              //   rushDeliveryDays+' day',
-              noop = null;
-
-            console.log(billingRatescale, billingPackage);
-
-            // if(minhours <= hours){
-              $element.find('[data-print-rate]').text(printRate);
-              $element.find('[data-print-fee]').text(printFee);
-              $element.find('[data-print-delivery]').text(printDelivery);
-            // }
-            // $element.find('[data-print-rushrate]').text('$'+rushRate+'/hr');
-            // $element.find('[data-print-rushfee]').text('$'+rushFee.toLocaleString());
-            // $element.find('[data-print-rushdelivery]').text(rushDelivery);
-            // $element.append(
-            //   $('<div class="column small-4 overlay info fullheight billingPackageName">'+
-            //       '<span class="left">'+name+'</span>'+
-            //       '<span class="right">('+hours+')</span>'+
-            //     '</div>'),
-            //   $('<div class="column small-4 overlay success fullheight billingPackageRate">'+
-            //       '<span class="left">$'+rate+'/hr</span>'+
-            //       '<span class="right">'+delivery+' days</span>'+
-            //       '<span class="center">$'+fee.toLocaleString()+'</span>'+
-            //     '</div>'),
-            //   $('<div class="column small-4 overlay alert fullheight billingPackageRate">'+
-            //       '<span class="left">$'+rushRate+'/hr</span>'+
-            //       '<span class="right">'+rushDelivery+' days</span>'+
-            //       '<span class="center">$'+rushFee.toLocaleString()+'</span>'+
-            //     '</div>')
-            // );
-          }
-        );
-  
-      });
-    })(jQuery)
-  </script>
-
+layout: default
+billing_base_rate: 60
+billing_base_delivery: 2
+billing_ratescales:
+- name: Introductory Rates
+  description: I offer a 25% discount on the first hourly package purchaced of up
+    to 480 hours.
+  colorcode: success
+  ratemod: 0.75
+  maxhours: 480
+- name: Standard Rates
+  description: This is the rate scale used to determine the price for most hourly
+    packages.
+  colorcode: primary
+- name: Rush Rates
+  description: I offer priority delivery for 125% upcharge on hourly packages of 40
+    hours or more.
+  colorcode: alert
+  ratemod: 1.25
+  delivery: 1
+  minhours: 40
+billing_packages:
+- name: 1 Hour
+  hours: 1
+- name: 1 day
+  hours: 8
+- name: 1 week
+  hours: 40
+- name: 1 month
+  hours: 160
+- name: '3 months '
+  hours: 480
+- name: 1 year
+  hours: 1920
+script: "<script>\n  (function($){\n    $(document).ready(function() {\n\n      var
+  billing_base_rate = 60;\n      var billing_base_delivery = 2;\n      // var billing_rush_mod
+  = 1.25;\n      // var billing_discount_mod = .75;\n      \n      function getBillingRatescaleBaseRate(ratescale){\n
+  \       ratescale = ratescale || {};\n        var ratemod = ratescale.ratemod ||
+  1;\n        var baserate =  \n          ratescale.baserate ? ratescale.baserate
+  :\n          billing_base_rate * ratemod ;\n        return baserate;\n      }\n\n
+  \     function getBillingPackageRate(package,ratescale){\n        package =  package
+  || {};\n        ratescale = ratescale || {};\n        var hours = package.hours
+  || 1;\n        var baserate = getBillingRatescaleBaseRate(ratescale);\n        var
+  packagerate = baserate - Math.round(Math.log10(hours)*(baserate/10))\n        return
+  packagerate;\n      }\n\n      function getBillingPackageDeliveryDays(package,ratescale){\n
+  \       package =  package || {};\n        ratescale = ratescale || {};\n        var
+  hours = package.hours || 1;\n        var delivery = ratescale.delivery || billing_base_delivery;\n
+  \       return Math.ceil((hours/8)*delivery);\n      }\n\n      $(\".billingRatescale[data-billing-ratescale]\").each(\n
+  \       function(index,element){\n          var \n            $element = $(element),\n
+  \           billingRatescale = $element.data(\"billingRatescale\"),\n            baserate
+  = getBillingRatescaleBaseRate(billingRatescale),\n            noop = null;\n          $element.find('[data-print-baserate]').text('$'+baserate+'/hr');\n
+  \       }\n      );\n      $(\".billingPackageDetails[data-billing-package]\").each(\n
+  \       function(index,element){\n          var \n            $element = $(element),\n
+  \           billingPackage = $element.data(\"billingPackage\") || {},\n            billingRatescale
+  = $element.parents(\".billingRatescale[data-billing-ratescale]\")\n              .data(\"billingRatescale\")
+  || {},\n            name = billingPackage.name,\n            hours = billingPackage.hours,\n
+  \           maxhours = billingRatescale.maxhours || hours,\n            minhours
+  = billingRatescale.minhours || hours,\n            rate = getBillingPackageRate(billingPackage,billingRatescale),\n
+  \           fee = hours*rate,\n            deliveryDays = getBillingPackageDeliveryDays(billingPackage,billingRatescale);\n
+  \           deliveryWeeks = deliveryDays / 5,\n            printRate = \n              maxhours
+  >= hours && minhours <= hours ? '$'+rate+'/hr' : \n              '--',\n            printFee
+  = \n              maxhours >= hours && minhours <= hours ? '$'+fee.toLocaleString()
+  :\n              '--',\n            printDelivery = \n              maxhours >=
+  hours && minhours <= hours ? \n              deliveryWeeks > 1 ? deliveryWeeks+'
+  weeks' : \n              deliveryDays > 1 ? deliveryDays+' days' : \n              deliveryDays+'
+  day' :\n              '--',\n            // rushRate = rate * billing_rush_mod,\n
+  \           // rushFee = hours*rushRate,\n            // rushDeliveryDays = getBillingPackageDeliveryDays(billingPackage,billingRatescale);\n
+  \           // rushDeliveryWeeks = rushDeliveryDays / 5,\n            // rushDelivery
+  = \n            //   rushDeliveryWeeks > 1 ? rushDeliveryWeeks+' weeks' : \n            //
+  \  rushDeliveryDays > 1 ? rushDeliveryDays+' days' : \n            //   rushDeliveryDays+'
+  day',\n            noop = null;\n\n          console.log(billingRatescale, billingPackage);\n\n
+  \         // if(minhours <= hours){\n            $element.find('[data-print-rate]').text(printRate);\n
+  \           $element.find('[data-print-fee]').text(printFee);\n            $element.find('[data-print-delivery]').text(printDelivery);\n
+  \         // }\n          // $element.find('[data-print-rushrate]').text('$'+rushRate+'/hr');\n
+  \         // $element.find('[data-print-rushfee]').text('$'+rushFee.toLocaleString());\n
+  \         // $element.find('[data-print-rushdelivery]').text(rushDelivery);\n          //
+  $element.append(\n          //   $('<div class=\"column small-4 overlay info fullheight
+  billingPackageName\">'+\n          //       '<span class=\"left\">'+name+'</span>'+\n
+  \         //       '<span class=\"right\">('+hours+')</span>'+\n          //     '</div>'),\n
+  \         //   $('<div class=\"column small-4 overlay success fullheight billingPackageRate\">'+\n
+  \         //       '<span class=\"left\">$'+rate+'/hr</span>'+\n          //       '<span
+  class=\"right\">'+delivery+' days</span>'+\n          //       '<span class=\"center\">$'+fee.toLocaleString()+'</span>'+\n
+  \         //     '</div>'),\n          //   $('<div class=\"column small-4 overlay
+  alert fullheight billingPackageRate\">'+\n          //       '<span class=\"left\">$'+rushRate+'/hr</span>'+\n
+  \         //       '<span class=\"right\">'+rushDelivery+' days</span>'+\n          //
+  \      '<span class=\"center\">$'+rushFee.toLocaleString()+'</span>'+\n          //
+  \    '</div>')\n          // );\n        }\n      );\n\n    });\n  })(jQuery)\n</script>\n"
 ---
+
 <style>
 .billingPackageHeader .overlay{
   margin-top:1em;

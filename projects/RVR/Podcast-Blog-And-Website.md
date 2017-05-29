@@ -1,8 +1,8 @@
 ---
-client: RVR
 title: Podcast Blog & Website
-startdate: 2007-02-01
-enddate: 2007-04-01
+client: RVR
+startdate: 2007-02-01 00:00:00 Z
+enddate: 2007-04-01 00:00:00 Z
 website: 
 status: retired
 role: Website Developer
@@ -21,15 +21,16 @@ tags:
 - Graphic Design
 - Architecture
 thumbnail: 
-assets: 
-- filename:
-  caption:
-  type:
-  width:
-  height:
-- filename:
-  caption:
-  type:
-  width:
-  height:
+assets:
+- filename: 
+  caption: 
+  type: 
+  width: 
+  height: 
+- filename: 
+  caption: 
+  type: 
+  width: 
+  height: 
 ---
+

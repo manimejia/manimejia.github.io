@@ -1,24 +1,21 @@
 ---
-client: MM
 title: Sound Sculpting Business Identity
-startdate: 2002-04-01
-enddate: 2001-12-01
+client: MM
+startdate: 2002-04-01 00:00:00 Z
+enddate: 2001-12-01 00:00:00 Z
 website: 
 role: Graphic Designer
 status: archived
 publish:
- draft: true
-
+  draft: true
 tags:
 - Fine Art
 - Print Media
 - Vector Illustration
 - Animation
-
 thumbnail: 
-
 assets: 
-
-tasks: 
- - Designed a number of conceptual user interfaces for a multimedia portfolio website.
+tasks:
+- Designed a number of conceptual user interfaces for a multimedia portfolio website.
 ---
+

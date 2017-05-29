@@ -1,154 +1,123 @@
+---
+title: Manimejia.Github.Io
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+defaults:
+- scope:
+    path: ''
+    type: posts
+  values:
+    libraries:
+    - foundation
+    - manimejia
+- scope:
+    path: ''
+    type: pages
+  values:
+    title: 
+    category: 
+    tags: 
+    layout: page
+    printable: false
+    assetpath: assets/
+    assetpath_is_relative_to_siteroot: false
+    libraries:
+    - foundation
+    - jquery_ui
+    - uix
+    - manimejia
+    splash: 
+    script: ''
+    style: ''
+    publish:
+      main: true
+      print: false
+      featured: false
+      draft: false
+    hide:
+      topbar: false
+      title: false
+      footer: false
+- scope:
+    path: projects
+    type: pages
+  values:
+    layout: project
+    category: project
+    hide:
+      title: true
+- scope:
+    path: resume/manimejia.pdf
+  values:
+    redirect_from: "/resume"
 markdown: kramdown
 permalink: none
-include: 
-  - blog 
-  - resume
+include:
+- blog
+- resume
 exclude:
-  - CNAME
-  - Gemfile
-  - LICENSE
-  - Rakefile
-  - README.md
-  - resources
-  - foundation/scss
-
+- CNAME
+- Gemfile
+- LICENSE
+- Rakefile
+- README.md
+- resources
+- foundation/scss
 sass:
-   sass_dir: theme/foundation/scss
-
+  sass_dir: theme/foundation/scss
 gems:
-  - jekyll-redirect-from
-
+- jekyll-redirect-from
 base_url: http://manimejia.me/
-# layouts: ./_layouts
-layouts_dir: ./_layouts
-
-# available_libraries 
-# define external JS and CSS files or related HTML snippets to be made available for referencing by pages and posts.
-# this does not actually add file references to the pages or posts, but simply makes them available to easily reference.
-# any library defined here may be referenced by a page or post in the 'libraries' front matter variable (see defaults below).
-# each page will then (in the order referenced) have the reference the files and snippets of each library 
-# loaded by the output HTML document
-# see default.html layout for examples on how this configuration is then added to the page template.
-# 
-# name : the name to reference the library by, in a page's 'libraries' array.
-# js: an array of javascript file paths to be referenced by the output HTML document
-# css: an array of css file paths to be referenced by the output HTML document
-# head: an array of HTML snippets (<link/> <style/> <script/> ect...) to be appended to the <head/> of the output HTML document
-# body: an array of HTML snippets (<style/> <script/> ect...) to be appended to the <body/> of the output HTML document
+layouts_dir: "./_layouts"
 available_libraries:
-  - name: foundation 
-    js: 
-      - /theme/foundation/js/vendor/jquery.js
-      - /theme/foundation/js/vendor/modernizr.js
-      - /theme/foundation/js/foundation.min.js
-    css: 
-      - /theme/foundation/icons/foundation-icons.css
-      - /theme/foundation/css/normalize.css
-
-  - name: jquery_ui
-    js:
-     - /theme/jquery-ui/jquery-ui.js
-
-  - name: uix
-    js:
-     - /theme/uix-widgets/uix-widgets.js
-
-  - name: skrollr
-    js: 
-      - /theme/skrollr/skrollr.min.js
-
-  - name: skrollr_stylesheets
-    js: 
-      - /theme/skrollr/skrollr.stylesheets.min.js
-    head:
-      - "<link rel='stylesheet' type='text/css' href='/theme/manimejia/skrollr-stylesheet.css' data-skrollr-stylesheet />"
-
-  - name: skrollr_menu
-    js: 
-      - /theme/skrollr/skrollr.menu.min.js
-
-  - name: slick
-    js: 
-      - /theme/slick/slick.min.js
-    css: 
-      - /theme/slick/slick.css
-
-  - name: manimejia
-    js: 
-      - /theme/manimejia/manimejia.js
-     #- /theme/manimejia/foundation.accordion.mm.js
-    css:
-      - "http://fonts.googleapis.com/css?family=Josefin+Sans:300,400|Open+Sans:400italic,600,400" 
-      - /theme/manimejia/foundation-manimejia-fourcolor.css
-
-sources: 
+- name: foundation
+  js:
+  - "/theme/foundation/js/vendor/jquery.js"
+  - "/theme/foundation/js/vendor/modernizr.js"
+  - "/theme/foundation/js/foundation.min.js"
+  css:
+  - "/theme/foundation/icons/foundation-icons.css"
+  - "/theme/foundation/css/normalize.css"
+- name: jquery_ui
+  js:
+  - "/theme/jquery-ui/jquery-ui.js"
+- name: uix
+  js:
+  - "/theme/uix-widgets/uix-widgets.js"
+- name: skrollr
+  js:
+  - "/theme/skrollr/skrollr.min.js"
+- name: skrollr_stylesheets
+  js:
+  - "/theme/skrollr/skrollr.stylesheets.min.js"
+  head:
+  - "<link rel='stylesheet' type='text/css' href='/theme/manimejia/skrollr-stylesheet.css'
+    data-skrollr-stylesheet />"
+- name: skrollr_menu
+  js:
+  - "/theme/skrollr/skrollr.menu.min.js"
+- name: slick
+  js:
+  - "/theme/slick/slick.min.js"
+  css:
+  - "/theme/slick/slick.css"
+- name: manimejia
+  js:
+  - "/theme/manimejia/manimejia.js"
+  css:
+  - http://fonts.googleapis.com/css?family=Josefin+Sans:300,400|Open+Sans:400italic,600,400
+  - "/theme/manimejia/foundation-manimejia-fourcolor.css"
+sources:
   unsplash: https://source.unsplash.com
-
-defaults:
-  - 
-    scope: # All Posts
-      type: "posts"
-      path: ""
-    values:
-      libraries: 
-        - foundation
-        - manimejia
-  -
-    scope: # All Pages
-      type: "pages"
-      path: ""
-    values:
-      title: 
-      category: 
-      tags: 
-      layout: "page"
-      printable: false
-      assetpath: "assets/"
-      assetpath_is_relative_to_siteroot: false
-      libraries: 
-        - foundation
-        - jquery_ui
-        - uix
-        - manimejia
-      splash: 
-      script: | 
-      style: | 
-      publish:
-        main: true
-        print: false
-        featured: false
-        draft: false
-      hide:
-        topbar: false
-        title: false
-        footer: false
-  -
-    scope: # Project Pages
-      type: "pages"
-      path: "projects"
-    values:
-      layout: "project" 
-      category: "project"
-      hide: 
-        title: true
-  - scope:
-      path: "resume/manimejia.pdf"
-    values:
-      redirect_from: "/resume"
-  # -
-  #   scope:
-  #     type: "page"
-  #     path: "pages"
-  #   values:
-  #     libraries: 
-  #       - foundation
-  #       - skrollr_stylesheets
-  #       - skrollr
-  #       - manimejia
-
 config:
-  name: "Manuel Mej&iacute;a"
-  description: "Creative Web Architect"
+  name: Manuel Mej&iacute;a
+  description: Creative Web Architect
   domain: manimejia.me
   author:
     name: Manuel Mej&iacute;a
@@ -156,38 +125,27 @@ config:
     state: Mi.
     website: http://manimejia.me
     email: hello(at)manimejia.me
-    phone: (971) 533 7591
+    phone: "(971) 533 7591"
     services:
-     - Web Developer
-     - Experience Architect
-
+    - Web Developer
+    - Experience Architect
   lang: en
   favicons:
-    - /assets/manimejia-gravatar-icon-256.png
+  - "/assets/manimejia-gravatar-icon-256.png"
   topbar:
     toggle: "<span class='hidden-for-small-only hidden-for-medium-up'>Toggle Menu</span>"
     right:
-      - name: Experience
-        url: "/#experience"
-      - name: Capacity
-        url: "/#capacity"
-      - name: Clients
-        url: "/#clients"
-      - name: Portfolio
-        url: "/portfolio"
-      - name: Resum&eacute;
-        url: "/resume/manimejia.pdf"
-        class: "button alert"
-        target: "_blank"
-      - name: Contact
-        url: "#contact"
-        #class: small button
-        #hasform: false
-      # - name: "<i class='fi-social-linkedin font-larger'></i><span class='hidden-for-small-only hidden-for-medium-up'>LinkedIn</span>"
-      #   url: "http://linkedin.com/in/manimejia"
-      #   title: View my LinkedIn Profile
-      #   target: _blank
-      # - name: "<i class='fi-social-github font-larger'></i><span class='hidden-for-small-only hidden-for-medium-up'>Github</span>"
-      #   url: "http://github.com/manimejia"
-      #   title: Check out my code on GitHub
-      #   target: _blank
+    - name: Experience
+      url: "/#experience"
+    - name: Capacity
+      url: "/#capacity"
+    - name: Clients
+      url: "/#clients"
+    - name: Portfolio
+      url: "/portfolio"
+    - name: Resum&eacute;
+      url: "/resume/manimejia.pdf"
+      class: button alert
+      target: _blank
+    - name: Contact
+      url: "#contact"

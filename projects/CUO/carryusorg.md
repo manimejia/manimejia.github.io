@@ -1,30 +1,29 @@
 ---
-client: CUO
 title: Carry.Us.Org Venture For Good
-summary: A mobile first web app to facilitate rich story telling and charitable fundraising in real time by inspired athletes.
-startdate: 2016-05-05
-enddate: 2016-05-20
+client: CUO
+summary: A mobile first web app to facilitate rich story telling and charitable fundraising
+  in real time by inspired athletes.
+startdate: 2016-05-05 00:00:00 Z
+enddate: 2016-05-20 00:00:00 Z
 website: http://carry.us.org
-services: 
-  - Product Design
-  - Website Design 
-  - Project Management 
-  - Graphic Design
-  - Content Strategy
-  - Multimedia Production
-  - User Experience Design
-  - Application Architecture
-  - Rapid Prototyping
-  - Front End Development
-  - Back End Development
-  - Cloud Services Integration
-  - Marketing & Outreach
+services:
+- Product Design
+- Website Design
+- Project Management
+- Graphic Design
+- Content Strategy
+- Multimedia Production
+- User Experience Design
+- Application Architecture
+- Rapid Prototyping
+- Front End Development
+- Back End Development
+- Cloud Services Integration
+- Marketing & Outreach
 status: 
-
 publish:
- print: false
- featured: false
-
+  print: false
+  featured: false
 tags:
 - AngularJS
 - SaaS
@@ -36,11 +35,8 @@ tags:
 - Intranet Application
 - Architectural Diagrams
 - Rapid Prototype
-
 thumbnail: carryusorg-logo-bg-256.png
-
-assets: 
-
+assets:
 - filename: Athletes Do Good. It's a thing..jpg
 - filename: Athletes4Good go further.jpg
 - filename: Athletes4Good Go further 2.jpg
@@ -51,9 +47,8 @@ assets:
 - filename: Racing for good- Join us..jpg
 - filename: Yes you can and you’ll love it.jpg
 - filename: Yes you can and you’ll love it 2.jpg
-
-accomplishments: 
-  -
+accomplishments:
+- 
 ---
 
 In spring 2016, I founded this tech startup to support charitable athletes in doing good and going further. We are designing a web/mobile app which will enable individuals and teams to raise money for any charity, while advancing their athletic goals and covering their campaign expenses.

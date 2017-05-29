@@ -1,8 +1,8 @@
 ---
-client: RCIT
 title: Small Business Website
-startdate: 2006-10-01
-enddate: 2006-12-01
+client: RCIT
+startdate: 2006-10-01 00:00:00 Z
+enddate: 2006-12-01 00:00:00 Z
 website: 
 status: retired
 role: Website Developer
@@ -18,15 +18,16 @@ tags:
 - Consultation
 - Architecture
 thumbnail: 
-assets: 
-- filename:
-  caption:
-  type:
-  width:
-  height:
-- filename:
-  caption:
-  type:
-  width:
-  height:
+assets:
+- filename: 
+  caption: 
+  type: 
+  width: 
+  height: 
+- filename: 
+  caption: 
+  type: 
+  width: 
+  height: 
 ---
+

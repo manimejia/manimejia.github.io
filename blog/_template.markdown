@@ -1,5 +1,5 @@
 ---
-title: Posting from Editorial
+title: PostTitle
 date: 2016-01-01 00:00:00 Z
 summary: PostSummary
 publish:
@@ -13,4 +13,4 @@ assets:
   caption: 
 ---
 
-This is my first post. It's a short one. Just long enought to say that I made a post from github.
+## Start With H2

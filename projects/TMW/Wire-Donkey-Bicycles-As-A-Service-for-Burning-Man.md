@@ -1,11 +1,11 @@
 ---
-client: TMW
 title: Wire Donkey (Bicycles-As-A-Service for Burning Man)
-startdate: 2004-06-01
-enddate: 2004-08-01
+client: TMW
+startdate: 2004-06-01 00:00:00 Z
+enddate: 2004-08-01 00:00:00 Z
 website: 
 role: Service Coordinator
-publish: 
+publish:
   draft: true
 tags:
 - Non-Profit
@@ -17,15 +17,16 @@ tags:
 - Communication
 - Team Building
 thumbnail: 
-assets: 
-- filename:
-  caption:
-  type:
-  width:
-  height:
-- filename:
-  caption:
-  type:
-  width:
-  height:
+assets:
+- filename: 
+  caption: 
+  type: 
+  width: 
+  height: 
+- filename: 
+  caption: 
+  type: 
+  width: 
+  height: 
 ---
+

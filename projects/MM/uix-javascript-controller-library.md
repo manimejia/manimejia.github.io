@@ -1,36 +1,36 @@
 ---
-client: MM
 title: UIX - User Interface Controllers
-summary: A JavaScript library for implementing ARIA standard widget interactions (mouse, keyboard, and touch) to any HTML structure without depending on or affecting style and layout.
-startdate: 2015-01-01
-enddate: 2015-06-01
+client: MM
+summary: A JavaScript library for implementing ARIA standard widget interactions (mouse,
+  keyboard, and touch) to any HTML structure without depending on or affecting style
+  and layout.
+startdate: 2015-01-01 00:00:00 Z
+enddate: 2015-06-01 00:00:00 Z
 website: http://github.com/manimejia/uix
-# role:  & Development Lead
 services:
-  - Product Design 
-  - Project Management 
-  - Front End Development
-
+- Product Design
+- Project Management
+- Front End Development
 status: repository
 publish:
- print: true
- featured: true
- draft: false 
-
+  print: true
+  featured: true
+  draft: false
 tags:
 - Accessibility
 - JavaScript
 - Widgets
 - Library
 - GitHub
-
 thumbnail: uix-icon.jpg
 assets: 
-tasks: 
-- Developed a dedicated library focused simply on implementing standards based UI controller logic.
-- Can be utilized within any front-end CSS libraries, which are typically inconsistent in their implementation of ARIA standards.
-
+tasks:
+- Developed a dedicated library focused simply on implementing standards based UI
+  controller logic.
+- Can be utilized within any front-end CSS libraries, which are typically inconsistent
+  in their implementation of ARIA standards.
 ---
+
 I am developing this UIX Library to apply standards based widget interaction patterns on top of any HTML structure and to work seamlessly with any CSS framework. 
 
 The WAI ARIA standards describe a set of keyboard and mouse interactions for controlling almost any user interface widget. Implementing these standards should be a simple matter of incorporating a dedicated "controller library" into your website or application. Such a dedicated controller library does not exist, until now. 
