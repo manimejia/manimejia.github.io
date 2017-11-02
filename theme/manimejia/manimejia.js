@@ -165,13 +165,14 @@ function init($content){
 
 };
 
-function filterPortfolioItems(newVals,doCloseAll){
+function filterPortfolioItems(newVals,doCloseAll,updateHistory){
   newVals = 
     typeof newVals === "string" ? [newVals] :
     newVals instanceof Array ? newVals :
     newVals === false ? false :
     null;
-  doCloseAll = doCloseAll == false ? false : true;
+  doCloseAll = doCloseAll == false ? false : true,
+  updateHistory = updateHistory == false ? false : true;
   var 
     $portfolioFilters = $('#portfolio-filters'),
     $portfolioList = $('#portfolio-accordion-grid'),
@@ -208,6 +209,9 @@ function filterPortfolioItems(newVals,doCloseAll){
     $portfolioFilters.find('select').val(filterVal);
     // $filterDisplaySelected.content('All Projects');
     // if(!doShowAll && !doShowSome) filterPortfolioItems(false);
+    if(updateHistory ) {
+      history.pushState({}, "", setUrlParameter("filter",newVals));
+    }
     $.uix.scrollToElement('#portfolio',false);
 }
 
@@ -282,14 +286,31 @@ function activateFoundationElement(elementId){
 }
 
 
-  function getUrlParameter(param){
-       var query = window.location.search.substring(1);
-       var vars = query.split("&");
+  function getUrlParameter(param, url){
+       url = typeof url == "string" ? url : document.location.href;
+       var a = document.createElement('a');
+       a.setAttribute("href",url);
+       var vars = a.search.substring(1).split("&");
        for (var i=0;i<vars.length;i++) {
                var pair = vars[i].split("=");
-               if(pair[0] == param){return pair[1];}
+               if(pair[0] == param){
+                 return pair[1];
+               }
        }
-       return('');
+       return null;
+  }
+  function setUrlParameter(param, value, url){
+       url = typeof url == "string" ? url : document.location.href;
+       var a = document.createElement('a');
+       a.setAttribute("href",url);
+       var vars = a.search.substring(1).split("&");
+       for (var i=0;i<vars.length;i++) {
+           if(vars[i] === "" || vars[i].indexOf(param)===0) vars.splice(i,1);
+       }
+       if(value !== false) vars.push(param+"="+value);
+       a.search = vars.length ? "?" + vars.join("&") : '';
+       // hash = hash ? "#" + match[3] : '';
+       return a.getAttribute("href");
   }
 
 

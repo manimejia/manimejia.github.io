@@ -351,7 +351,7 @@ display:none;
     <div class="inline">
       <input type="radio" id="filter-{{service | slugify }}" name="filter-radios" 
       data-toggle="button" data-filter="{{service | slugify }}"
-      onclick="filterPortfolioItems()">
+      onclick="filterPortfolioItems('{{service | slugify }}')">
       <label class="button check fi-check small" for="filter-{{service | slugify }}"   data-tabs-close>
       {{service}}
       </label>

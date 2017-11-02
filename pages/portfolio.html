@@ -8,16 +8,16 @@ hide:
 ---
 
 {% assign person = person | default : site.data.people.manimejia %}
-<section class="row">
+<!-- <section class="row">
 <div class="column large-3 medium-4 small-centered">
 <br/>
 {% include vcard.html person=person id="contact" compact=true flowto="portfolio"%}
 </div>
-</section>
+</section> -->
 
 <section id="portfolio" role="region" aria-labelledby="portfolio-heading">
 <header class="text-center">
-<h2 id="portfolio-heading" >{{page.title}}</h2>
+<h2 id="portfolio-heading" ><small>{{person.name}}</small><br/> {{page.title}}</h2>
 <p class="font-larger">{{page.subtitle}}</p>
 </header>
 {% include listing-grid-inline.html category="project" %}
