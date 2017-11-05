@@ -115,7 +115,7 @@ available_libraries:
   - "/theme/manimejia/foundation-manimejia-fourcolor.css"
 sources:
   unsplash: https://source.unsplash.com
-config:
+info:
   name: Manuel Mej&iacute;a
   description: Creative Web Architect
   domain: manimejia.me

@@ -1,20 +1,20 @@
 <!doctype html>
-<html dir="ltr" lang="{{ site.config.lang }}">
+<html dir="ltr" lang="{{ site.info.lang }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{site.config.name}} - {% if page.title  %}{{ page.title }}{% else %}{{site.config.description}}{%endif%}</title>
+  <title>{{site.info.name}} - {% if page.title  %}{{ page.title }}{% else %}{{site.info.description}}{%endif%}</title>
   {% include robots.html %}
   {% include meta-description.html %}
 
-  {% for favicon in site.config.favicons %}
+  {% for favicon in site.info.favicons %}
     {% assign size = favicon | split: '-' | last | split: '.' | first %}
     <link rel="icon" type="image/png" sizes="{{ size }}x{{ size }}" href="{{ favicon }}">
     <link rel="apple-touch-icon" sizes="{{ size }}x{{ size }}" href="{{ favicon }}">
   {% endfor %}
 
   <link rel="alternate" href="/blog/feed.atom"
-    title="{{ site.config.name }}" type="application/atom+xml">
+    title="{{ site.info.name }}" type="application/atom+xml">
 
 {% for library in page.libraries %}
 {% for site_library in site.available_libraries %}

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ site.config.lang }}">
-  <title>{{ site.config.name }}</title>
-  <subtitle>{{ site.config.description }}</subtitle>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ site.info.lang }}">
+  <title>{{ site.info.name }}</title>
+  <subtitle>{{ site.info.description }}</subtitle>
 
-{% if site.config.url %}
-  {% assign base = site.config.url %}
+{% if site.info.url %}
+  {% assign base = site.info.url %}
 {% elsif site.github.url %}
   {% assign base = site.github.url %}
 {% else %}
@@ -13,8 +13,8 @@
 
   <id>{{ base }}{{ page.url }}</id>
   <author>
-    <name>{{ site.config.author.name }}</name>
-    <uri>{{ site.config.author.url }}</uri>
+    <name>{{ site.info.author.name }}</name>
+    <uri>{{ site.info.author.url }}</uri>
   </author>
   <link
     rel="alternate"

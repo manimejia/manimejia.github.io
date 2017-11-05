@@ -2,14 +2,14 @@
   <nav class="top-bar" data-topbar id="topbar" role="navigation">
     <ul class="title-area" role="presentation">
       <li class="name" role="presentation">
-        <h1><a id="topbar-homepage" href="/" tabindex="0" title="website home">{{ site.config.name }}</a></h1>        
+        <h1><a id="topbar-homepage" href="/" tabindex="0" title="website home">{{ site.info.name }}</a></h1>        
       </li>
-      <li class="toggle-topbar menu-icon"><a href="#"><span>{{ site.config.topbar.toggle }}</span></a></li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span>{{ site.info.topbar.toggle }}</span></a></li>
     </ul>
     <div class="top-bar-section">
-      {% if site.config.topbar.left %}
+      {% if site.info.topbar.left %}
       <ul class="left">
-      {% for item in site.config.topbar.left %}
+      {% for item in site.info.topbar.left %}
         <li{% if item.hasform %} class="has-form"{% endif %}>
           <a href="{{ item.url }}" class="{{ item.class }}" role="link" tabindex="0">{{ item.name }}</a>
         </li>
@@ -17,9 +17,9 @@
       </ul>
       {% endif %}
 
-      {% if site.config.topbar.right %}
+      {% if site.info.topbar.right %}
       <ul class="right">
-      {% for item in site.config.topbar.right %}
+      {% for item in site.info.topbar.right %}
         <li {% if item.hasform %}class="has-form"{% endif %}>
           <a href="{{ item.url }}" class="{{ item.class }}" title="{{ item.title }}" target="{{ item.target }}" role="link" tabindex="0">{{ item.name }}</a>
         </li>
