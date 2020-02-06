@@ -143,9 +143,9 @@ info:
       url: "/#clients"
     - name: Portfolio
       url: "/portfolio"
-    - name: Resum&eacute;
-      url: "/resume/manimejia.pdf"
-      class: button alert
-      target: _blank
+    # - name: Resum&eacute;
+    #   url: "/resume/manimejia.pdf"
+    #   class: button alert
+    #   target: _blank
     - name: Contact
       url: "#contact"
