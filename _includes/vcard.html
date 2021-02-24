@@ -45,6 +45,7 @@
     {%endfor%}
   </ul>
   <ul class="vcard-contact-info" role="presentation">
+    {%if include.person.website %}
     <li class="vcard-website hide-for-screen" role="presentation">
 			<b class="hidden-for-small-only hidden-for-medium-up">Website: </b>
 			<a href="http://{{ include.person.website }}" class="hide-href-for-print">
@@ -52,6 +53,8 @@
       <span>{{ include.person.website }}</span>
       </a>
     </li>
+    {%endif%}
+    {%if include.person.email %}
     <li class="vcard-email" role="presentation">
 			<b class="hidden-for-small-only hidden-for-medium-up">Email: </b>
       <a href="mailto:{{include.person.email}}"  class="hide-href-for-print">
@@ -59,11 +62,15 @@
 			<span>{{ include.person.email }}</span>
       </a>
     </li>
+    {%endif%}
+    {%if include.person.phone %}
     <li class="vcard-phone" role="presentation">
 			<b class="hidden-for-small-only hidden-for-medium-up">Phone: </b>
 			<i class="fi-telephone"></i>&nbsp;
 			<span>{{ include.person.phone }}</span>
-      </li>
+    </li>
+    {%endif%}
+    {%if include.person.locality %}
     <li class="vcard-locality" role="presentation">
 			<b class="hidden-for-small-only hidden-for-medium-up">Location: </b>
 			<i class="fi-marker"></i>&nbsp;
@@ -71,6 +78,7 @@
       <span class="state">{{ include.person.state }}</span>
       </span>
     </li>
+    {%endif%}
   </ul>
   </div>
 </div>

@@ -26,17 +26,17 @@ numbers:
     icon: layout
     color: alert
   - 
-    number: 500
-    increment: RYT
-    label: Body Awareness Coach
-    icon: universal-access
+    number: 40
+    increment: launches
+    label: Product Leader
+    icon: rocket
     color: warning
   - 
     number: ∞
     increment: failures
     label: Tireless Entrepreneur
     icon: lightbulb
-    color: info
+    color: success
 title: Solutions for People
 # byline: |
 #   integrating technical, design, and communication
