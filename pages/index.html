@@ -37,7 +37,9 @@ splash: false
       <li>
         <i class="font-xlarger fi-{{numberinfo.icon}} {%if numberinfo.color %}{{numberinfo.color}}-text{%endif%}">&nbsp;</i>
         <b class="font-xxlarger">{{numberinfo.number}}</b>
-        <div class="{%if numberinfo.color %}{{numberinfo.color}}-text{%endif%}">{{numberinfo.label}}</div>
+        <i class="{%if numberinfo.color %}{{numberinfo.color}}-text{%endif%}">
+        {{numberinfo.increment}}</i>
+        <h3 class="{%if numberinfo.color %}{{numberinfo.color}}-text{%endif%}">{{numberinfo.label}}</h3>
       </li>
     {%endfor%}
     </ul>

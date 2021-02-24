@@ -1,10 +1,9 @@
 uid: manimejia
 name: Manuel Mej&iacute;a
-locality: Ann Arbor
-state: Mi.
+locality: Illinois
+state: USA
 website: manimejia.me
 email: hello@manimejia.me
-phone: (971) 533 7591
 social:
   - icon: angellist
     logo: data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDE1MCAxNTAiIGhlaWdodD0iMTUwcHgiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxNTAgMTUwIiB3aWR0aD0iMTUwcHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxnPjxjaXJjbGUgY3g9Ijc0Ljk4MyIgY3k9Ijc1LjA0MiIgZmlsbD0iIzQxNDA0MiIgb3BhY2l0eT0iMC4xIiByPSI3NSIvPjxwYXRoIGQ9Ik03NC45ODMsMC4wNDJ2MTUwYzQxLjQyMiwwLDc1LTMzLjU3OSw3NS03NS4wMDFDMTQ5Ljk4MywzMy42MjEsMTE2LjQwNSwwLjA0Miw3NC45ODMsMC4wNDJ6ICAgIiBmaWxsPSIjNDE0MDQyIiBvcGFjaXR5PSIwLjEiLz48Y2lyY2xlIGN4PSI3NC45ODMiIGN5PSI3NS4wNDIiIGZpbGw9IiMzRDNEM0UiIHI9IjY1LjQ4NyIvPjxwYXRoIGQ9Ik03NC45ODMsOS41NTV2MTMwLjk3NWMzNi4xNjgsMCw2NS40ODgtMjkuMzE5LDY1LjQ4OC02NS40ODhDMTQwLjQ3MiwzOC44NzQsMTExLjE1MSw5LjU1NSw3NC45ODMsOS41NTV6IiBmaWxsPSIjMjgyODI5Ii8+PGc+PHBhdGggZD0iTTkuNTY5LDcyLjExNWMtMC4wNDMsMC45NzEtMC4wNzQsMS45NDUtMC4wNzQsMi45MjZjMCwzNi4xNjksMjkuMzIsNjUuNDg4LDY1LjQ4OCw2NS40ODh2LTUuODUyICAgIEMzOS43OTYsMTM0LjY3OCwxMS4xMDMsMTA2LjkyNCw5LjU2OSw3Mi4xMTV6IiBmaWxsPSIjMjgyODI5Ii8+PHBhdGggZD0iTTE0MC4zOTcsNzIuMTE1Yy0xLjUzMSwzNC44MDktMzAuMjI3LDYyLjU2Mi02NS40MTQsNjIuNTYydjUuODUyYzM2LjE2OCwwLDY1LjQ4OC0yOS4zMTksNjUuNDg4LTY1LjQ4OCAgICBDMTQwLjQ3Miw3NC4wNjEsMTQwLjQ0LDczLjA4NiwxNDAuMzk3LDcyLjExNXoiLz48L2c+PC9nPjxnPjxnPjxwYXRoIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTY4LjIyOSw0MC43ODljLTAuODc1LTIuMjU3LTEuOTY3LTYuMDAzLTQuMDItNy4wMDggICAgYy0xLjYxOC0wLjc5MS0zLjE4OS0wLjA1Ny0zLjc5MiwxLjAzNGMtMS41NzksMi44NiwwLjA0Miw3LjYwNywwLjkyLDEwLjQ1MmMyLjE0OSw2Ljk3Nyw0Ljk5OSwxNC4zNDQsNy4yMzcsMjAuNTYxICAgIGMxLjU4NC0xLjI3Miw1LjQ3NC0wLjgyNyw4LjI2OS0wLjU3NEM3NC4yMjcsNTcuNDQ0LDcxLjMwMiw0OC42OTgsNjguMjI5LDQwLjc4OXogTTk5LjcwMiw0Ni4zMDIgICAgYzAuODExLTIuNTc1LDIuMTI0LTQuNzM4LDEuODM2LTcuNjk1Yy0wLjE3NC0xLjgyOS0xLjI2Ny0zLjMyNy0zLjA5OS0zLjIxN2MtMi43OTgsMC4xNjgtNC4zNjUsNC40MjktNS4yODMsNi42NjIgICAgYy0zLjIyNiw3Ljg0Mi01Ljk2OCwxNi4yNjctOC4zODUsMjQuMTIyYzIuNzQ2LDAuMjc4LDUuMTQ4LDAuODk5LDcuODExLDEuMjYzQzk0Ljk2MSw2MS4yMDcsOTcuNDgzLDUzLjM1NCw5OS43MDIsNDYuMzAyeiAgICAgTTYwLjA3NCwxMDIuODE0YzEuOTc4LDAuNjYxLDQuNjExLDAuMTQ2LDQuOTM5LTEuNzI0YzAuMzI1LTEuODU3LTEuMjk2LTMuNjEyLTEuODM5LTQuNDc5Yy0yLjA1MS0zLjI4Ni0zLjIwMS00Ljc1NS01Ljc0Mi03LjM1MiAgICBjLTEuMDA4LTEuMDMtMi40MTktMi42MjYtMy45MDUtMi43NTdjLTIuNDI4LTAuMjE0LTQuMzczLDIuMzYyLTUuMTcsMy43OTFjLTIuMjg5LDQuMTEzLTAuMTUsOS43NDksMS44MzcsMTIuOTc5ICAgIGM0LjcwMiw3LjYzNywxMi4yNSwxMy44NTUsMjQuMjM3LDEzLjc4M2MxMC4xNTUtMC4wNjMsMTcuMDktNS4xNzYsMjEuNDgtMTAuNTY3YzQuODYzLTUuOTczLDcuNzY3LTE0LjU1MSw3LjEyLTI0LjkyNiAgICBjLTAuMTIxLTEuOTU1LTAuNDAyLTQuMTA3LTEuNDk0LTUuODU4Yy0xLjg0Mi0yLjk2LTcuMjM5LTQuMjQyLTExLjk0My01LjI4M2MtMi4yMzYtMC40OTQtNC43NzMtMC44NjYtNy40NjYtMS4xNDggICAgYy0zLjU2NS0wLjM3MS05LjY0LTEuMzc5LTExLjI1OCwwLjY4OWMtMS40MDQsMS43OTUtMC4yMzgsNC42NDgsMC40Niw1Ljc0MmMyLjU3LDQuMDMxLDEwLjE2MSw0LjU5NSwxNi42NTQsNC41OTUgICAgYzMuMzYyLDAsOC4wMDgtMC43Niw3LjQ2OCwyLjUyOGMtMC4yNDcsMS40OTctMy45OSwyLjM1NC01Ljg1OCwzLjFjLTIuMTE3LDAuODQ3LTQuMTQ0LDIuMjI1LTUuNTE0LDMuNDQ2ICAgIGMtMi42MzEsMi4zNDgtNi4xOTcsNi40OTEtNi41NDcsMTEuMzcxYy0wLjMzLDQuNTk0LDIuMDY5LDUuODY5LDEuNjA2LDEwLjU2NmMtNC45MS0wLjkwNS01LjU1Mi02LjA4My01Ljg1Ni0xMS41OTkgICAgYy0xLjEyNywwLjUwNi0yLjc1MSwwLjU1OS00LjEzNSwwLjIyOWMxLjg5Niw2LjkxNS01LjEwNCw5LjQ2LTEwLjIyNSw3LjAwOGMtMi4wMDctMC45NjItNC4wODUtMi44ODUtNS42MjctNC45MzkgICAgYy0xLjYzMi0yLjE3My0zLjI2OC01LjE1OC0xLjYwOS03LjY5NUM1NC4zMDcsOTYuNTczLDU2LjA4MiwxMDEuNDc5LDYwLjA3NCwxMDIuODE0eiBNNTUuNzEsNzYuNjI2ICAgIGMtMC4xNzcsMi4yMSwxLjU4OSw0Ljc3NywyLjQxMiw2LjIwM2MyLjE5NywzLjgwNyw0LjU0LDYuODM2LDcuNDY2LDkuNzYzYzEuMzEzLDEuMzEzLDMuNDEzLDMuNDY5LDUuNTE1LDMuMjE3ICAgIGMxLjAyNy0wLjEyNCwyLjMzMy0xLjM5NiwyLjUyNS0yLjUyN2MwLjM0OC0yLjAzLTEuMTEyLTQuNTczLTEuODM4LTYuMzE4Yy0xLjU3My0zLjc4Mi0zLjY0NS03LjY2Ni01Ljc0Mi0xMC41NjcgICAgYy0xLjQxOS0xLjk2MS0zLjE1Ni00LjM3My01Ljg1Ny00LjEzNUM1OC40Nyw3Mi40MTIsNTUuODgsNzQuNDg5LDU1LjcxLDc2LjYyNnogTTc3LjQxOSw5MC40MSAgICBjMS45MjEtMi4yMTUsNC4xMjctNC4xNDQsNi40MzItNS45NzNjLTMuNTE0LTAuMDg2LTYuNzg2LTEuMDIzLTkuNDE5LTEuNjA4Qzc1LjYwOCw4NS4xNzUsNzYuNTgxLDg3LjcyNiw3Ny40MTksOTAuNDF6IiBmaWxsPSIjRkZGRkZGIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L2c+PC9nPjwvc3ZnPg==
@@ -16,65 +15,35 @@ social:
   - icon: github
     url: http://github.com/manimejia
     username: /manimejia
-  - icon: skype
-    url: skype:mani.mejia?chat
-    username: mani.mejia
+  - icon: telegram
+    url: https://t.me/manimejia
+    username: manimejia
 numbers:
   - 
-    number: 16
-    label: Years Professional Experience
-    icon: lightbulb
-    color: warning
-  - 
-    number: 32
-    label: Digital Products Delivered
-    icon: monitor
+    number: 20
+    increment: years
+    label: Web Application Architect
+    icon: layout
     color: alert
   - 
-    number: 20
-    label: Satisfied Clients & Employers
-    icon: torsos-all-female
-    color: success
-# - 
-#   number: 12
-#   label: Business Websites
-#   icon: monitor
-#   color: info
-# - 
-#   number: 5
-#   label: Web Applications
-#   icon: layout
-#   color: info
-# - 
-#   number: 10
-#   label: Multimedia Presentations
-#   icon: photo
-#   color: info
-title: Web Solutions Designer & Developer
+    number: 500
+    increment: RYT
+    label: Body Awareness Coach
+    icon: universal-access
+    color: warning
+  - 
+    number: ∞
+    increment: failures
+    label: Tireless Entrepreneur
+    icon: lightbulb
+    color: info
+title: Solutions for People
 # byline: |
 #   integrating technical, design, and communication
 #   challenges to create durable product solutions
 summary: |
-  I am a poly-skilled digital professional with 16 years experience. I communicate across disciplines to produce practical, scalable, and user centered solutions for small business, nonprofit, and academic clients. I am optimistically powered, creatively inspired, and technically minded.
-# Full Stack Experience Architect - solving technical, design, and communication challenges to create scalable and user centered web products.
+  I am a web professional since 2001, communicating across disciplines to produce practical, scalable, and user centered solutions for small businesses, nonprofits, and academic clients. I am an india trained yoga teacher since 2017, developing an ever increasing awareness of my mental and physical capabilities and disabilities. I am a habitual inventor and problem solver since like forever, only now maybe finding the right idea at the right time with the right people to truly make a difference in the world.
 
-# Poly-skilled Web Professional - With 15 years experience communicating across disciplines, I produce scalable and user centered solutions for technology startups, nonprofits, and higher education.
-
-# I am a poly-skilled digital professional, with 15 years of practice designing and developing web based solutions. As a collaborative product leader, I leverage this experience by communicating across disciplines to create scalable user centered software. I am observant, optimistic, and unconfined.
-
-#  I am a polly-skilled digital creative with 15 years in the production of web and mobile software solutions. As a product designer, I leverage this body of knowledge to collaborate iteratively across disciplines in the creation of scalable user-centered solutions for every product touchpoint.
-# summary: |
-#   Having 15 years of professional experience in the production of web and mobile software solutions, I am a holistic thinker and a creative problem solver with a deep understanding of the technical, communication and design challenges inherent to these projects. My experience involves work in all phases of digital product development: from understanding concept and vision to marketing a release; from collecting user stories to designing wireframes and UX deliverables; from crafting effective information architectures to contributing scalable front and back end code. My practice as a product leader, is to always steer boldly toward the possible future while making the most of the present reality. It is from this multi-level and can-do perspective that I offer practical insights to iteratively address every design, technical, and communication challenge. 
-
-#summary: |
-#  As an autodidactic digital professional, my unique superpowers are 
-#  curiosity, empathy, and optimism. Armed as such, I have sought out, 
-#  engaged with, and overcome a number of ever increasing architectural 
-#  and interpersonal challenges. With many successes and failures to learn 
-#  from, my work history reflects the same turbulent trajectory we all 
-#  humans must navigate; but these superpowers never fail. I continuously 
-#  will ask the tough questions, listen to the unexpected results, 
-#  and optimize the path toward progress through diverse conditions.
 
 personal: |
   Here are a few bits from my non-worky life:
@@ -150,11 +119,7 @@ education:
    end: 1994
    logo: unc-school-logo.png
    degree: 
-  # - 
-  #  school: Arvada West HS (Colo)/ Kanab HS (Utah)
-  #  study: High School Academics
-  #  years: 1989 - 1992
-  #  degree: "yes"
+
 
 employment:
   - 
